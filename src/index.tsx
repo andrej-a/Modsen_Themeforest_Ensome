@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 
-const App = () => {
-    return <h1>Hello World</h1>;
+import { App } from './components/index';
+import { theme } from './componentsLibrary';
+import GlobalStyle from './globalStyles';
+
+const Root = () => {
+    return (
+        <>
+            <ThemeProvider theme={theme}>
+                <App />
+                <GlobalStyle />
+            </ThemeProvider>
+        </>
+    );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
