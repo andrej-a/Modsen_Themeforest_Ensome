@@ -19,17 +19,20 @@ export const MenuContainer = styled.div`
     gap: ${({ theme: { gap } }) => gap.l}px;
 `;
 
-export const MenuItem = styled.h6`
+export const MenuItem = styled.h6<{ type?: string }>`
+    position: relative;
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
     font-style: normal;
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.l};
     font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-    color: ${({ theme: { colors } }) => colors.grey};
+    color: ${({ type, theme: { colors } }) =>
+        type === 'secondary' ? colors.white : colors.grey};
     cursor: pointer;
 
     &:hover {
-        color: ${({ theme: { colors } }) => colors.black};
+        color: ${({ type, theme: { colors } }) =>
+            type === 'secondary' ? colors.lightGrey : colors.black};
     }
 `;

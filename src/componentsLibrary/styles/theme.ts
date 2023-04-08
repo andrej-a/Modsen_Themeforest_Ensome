@@ -1,13 +1,17 @@
 const theme = {
     width: {
+        l: 30,
+        xl: 60,
         xxl: 100,
+        x4l: 1100,
+        x5l: 1920,
     },
     height: {
         xxl: 100,
     },
     margin: {
         l: '40px 0',
-        xl: '',
+        xl: '70px 0 90px 0',
         xxl: '',
         xxxl: '',
         x4l: '',
@@ -35,6 +39,7 @@ const theme = {
         black: '#292D33',
         white: '#FFF',
         grey: '#9497A1',
+        lightGrey: '#D7D7D7',
         background: '#F1F6FA',
         red: '#C14040',
     },
@@ -52,19 +57,28 @@ const theme = {
         l: 6,
     },
     fontFamily: {
-        manrope: 'Manrope',
+        manrope: "'Manrope', sans-serif",
+        openSans: "'Open Sans', sans-serif",
     },
     fontSize: {
         l: 14,
+        xl: 16,
+        xxxl: 46,
     },
     fontWeight: {
+        s: 400,
         l: 500,
         xl: 600,
+        xxl: 700,
+        xxxl: 800,
     },
     lineHeight: {
         l: 24,
+        xl: 28,
+        xxxl: 60,
     },
     letterSpacing: {
+        x: -0.015,
         s: -0.01,
     },
 };

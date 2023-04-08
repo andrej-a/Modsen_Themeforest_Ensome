@@ -29,6 +29,10 @@ module.exports = {
                     from: './src/assets/images/logo',
                     to: 'src/assets/images/logo',
                 },
+                {
+                    from: './src/assets/images/pictures',
+                    to: 'src/assets/images/pictures',
+                },
             ],
         }),
     ],

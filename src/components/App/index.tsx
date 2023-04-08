@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { Content, Header } from '@/components';
+import MainPage from '@/pages/Main';
 
 import { ApplicationContainer } from './styles';
 
 const App = () => {
     return (
         <ApplicationContainer>
-            <Header>
-                <Content />
-            </Header>
+            <MainPage />
         </ApplicationContainer>
     );
 };

@@ -1,13 +1,28 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export interface DefaultTheme {
+    colors: {
+        secondary: string;
+    };
+}
+
+const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     transition: all .3s ease;
+  }
+  #root {
+    overflow: auto;
+    scrollbar-gutter: stable;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 export default GlobalStyle;

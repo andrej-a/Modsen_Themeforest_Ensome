@@ -5,6 +5,10 @@ export type HeaderProps = {
 export type WatchVideoButtonProps = {
     onClick?: () => void;
     children?: React.ReactNode;
+    type?: 'primary' | 'secondary';
+};
+export type HeaderContentProps = {
+    type?: 'primary' | 'secondary';
 };
 
 export type LogoComponentProps = { source: string };
