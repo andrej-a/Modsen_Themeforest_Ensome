@@ -22,7 +22,7 @@ module.exports = merge(common, {
                     ecma: 2015,
                 },
                 extractComments: 'all',
-                test: /(?<!\.d)\.(ts|tsx|json|js|jsx)(\?.*)?$/i,
+                test: /(?<!\.d)\.(ts|tsx|js|jsx)(\?.*)?$/i,
             }),
         ],
     },

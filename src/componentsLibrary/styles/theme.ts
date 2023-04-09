@@ -1,4 +1,10 @@
 const theme = {
+    top: {
+        xl: 111,
+    },
+    right: {
+        l: 18,
+    },
     width: {
         l: 30,
         xl: 60,
@@ -17,7 +23,9 @@ const theme = {
         x4l: '',
     },
     padding: {
+        l: 8,
         xl: '10px 13px',
+        xxl: '48px 23px',
     },
     gap: {
         s: 10,
@@ -52,9 +60,11 @@ const theme = {
     },
     border: {
         none: 0,
+        l: '1px solid #FFFFFF66',
     },
     borderRadius: {
         l: 6,
+        full: 100,
     },
     fontFamily: {
         manrope: "'Manrope', sans-serif",

@@ -33,6 +33,10 @@ module.exports = {
                     from: './src/assets/images/pictures',
                     to: 'src/assets/images/pictures',
                 },
+                {
+                    from: './src/settings/locales',
+                    to: 'src/settings/locales',
+                },
             ],
         }),
     ],

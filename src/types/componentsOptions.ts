@@ -12,3 +12,8 @@ export type HeaderContentProps = {
 };
 
 export type LogoComponentProps = { source: string };
+
+export type RoundButtonProps = {
+    onClick?: () => void;
+    children?: React.ReactNode;
+};

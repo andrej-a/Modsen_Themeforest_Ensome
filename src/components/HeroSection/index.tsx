@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import HeroSectionImage from '@/assets/images/pictures/heroSection.png';
-import { ImageComponent } from '@/components';
+import { ImageComponent, RoundButton } from '@/components';
+import i18n from '@/settings/i18n';
+import { valuesOfTheSettings } from '@/types/constants';
 
 import {
     ColoredWord,
@@ -12,26 +15,38 @@ import {
     HeroSectionImageContainer,
     HeroSectionTitle,
     HeroSectionTitleContainer,
+    LearnMoreButton,
 } from './styles';
 
+const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE } =
+    valuesOfTheSettings;
 const HeroSection = () => {
+    const { t } = useTranslation();
     return (
         <HeroSectionContainer>
             <HeroSectionContentContainer>
                 <HeroSectionTitleContainer>
                     <HeroSectionTitle>
-                        Find true power in your data with{' '}
-                        <ColoredWord>Ensome</ColoredWord>
+                        {t(FIND_POWER)}{' '}
+                        <ColoredWord
+                            onClick={() =>
+                                i18n.language === 'ru'
+                                    ? i18n.changeLanguage('en')
+                                    : i18n.changeLanguage('ru')
+                            }
+                        >
+                            Ensome
+                        </ColoredWord>
                     </HeroSectionTitle>
                 </HeroSectionTitleContainer>
                 <HeroSectionDescriptionContainer>
                     <HeroSectionDescription>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque lauda, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi.
+                        {t(HEROES_SECTION_DESCRIPTION)}
                     </HeroSectionDescription>
                 </HeroSectionDescriptionContainer>
+                <LearnMoreButton>
+                    <RoundButton>{t(LEARN_MORE)}</RoundButton>
+                </LearnMoreButton>
             </HeroSectionContentContainer>
             <HeroSectionImageContainer>
                 <ImageComponent source={HeroSectionImage} />

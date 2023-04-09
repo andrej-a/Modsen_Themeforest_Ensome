@@ -12,6 +12,7 @@ export const HeroSectionContainer = styled.div`
 `;
 
 export const HeroSectionContentContainer = styled.div`
+    position: relative;
     width: auto;
     max-width: ${({ theme: { width } }) => width.x4l}px;
     height: auto;
@@ -47,6 +48,19 @@ export const ColoredWord = styled.span`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.primary};
+`;
+
+export const LearnMoreButton = styled.div`
+    position: absolute;
+    top: ${({ theme: { top } }) => top.xl}%;
+    right: ${({ theme: { right } }) => right.l}%;
+
+    width: auto;
+    height: auto;
+    padding: ${({ theme: { padding } }) => padding.l}px;
+
+    background: ${({ theme: { colors } }) => colors.white};
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius.full}%;
 `;
 
 export const HeroSectionDescriptionContainer = styled(
