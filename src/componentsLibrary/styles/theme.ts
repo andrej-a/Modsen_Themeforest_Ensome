@@ -7,8 +7,10 @@ const theme = {
     },
     width: {
         l: 30,
+        xll: 50,
         xl: 60,
         xxl: 100,
+        xxxl: 540,
         x4l: 1100,
         x5l: 1920,
     },
@@ -18,7 +20,7 @@ const theme = {
     margin: {
         l: '40px 0',
         xl: '70px 0 90px 0',
-        xxl: '',
+        xxl: '120px 0',
         xxxl: '',
         x4l: '',
     },
@@ -26,12 +28,13 @@ const theme = {
         l: 8,
         xl: '10px 13px',
         xxl: '48px 23px',
+        xxxl: '15px 52px',
     },
     gap: {
         s: 10,
-        sl: '',
+        sl: 30,
         l: 40,
-        xl: '',
+        xl: 45,
         xxl: '',
         xxxl: '',
         x4l: 145,
@@ -73,7 +76,10 @@ const theme = {
     fontSize: {
         l: 14,
         xl: 16,
+        xxl: 20,
+        xxll: 38,
         xxxl: 46,
+        x4l: 57,
     },
     fontWeight: {
         s: 400,
@@ -85,7 +91,10 @@ const theme = {
     lineHeight: {
         l: 24,
         xl: 28,
+        xxl: 33,
+        xxll: 56,
         xxxl: 60,
+        x4l: 66,
     },
     letterSpacing: {
         x: -0.015,

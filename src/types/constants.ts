@@ -11,4 +11,11 @@ export enum valuesOfTheSettings {
     ENSOME = 'Ensome',
     HEROES_SECTION_DESCRIPTION = 'HeroesSectionDescription',
     LEARN_MORE = 'Learn more',
+    NEWEST_PLATFORM_START = 'Newest platform start',
+    NEWEST_PLATFORM_MIDDLE = 'Newest platform middle',
+    NEWEST_PLATFORM_END = 'Newest platform end',
+    NEWEST_PLATFORM_DESCRIPTION = 'NewestPlatformDescription',
+    DISCOVER_MORE = 'Discover more',
+    NEW_SOLUTIONS = 'New Solutions',
+    NEW_SOLUTIONS_DESCRIPTION = 'New Solutions Description',
 }

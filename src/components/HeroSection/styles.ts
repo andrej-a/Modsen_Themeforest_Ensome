@@ -38,16 +38,10 @@ export const HeroSectionTitle = styled.h1`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
-`;
 
-export const ColoredWord = styled.span`
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxxl};
-    font-size: ${({ theme: { fontSize } }) => fontSize.xxxl}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.xxxl}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.primary};
+    span {
+        color: ${({ theme: { colors } }) => colors.primary};
+    }
 `;
 
 export const LearnMoreButton = styled.div`

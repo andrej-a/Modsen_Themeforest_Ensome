@@ -7,7 +7,6 @@ import i18n from '@/settings/i18n';
 import { valuesOfTheSettings } from '@/types/constants';
 
 import {
-    ColoredWord,
     HeroSectionContainer,
     HeroSectionContentContainer,
     HeroSectionDescription,
@@ -28,7 +27,7 @@ const HeroSection = () => {
                 <HeroSectionTitleContainer>
                     <HeroSectionTitle>
                         {t(FIND_POWER)}{' '}
-                        <ColoredWord
+                        <span
                             onClick={() =>
                                 i18n.language === 'ru'
                                     ? i18n.changeLanguage('en')
@@ -36,7 +35,7 @@ const HeroSection = () => {
                             }
                         >
                             Ensome
-                        </ColoredWord>
+                        </span>
                     </HeroSectionTitle>
                 </HeroSectionTitleContainer>
                 <HeroSectionDescriptionContainer>
