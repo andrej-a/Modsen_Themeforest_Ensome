@@ -18,4 +18,9 @@ export enum valuesOfTheSettings {
     DISCOVER_MORE = 'Discover more',
     NEW_SOLUTIONS = 'New Solutions',
     NEW_SOLUTIONS_DESCRIPTION = 'New Solutions Description',
+    OVERVIEW_TITLE = 'OverviewTitle',
+    OVERVIEW_DESCRIPTION = 'OverviewDescription',
+    PROJECT_EXECUTED = 'ProjectExecuted',
+    S_CUSTOMERS = 'SatisfiedCustomers',
+    DATA_MANAGEMENT = 'DataManagement',
 }

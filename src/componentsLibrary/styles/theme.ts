@@ -21,7 +21,7 @@ const theme = {
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
-        xxxl: '',
+        xxxl: '120px 0 90px 0',
         x4l: '',
     },
     padding: {
@@ -35,7 +35,7 @@ const theme = {
         sl: 30,
         l: 40,
         xl: 45,
-        xxl: '',
+        xxl: 50,
         xxxl: '',
         x4l: 145,
     },
@@ -79,6 +79,7 @@ const theme = {
         xxl: 20,
         xxll: 38,
         xxxl: 46,
+        x3l: 50,
         x4l: 57,
     },
     fontWeight: {
@@ -95,9 +96,11 @@ const theme = {
         xxll: 56,
         xxxl: 60,
         x4l: 66,
+        x8l: 112,
     },
     letterSpacing: {
         x: -0.015,
+        xs: -0.025,
         s: -0.01,
     },
 };

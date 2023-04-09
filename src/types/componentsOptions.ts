@@ -17,3 +17,8 @@ export type RoundButtonProps = {
     onClick?: () => void;
     children?: React.ReactNode;
 };
+
+export interface IStatisticCard {
+    number: string;
+    description: string;
+}

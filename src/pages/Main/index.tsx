@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { Content, FeatureSection, Header, HeroSection } from '@/components';
+import {
+    Content,
+    FeatureSection,
+    Header,
+    HeroSection,
+    OverviewSection,
+} from '@/components';
 
 import { MainPageContainer } from './styles';
 
@@ -12,6 +18,7 @@ const MainPage = () => {
             </Header>
             <HeroSection />
             <FeatureSection />
+            <OverviewSection />
         </MainPageContainer>
     );
 };
