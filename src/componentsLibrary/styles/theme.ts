@@ -1,9 +1,17 @@
 const theme = {
     top: {
+        xs: 0,
+        l: 50,
         xl: 111,
     },
     right: {
         l: 18,
+    },
+    left: {
+        xs: 0,
+    },
+    zIndex: {
+        l: 5,
     },
     width: {
         l: 30,
@@ -53,6 +61,7 @@ const theme = {
         lightGrey: '#D7D7D7',
         background: '#F1F6FA',
         red: '#C14040',
+        transparentBlue: '#0c44cc1a',
     },
     shadows: {
         shadowButton: '0px 12px 30px #185CFF30',

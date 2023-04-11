@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   }
   #root {
     overflow: auto;
+
     scrollbar-gutter: stable;
     display: flex;
     flex-direction: column;

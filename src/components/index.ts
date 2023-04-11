@@ -8,5 +8,7 @@ export { default as Content } from './Header/Content';
 export { default as HeroSection } from './HeroSection';
 export { default as ImageComponent } from './ImageComponent';
 export { default as LogoComponent } from './Logo';
+export { default as ModalWindow } from './ModalWindow';
 export { default as OverviewSection } from './OverviewSection';
 export { default as StatisticCard } from './StatisticCard';
+export { default as VideoPlayerWindow } from './VideoPlayerWindow';

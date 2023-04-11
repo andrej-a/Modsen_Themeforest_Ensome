@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import HeaderLogo from '@/assets/images/logo/headerLogo.png';
 import HeaderLogoWhite from '@/assets/images/logo/headerLogoWhite.png';
-import { LogoComponent, WatchVideoButton } from '@/components/';
+import { LogoComponent } from '@/components/';
 import { HeaderContentProps } from '@/types/componentsOptions';
 import { valuesOfTheSettings } from '@/types/constants';
 
+import VideoPlayerHandler from '../VideoPlayerHandler';
 import { ContentContainer, MenuContainer, MenuItem } from './styles';
 
 const { HOME, SOLUTIONS, PAGES, ELEMENTS, BLOG, CONTACT, WATCH_THE_DEMO } =
@@ -27,7 +28,7 @@ const Content = ({ type }: HeaderContentProps) => {
                 <MenuItem type={type}>{t(BLOG)}</MenuItem>
                 <MenuItem type={type}>{t(CONTACT)}</MenuItem>
             </MenuContainer>
-            <WatchVideoButton type={type}>{t(WATCH_THE_DEMO)}</WatchVideoButton>
+            <VideoPlayerHandler type={type} />
         </ContentContainer>
     );
 };

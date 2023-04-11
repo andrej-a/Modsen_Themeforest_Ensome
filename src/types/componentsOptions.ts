@@ -3,7 +3,7 @@ export type HeaderProps = {
     children?: React.ReactNode;
 };
 export type WatchVideoButtonProps = {
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
     children?: React.ReactNode;
     type?: 'primary' | 'secondary';
 };
@@ -22,3 +22,8 @@ export interface IStatisticCard {
     number: string;
     description: string;
 }
+
+export type ModalWindowProps = {
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+    children?: React.ReactNode;
+};
