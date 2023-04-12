@@ -33,4 +33,5 @@ export enum valuesOfTheSettings {
     ACCESS_CONTROL_DESCRIPTION = 'AccessControlDescription',
     DATA_ANALYTICS_TITLE = 'DataAnalyticsTitle',
     DATA_ANALYTICS_DESCRIPTION = 'DataAnalyticsDescription',
+    TESTIMONIALS = 'Testimonials',
 }

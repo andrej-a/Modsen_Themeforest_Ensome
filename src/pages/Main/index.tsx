@@ -7,6 +7,7 @@ import {
     Header,
     HeroSection,
     OverviewSection,
+    TestimonialsSection,
 } from '@/components';
 
 import { MainPageContainer } from './styles';
@@ -21,6 +22,7 @@ const MainPage = () => {
             <FeatureSection />
             <OverviewSection />
             <BenefitsSection />
+            <TestimonialsSection />
         </MainPageContainer>
     );
 };

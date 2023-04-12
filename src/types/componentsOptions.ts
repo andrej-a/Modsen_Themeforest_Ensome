@@ -27,3 +27,8 @@ export type ModalWindowProps = {
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;
     children?: React.ReactNode;
 };
+
+export type SliderProps = {
+    title: string;
+    children: React.ReactNode;
+};

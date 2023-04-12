@@ -38,13 +38,17 @@ const theme = {
     },
     padding: {
         l: 8,
+        lx: '25px 45px',
         xl: '10px 13px',
         xxl: '48px 23px',
         xxxl: '15px 52px',
         x4l: '30px 25px 25px 30px',
+        x5l: 35,
     },
     gap: {
         s: 10,
+        sx: 15,
+        ssl: 25,
         sl: 30,
         l: 40,
         xl: 45,
@@ -81,6 +85,7 @@ const theme = {
     },
     borderRadius: {
         l: 6,
+        xl: 20,
         full: 100,
     },
     fontFamily: {
@@ -116,6 +121,10 @@ const theme = {
         x: -0.015,
         xs: -0.025,
         s: -0.01,
+    },
+    opacity: {
+        s: 0.3,
+        l: 1,
     },
 };
 
