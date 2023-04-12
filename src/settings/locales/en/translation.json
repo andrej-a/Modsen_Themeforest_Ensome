@@ -21,6 +21,16 @@
     "OverviewDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt tempor quam, non mollis quam finibus nec.",
     "ProjectExecuted": "Project executed",
     "SatisfiedCustomers": "Satisfied customers",
-    "DataManagement": "Data management"
+    "DataManagement": "Data management",
+    "BenefitsTitle": "The benefits of Ensome",
+    "BenefitsDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    "MachineLearningTitle": "Machine learning",
+    "MachineLearningDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.",
+    "EmbedAnalyticsTitle": "Embed analytics",
+    "EmbedAnalyticsDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.",
+    "AccessControlTitle": "Access control",
+    "AccessControlDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.",
+    "DataAnalyticsTitle": "Data analytics",
+    "DataAnalyticsDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo."
 
 }

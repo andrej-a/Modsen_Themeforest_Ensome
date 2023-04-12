@@ -18,6 +18,7 @@ const theme = {
         xll: 50,
         xl: 60,
         xxl: 100,
+        x2l: 255,
         xxxl: 540,
         x4l: 1100,
         x5l: 1920,
@@ -26,6 +27,9 @@ const theme = {
         xxl: 100,
     },
     margin: {
+        x: 20,
+        lx: 30,
+        lxx: 55,
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
@@ -37,6 +41,7 @@ const theme = {
         xl: '10px 13px',
         xxl: '48px 23px',
         xxxl: '15px 52px',
+        x4l: '30px 25px 25px 30px',
     },
     gap: {
         s: 10,

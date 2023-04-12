@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+    BenefitsSection,
     Content,
     FeatureSection,
     Header,
@@ -19,6 +20,7 @@ const MainPage = () => {
             <HeroSection />
             <FeatureSection />
             <OverviewSection />
+            <BenefitsSection />
         </MainPageContainer>
     );
 };
