@@ -32,3 +32,9 @@ export type SliderProps = {
     title: string;
     children: React.ReactNode;
 };
+
+export type PricingCardProps = {
+    kindOfThePlan: string;
+    cost: string;
+    listOfServices: string[];
+};

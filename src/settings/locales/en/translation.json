@@ -32,6 +32,24 @@
     "AccessControlDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.",
     "DataAnalyticsTitle": "Data analytics",
     "DataAnalyticsDescription": "At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.",
-    "Testimonials": "Testimonials"
-
+    "Testimonials": "Testimonials",
+    "OurPricing": "Our pricing",
+    "FreeTrial": "Free trial",
+    "Lite": "Lite",
+    "Basic": "Basic",
+    "ForEnterprises": "For enterprises",
+    "ForSmallTeams": "For small teams - 5 users",
+    "CommunitySupport": "Community support",
+    "ForMiddleTeams": "For small teams - 15 users",
+    "IndividualSupport": "Individual support",
+    "IndividualData": "Individual data - 60GB",
+    "ForBigTeams": "For big teams - 30 users",
+    "IndividualData120": "Individual data - 120GB",
+    "AdvancedPermissions": "Advanced permissions",
+    "UnlimitedTeams": "Unlimited team members",
+    "UnlimitedData": "Unlimited Individual data",
+    "DataHistory": "Data history",
+    "AuditLog": "Audit log",
+    "AllFunctions": "All functions included",
+    "ChoosePlan": "Choose plan"
 }

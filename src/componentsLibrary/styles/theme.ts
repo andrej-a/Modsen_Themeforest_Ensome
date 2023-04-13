@@ -41,7 +41,7 @@ const theme = {
         lx: '25px 45px',
         xl: '10px 13px',
         xxl: '48px 23px',
-        xxxl: '15px 52px',
+        xxxl: '10px 52px',
         x4l: '30px 25px 25px 30px',
         x5l: 35,
     },
@@ -81,6 +81,7 @@ const theme = {
     },
     border: {
         none: 0,
+        s: '1px solid #185CFF',
         l: '1px solid #FFFFFF66',
     },
     borderRadius: {

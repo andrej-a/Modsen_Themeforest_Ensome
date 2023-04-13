@@ -32,6 +32,7 @@ const OverviewSection = () => {
                             ({ amountOfWorkeDone, descriptionOfWorke }) => {
                                 return (
                                     <StatisticCard
+                                        key={amountOfWorkeDone}
                                         number={amountOfWorkeDone}
                                         description={t(descriptionOfWorke)}
                                     />

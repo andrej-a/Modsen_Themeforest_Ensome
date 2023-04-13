@@ -33,6 +33,25 @@
     "AccessControlDescription": "Определение уровня контроля доступа и защиты данных",
     "DataAnalyticsTitle": "Аналитика данных",
     "DataAnalyticsDescription": "Сбор, обработка и анализ информации для извлечения полезных знаний и принятия решений",
-    "Testimonials": "Отзывы"
+    "Testimonials": "Отзывы",
+    "OurPricing": "Наши цены",
+    "FreeTrial": "Пробная версия",
+    "Lite": "Лайт",
+    "Basic": "Базовый",
+    "ForEnterprises": "Для предприятий",
+    "ForSmallTeams": "Для небольших команд - 5 пользователей",
+    "CommunitySupport": "Поддержка сообщества",
+    "ForMiddleTeams": "Для средних команд - 15 пользователей",
+    "IndividualSupport": "Индивидуальная поддержка",
+    "IndividualData": "Индивидуальные данные - 60 ГБ",
+    "ForBigTeams": "Для больших команд - 30 пользователей",
+    "IndividualData120": "Индивидуальные данные - 120 ГБ",
+    "AdvancedPermissions": "Расширенные разрешения",
+    "UnlimitedTeams": "Неограниченное количество участников команды",
+    "UnlimitedData": "Неограниченный объем индивидуальных данных",
+    "DataHistory": "История данных",
+    "AuditLog": "Журнал аудита",
+    "AllFunctions": "Все функции включены",
+    "ChoosePlan": "Выбрать"
 
 }

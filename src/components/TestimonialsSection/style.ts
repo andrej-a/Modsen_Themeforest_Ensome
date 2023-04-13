@@ -25,8 +25,9 @@ export const TestimonialCard = styled.div<{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: ${({ theme: { gap } }) => gap.ssl}px;
+    margin-right: 30px;
     padding: ${({ theme: { padding } }) => padding.x5l}px;
+    box-shadow: ${({ theme: { shadows } }) => shadows.shadowCard3};
 `;
 
 export const TestimonialCardHeader = styled.div`

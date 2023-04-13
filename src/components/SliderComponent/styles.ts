@@ -71,6 +71,5 @@ export const SliderCarousel = styled.div<{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: ${({ theme: { gap } }) => gap.sl}px;
     transform: ${({ params: { index } }) => css`translateX(${index * 1100}px)`};
 `;

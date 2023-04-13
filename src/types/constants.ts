@@ -34,4 +34,27 @@ export enum valuesOfTheSettings {
     DATA_ANALYTICS_TITLE = 'DataAnalyticsTitle',
     DATA_ANALYTICS_DESCRIPTION = 'DataAnalyticsDescription',
     TESTIMONIALS = 'Testimonials',
+    OUR_PRICING = 'OurPricing',
+    FREE_TRIAL = 'FreeTrial',
+    LITE = 'Lite',
+    BASIC = 'Basic',
+    FOR_ENTERPRISES = 'ForEnterprises',
+    FOR_SMALL_TEAMS = 'ForSmallTeams',
+    COMUNITY_SUPPORT = 'CommunitySupport',
+    FOR_MIDDLE_TEAMS = 'ForMiddleTeams',
+    INDIVIDUAL_SUPPORT = 'IndividualSupport',
+    INDIVIDUAL_DATA = 'IndividualData',
+    FOR_BIG_TEAMS = 'ForBigTeams',
+    INDIVIDUAL_DATA120 = 'IndividualData120',
+    ADVANCED_PERMISSIONS = 'AdvancedPermissions',
+    UNLIMITED_TEAMS = 'UnlimitedTeams',
+    UNLIMITED_DATA = 'UnlimitedData',
+    DATA_HISTORY = 'DataHistory',
+    AUDIT_LOG = 'AuditLog',
+    ALL_FUNCTIONS = 'AllFunctions',
+    CHOOSE_PLAN = 'ChoosePlan',
+}
+
+export enum numberEnums {
+    MONTH_ON_THE_YEAR = 12,
 }
