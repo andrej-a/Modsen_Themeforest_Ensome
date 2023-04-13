@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ModalWindowOverlay = styled.div`
-    position: absolute;
+    position: fixed;
     z-index: ${({ theme: { zIndex } }) => zIndex.l};
     top: ${({ theme: { top } }) => top.xs};
     left: ${({ theme: { left } }) => left.xs};

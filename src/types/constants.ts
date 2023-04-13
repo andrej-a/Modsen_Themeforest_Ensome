@@ -58,3 +58,8 @@ export enum valuesOfTheSettings {
 export enum numberEnums {
     MONTH_ON_THE_YEAR = 12,
 }
+
+export const envConstants = {
+    PAYPAL_ID: process.env.PAYPAL_ID,
+    PAYPAL_SECRET: process.env.PAYPAL_SECRET,
+};

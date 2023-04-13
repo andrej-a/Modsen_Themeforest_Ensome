@@ -38,3 +38,7 @@ export type PricingCardProps = {
     cost: string;
     listOfServices: string[];
 };
+
+export type PaymentModalWindowProps = {
+    cost: string;
+};

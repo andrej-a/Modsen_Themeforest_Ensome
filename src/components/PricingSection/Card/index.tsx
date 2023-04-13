@@ -3,11 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 import Vector from '@/assets/images/logo/vector.png';
 import VectorLight from '@/assets/images/logo/vectorLight.png';
-import { DefaultButton, ImageComponent } from '@/components';
+import { DefaultButton, ImageComponent, ModalWindow } from '@/components';
 import { PricingCardProps } from '@/types/componentsOptions';
 import { valuesOfTheSettings } from '@/types/constants';
 import { getSummAroundYear } from '@/utils/getSummAroundYear';
 
+import PaymentModalWindow from '../PaymentModalWindow';
 import {
     CardContainer,
     ChoosePlanButtonContainer,
@@ -17,7 +18,7 @@ import {
     ServiceItem,
     TogglersContainer,
     YearToggler,
-} from './style';
+} from './styles';
 
 const { CHOOSE_PLAN } = valuesOfTheSettings;
 const PricingCard = ({
@@ -29,6 +30,12 @@ const PricingCard = ({
     const [currentCost, setCost] = useState(cost);
     const [period, setPeriod] = useState('Mo');
     const [isCardHover, setIsCardHover] = useState(false);
+    const [isShowPaymentModal, setIsShowPaymentModal] = useState(false);
+
+    const onHandlePaymentModal = (status: boolean) => () => {
+        setIsShowPaymentModal(status);
+        setIsCardHover(status);
+    };
 
     const onHandlePeriod = (period: string) => () => {
         setPeriod(period);
@@ -39,15 +46,15 @@ const PricingCard = ({
         }
     };
 
-    const onHandleHover = () => {
-        setIsCardHover(!isCardHover);
+    const onHandleHover = (status: boolean) => () => {
+        setIsCardHover(status);
     };
 
     return (
         <CardContainer
             isCardHover={isCardHover}
-            onMouseLeave={onHandleHover}
-            onMouseEnter={onHandleHover}
+            onMouseLeave={onHandleHover(false)}
+            onMouseEnter={onHandleHover(true)}
         >
             <KindOfThePlan isCardHover={isCardHover}>
                 {t(kindOfThePlan)}
@@ -71,7 +78,10 @@ const PricingCard = ({
                     </YearToggler>
                 </TogglersContainer>
             </CostAndTogglerContainer>
-            <ChoosePlanButtonContainer isCardHover={isCardHover}>
+            <ChoosePlanButtonContainer
+                onClick={onHandlePaymentModal(true)}
+                isCardHover={isCardHover}
+            >
                 <DefaultButton>{t(CHOOSE_PLAN)}</DefaultButton>
             </ChoosePlanButtonContainer>
             {listOfServices.map(service => {
@@ -84,6 +94,11 @@ const PricingCard = ({
                     </ServiceItem>
                 );
             })}
+            {isShowPaymentModal && (
+                <ModalWindow onClick={onHandlePaymentModal(false)}>
+                    <PaymentModalWindow cost={currentCost} />
+                </ModalWindow>
+            )}
         </CardContainer>
     );
 };

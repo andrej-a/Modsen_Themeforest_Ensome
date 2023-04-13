@@ -10,7 +10,7 @@ import {
     PricingSectionContainer,
     PricingSectionContent,
     PricingSectionHeader,
-} from './style';
+} from './styles';
 
 const { OUR_PRICING } = valuesOfTheSettings;
 const PricingSection = () => {
