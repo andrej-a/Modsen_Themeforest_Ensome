@@ -10,6 +10,7 @@ export { default as HeroSection } from './HeroSection';
 export { default as ImageComponent } from './ImageComponent';
 export { default as LogoComponent } from './Logo';
 export { default as ModalWindow } from './ModalWindow';
+export { default as OurBlogSection } from './OurBlogSection';
 export { default as OverviewSection } from './OverviewSection';
 export { default as PricingSection } from './PricingSection';
 export { default as SliderComponent } from './SliderComponent';

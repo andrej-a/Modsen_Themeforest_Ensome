@@ -53,6 +53,15 @@ export enum valuesOfTheSettings {
     AUDIT_LOG = 'AuditLog',
     ALL_FUNCTIONS = 'AllFunctions',
     CHOOSE_PLAN = 'ChoosePlan',
+    PUBLISH_DATE = 'PublishDate',
+    SOFTWARE_BLOG_TITLE = 'SowtvareBlogTitle',
+    FIRST_CONTENT_PART = 'FirstContentPart',
+    SEPARATE_PARAGRAPH = 'SeparateParagraph',
+    SECOND_CONTENT_PART = 'SecondContentPart',
+    VIEWS = 'Views',
+    SHARE = 'Share',
+    TAGS = 'Tags',
+    READ_MORE = 'ReadMore',
 }
 
 export enum numberEnums {

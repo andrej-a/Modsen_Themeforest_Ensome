@@ -6,6 +6,7 @@ import {
     FeatureSection,
     Header,
     HeroSection,
+    OurBlogSection,
     OverviewSection,
     PricingSection,
     TestimonialsSection,
@@ -25,6 +26,7 @@ const MainPage = () => {
             <BenefitsSection />
             <TestimonialsSection />
             <PricingSection />
+            <OurBlogSection />
         </MainPageContainer>
     );
 };
