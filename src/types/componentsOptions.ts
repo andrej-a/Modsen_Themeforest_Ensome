@@ -1,3 +1,5 @@
+import { PaymentCardProps } from '@/components/PricingSection';
+
 export type HeaderProps = {
     background?: string;
     children?: React.ReactNode;
@@ -37,6 +39,8 @@ export type PricingCardProps = {
     kindOfThePlan: string;
     cost: string;
     listOfServices: string[];
+    onHandlePlan: (plan: PaymentCardProps) => () => void;
+    isPaymentCard: boolean;
 };
 
 export type PaymentModalWindowProps = {

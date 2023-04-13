@@ -7,6 +7,7 @@ import { DefaultButton, ImageComponent, ModalWindow } from '@/components';
 import { PricingCardProps } from '@/types/componentsOptions';
 import { valuesOfTheSettings } from '@/types/constants';
 import { getSummAroundYear } from '@/utils/getSummAroundYear';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 
 import PaymentModalWindow from '../PaymentModalWindow';
 import {
@@ -22,20 +23,16 @@ import {
 
 const { CHOOSE_PLAN } = valuesOfTheSettings;
 const PricingCard = ({
+    isPaymentCard,
     kindOfThePlan,
     cost,
     listOfServices,
+    onHandlePlan,
 }: PricingCardProps) => {
     const { t } = useTranslation();
     const [currentCost, setCost] = useState(cost);
     const [period, setPeriod] = useState('Mo');
     const [isCardHover, setIsCardHover] = useState(false);
-    const [isShowPaymentModal, setIsShowPaymentModal] = useState(false);
-
-    const onHandlePaymentModal = (status: boolean) => () => {
-        setIsShowPaymentModal(status);
-        setIsCardHover(status);
-    };
 
     const onHandlePeriod = (period: string) => () => {
         setPeriod(period);
@@ -45,7 +42,6 @@ const PricingCard = ({
             setCost(`${getSummAroundYear(currentCost)}`);
         }
     };
-
     const onHandleHover = (status: boolean) => () => {
         setIsCardHover(status);
     };
@@ -61,28 +57,46 @@ const PricingCard = ({
             </KindOfThePlan>
             <CostAndTogglerContainer isCardHover={isCardHover}>
                 ${currentCost}
-                <TogglersContainer>
-                    <MonthToggler
-                        isCardHover={isCardHover}
-                        period={period}
-                        onClick={onHandlePeriod('Mo')}
-                    >
-                        Mo
-                    </MonthToggler>
-                    <YearToggler
-                        isCardHover={isCardHover}
-                        period={period}
-                        onClick={onHandlePeriod('Yr')}
-                    >
-                        Yr
-                    </YearToggler>
-                </TogglersContainer>
+                {isPaymentCard ? null : (
+                    <TogglersContainer>
+                        <MonthToggler
+                            isCardHover={isCardHover}
+                            period={period}
+                            onClick={onHandlePeriod('Mo')}
+                        >
+                            Mo
+                        </MonthToggler>
+                        <YearToggler
+                            isCardHover={isCardHover}
+                            period={period}
+                            onClick={onHandlePeriod('Yr')}
+                        >
+                            Yr
+                        </YearToggler>
+                    </TogglersContainer>
+                )}
             </CostAndTogglerContainer>
             <ChoosePlanButtonContainer
-                onClick={onHandlePaymentModal(true)}
+                onClick={onHandlePlan({ kindOfThePlan, cost: currentCost })}
                 isCardHover={isCardHover}
             >
-                <DefaultButton>{t(CHOOSE_PLAN)}</DefaultButton>
+                {isPaymentCard ? (
+                    <PayPalButtons
+                        createOrder={(data, actions) => {
+                            return actions.order.create({
+                                purchase_units: [
+                                    {
+                                        amount: {
+                                            value: `${+cost ? cost : '0.01'}`,
+                                        },
+                                    },
+                                ],
+                            });
+                        }}
+                    />
+                ) : (
+                    <DefaultButton>{t(CHOOSE_PLAN)}</DefaultButton>
+                )}
             </ChoosePlanButtonContainer>
             {listOfServices.map(service => {
                 return (
@@ -94,11 +108,6 @@ const PricingCard = ({
                     </ServiceItem>
                 );
             })}
-            {isShowPaymentModal && (
-                <ModalWindow onClick={onHandlePaymentModal(false)}>
-                    <PaymentModalWindow cost={currentCost} />
-                </ModalWindow>
-            )}
         </CardContainer>
     );
 };
