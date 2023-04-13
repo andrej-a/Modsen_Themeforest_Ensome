@@ -15,17 +15,14 @@ export const TestimonialCard = styled.div<{
     sizeOfTheScreen: number;
     countCardsOnThePage: number;
 }>`
-    min-width: ${({ sizeOfTheScreen, countCardsOnThePage }) =>
-        css`calc(${sizeOfTheScreen}px / ${countCardsOnThePage})`};
-    max-width: ${({ sizeOfTheScreen, countCardsOnThePage }) =>
-        css`calc(${sizeOfTheScreen}px / ${countCardsOnThePage})`};
+    min-width: ${({ theme: { width } }) => width.x1l}px;
+    max-width: ${({ theme: { width } }) => width.x1l}px;
     height: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
     padding: ${({ theme: { padding } }) => padding.x5l}px;
     box-shadow: ${({ theme: { shadows } }) => shadows.shadowCard3};
 `;

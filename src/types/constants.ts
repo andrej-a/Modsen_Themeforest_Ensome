@@ -62,6 +62,7 @@ export enum valuesOfTheSettings {
     SHARE = 'Share',
     TAGS = 'Tags',
     READ_MORE = 'ReadMore',
+    OUR_BLOG = 'OurBlog',
 }
 
 export enum numberEnums {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ReadMoreArrow from '@/assets/images/logo/readmore.png';
@@ -45,7 +45,8 @@ type BlogCardProps = {
     };
 };
 const { READ_MORE } = valuesOfTheSettings;
-const BlogCard = ({ settings, content }: BlogCardProps) => {
+
+const BlogCard = memo(({ settings, content }: BlogCardProps) => {
     const { type } = settings;
     const { image, publishDate, blogTitle, firstContentPart, tagsArray } =
         content;
@@ -75,6 +76,6 @@ const BlogCard = ({ settings, content }: BlogCardProps) => {
             </BlogCardContent>
         </BlogCardContainer>
     );
-};
+});
 
 export default BlogCard;

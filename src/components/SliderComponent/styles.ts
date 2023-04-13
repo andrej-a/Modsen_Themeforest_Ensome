@@ -67,9 +67,10 @@ export const SliderCarousel = styled.div<{
     params: { index: number; childrensLength: number };
 }>`
     width: ${({ params: { childrensLength } }) =>
-        css`calc(1100px / 3 * ${childrensLength})`};
+        css`calc(1140px / 3 * ${childrensLength})`};
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    transform: ${({ params: { index } }) => css`translateX(${index * 1100}px)`};
+    gap: ${({ theme: { gap } }) => gap.sl}px;
+    transform: ${({ params: { index } }) => css`translateX(${index * 1140}px)`};
 `;

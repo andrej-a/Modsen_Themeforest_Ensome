@@ -19,7 +19,7 @@ const { TESTIMONIALS } = valuesOfTheSettings;
 
 const TestimonialsSection = () => {
     const [countCardsOnThePage, setCountCardsOnThePage] = useState(3);
-    const [sizeOfTheScreen, setSizeOfTheScreen] = useState(1015);
+    const [sizeOfTheScreen, setSizeOfTheScreen] = useState(1140);
     return (
         <TestimonialsSectionContainer>
             <SliderComponent title={TESTIMONIALS}>
