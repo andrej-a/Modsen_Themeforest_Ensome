@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
     BenefitsSection,
+    ContactUsSection,
     Content,
     FeatureSection,
     Header,
@@ -27,6 +28,7 @@ const MainPage = () => {
             <TestimonialsSection />
             <PricingSection />
             <OurBlogSection />
+            <ContactUsSection />
         </MainPageContainer>
     );
 };

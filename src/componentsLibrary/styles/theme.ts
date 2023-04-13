@@ -41,6 +41,7 @@ const theme = {
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
+        x2l: '100px 0',
         xxxl: '120px 0 90px 0',
         x4l: '30px 0',
     },

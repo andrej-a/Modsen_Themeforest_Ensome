@@ -63,6 +63,9 @@ export enum valuesOfTheSettings {
     TAGS = 'Tags',
     READ_MORE = 'ReadMore',
     OUR_BLOG = 'OurBlog',
+    IS_NEED_HELP = 'IsNeedHelp',
+    CONTACT_US_DESCRIPTION = 'ContactUsDescription',
+    CONTACT_US = 'ContactUs',
 }
 
 export enum numberEnums {
