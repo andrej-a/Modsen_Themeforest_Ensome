@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { AlertContainer } from 'alertor-library';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -10,7 +11,7 @@ import { theme } from './componentsLibrary';
 import GlobalStyle from './globalStyles';
 import { envConstants } from './types/constants';
 
-const { PAYPAL_ID, PAYPAL_SECRET } = envConstants;
+const { PAYPAL_ID } = envConstants;
 
 const Root = () => {
     return (
@@ -23,6 +24,7 @@ const Root = () => {
                         }}
                     >
                         <App />
+                        <AlertContainer />
                         <GlobalStyle />
                     </PayPalScriptProvider>
                 </ThemeProvider>

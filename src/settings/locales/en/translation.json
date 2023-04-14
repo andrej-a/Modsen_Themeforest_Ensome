@@ -64,5 +64,11 @@
     "OurBlog": "Our blog",
     "IsNeedHelp": "Do you need help?",
     "ContactUsDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
-    "ContactUs": "Contact Us"
+    "ContactUs": "Contact Us",
+    "SubscribeTitle": "Subscribe to our newsletter",
+    "SubscribeDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "InputError": "Please enter your email",
+    "CorrectEmailError": "Please enter a valid email address",
+    "SubscribeEmailPlaceholder": "Your email",
+    "SubscribeButtonValue": "Send"
 }

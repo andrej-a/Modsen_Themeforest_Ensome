@@ -5,6 +5,7 @@ const theme = {
         xl: 111,
     },
     right: {
+        xs: 0,
         l: 18,
     },
     left: {
@@ -38,6 +39,7 @@ const theme = {
         x: 20,
         lx: 30,
         lxx: 55,
+        lxxx: 80,
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
@@ -47,7 +49,9 @@ const theme = {
     },
     padding: {
         s: '4px 10px',
+        sx: '15px 0 15px 25px',
         x: 5,
+        xs: '15px 20px',
         l: 8,
         lxx: '35px 20px',
         lxxx: '30px 35px 50px 35px',
@@ -69,10 +73,12 @@ const theme = {
         xl: 45,
         xxl: 50,
         xxxl: '',
+        x3l: 80,
         x4l: 145,
     },
     colors: {
         primary: '#185CFF',
+        beige: '#eceff2',
         primaryLight: '#467DFF',
         secondary: '#002B4E',
         tertiary: '#F0F9FF',
@@ -83,8 +89,10 @@ const theme = {
         white: '#FFF',
         grey: '#9497A1',
         lightGrey: '#D7D7D7',
+        lightBlue: '#c9dcec',
         background: '#F1F6FA',
         red: '#C14040',
+        errorRed: '#F6E2E2',
         transparentBlue: '#0c44cc1a',
     },
     shadows: {

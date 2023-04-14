@@ -46,3 +46,7 @@ export type PricingCardProps = {
 export type PaymentModalWindowProps = {
     cost: string;
 };
+
+export type SubscribeSectionProps = {
+    type: string;
+};

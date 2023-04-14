@@ -69,7 +69,7 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
                     </ReadMore>
                     <TagsContainer type={type}>
                         {tagsArray.map(tag => {
-                            return <Tag>{tag}</Tag>;
+                            return <Tag key={tag}>{tag}</Tag>;
                         })}
                     </TagsContainer>
                 </DescriptionContainer>

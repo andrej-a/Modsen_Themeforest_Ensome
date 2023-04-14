@@ -10,6 +10,7 @@ import {
     OurBlogSection,
     OverviewSection,
     PricingSection,
+    SubscribeSection,
     TestimonialsSection,
 } from '@/components';
 
@@ -29,6 +30,7 @@ const MainPage = () => {
             <PricingSection />
             <OurBlogSection />
             <ContactUsSection />
+            <SubscribeSection type="dark" />
         </MainPageContainer>
     );
 };

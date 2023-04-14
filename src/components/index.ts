@@ -16,5 +16,6 @@ export { default as OverviewSection } from './OverviewSection';
 export { default as PricingSection } from './PricingSection';
 export { default as SliderComponent } from './SliderComponent';
 export { default as StatisticCard } from './StatisticCard';
+export { default as SubscribeSection } from './SubscribeToUsSection';
 export { default as TestimonialsSection } from './TestimonialsSection';
 export { default as VideoPlayerWindow } from './VideoPlayerWindow';

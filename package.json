@@ -20,8 +20,11 @@
     "author": "Andrej Amelyanovich <amelyanovich.andrej@mail.ru>",
     "license": "MIT",
     "dependencies": {
+        "@emailjs/browser": "^3.11.0",
         "@paypal/paypal-js": "^5.1.6",
         "@paypal/react-paypal-js": "^7.8.3",
+        "alertor-library": "^1.0.15",
+        "emailjs": "^4.0.1",
         "i18next": "^22.4.14",
         "i18next-browser-languagedetector": "^7.0.1",
         "i18next-http-backend": "^2.2.0",

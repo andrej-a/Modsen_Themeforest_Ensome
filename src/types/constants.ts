@@ -66,6 +66,12 @@ export enum valuesOfTheSettings {
     IS_NEED_HELP = 'IsNeedHelp',
     CONTACT_US_DESCRIPTION = 'ContactUsDescription',
     CONTACT_US = 'ContactUs',
+    SUBSCRIBE_US = 'SubscribeTitle',
+    SUBSCRIBE_DESCRIPTION = 'SubscribeDescription',
+    INPUT_ERROR = 'InputError',
+    CORRECT_EMAIL_ERROR = 'CorrectEmailError',
+    SUBSCRIBE_PLACEHOLDER = 'SubscribeEmailPlaceholder',
+    SUBSCRIBE_BUTTON_VALUE = 'SubscribeButtonValue',
 }
 
 export enum numberEnums {
@@ -75,4 +81,7 @@ export enum numberEnums {
 export const envConstants = {
     PAYPAL_ID: process.env.PAYPAL_ID,
     PAYPAL_SECRET: process.env.PAYPAL_SECRET,
+    SERVICE_ID: process.env.SERVICE_ID,
+    TEMPLATE_ID: process.env.TEMPLATE_ID,
+    USER_ID: process.env.USER_ID,
 };
