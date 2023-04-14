@@ -33,12 +33,14 @@ const theme = {
     },
     height: {
         xxl: 100,
+        x1l: 360,
         xxxl: 525,
     },
     margin: {
         xs: 15,
         x: 20,
         lx: 30,
+        l1x: 40,
         lxx: 55,
         lxxx: 80,
         m: 85,

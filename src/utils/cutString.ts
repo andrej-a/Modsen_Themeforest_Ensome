@@ -5,3 +5,7 @@ export const cutString = (str: string): string => {
     }
     return stringWithoutTags;
 };
+
+export const capitalize = (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};

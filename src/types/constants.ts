@@ -83,6 +83,7 @@ export enum valuesOfTheSettings {
     SERVICE = 'Service',
     CONTACT_INFO = 'ContactInfo',
     FOOTER_DESCRIPTION = 'FooterDescription',
+    BLOG_DESCRIPTION = 'BlogDescription',
 }
 
 export enum numberEnums {

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
 
 import FooterLogoWhite from '@/assets/images/logo/footerLogoWhite.png';
 import { ImageComponent } from '@/components';
+import links from '@/config/links';
 import { UIConstants, valuesOfTheSettings } from '@/types/constants';
 
 import contactInfo from './config/contactInfo';
@@ -19,6 +21,7 @@ import {
     FooterContainer,
     FooterContent,
     Link,
+    PageLink,
     Policy,
     QuickLinkContainer,
     ServiceContainer,
@@ -54,8 +57,12 @@ const DarkFooter = () => {
                 </ContentDescription>
                 <QuickLinkContainer>
                     <Title>{t(QUICK_LINK)}</Title>
-                    {quickLinks.map(link => {
-                        return <p>{t(link)}</p>;
+                    {links.map(({ id, link, title }) => {
+                        return (
+                            <NavLink key={id} to={link}>
+                                <PageLink>{t(title)}</PageLink>
+                            </NavLink>
+                        );
                     })}
                 </QuickLinkContainer>
                 <ServiceContainer>

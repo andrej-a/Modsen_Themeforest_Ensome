@@ -67,6 +67,18 @@ export const QuickLinkContainer = styled.div`
     align-items: flex-start;
     text-align: left;
     gap: ${({ theme: { gap } }) => gap.sx}px;
+
+    a {
+        font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
+        font-style: normal;
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+        color: ${({ theme: { colors } }) => colors.grey};
+        text-decoration: none;
+        cursor: pointer;
+    }
 `;
 
 export const ServiceContainer = styled.div`
@@ -125,3 +137,5 @@ export const Policy = styled.div`
 `;
 
 export const Text = styled.p``;
+
+export const PageLink = styled.p``;

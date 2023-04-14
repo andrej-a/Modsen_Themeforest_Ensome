@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import { AlertContainer } from 'alertor-library';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 import './settings/i18n';
 import { App } from './components/index';
@@ -17,17 +18,19 @@ const Root = () => {
     return (
         <>
             <Suspense>
-                <ThemeProvider theme={theme}>
-                    <PayPalScriptProvider
-                        options={{
-                            'client-id': PAYPAL_ID!,
-                        }}
-                    >
-                        <App />
-                        <AlertContainer />
-                        <GlobalStyle />
-                    </PayPalScriptProvider>
-                </ThemeProvider>
+                <Router>
+                    <ThemeProvider theme={theme}>
+                        <PayPalScriptProvider
+                            options={{
+                                'client-id': PAYPAL_ID!,
+                            }}
+                        >
+                            <App />
+                            <AlertContainer />
+                            <GlobalStyle />
+                        </PayPalScriptProvider>
+                    </ThemeProvider>
+                </Router>
             </Suspense>
         </>
     );

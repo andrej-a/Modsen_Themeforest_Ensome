@@ -1,5 +1,7 @@
 export { default as App } from './App';
 export { default as BenefitsSection } from './BenefitsSection';
+export { default as BlogPagePreview } from './BlogPagePreview';
+export { default as BreadCrumbs } from './BreadCrumbs';
 export { default as DefaultButton } from './Buttons/DefaultButton';
 export { default as RoundButton } from './Buttons/RoundButton';
 export { default as WatchVideoButton } from './Buttons/WatchVideoButton';

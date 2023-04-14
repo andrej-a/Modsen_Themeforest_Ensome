@@ -1,13 +1,21 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import MainPage from '@/pages/Main';
+import links from '@/config/links';
 
+import pages from './config/pages';
 import { ApplicationContainer } from './styles';
 
 const App = () => {
     return (
         <ApplicationContainer>
-            <MainPage />
+            <Routes>
+                {links.map(({ link, id }, index) => {
+                    return (
+                        <Route key={id} path={link} element={pages[index]} />
+                    );
+                })}
+            </Routes>
         </ApplicationContainer>
     );
 };
