@@ -4,6 +4,7 @@ import {
     BenefitsSection,
     ContactUsSection,
     Content,
+    DarkFooter,
     FeatureSection,
     Header,
     HeroSection,
@@ -31,6 +32,7 @@ const MainPage = () => {
             <OurBlogSection />
             <ContactUsSection />
             <SubscribeSection type="dark" />
+            <DarkFooter />
         </MainPageContainer>
     );
 };

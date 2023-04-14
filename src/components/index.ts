@@ -4,6 +4,7 @@ export { default as DefaultButton } from './Buttons/DefaultButton';
 export { default as RoundButton } from './Buttons/RoundButton';
 export { default as WatchVideoButton } from './Buttons/WatchVideoButton';
 export { default as ContactUsSection } from './ContactUsSection';
+export { default as DarkFooter } from './DarkHeader';
 export { default as FeatureSection } from './FeatureSection';
 export { default as Header } from './Header';
 export { default as Content } from './Header/Content';

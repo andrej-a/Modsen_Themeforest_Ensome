@@ -71,6 +71,17 @@
     "InputError": "Пожалуйста, введите email",
     "CorrectEmailError": "Пожалуйста, введите корректный email",
     "SubscribeEmailPlaceholder": "Ваш email",
-    "SubscribeButtonValue": "Отправить"
+    "SubscribeButtonValue": "Отправить",
+    "QuickLink": "Быстрая навигация",
+    "Contacts": "Контакты",
+    "OurTeam": "Наша команда",
+    "AboutUs": "О нас",
+    "Services": "Услуги",
+    "FAQ": "FAQ",
+    "Pricing": "Цены",
+    "SiteMap": "Карта сайта",
+    "Service": "Услуги",
+    "ContactInfo": "Контакты",
+    "FooterDescription": "Мы компания, которая предоставляет комплексные решения в области бизнес-аналитики для оптимизации процессов и увеличения эффективности бизнеса на основе данных."
 
 }

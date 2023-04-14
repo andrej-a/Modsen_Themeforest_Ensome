@@ -70,5 +70,16 @@
     "InputError": "Please enter your email",
     "CorrectEmailError": "Please enter a valid email address",
     "SubscribeEmailPlaceholder": "Your email",
-    "SubscribeButtonValue": "Send"
+    "SubscribeButtonValue": "Send",
+    "QuickLink": "Quick Link",
+    "Contacts": "Contacts",
+    "OurTeam": "Our Team",
+    "AboutUs": "About Us",
+    "Services": "Services",
+    "FAQ": "FAQ",
+    "Pricing": "Pricing",
+    "SiteMap": "Site map",
+    "Service": "Service",
+    "ContactInfo": "Contact info",
+    "FooterDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi."
 }

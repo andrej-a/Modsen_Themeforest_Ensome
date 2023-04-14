@@ -72,10 +72,27 @@ export enum valuesOfTheSettings {
     CORRECT_EMAIL_ERROR = 'CorrectEmailError',
     SUBSCRIBE_PLACEHOLDER = 'SubscribeEmailPlaceholder',
     SUBSCRIBE_BUTTON_VALUE = 'SubscribeButtonValue',
+    QUICK_LINK = 'QuickLink',
+    CONTACTS = 'Contacts',
+    OUR_TEAM = 'OurTeam',
+    ABOUT_US = 'AboutUs',
+    SERVICES = 'Services',
+    FAQ = 'FAQ',
+    PRICING = 'Pricing',
+    SITE_MAP = 'SiteMap',
+    SERVICE = 'Service',
+    CONTACT_INFO = 'ContactInfo',
+    FOOTER_DESCRIPTION = 'FooterDescription',
 }
 
 export enum numberEnums {
     MONTH_ON_THE_YEAR = 12,
+}
+
+export enum UIConstants {
+    COMPANY_INFO = 'Ensome© 2022 All Rights Reserved',
+    POLICY = 'Privacy policy',
+    TERMS = 'Terms of us',
 }
 
 export const envConstants = {
