@@ -1,5 +1,6 @@
 export { default as App } from './App';
 export { default as BenefitsSection } from './BenefitsSection';
+export { default as BlogPageContent } from './BlogPageContent';
 export { default as BlogPagePreview } from './BlogPagePreview';
 export { default as BreadCrumbs } from './BreadCrumbs';
 export { default as DefaultButton } from './Buttons/DefaultButton';

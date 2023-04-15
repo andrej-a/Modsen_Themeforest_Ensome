@@ -21,7 +21,25 @@ const {
     VIEWS,
     TAGS,
 } = valuesOfTheSettings;
-const blogCardsData = [
+
+export interface IBlogCard {
+    id: string;
+    image: string;
+    publishDate: string;
+    author: string;
+    blogTitle: string;
+    firstContentPart: string;
+    separateParagraph: string;
+    secondContentPart: string;
+    countOfTheViews: string;
+    share: string;
+    tagsTitle: string;
+    tagsArray: string[];
+}
+
+export type TBlogCards = IBlogCard[];
+
+const blogCardsData: TBlogCards = [
     {
         id: uuidv4(),
         image: Article1,

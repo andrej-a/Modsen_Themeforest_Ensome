@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { BlogPagePreview, Content, Header } from '@/components';
+import {
+    BlogPageContent,
+    BlogPagePreview,
+    Content,
+    Header,
+} from '@/components';
 
 import { BlogPageContainer } from './styles';
 
@@ -11,6 +16,7 @@ const Blog = () => {
                 <Content type="secondary" />
             </Header>
             <BlogPagePreview />
+            <BlogPageContent />
         </BlogPageContainer>
     );
 };

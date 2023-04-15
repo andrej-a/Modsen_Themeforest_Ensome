@@ -34,6 +34,10 @@ module.exports = {
                     to: 'src/assets/images/pictures',
                 },
                 {
+                    from: './src/redirects',
+                    to: './',
+                },
+                {
                     from: './src/settings/locales',
                     to: 'src/settings/locales',
                 },

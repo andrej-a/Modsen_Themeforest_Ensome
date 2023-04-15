@@ -84,10 +84,15 @@ export enum valuesOfTheSettings {
     CONTACT_INFO = 'ContactInfo',
     FOOTER_DESCRIPTION = 'FooterDescription',
     BLOG_DESCRIPTION = 'BlogDescription',
+    MORE_ARTICLES = 'MoreArticles',
 }
 
 export enum numberEnums {
     MONTH_ON_THE_YEAR = 12,
+}
+
+export enum namesOfTheSlices {
+    BLOG_SLICE = 'blogSlice',
 }
 
 export enum UIConstants {

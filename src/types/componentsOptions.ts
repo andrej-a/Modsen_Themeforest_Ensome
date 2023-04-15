@@ -50,3 +50,7 @@ export type PaymentModalWindowProps = {
 export type SubscribeSectionProps = {
     type: string;
 };
+
+export type TPayload<T> = {
+    payload: T;
+};
