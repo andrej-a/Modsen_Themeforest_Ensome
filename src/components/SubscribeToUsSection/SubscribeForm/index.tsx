@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import useSubscribe from '@/hooks/useSubscribe';
 import { valuesOfTheSettings } from '@/types/constants';
 
+import { schema } from './config/schema';
 import {
     SubmitButton,
     SubscribeForm,
@@ -21,7 +22,7 @@ const SubscribeFormComponent = () => {
         handleSubmit,
         errors,
         handleChange,
-    } = useSubscribe();
+    } = useSubscribe(schema);
     return (
         <SubscribeForm ref={formRef} onSubmit={handleSubmit(handleChange)}>
             <SubscribeInput

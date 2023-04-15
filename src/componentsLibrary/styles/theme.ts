@@ -56,7 +56,9 @@ const theme = {
         sx: '15px 0 15px 25px',
         x: 5,
         xs: '15px 20px',
+        xss: '15px 25px',
         l: 8,
+        lm: 20,
         m: '30px 0',
         lxx: '35px 20px',
         lxxx: '30px 35px 50px 35px',
@@ -67,9 +69,11 @@ const theme = {
         x4l: '30px 25px 25px 30px',
         x5l: 35,
         x6l: 50,
+        x7l: 100,
     },
     gap: {
         none: 0,
+        x: 5,
         s: 10,
         sx: 15,
         sxx: 20,
@@ -114,6 +118,7 @@ const theme = {
         x: '1px solid #F1F6FA',
         s: '1px solid #185CFF',
         l: '1px solid #FFFFFF66',
+        xl: '1px solid #9497A1',
         m: '1px solid #607d94',
     },
     borderRadius: {
@@ -134,6 +139,7 @@ const theme = {
         xxxl: 46,
         x3l: 50,
         x4l: 57,
+        x5l: 80,
     },
     fontWeight: {
         s: 400,

@@ -20,8 +20,8 @@ import { MainPageContainer } from './styles';
 const MainPage = () => {
     return (
         <MainPageContainer>
-            <Header>
-                <Content />
+            <Header background="primary">
+                <Content type="primary" />
             </Header>
             <HeroSection />
             <FeatureSection />

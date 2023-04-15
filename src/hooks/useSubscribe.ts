@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { AnyObject, ObjectSchema, Schema } from 'yup';
 
 import { schema } from '@/components/SubscribeToUsSection/SubscribeForm/config/schema';
 import { envConstants } from '@/types/constants';
@@ -9,7 +10,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 const { SERVICE_ID, TEMPLATE_ID, USER_ID } = envConstants;
 
-const useSubscribe = () => {
+type TFormFileds = {
+    email: string;
+    name?: string;
+    theme?: string;
+    message?: string;
+};
+
+const useSubscribe = (schema: Schema<TFormFileds>) => {
     const [isDisabled, setIsDisabled] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
     const {
@@ -17,12 +25,12 @@ const useSubscribe = () => {
         handleSubmit,
         reset,
         formState: { errors, isSubmitSuccessful },
-    } = useForm<{ email: string }>({
+    } = useForm<TFormFileds>({
         resolver: yupResolver(schema),
-        defaultValues: { email: '' },
+        defaultValues: { email: '', name: '', theme: '', message: '' },
     });
 
-    const handleChange: SubmitHandler<{ email: string }> = ({ email }) => {
+    const handleChange: SubmitHandler<TFormFileds> = () => {
         setIsDisabled(true);
         emailjs
             .sendForm(SERVICE_ID!, TEMPLATE_ID!, formRef.current!, USER_ID)

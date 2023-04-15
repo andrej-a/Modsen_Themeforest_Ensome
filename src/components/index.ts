@@ -6,6 +6,7 @@ export { default as BreadCrumbs } from './BreadCrumbs';
 export { default as DefaultButton } from './Buttons/DefaultButton';
 export { default as RoundButton } from './Buttons/RoundButton';
 export { default as WatchVideoButton } from './Buttons/WatchVideoButton';
+export { default as ContactsSection } from './ContactsSection';
 export { default as ContactUsSection } from './ContactUsSection';
 export { default as DarkFooter } from './DarkHeader';
 export { default as FeatureSection } from './FeatureSection';

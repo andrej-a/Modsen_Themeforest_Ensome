@@ -85,11 +85,22 @@ export enum valuesOfTheSettings {
     FOOTER_DESCRIPTION = 'FooterDescription',
     BLOG_DESCRIPTION = 'BlogDescription',
     MORE_ARTICLES = 'MoreArticles',
+    CONTACTS_PAGE_TITLE = 'ContactsPageTitle',
+    MINIMUM_LETTERS_ERROR = 'MinimumLettersError',
+    NAME_INPUT_PLACEHOLDER = 'NameInputPlaceholder',
+    THEME_INPUT_PLACEHOLDER = 'ThemeInputPlaceholder',
+    MESSAGE_INPUT_PLACEHOLDER = 'MessageInputPlaceholder',
+    PHONE = 'Phone',
+    EMAIL = 'Email',
+    ADDRESS = 'Address',
 }
 
 export enum numberEnums {
     MONTH_ON_THE_YEAR = 12,
     COUNT_OF_THE_CARDS_IN_BLOG_FLOW = 9,
+    MINIMUM_LETTERS_OF_NAME_INPUT = 3,
+    MINIMUM_LETTERS_OF_THEME_INPUT = 5,
+    MINIMUM_LETTERS_OF_MESSAGE_INPUT = 10,
 }
 
 export enum namesOfTheSlices {

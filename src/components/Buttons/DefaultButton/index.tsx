@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { RoundButtonProps } from '@/types/componentsOptions';
+import { ButtonProps } from '@/types/componentsOptions';
 
 import { DefaultButtonElement, DefaultButtonWrapper } from './styles';
 
-const DefaultButton = ({ children, onClick }: RoundButtonProps) => {
+const DefaultButton: React.FC<ButtonProps> = ({ children, ...rest }) => {
     return (
-        <DefaultButtonWrapper onClick={onClick}>
-            <DefaultButtonElement>
+        <DefaultButtonWrapper>
+            <DefaultButtonElement {...rest}>
                 {children || 'Discover more'}
             </DefaultButtonElement>
         </DefaultButtonWrapper>

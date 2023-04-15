@@ -5,7 +5,7 @@ export const BreadCrumbsWrapper = styled.div`
     gap: ${({ theme: { gap } }) => gap.s}px;
 `;
 
-export const BreadCrumbLink = styled.div`
+export const BreadCrumbLink = styled.div<{ linkColor: string }>`
     a {
         font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
         font-style: normal;
@@ -13,13 +13,13 @@ export const BreadCrumbLink = styled.div`
         font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
         line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
         letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-        color: ${({ theme: { colors } }) => colors.grey};
+        color: ${({ linkColor, theme: { colors } }) => colors[linkColor]};
         text-decoration: none;
         cursor: pointer;
     }
 `;
 
-export const FinalyBreadCrumb = styled.div`
+export const FinalyBreadCrumb = styled.div<{ crumbColor: string }>`
     display: flex;
     gap: ${({ theme: { gap } }) => gap.s}px;
 
@@ -29,5 +29,5 @@ export const FinalyBreadCrumb = styled.div`
     font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-    color: ${({ theme: { colors } }) => colors.white};
+    color: ${({ crumbColor, theme: { colors } }) => colors[crumbColor]};
 `;

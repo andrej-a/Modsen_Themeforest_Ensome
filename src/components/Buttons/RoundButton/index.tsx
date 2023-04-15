@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { RoundButtonProps } from '@/types/componentsOptions';
+import { ButtonProps } from '@/types/componentsOptions';
 
 import { RoundButtonContainer, RoundButtonElement } from './style';
 
-const RoundButton = ({ onClick, children }: RoundButtonProps) => {
+const RoundButton: React.FC<ButtonProps> = ({ children, ...rest }) => {
     return (
-        <RoundButtonContainer onClick={onClick}>
-            <RoundButtonElement>{children || 'Learn more'}</RoundButtonElement>
+        <RoundButtonContainer>
+            <RoundButtonElement {...rest}>
+                {children || 'Learn more'}
+            </RoundButtonElement>
         </RoundButtonContainer>
     );
 };

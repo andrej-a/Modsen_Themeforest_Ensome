@@ -1,3 +1,5 @@
+import { ButtonHTMLAttributes } from 'react';
+
 import { PaymentCardProps } from '@/components/PricingSection';
 
 export type HeaderProps = {
@@ -15,10 +17,9 @@ export type HeaderContentProps = {
 
 export type LogoComponentProps = { source: string };
 
-export type RoundButtonProps = {
-    onClick?: () => void;
-    children?: React.ReactNode;
-};
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode;
+}
 
 export interface IStatisticCard {
     number: string;
@@ -53,4 +54,9 @@ export type SubscribeSectionProps = {
 
 export type TPayload<T> = {
     payload: T;
+};
+
+export type TLinksStack = {
+    title: string;
+    link: string;
 };

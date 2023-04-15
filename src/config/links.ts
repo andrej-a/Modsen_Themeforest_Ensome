@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { valuesOfTheSettings } from '@/types/constants';
 
-const { HOME, BLOG } = valuesOfTheSettings;
+const { HOME, BLOG, CONTACTS } = valuesOfTheSettings;
 
 const links = [
     {
@@ -14,6 +14,11 @@ const links = [
         id: uuidv4(),
         link: '/blog',
         title: BLOG,
+    },
+    {
+        id: uuidv4(),
+        link: '/contacts',
+        title: CONTACTS,
     },
 ];
 

@@ -21,7 +21,7 @@ const BlogPagePreview = () => {
         <BlogPagePreviewContainer>
             <BlogPagePreviewContent>
                 <BreadCrumb>
-                    <BreadCrumbs />
+                    <BreadCrumbs linkColor="grey" crumbColor="white" />
                 </BreadCrumb>
                 <BlogPagePreviewDescription>
                     <BlogPagePreviewTitle>{t(BLOG)}</BlogPagePreviewTitle>

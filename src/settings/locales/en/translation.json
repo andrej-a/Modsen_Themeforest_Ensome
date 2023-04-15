@@ -67,7 +67,7 @@
     "ContactUs": "Contact Us",
     "SubscribeTitle": "Subscribe to our newsletter",
     "SubscribeDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    "InputError": "Please enter your email",
+    "InputError": "Invalid input",
     "CorrectEmailError": "Please enter a valid email address",
     "SubscribeEmailPlaceholder": "Your email",
     "SubscribeButtonValue": "Send",
@@ -83,5 +83,13 @@
     "ContactInfo": "Contact info",
     "FooterDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
     "BlogDescription": "Sed ut perspiciatis unde omnis iste natus error volupta accusantium doloremque laudantium, totam remiga aperiam, eaque ipsa.",
-    "MoreArticles": "More articles"
+    "MoreArticles": "More articles",
+    "ContactsPageTitle": "How can we <span>help you?<span>",
+    "MinimumLettersError": "Minimum letters of input is: ",
+    "NameInputPlaceholder": "Your name",
+    "ThemeInputPlaceholder": "Theme",
+    "MessageInputPlaceholder": "Your message",
+    "Phone": "Phone",
+    "Email": "Email",
+    "Address": "Address"
 }

@@ -2,15 +2,17 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
+import { TLinksStack } from '@/types/componentsOptions';
 import { capitalize } from '@/utils/cutString';
 
 import { BreadCrumbLink, BreadCrumbsWrapper, FinalyBreadCrumb } from './styles';
 
-type TLinksStack = {
-    title: string;
-    link: string;
+type BreadCrumbsProps = {
+    linkColor: string;
+    crumbColor: string;
 };
-const BreadCrumbs = () => {
+
+const BreadCrumbs = ({ linkColor, crumbColor }: BreadCrumbsProps) => {
     const location = useLocation();
     const linksStack: TLinksStack[] = [];
     const crumbs = location.pathname.split('/');
@@ -33,18 +35,18 @@ const BreadCrumbs = () => {
     const result = linksStack.map(({ link, title }, index) => {
         if (index !== linksStack.length - 1) {
             return index === 0 ? (
-                <BreadCrumbLink>
+                <BreadCrumbLink linkColor={linkColor}>
                     <Link to={link}>{title} </Link>
                 </BreadCrumbLink>
             ) : (
-                <BreadCrumbLink>
+                <BreadCrumbLink linkColor={linkColor}>
                     | <Link to={link}>{title}</Link>
                 </BreadCrumbLink>
             );
         }
         return (
-            <FinalyBreadCrumb>
-                <FinalyBreadCrumb>|</FinalyBreadCrumb>
+            <FinalyBreadCrumb crumbColor={crumbColor}>
+                <FinalyBreadCrumb crumbColor={crumbColor}>|</FinalyBreadCrumb>
                 {title}
             </FinalyBreadCrumb>
         );
