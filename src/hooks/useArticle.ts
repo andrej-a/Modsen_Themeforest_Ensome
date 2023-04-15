@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 
 import { TBlogCards } from '@/config/blogCardsData';
 import { blogSelector } from '@/store/selectors/selectors';
+import { numberEnums } from '@/types/constants';
 
 import { useAppSelector } from './useStore';
 
+const { COUNT_OF_THE_CARDS_IN_BLOG_FLOW } = numberEnums;
 const useArticle = () => {
     const [index, setIndex] = useState(1);
     const { blogCards } = useAppSelector(blogSelector);
@@ -16,12 +18,16 @@ const useArticle = () => {
     };
 
     useEffect(() => {
-        setVisibleCards(blogCards.slice(0, index * 9));
+        setVisibleCards(
+            blogCards.slice(0, index * COUNT_OF_THE_CARDS_IN_BLOG_FLOW),
+        );
     }, []);
 
     useEffect(() => {
-        setVisibleCards(blogCards.slice(0, index * 9));
-        if (index * 9 >= blogCards.length) {
+        setVisibleCards(
+            blogCards.slice(0, index * COUNT_OF_THE_CARDS_IN_BLOG_FLOW),
+        );
+        if (index * COUNT_OF_THE_CARDS_IN_BLOG_FLOW >= blogCards.length) {
             setIsButtonVisible(false);
         }
     }, [index]);

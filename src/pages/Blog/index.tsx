@@ -4,7 +4,9 @@ import {
     BlogPageContent,
     BlogPagePreview,
     Content,
+    DarkFooter,
     Header,
+    SubscribeSection,
 } from '@/components';
 
 import { BlogPageContainer } from './styles';
@@ -17,6 +19,8 @@ const Blog = () => {
             </Header>
             <BlogPagePreview />
             <BlogPageContent />
+            <SubscribeSection type="dark" />
+            <DarkFooter />
         </BlogPageContainer>
     );
 };

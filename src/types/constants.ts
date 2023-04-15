@@ -89,6 +89,7 @@ export enum valuesOfTheSettings {
 
 export enum numberEnums {
     MONTH_ON_THE_YEAR = 12,
+    COUNT_OF_THE_CARDS_IN_BLOG_FLOW = 9,
 }
 
 export enum namesOfTheSlices {
