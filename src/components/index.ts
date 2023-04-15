@@ -20,6 +20,7 @@ export { default as ModalWindow } from './ModalWindow';
 export { default as OurBlogSection } from './OurBlogSection';
 export { default as OverviewSection } from './OverviewSection';
 export { default as PricingSection } from './PricingSection';
+export { default as SingleBlogTitle } from './SingleBlogTitle';
 export { default as SliderComponent } from './SliderComponent';
 export { default as StatisticCard } from './StatisticCard';
 export { default as SubscribeSection } from './SubscribeToUsSection';

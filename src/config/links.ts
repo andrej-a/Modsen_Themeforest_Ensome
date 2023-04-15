@@ -22,4 +22,12 @@ const links = [
     },
 ];
 
+export const singlePagesLinks = [
+    {
+        id: uuidv4(),
+        link: '/:title',
+        title: '',
+    },
+];
+
 export default links;

@@ -11,7 +11,9 @@ export const cutString = (str: string): string => {
 };
 
 export const capitalize = (str: string): string => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    let correctLink = str.replace(/%20/gi, ' ');
+    correctLink = decodeURIComponent(str);
+    return correctLink.charAt(0).toUpperCase() + correctLink.slice(1);
 };
 
 export const getIcon = (type: string) => {

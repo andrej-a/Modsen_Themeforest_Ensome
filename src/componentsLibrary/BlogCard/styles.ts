@@ -156,15 +156,17 @@ export const ReadMore = styled.div<{ type: string }>`
     display: flex;
     gap: ${({ theme: { gap } }) => gap.s}px;
 
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
-    font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-    color: ${({ theme: { colors } }) => colors.primary};
-    cursor: pointer;
-
+    a {
+        font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
+        font-style: normal;
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
+        color: ${({ theme: { colors } }) => colors.primary};
+        text-decoration: none;
+        cursor: pointer;
+    }
     ${({ type }) => {
         switch (type) {
             case 'medium':

@@ -28,6 +28,7 @@ const theme = {
         l1x: 445,
         xxxl: 540,
         x3l: 635,
+        x3ll: 750,
         x4l: 1100,
         x5l: 1920,
     },

@@ -1,16 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import links from '@/config/links';
+import links, { singlePagesLinks } from '@/config/links';
 
 import pages from './config/pages';
 import { ApplicationContainer } from './styles';
+
+const setOfTheLinks = [...links, ...singlePagesLinks];
 
 const App = () => {
     return (
         <ApplicationContainer>
             <Routes>
-                {links.map(({ link, id }, index) => {
+                {setOfTheLinks.map(({ link, id }, index) => {
                     return (
                         <Route key={id} path={link} element={pages[index]} />
                     );

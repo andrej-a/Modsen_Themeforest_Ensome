@@ -1,8 +1,12 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import ReadMoreArrow from '@/assets/images/logo/readmore.png';
 import { ImageComponent } from '@/components';
+import { IBlogCard } from '@/config/blogCardsData';
+import { useAppDispatch } from '@/hooks/useStore';
+import { setCurrentBlog } from '@/store/slices/blog';
 import { valuesOfTheSettings } from '@/types/constants';
 import { cutString } from '@/utils/cutString';
 
@@ -51,6 +55,11 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
     const { image, publishDate, blogTitle, firstContentPart, tagsArray } =
         content;
     const { t } = useTranslation();
+    const dispatch = useAppDispatch();
+
+    const onSetSingleBlog = (content: IBlogCard) => () => {
+        dispatch(setCurrentBlog(content));
+    };
     return (
         <BlogCardContainer>
             <BlogCardContent type={type}>
@@ -63,8 +72,8 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
                     <MainTextSection type={type}>
                         {cutString(t(firstContentPart))}
                     </MainTextSection>
-                    <ReadMore type={type}>
-                        {t(READ_MORE)}
+                    <ReadMore type={type} onClick={onSetSingleBlog(content)}>
+                        <Link to={`/${t(blogTitle)}`}>{t(READ_MORE)}</Link>
                         <ImageComponent source={ReadMoreArrow} />
                     </ReadMore>
                     <TagsContainer type={type}>
