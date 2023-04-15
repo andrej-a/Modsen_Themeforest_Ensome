@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export interface DefaultTheme {
+    width: {
+        xxl: number;
+    };
+    height: {
+        xxl: number;
+    };
     colors: {
         secondary: string;
     };

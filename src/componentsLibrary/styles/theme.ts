@@ -34,6 +34,7 @@ const theme = {
     height: {
         xxl: 100,
         x1l: 360,
+        x2l: 460,
         xxxl: 525,
     },
     margin: {

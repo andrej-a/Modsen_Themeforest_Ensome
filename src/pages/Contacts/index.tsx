@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { ContactsSection, Content, Header } from '@/components';
+import {
+    ContactsSection,
+    Content,
+    DarkFooter,
+    Header,
+    MapSection,
+} from '@/components';
 
 import { ContactsPageContainer } from './styles';
 
@@ -11,6 +17,8 @@ const ContactsPage = () => {
                 <Content type="primary" />
             </Header>
             <ContactsSection />
+            <MapSection />
+            <DarkFooter />
         </ContactsPageContainer>
     );
 };

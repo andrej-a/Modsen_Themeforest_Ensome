@@ -101,6 +101,7 @@ export enum numberEnums {
     MINIMUM_LETTERS_OF_NAME_INPUT = 3,
     MINIMUM_LETTERS_OF_THEME_INPUT = 5,
     MINIMUM_LETTERS_OF_MESSAGE_INPUT = 10,
+    DEFAULT_ZOOM_OF_THE_MAP = 10,
 }
 
 export enum namesOfTheSlices {
