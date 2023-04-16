@@ -8,8 +8,8 @@ import { ImageComponent } from '@/components';
 import links from '@/config/links';
 import { UIConstants, valuesOfTheSettings } from '@/types/constants';
 
+import footerLogoArray from '../../config/logoLinks';
 import contactInfo from './config/contactInfo';
-import footerLogoArray from './config/links';
 import quickLinks from './config/quickLinks';
 import services from './config/service';
 import {

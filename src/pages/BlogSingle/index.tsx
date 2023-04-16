@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { Content, Header, SingleBlogTitle } from '@/components';
+import {
+    Content,
+    Header,
+    MainContentSection,
+    SingleBlogTitle,
+} from '@/components';
 
 import { SinglePageContainer } from './styles';
 
@@ -11,6 +16,7 @@ const BlogSingle = () => {
                 <Content type="primary" />
             </Header>
             <SingleBlogTitle />
+            <MainContentSection />
         </SinglePageContainer>
     );
 };

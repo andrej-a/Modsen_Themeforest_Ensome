@@ -15,6 +15,7 @@ const theme = {
         l: 5,
     },
     width: {
+        sx: 15,
         l: 30,
         xlll: 40,
         xll: 50,
@@ -33,7 +34,9 @@ const theme = {
         x5l: 1920,
     },
     height: {
+        ssx: 15,
         xxl: 100,
+        xl: 330,
         x1l: 360,
         x2l: 460,
         xxxl: 525,
@@ -41,6 +44,7 @@ const theme = {
     margin: {
         xs: 15,
         x: 20,
+        s: 25,
         lx: 30,
         l1x: 40,
         lxx: 55,
@@ -62,6 +66,7 @@ const theme = {
         l: 8,
         lm: 20,
         m: '30px 0',
+        ml: 30,
         lxx: '35px 20px',
         lxxx: '30px 35px 50px 35px',
         lx: '25px 45px',
@@ -122,6 +127,7 @@ const theme = {
         l: '1px solid #FFFFFF66',
         xl: '1px solid #9497A1',
         m: '1px solid #607d94',
+        xxl: '4px solid #185cff',
     },
     borderRadius: {
         l: 6,
@@ -137,6 +143,7 @@ const theme = {
         xl: 16,
         xxl: 20,
         xxlll: 26,
+        xll: 30,
         xxll: 38,
         xxxl: 46,
         x3l: 50,

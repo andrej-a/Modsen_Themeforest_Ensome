@@ -1,4 +1,5 @@
 import Facebook from '@/assets/images/logo/facebookLogo.svg';
+import Google from '@/assets/images/logo/google.svg';
 import Linkedin from '@/assets/images/logo/linkedinLogo.svg';
 import Noname1 from '@/assets/images/logo/noname1.svg';
 import Noname2 from '@/assets/images/logo/noname2.svg';
@@ -13,5 +14,7 @@ const footerLogoArray = [
     Noname1,
     Noname2,
 ];
+
+export const blogLogoArray = [Linkedin, Facebook, Twitter, YouTube, Google];
 
 export default footerLogoArray;
