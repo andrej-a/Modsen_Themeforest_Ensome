@@ -25,9 +25,17 @@ const blogSlice = createSlice({
         setTagsOfCurrentBlog: (state, { payload }: TPayload<string[]>) => {
             state.tagsOfCurrentBlog = payload;
         },
+        setTagFromSearchInput: (state, { payload }: TPayload<string>) => {
+            state.tagFromSearchInput = payload;
+        },
     },
 });
 
 const { actions, reducer } = blogSlice;
-export const { setCurrentTag, setCurrentBlog, setTagsOfCurrentBlog } = actions;
+export const {
+    setCurrentTag,
+    setCurrentBlog,
+    setTagsOfCurrentBlog,
+    setTagFromSearchInput,
+} = actions;
 export default reducer;

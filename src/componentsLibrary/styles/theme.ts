@@ -2,6 +2,7 @@ const theme = {
     top: {
         xs: 0,
         l: 50,
+        m: 100,
         xl: 111,
     },
     right: {
@@ -89,7 +90,7 @@ const theme = {
         l: 40,
         xl: 45,
         xxl: 50,
-        xxxl: '',
+        xxxl: 60,
         x3l: 80,
         xll: 95,
         x4l: 145,

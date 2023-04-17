@@ -8,7 +8,6 @@ export const PopularPostsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: ${({ theme: { gap } }) => gap.s}px;
 
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
     font-style: normal;
@@ -17,4 +16,14 @@ export const PopularPostsContainer = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
     color: ${({ theme: { colors } }) => colors.black};
+`;
+
+export const PopularPostsContent = styled.div`
+    width: ${({ theme: { width } }) => width.xxl}%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: ${({ theme: { gap } }) => gap.s}px;
 `;

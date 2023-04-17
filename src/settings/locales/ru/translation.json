@@ -93,5 +93,8 @@
     "Phone": "Телефон",
     "Email": "Email",
     "Address": "Адрес",
-    "PopularPosts": "Популярные записи"
+    "PopularPosts": "Популярные записи",
+    "NoCards": "Записи не найдены",
+    "NoTags": "Данные не найдены"
+
 }

@@ -19,3 +19,12 @@ export const MainContent = styled.div`
     gap: ${({ theme: { gap } }) => gap.sl}px;
     margin: ${({ theme: { margin } }) => margin.xxl};
 `;
+export const RightSideBar = styled.div`
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: ${({ theme: { gap } }) => gap.xxxl}px;
+`;

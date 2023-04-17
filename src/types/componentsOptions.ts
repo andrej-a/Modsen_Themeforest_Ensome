@@ -60,3 +60,8 @@ export type TLinksStack = {
     title: string;
     link: string;
 };
+
+export interface IElasticContainerItems {
+    isVisible: boolean;
+    onSetIsVisible: (status: boolean) => () => void;
+}

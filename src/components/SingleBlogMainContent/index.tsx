@@ -1,7 +1,8 @@
 import React from 'react';
 
 import PopularPosts from './PopularPosts';
-import { MainContent, MainContentContainer } from './styles';
+import SearchPanel from './SearchPanel';
+import { MainContent, MainContentContainer, RightSideBar } from './styles';
 import Text from './Text';
 
 const MainContentSection = () => {
@@ -9,7 +10,10 @@ const MainContentSection = () => {
         <MainContentContainer>
             <MainContent>
                 <Text />
-                <PopularPosts />
+                <RightSideBar>
+                    <SearchPanel />
+                    <PopularPosts />
+                </RightSideBar>
             </MainContent>
         </MainContentContainer>
     );

@@ -92,5 +92,7 @@
     "Phone": "Phone",
     "Email": "Email",
     "Address": "Address",
-    "PopularPosts": "Popular posts"
+    "PopularPosts": "Popular posts",
+    "NoCards": "Posts are not found",
+    "NoTags": "No data"
 }

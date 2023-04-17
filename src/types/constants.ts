@@ -94,6 +94,8 @@ export enum valuesOfTheSettings {
     EMAIL = 'Email',
     ADDRESS = 'Address',
     POPULAR_POSTS = 'PopularPosts',
+    NO_POSTS = 'NoCards',
+    NO_DATA = 'NoTags',
 }
 
 export enum numberEnums {
