@@ -12,6 +12,9 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/',
     },
+    cache: {
+        type: 'filesystem',
+    },
     plugins: [
         new HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),

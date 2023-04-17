@@ -188,6 +188,7 @@ export const ReadMore = styled.div<{ type: string }>`
 `;
 
 export const TagsContainer = styled.div<{ type: string }>`
+    width: auto;
     display: flex;
     gap: ${({ theme: { gap } }) => gap.ssl}px;
 
@@ -217,6 +218,7 @@ export const TagsContainer = styled.div<{ type: string }>`
 `;
 
 export const Tag = styled.div`
+    display: flex;
     border: ${({ theme: { border } }) => border.x};
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;
     padding: ${({ theme: { padding } }) => padding.x}px;
@@ -226,7 +228,14 @@ export const Tag = styled.div`
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxxl};
     font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-    text-align: center;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+    background: ${({ theme: { colors } }) => colors.white};
     color: ${({ theme: { colors } }) => colors.primary};
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+        background: ${({ theme: { colors } }) => colors.primary};
+        color: ${({ theme: { colors } }) => colors.white};
+    }
 `;

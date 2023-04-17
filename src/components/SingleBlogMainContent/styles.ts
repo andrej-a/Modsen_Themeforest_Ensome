@@ -15,5 +15,7 @@ export const MainContent = styled.div`
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: ${({ theme: { gap } }) => gap.sl}px;
+    margin: ${({ theme: { margin } }) => margin.xxl};
 `;

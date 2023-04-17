@@ -8,7 +8,8 @@ const { BLOG_SLICE } = namesOfTheSlices;
 export const initialState = {
     blogCards: blogCardsData,
     currentBlog: {} as IBlogCard,
-    currentTag: '',
+    tagFromSearchInput: '',
+    tagsOfCurrentBlog: [] as string[],
 };
 
 const blogSlice = createSlice({
@@ -16,14 +17,17 @@ const blogSlice = createSlice({
     initialState,
     reducers: {
         setCurrentTag: (state, { payload }: TPayload<string>) => {
-            state.currentTag = payload;
+            state.tagFromSearchInput = payload;
         },
         setCurrentBlog: (state, { payload }: TPayload<IBlogCard>) => {
             state.currentBlog = payload;
+        },
+        setTagsOfCurrentBlog: (state, { payload }: TPayload<string[]>) => {
+            state.tagsOfCurrentBlog = payload;
         },
     },
 });
 
 const { actions, reducer } = blogSlice;
-export const { setCurrentTag, setCurrentBlog } = actions;
+export const { setCurrentTag, setCurrentBlog, setTagsOfCurrentBlog } = actions;
 export default reducer;

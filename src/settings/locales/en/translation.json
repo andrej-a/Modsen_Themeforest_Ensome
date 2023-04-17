@@ -91,5 +91,6 @@
     "MessageInputPlaceholder": "Your message",
     "Phone": "Phone",
     "Email": "Email",
-    "Address": "Address"
+    "Address": "Address",
+    "PopularPosts": "Popular posts"
 }

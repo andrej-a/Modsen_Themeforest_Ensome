@@ -93,6 +93,7 @@ export enum valuesOfTheSettings {
     PHONE = 'Phone',
     EMAIL = 'Email',
     ADDRESS = 'Address',
+    POPULAR_POSTS = 'PopularPosts',
 }
 
 export enum numberEnums {
@@ -102,6 +103,7 @@ export enum numberEnums {
     MINIMUM_LETTERS_OF_THEME_INPUT = 5,
     MINIMUM_LETTERS_OF_MESSAGE_INPUT = 10,
     DEFAULT_ZOOM_OF_THE_MAP = 10,
+    COUNT_OF_THE_POPULAR_POSTS = 4,
 }
 
 export enum namesOfTheSlices {

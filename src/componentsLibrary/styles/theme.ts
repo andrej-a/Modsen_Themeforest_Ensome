@@ -142,6 +142,7 @@ const theme = {
         l: 14,
         xl: 16,
         xxl: 20,
+        xxxll: 22,
         xxlll: 26,
         xll: 30,
         xxll: 38,

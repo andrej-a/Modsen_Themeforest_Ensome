@@ -92,8 +92,6 @@
     "MessageInputPlaceholder": "Ваше сообщение",
     "Phone": "Телефон",
     "Email": "Email",
-    "Address": "Адрес"
-
-
-
+    "Address": "Адрес",
+    "PopularPosts": "Популярные записи"
 }

@@ -39,6 +39,7 @@ export const MetaDataItem = styled.div`
     display: flex;
     align-items: center;
     column-gap: ${({ theme: { gap } }) => gap.s}px;
+    white-space: nowrap;
 
     svg {
         display: flex;

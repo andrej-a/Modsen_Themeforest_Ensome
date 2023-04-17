@@ -1,5 +1,6 @@
 import React from 'react';
 
+import PopularPosts from './PopularPosts';
 import { MainContent, MainContentContainer } from './styles';
 import Text from './Text';
 
@@ -8,6 +9,7 @@ const MainContentSection = () => {
         <MainContentContainer>
             <MainContent>
                 <Text />
+                <PopularPosts />
             </MainContent>
         </MainContentContainer>
     );

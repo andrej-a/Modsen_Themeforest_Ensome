@@ -6,7 +6,7 @@ import ReadMoreArrow from '@/assets/images/logo/readmore.png';
 import { ImageComponent } from '@/components';
 import { IBlogCard } from '@/config/blogCardsData';
 import { useAppDispatch } from '@/hooks/useStore';
-import { setCurrentBlog } from '@/store/slices/blog';
+import { setCurrentBlog, setTagsOfCurrentBlog } from '@/store/slices/blog';
 import { valuesOfTheSettings } from '@/types/constants';
 import { cutString } from '@/utils/cutString';
 
@@ -59,6 +59,7 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
 
     const onSetSingleBlog = (content: IBlogCard) => () => {
         dispatch(setCurrentBlog(content));
+        dispatch(setTagsOfCurrentBlog(tagsArray));
     };
     return (
         <BlogCardContainer>
