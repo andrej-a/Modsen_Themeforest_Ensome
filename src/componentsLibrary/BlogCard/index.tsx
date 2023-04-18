@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import ReadMoreArrow from '@/assets/images/logo/readmore.png';
 import { ImageComponent } from '@/components';
+import { Tag } from '@/componentsLibrary';
 import { IBlogCard } from '@/config/blogCardsData';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentBlog, setTagsOfCurrentBlog } from '@/store/slices/blog';
@@ -19,7 +20,6 @@ import {
     MainTextSection,
     PublishDate,
     ReadMore,
-    Tag,
     TagsContainer,
 } from './styles';
 

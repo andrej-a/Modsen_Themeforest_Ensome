@@ -10,6 +10,7 @@ export const initialState = {
     currentBlog: {} as IBlogCard,
     tagFromSearchInput: '',
     tagsOfCurrentBlog: [] as string[],
+    activeFilters: [] as string[],
 };
 
 const blogSlice = createSlice({
@@ -28,6 +29,9 @@ const blogSlice = createSlice({
         setTagFromSearchInput: (state, { payload }: TPayload<string>) => {
             state.tagFromSearchInput = payload;
         },
+        setActiveFilters: (state, { payload }: TPayload<string[]>) => {
+            state.activeFilters = payload;
+        },
     },
 });
 
@@ -37,5 +41,6 @@ export const {
     setCurrentBlog,
     setTagsOfCurrentBlog,
     setTagFromSearchInput,
+    setActiveFilters,
 } = actions;
 export default reducer;

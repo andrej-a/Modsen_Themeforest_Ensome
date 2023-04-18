@@ -8,7 +8,7 @@ import Sharing from '@/assets/images/logo/sharing.png';
 import Tags from '@/assets/images/logo/tags.png';
 import Views from '@/assets/images/logo/views.png';
 import { ImageComponent } from '@/components';
-import { Tag } from '@/componentsLibrary/BlogCard/styles';
+import { Tag } from '@/componentsLibrary';
 import { blogLogoArray } from '@/config/logoLinks';
 import { useAppSelector } from '@/hooks/useStore';
 import { blogSelector } from '@/store/selectors/selectors';

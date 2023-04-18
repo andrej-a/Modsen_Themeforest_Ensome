@@ -65,3 +65,8 @@ export interface IElasticContainerItems {
     isVisible: boolean;
     onSetIsVisible: (status: boolean) => () => void;
 }
+
+export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode;
+    isActive?: boolean;
+}

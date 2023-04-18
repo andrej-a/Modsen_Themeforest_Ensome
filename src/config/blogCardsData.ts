@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import Article1 from '@/assets/images/pictures/article1.png';
 import Article2 from '@/assets/images/pictures/article2.png';
 import Article3 from '@/assets/images/pictures/article3.png';
 import Article4 from '@/assets/images/pictures/article4.png';
@@ -10,6 +9,8 @@ import Article7 from '@/assets/images/pictures/article7.png';
 import Article8 from '@/assets/images/pictures/article8.png';
 import Article9 from '@/assets/images/pictures/article9.png';
 import { valuesOfTheSettings } from '@/types/constants';
+
+import Article1 from '../assets/images/pictures/article1.png';
 
 const {
     PUBLISH_DATE,
