@@ -37,6 +37,7 @@ const theme = {
     height: {
         ssx: 15,
         xxl: 100,
+        x3l: 170,
         xl: 330,
         x1l: 360,
         x2l: 460,

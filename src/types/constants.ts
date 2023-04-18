@@ -96,6 +96,7 @@ export enum valuesOfTheSettings {
     POPULAR_POSTS = 'PopularPosts',
     NO_POSTS = 'NoCards',
     NO_DATA = 'NoTags',
+    RELATED_POSTS = 'RelatedPosts',
 }
 
 export enum numberEnums {
@@ -106,6 +107,7 @@ export enum numberEnums {
     MINIMUM_LETTERS_OF_MESSAGE_INPUT = 10,
     DEFAULT_ZOOM_OF_THE_MAP = 10,
     COUNT_OF_THE_POPULAR_POSTS = 4,
+    COUNT_OF_THE_RELATED_POSTS = 3,
 }
 
 export enum namesOfTheSlices {

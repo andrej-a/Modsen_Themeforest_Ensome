@@ -1,5 +1,4 @@
 const tags = [
-    'All topics',
     'App',
     'Management',
     'CMR',

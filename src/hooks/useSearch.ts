@@ -22,8 +22,9 @@ const useSearch = (schema?: Schema<TSearchField>) => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isSubmitSuccessful },
         setValue,
+        reset,
     } = useForm<TSearchField>({
         resolver: yupResolver(schema),
         defaultValues: { search: tagFromSearchInput },

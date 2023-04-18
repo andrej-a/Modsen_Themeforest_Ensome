@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const TextWrapper = styled.div`
-    width: ${({ theme: { width } }) => width.xl}%;
     max-width: ${({ theme: { width } }) => width.x3l}px;
     height: auto;
     display: flex;

@@ -9,7 +9,9 @@ export const ElasticContainer = styled.div`
     height: auto;
     max-height: ${({ theme: { height } }) => height.xxl}px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     border: ${({ theme: { border } }) => border.xl};
     overflow: auto;
 `;

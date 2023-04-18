@@ -94,5 +94,6 @@
     "Address": "Address",
     "PopularPosts": "Popular posts",
     "NoCards": "Posts are not found",
-    "NoTags": "No data"
+    "NoTags": "No data",
+    "RelatedPosts": "Related Posts"
 }

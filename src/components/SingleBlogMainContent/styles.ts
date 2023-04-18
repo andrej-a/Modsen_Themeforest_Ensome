@@ -28,3 +28,13 @@ export const RightSideBar = styled.div`
     align-items: flex-start;
     gap: ${({ theme: { gap } }) => gap.xxxl}px;
 `;
+
+export const LeftSideBar = styled.div`
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: ${({ theme: { gap } }) => gap.xxxl}px;
+`;

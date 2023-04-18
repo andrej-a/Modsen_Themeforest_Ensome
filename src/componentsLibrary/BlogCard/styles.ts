@@ -59,6 +59,7 @@ export const ImageContainer = styled.div<{ type: string }>`
                 case 'right text':
                     return css`
                         width: ${({ theme: { width } }) => width.lx}px;
+                        height: ${({ theme: { height } }) => height.x3l}px;
                     `;
                 case 'without description':
                     return css`

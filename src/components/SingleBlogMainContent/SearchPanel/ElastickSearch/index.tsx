@@ -17,6 +17,7 @@ const ElasticContainerItems = memo(
         const [resultOfSearch, setResultOfSearch] = useState<string[]>([]);
         const dispatch = useAppDispatch();
         const { t } = useTranslation();
+
         useEffect(() => {
             const result: string[] = [];
             tags.forEach(tag => {
