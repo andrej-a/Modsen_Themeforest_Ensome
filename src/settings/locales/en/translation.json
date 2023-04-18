@@ -95,5 +95,10 @@
     "PopularPosts": "Popular posts",
     "NoCards": "Posts are not found",
     "NoTags": "No data",
-    "RelatedPosts": "Related Posts"
+    "RelatedPosts": "Related Posts",
+    "SoftwareDevelopment": "Software development",
+    "InformationSecurity": "Information security",
+    "InternetOfThings": "Internet of things",
+    "DigitalTransformation": "Digital transformation",
+    "HealthcareIt": "Healthcare it"
 }

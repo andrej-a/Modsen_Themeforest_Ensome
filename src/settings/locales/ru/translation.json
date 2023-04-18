@@ -96,6 +96,11 @@
     "PopularPosts": "Популярные записи",
     "NoCards": "Записи не найдены",
     "NoTags": "Данные не найдены",
-    "RelatedPosts": "Недавние публикации"
+    "RelatedPosts": "Недавние публикации",
+    "SoftwareDevelopment": "Разработка программного обеспечения",
+    "InformationSecurity": "Информационная безопасность",
+    "InternetOfThings": "Интернет вещей",
+    "DigitalTransformation": "Цифровая трансформация",
+    "HealthcareIt": "Здравоохранение и информационные технологии"
 
 }

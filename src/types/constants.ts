@@ -97,6 +97,11 @@ export enum valuesOfTheSettings {
     NO_POSTS = 'NoCards',
     NO_DATA = 'NoTags',
     RELATED_POSTS = 'RelatedPosts',
+    SOFTWARE_DEVELOPMENT = 'SoftwareDevelopment',
+    INFORMATION_SECURITY = 'InformationSecurity',
+    INTERNET_OF_THIGS = 'InternetOfThings',
+    DIGITAL_TRANSFORMATION = 'DigitalTransformation',
+    HEALTH_CARE_IT = 'HealthcareIt',
 }
 
 export enum numberEnums {
