@@ -70,3 +70,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
     isActive?: boolean;
 }
+
+export interface IAccordionCard {
+    content: string;
+}

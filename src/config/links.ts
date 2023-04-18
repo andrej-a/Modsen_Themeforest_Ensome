@@ -20,6 +20,11 @@ const links = [
         link: '/contacts',
         title: CONTACTS,
     },
+    {
+        id: uuidv4(),
+        link: '/FAQs',
+        title: 'FAQ',
+    },
 ];
 
 export const singlePagesLinks = [

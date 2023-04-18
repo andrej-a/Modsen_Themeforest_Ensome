@@ -101,6 +101,15 @@
     "InformationSecurity": "Информационная безопасность",
     "InternetOfThings": "Интернет вещей",
     "DigitalTransformation": "Цифровая трансформация",
-    "HealthcareIt": "Здравоохранение и информационные технологии"
+    "HealthcareIt": "Здравоохранение и информационные технологии",
+    "FrequentlyQuestions": "Часто задаваемые вопросы",
+    "FrequentlyQuestionsDescription": "Часто задаваемые вопросы и ответы на них от наших специалистов",
+    "DataAnalytics": "Что такое аналитика данных?",
+    "DataMining": "Что такое добыча данных?",
+    "BusinessIntelligence": "Что такое бизнес-аналитика?",
+    "ExploratoryDataAnalysis": "Что такое исследовательский анализ данных (EDA)?",
+    "ConfirmatoryDataAnalysis": "Что такое проверочный анализ данных (CDA)?",
+    "PredictiveAnalytics": "Что такое прогнозирование данных?",
+    "DataVisualization": "Что такое визуализация данных?"
 
 }

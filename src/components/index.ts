@@ -9,6 +9,7 @@ export { default as WatchVideoButton } from './Buttons/WatchVideoButton';
 export { default as ContactsSection } from './ContactsSection';
 export { default as ContactUsSection } from './ContactUsSection';
 export { default as DarkFooter } from './DarkHeader';
+export { default as FAQMainSection } from './FAQMainSection';
 export { default as FeatureSection } from './FeatureSection';
 export { default as Header } from './Header';
 export { default as Content } from './Header/Content';

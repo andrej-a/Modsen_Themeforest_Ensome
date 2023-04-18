@@ -4,5 +4,12 @@ const MainPage = lazy(() => import('@/pages/Main'));
 const Blog = lazy(() => import('@/pages/Blog'));
 const ContactsPage = lazy(() => import('@/pages/Contacts'));
 const SinglePage = lazy(() => import('@/pages/BlogSingle'));
-const pages = [<MainPage />, <Blog />, <ContactsPage />, <SinglePage />];
+const FAQ = lazy(() => import('@/pages/FAQ'));
+const pages = [
+    <MainPage />,
+    <Blog />,
+    <ContactsPage />,
+    <FAQ />,
+    <SinglePage />,
+];
 export default pages;
