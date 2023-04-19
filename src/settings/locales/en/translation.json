@@ -109,5 +109,7 @@
     "ExploratoryDataAnalysis": "What is exploratory data analysis (EDA)?",
     "ConfirmatoryDataAnalysis": "What is confirmatory data analysis (CDA)?",
     "PredictiveAnalytics": "What are predictive analytics?",
-    "DataVisualization": "What is data visualisation"
+    "DataVisualization": "What is data visualisation",
+    "ServicesPageTitle": "Data Analytics Services",
+    "ServicesPageDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore."
 }

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: ${({ theme: { width } }) => width.xxl}%;
+    width: ${({ theme: { width } }) => width.xxl}vw;
+    max-width: ${({ theme: { width } }) => width.x5l}px;
     height: auto;
     display: flex;
     flex-direction: column;

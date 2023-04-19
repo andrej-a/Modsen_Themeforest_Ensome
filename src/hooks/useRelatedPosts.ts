@@ -8,12 +8,12 @@ import getRelatedPosts from '@/utils/getRelatedPosts';
 import { useAppSelector } from './useStore';
 
 const useRelatedPosts = () => {
-    const { tagsOfCurrentBlog, blogCards } = useAppSelector(blogSelector);
+    const { currentBlog, blogCards } = useAppSelector(blogSelector);
     const [relatedPosts, setRelatedPosts] = useState<IBlogCard[]>([]);
 
     useEffect(() => {
-        setRelatedPosts(getRelatedPosts(blogCards, tagsOfCurrentBlog));
-    }, [tagsOfCurrentBlog]);
+        setRelatedPosts(getRelatedPosts(blogCards, currentBlog.tagsArray));
+    }, [currentBlog]);
 
     return {
         relatedPosts,

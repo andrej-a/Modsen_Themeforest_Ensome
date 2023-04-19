@@ -102,7 +102,7 @@ export enum valuesOfTheSettings {
     INTERNET_OF_THIGS = 'InternetOfThings',
     DIGITAL_TRANSFORMATION = 'DigitalTransformation',
     HEALTH_CARE_IT = 'HealthcareIt',
-    FAQS_SUBTITLE = 'FAQS',
+    FAQS_SUBTITLE = 'FAQs',
     FAQ_TITLE = 'FrequentlyQuestions',
     FAQ_DESCRIPTION = 'FrequentlyQuestionsDescription',
     DATA_ANALYTICS = 'DataAnalytics',
@@ -112,6 +112,8 @@ export enum valuesOfTheSettings {
     CONFIRMATORY_DATA_ANALYSIS = 'ConfirmatoryDataAnalysis',
     PREDICTIVE_ANALYTICS = 'PredictiveAnalytics',
     DATA_VISUALIZATION = 'DataVisualization',
+    SERVICES_PAGE_TITLE = 'ServicesPageTitle',
+    SERVICES_PAGE_DESCRIPTION = 'ServicesPageDescription',
 }
 
 export enum numberEnums {

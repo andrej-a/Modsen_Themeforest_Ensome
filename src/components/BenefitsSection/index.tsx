@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent } from '@/components';
+import benefitsInformation from '@/config/services';
 import { valuesOfTheSettings } from '@/types/constants';
 
-import benefitsInformation from './config';
 import {
     BenefitsCard,
     BenefitsCardDescription,
@@ -34,8 +34,9 @@ const BenefitsSection = () => {
                     </BenefitsDescriptionText>
                 </BenefitsDescription>
                 <BenefitsCards>
-                    {benefitsInformation.map(
-                        ({ image, title, description }) => {
+                    {benefitsInformation
+                        .slice(0, 4)
+                        .map(({ image, title, description }) => {
                             return (
                                 <BenefitsCard key={title}>
                                     <BenefitsCardImage>
@@ -49,8 +50,7 @@ const BenefitsSection = () => {
                                     </BenefitsCardDescription>
                                 </BenefitsCard>
                             );
-                        },
-                    )}
+                        })}
                 </BenefitsCards>
             </BenefitsContentContainer>
         </BenefitsSectionContainer>

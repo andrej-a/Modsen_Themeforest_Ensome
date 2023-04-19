@@ -74,3 +74,13 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
 export interface IAccordionCard {
     content: string;
 }
+
+export type PageTitleProps = {
+    size?: 'low' | 'medium' | 'big';
+    subTitle?: string;
+    title: string;
+    description: string;
+};
+export type PageContainerProps = {
+    children?: React.ReactNode;
+};

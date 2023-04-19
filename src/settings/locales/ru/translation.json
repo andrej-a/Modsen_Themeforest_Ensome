@@ -110,6 +110,8 @@
     "ExploratoryDataAnalysis": "Что такое исследовательский анализ данных (EDA)?",
     "ConfirmatoryDataAnalysis": "Что такое проверочный анализ данных (CDA)?",
     "PredictiveAnalytics": "Что такое прогнозирование данных?",
-    "DataVisualization": "Что такое визуализация данных?"
+    "DataVisualization": "Что такое визуализация данных?",
+    "ServicesPageTitle": "Услуги по анализу данных",
+    "ServicesPageDescription": "Решения для вашего бизнеса, связанные с обработкой, анализом и визуализацией данных"
 
 }
