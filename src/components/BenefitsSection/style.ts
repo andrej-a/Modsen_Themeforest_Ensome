@@ -60,53 +60,23 @@ export const BenefitsCards = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: ${({ theme: { gap } }) => gap.sl}px;
 
     & > :nth-child(1) {
-        margin-bottom: ${({ theme: { margin } }) => margin.lx}px;
+        position: relative;
+        bottom: ${({ theme: { bottom } }) => bottom.s}px;
     }
     & > :nth-child(3) {
-        margin-bottom: ${({ theme: { margin } }) => margin.lxx}px;
+        position: relative;
+        bottom: ${({ theme: { bottom } }) => bottom.s}px;
     }
 
     & > :nth-child(2) {
-        margin-top: ${({ theme: { margin } }) => margin.lxx}px;
+        position: relative;
+        top: ${({ theme: { top } }) => top.s}px;
     }
     & > :nth-child(4) {
-        margin-top: ${({ theme: { margin } }) => margin.lx}px;
+        position: relative;
+        top: ${({ theme: { top } }) => top.s}px;
     }
-`;
-
-export const BenefitsCard = styled.div`
-    width: ${({ theme: { width } }) => width.x2l}px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: ${({ theme: { padding } }) => padding.x4l};
-
-    background: ${({ theme: { colors } }) => colors.white};
-    box-shadow: ${({ theme: { shadows } }) => shadows.shadowCard2};
-`;
-
-export const BenefitsCardImage = styled.div``;
-
-export const BenefitsCardTitle = styled.div`
-    margin-top: ${({ theme: { margin } }) => margin.x}px;
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxl};
-    font-size: ${({ theme: { fontSize } }) => fontSize.xxl}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.black};
-`;
-
-export const BenefitsCardDescription = styled.div`
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
-    font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.grey};
 `;

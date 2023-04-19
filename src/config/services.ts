@@ -1,7 +1,4 @@
-import accessControl from '@/assets/images/logo/accessControl.png';
-import dataAnalytics from '@/assets/images/logo/dataAnalytics.png';
-import embdedAnalytics from '@/assets/images/logo/embdedAnalytics.png';
-import machineLearning from '@/assets/images/logo/machineLearning.png';
+import { TService } from '@/types/componentsOptions';
 import { valuesOfTheSettings } from '@/types/constants';
 
 const {
@@ -13,29 +10,101 @@ const {
     DATA_ANALYTICS_DESCRIPTION,
     ACCESS_CONTROL_TITLE,
     ACCESS_CONTROL_DESCRIPTION,
+    SERVICE_CUSTOMER,
+    SERVICE_CHALLENGE,
+    SERVICE_SOLUTION,
+    SERVICE_RESULTS,
+    SERVICE_TECHNOLOGIES,
+    SERVICE_SOLUTIONS_LIST,
+    BIG_DATA_TITLE,
+    ARTIFICAL_TITLE,
 } = valuesOfTheSettings;
 
-const benefitsInformation = [
+const service: TService = [
     {
-        image: machineLearning,
+        image: './logo/machineLearning.png',
+        glassImage: './logo/machineLearningGlass.png',
         title: MACHINE_LEARNING_TITLE,
         description: MACHINE_LEARNING_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
     },
     {
-        image: embdedAnalytics,
+        image: './logo/embdedAnalytics.png',
+        glassImage: './logo/embdedAnalyticsGlass.png',
         title: EMBED_ANALYTICS_TITLE,
         description: EMBED_ANALYTICS_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
     },
     {
-        image: accessControl,
+        image: './logo/accessControl.png',
+        glassImage: './logo/accessControlGlass.png',
         title: ACCESS_CONTROL_TITLE,
         description: ACCESS_CONTROL_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
     },
     {
-        image: dataAnalytics,
+        image: './logo/dataAnalytics.png',
+        glassImage: './logo/dataAnalyticsGlass.png',
         title: DATA_ANALYTICS_TITLE,
         description: DATA_ANALYTICS_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
+    },
+    {
+        image: './logo/bigData.png',
+        glassImage: './logo/bigDataGlass.png',
+        title: BIG_DATA_TITLE,
+        description: DATA_ANALYTICS_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
+    },
+    {
+        image: './logo/artifical.png',
+        glassImage: './logo/artificalGlass.png',
+        title: ARTIFICAL_TITLE,
+        description: DATA_ANALYTICS_DESCRIPTION,
+        solutionList: SERVICE_SOLUTIONS_LIST,
+        content: {
+            customer: SERVICE_CUSTOMER,
+            challenge: SERVICE_CHALLENGE,
+            solution: SERVICE_SOLUTION,
+            results: SERVICE_RESULTS,
+            tech: SERVICE_TECHNOLOGIES,
+        },
     },
 ];
 
-export default benefitsInformation;
+export default service;

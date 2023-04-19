@@ -154,20 +154,6 @@ export const MainTextSection = styled.div<{ type: string }>`
 `;
 
 export const ReadMore = styled.div<{ type: string }>`
-    display: flex;
-    gap: ${({ theme: { gap } }) => gap.s}px;
-
-    a {
-        font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-        font-style: normal;
-        font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
-        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-        color: ${({ theme: { colors } }) => colors.primary};
-        text-decoration: none;
-        cursor: pointer;
-    }
     ${({ type }) => {
         switch (type) {
             case 'medium':
@@ -216,27 +202,4 @@ export const TagsContainer = styled.div<{ type: string }>`
                 return css``;
         }
     }}
-`;
-
-export const Tag = styled.div`
-    display: flex;
-    border: ${({ theme: { border } }) => border.x};
-    border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;
-    padding: ${({ theme: { padding } }) => padding.x}px;
-
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxxl};
-    font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    background: ${({ theme: { colors } }) => colors.white};
-    color: ${({ theme: { colors } }) => colors.primary};
-    white-space: nowrap;
-    cursor: pointer;
-
-    &:hover {
-        background: ${({ theme: { colors } }) => colors.primary};
-        color: ${({ theme: { colors } }) => colors.white};
-    }
 `;

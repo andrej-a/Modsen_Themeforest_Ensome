@@ -2,15 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent } from '@/components';
-import benefitsInformation from '@/config/services';
+import { ServiceCard } from '@/componentsLibrary';
+import service from '@/config/services';
 import { valuesOfTheSettings } from '@/types/constants';
 
 import {
-    BenefitsCard,
-    BenefitsCardDescription,
-    BenefitsCardImage,
     BenefitsCards,
-    BenefitsCardTitle,
     BenefitsContentContainer,
     BenefitsDescription,
     BenefitsDescriptionText,
@@ -34,23 +31,9 @@ const BenefitsSection = () => {
                     </BenefitsDescriptionText>
                 </BenefitsDescription>
                 <BenefitsCards>
-                    {benefitsInformation
-                        .slice(0, 4)
-                        .map(({ image, title, description }) => {
-                            return (
-                                <BenefitsCard key={title}>
-                                    <BenefitsCardImage>
-                                        <ImageComponent source={image} />
-                                    </BenefitsCardImage>
-                                    <BenefitsCardTitle>
-                                        {t(title)}
-                                    </BenefitsCardTitle>
-                                    <BenefitsCardDescription>
-                                        {t(description)}
-                                    </BenefitsCardDescription>
-                                </BenefitsCard>
-                            );
-                        })}
+                    {service.slice(0, 4).map(serv => {
+                        return <ServiceCard type="small" content={serv} />;
+                    })}
                 </BenefitsCards>
             </BenefitsContentContainer>
         </BenefitsSectionContainer>

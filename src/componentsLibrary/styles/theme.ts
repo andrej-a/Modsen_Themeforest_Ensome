@@ -1,6 +1,7 @@
 const theme = {
     top: {
         xs: 0,
+        s: 30,
         l: 50,
         m: 100,
         xl: 111,
@@ -8,6 +9,9 @@ const theme = {
     right: {
         xs: 0,
         l: 18,
+    },
+    bottom: {
+        s: 30,
     },
     left: {
         xs: 0,
@@ -34,7 +38,7 @@ const theme = {
         m: 730,
         x3ll: 750,
         xx3l: 920,
-        x4l: 1100,
+        x4l: 1110,
         x5l: 1920,
     },
     height: {
@@ -56,6 +60,7 @@ const theme = {
         lxx: 55,
         lxxx: 80,
         m: 85,
+        ml: 120,
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
@@ -73,8 +78,11 @@ const theme = {
         xss: '15px 25px',
         l: 8,
         lm: 20,
+        lmx: 25,
         m: '30px 0',
         ml: 30,
+        ms: '45px 35px',
+        mx: '20px 35px',
         lxx: '35px 20px',
         lxxx: '30px 35px 50px 35px',
         lx: '25px 45px',

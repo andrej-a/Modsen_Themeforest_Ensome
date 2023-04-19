@@ -114,6 +114,14 @@ export enum valuesOfTheSettings {
     DATA_VISUALIZATION = 'DataVisualization',
     SERVICES_PAGE_TITLE = 'ServicesPageTitle',
     SERVICES_PAGE_DESCRIPTION = 'ServicesPageDescription',
+    SERVICE_CUSTOMER = 'Customer',
+    SERVICE_CHALLENGE = 'Challenge',
+    SERVICE_SOLUTION = 'Solution',
+    SERVICE_RESULTS = 'Results',
+    SERVICE_TECHNOLOGIES = 'Technologies',
+    SERVICE_SOLUTIONS_LIST = 'SolutionsList',
+    BIG_DATA_TITLE = 'BigDataTitle',
+    ARTIFICAL_TITLE = 'ArtificalTitle',
 }
 
 export enum numberEnums {

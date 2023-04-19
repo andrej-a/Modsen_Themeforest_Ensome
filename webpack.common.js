@@ -28,6 +28,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'public/icons', to: 'icons' },
+                { from: 'public/images', to: 'images' },
+                { from: 'public/logo', to: 'logo' },
                 {
                     from: './src/assets/images/logo',
                     to: 'src/assets/images/logo',
@@ -61,6 +63,23 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                },
+            },
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        sources: {
+                            list: [
+                                {
+                                    tag: 'img',
+                                    attribute: 'src',
+                                    type: 'src',
+                                },
+                            ],
+                        },
+                    },
                 },
             },
             {

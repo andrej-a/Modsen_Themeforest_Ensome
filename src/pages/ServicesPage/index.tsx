@@ -1,6 +1,15 @@
 import React from 'react';
 
-import { Content, Header, PageContainer, ServiceContent } from '@/components';
+import {
+    ContactUsSection,
+    Content,
+    DarkFooter,
+    Header,
+    OverviewSection,
+    PageContainer,
+    ServiceContent,
+    SubscribeSection,
+} from '@/components';
 import { PageTitle } from '@/componentsLibrary';
 import { valuesOfTheSettings } from '@/types/constants';
 
@@ -20,6 +29,10 @@ const Services = () => {
                 description={SERVICES_PAGE_DESCRIPTION}
             />
             <ServiceContent />
+            <OverviewSection />
+            <ContactUsSection />
+            <SubscribeSection type="primary" />
+            <DarkFooter />
         </PageContainer>
     );
 };

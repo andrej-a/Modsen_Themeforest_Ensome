@@ -17,7 +17,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 const persistConfig = {
     key: 'root_store',
-    storage: localforage,
+    storage,
 };
 const rootReducer = combineReducers({
     blogSlice,

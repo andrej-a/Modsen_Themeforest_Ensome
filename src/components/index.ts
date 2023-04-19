@@ -22,6 +22,7 @@ export { default as ModalWindow } from './ModalWindow';
 export { default as OurBlogSection } from './OurBlogSection';
 export { default as OverviewSection } from './OverviewSection';
 export { default as PricingSection } from './PricingSection';
+export { default as ReadMoreComponent } from './ReadMoreLink';
 export { default as ServiceContent } from './ServicesPageContent';
 export { default as MainContentSection } from './SingleBlogMainContent';
 export { default as SingleBlogTitle } from './SingleBlogTitle';

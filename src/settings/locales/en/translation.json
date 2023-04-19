@@ -111,5 +111,13 @@
     "PredictiveAnalytics": "What are predictive analytics?",
     "DataVisualization": "What is data visualisation",
     "ServicesPageTitle": "Data Analytics Services",
-    "ServicesPageDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore."
+    "ServicesPageDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.",
+    "Customer": "<span>Customer</span> <br> Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel.",
+    "Challenge": "<span>Challenge</span> <br> Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel.",
+    "Solution": "<span>Solution</span> <br> Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel.",
+    "Results": "<span>Results</span> <br> Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel.",
+    "Technologies": "<span>Technologies</span> <br> Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel.",
+    "SolutionsList": "<ul><li>Hid mobile access </li><li>Location services</li><li>Visitor management</li><li>Cybersecurity coordination</li></ul>",
+    "BigDataTitle": "Big data consulting",
+    "ArtificalTitle": "Artificial intelligence"
 }

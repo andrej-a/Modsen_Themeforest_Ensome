@@ -23,7 +23,7 @@ const PageTitle = memo(
                     <BreadCrumbs linkColor="grey" crumbColor="black" />
                 </BreadCrumbsWrapper>
                 <DescriptionWrapper>
-                    <SubTitle>{subTitle}</SubTitle>
+                    <SubTitle>{t(subTitle || '')}</SubTitle>
                     <Title>{t(title)}</Title>
                     <Description size={size!}>{t(description)}</Description>
                 </DescriptionWrapper>

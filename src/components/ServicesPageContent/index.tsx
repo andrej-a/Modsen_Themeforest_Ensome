@@ -1,9 +1,22 @@
 import React from 'react';
 
-type Props = {};
+import { ServiceCard } from '@/componentsLibrary';
+import service from '@/config/services';
 
-const ServiceContent = (props: Props) => {
-    return <div>ServiceContent</div>;
+import { Content, ContentWrapper } from './styles';
+
+const ServiceContent = () => {
+    return (
+        <ContentWrapper>
+            <Content>
+                {service.map(serv => {
+                    return (
+                        <ServiceCard type="wide glass icon" content={serv} />
+                    );
+                })}
+            </Content>
+        </ContentWrapper>
+    );
 };
 
 export default ServiceContent;

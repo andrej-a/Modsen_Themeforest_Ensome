@@ -84,3 +84,51 @@ export type PageTitleProps = {
 export type PageContainerProps = {
     children?: React.ReactNode;
 };
+
+export interface IService {
+    image: string;
+    glassImage: string;
+    title: string;
+    description: string;
+    solutionList: string;
+    content: {
+        customer: string;
+        challenge: string;
+        solution: string;
+        results: string;
+        tech: string;
+    };
+}
+
+export type TService = IService[];
+
+export type ServiceCardProps = {
+    type: 'right text' | 'center text' | 'wide glass icon' | 'small';
+    content: IService;
+};
+
+export type BlogCardProps = {
+    settings: {
+        type:
+            | 'big'
+            | 'medium'
+            | 'small'
+            | 'right text'
+            | 'without description'
+            | 'no img';
+    };
+    content: {
+        id: string;
+        author: string;
+        image: string;
+        countOfTheViews: string;
+        publishDate: string;
+        blogTitle: string;
+        firstContentPart: string;
+        separateParagraph: string;
+        secondContentPart: string;
+        share: string;
+        tagsTitle: string;
+        tagsArray: string[];
+    };
+};

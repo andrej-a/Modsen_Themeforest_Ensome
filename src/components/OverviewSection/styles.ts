@@ -12,7 +12,7 @@ export const Overview = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x4l}px;
     height: auto;
-    margin: ${({ theme: { margin } }) => margin.xxxl};
+    margin-top: ${({ theme: { margin } }) => margin.ml}px;
     display: flex;
     flex-direction: column;
     justify-content: center;
