@@ -2,14 +2,17 @@ import React from 'react';
 
 import {
     BlogPageContent,
-    BlogPagePreview,
     Content,
     DarkFooter,
+    DarkPageTitle,
     Header,
     SubscribeSection,
 } from '@/components';
+import { valuesOfTheSettings } from '@/types/constants';
 
 import { BlogPageContainer } from './styles';
+
+const { BLOG, BLOG_DESCRIPTION } = valuesOfTheSettings;
 
 const Blog = () => {
     return (
@@ -17,7 +20,7 @@ const Blog = () => {
             <Header background="secondary">
                 <Content type="secondary" />
             </Header>
-            <BlogPagePreview />
+            <DarkPageTitle title={BLOG} description={BLOG_DESCRIPTION} />
             <BlogPageContent />
             <SubscribeSection type="dark" />
             <DarkFooter />

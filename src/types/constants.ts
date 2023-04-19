@@ -137,6 +137,7 @@ export enum numberEnums {
 
 export enum namesOfTheSlices {
     BLOG_SLICE = 'blogSlice',
+    SERVICE_SLICE = 'serviceSlice',
 }
 
 export enum UIConstants {

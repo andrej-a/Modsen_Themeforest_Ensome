@@ -6,6 +6,7 @@ const ContactsPage = lazy(() => import('@/pages/Contacts'));
 const SinglePage = lazy(() => import('@/pages/BlogSingle'));
 const Services = lazy(() => import('@/pages/ServicesPage'));
 const FAQ = lazy(() => import('@/pages/FAQ'));
+const ServiceSingle = lazy(() => import('@/pages/ServiceSingle'));
 const pages = [
     <MainPage />,
     <Blog />,
@@ -13,5 +14,6 @@ const pages = [
     <Services />,
     <FAQ />,
     <SinglePage />,
+    <ServiceSingle />,
 ];
 export default pages;

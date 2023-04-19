@@ -1,7 +1,6 @@
 export { default as App } from './App';
 export { default as BenefitsSection } from './BenefitsSection';
 export { default as BlogPageContent } from './BlogPageContent';
-export { default as BlogPagePreview } from './BlogPagePreview';
 export { default as BreadCrumbs } from './BreadCrumbs';
 export { default as DefaultButton } from './Buttons/DefaultButton';
 export { default as RoundButton } from './Buttons/RoundButton';
@@ -9,6 +8,7 @@ export { default as WatchVideoButton } from './Buttons/WatchVideoButton';
 export { default as ContactsSection } from './ContactsSection';
 export { default as ContactUsSection } from './ContactUsSection';
 export { default as DarkFooter } from './DarkHeader';
+export { default as DarkPageTitle } from './DarkPageTitle';
 export { default as FAQMainSection } from './FAQMainSection';
 export { default as FeatureSection } from './FeatureSection';
 export { default as PageContainer } from './GlobalPageContainer';

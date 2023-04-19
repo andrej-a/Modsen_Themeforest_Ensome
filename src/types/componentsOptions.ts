@@ -132,3 +132,7 @@ export type BlogCardProps = {
         tagsArray: string[];
     };
 };
+export interface IDarkPageTitle {
+    title: string;
+    description: string;
+}

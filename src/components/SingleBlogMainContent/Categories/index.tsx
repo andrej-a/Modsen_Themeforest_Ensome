@@ -1,15 +1,22 @@
 import React from 'react';
 
-import categories from '@/config/categories';
-
 import CategoryItem from './Accordeon';
 import { CategoriesWrapper } from './styles';
 
-const Categories = () => {
+export interface IListItem {
+    title: string;
+    description: string;
+}
+
+export interface ICategories {
+    content: IListItem[];
+}
+
+const Categories = ({ content }: ICategories) => {
     return (
         <CategoriesWrapper>
-            {categories.map(({ theme, description }) => {
-                return <CategoryItem theme={theme} description={description} />;
+            {content.map(({ title, description }) => {
+                return <CategoryItem theme={title} description={description} />;
             })}
         </CategoriesWrapper>
     );

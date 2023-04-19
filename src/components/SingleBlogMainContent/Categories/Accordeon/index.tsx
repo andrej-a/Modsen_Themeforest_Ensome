@@ -35,7 +35,7 @@ const CategoryItem = memo(({ theme, description }: CategoryItemProps) => {
                 currentHeight={height}
                 isExpanded={isExpanded}
             >
-                {description}
+                {t(description)}
             </AccordeonDescription>
         </>
     );

@@ -66,23 +66,6 @@ module.exports = {
                 },
             },
             {
-                test: /\.(html)$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        sources: {
-                            list: [
-                                {
-                                    tag: 'img',
-                                    attribute: 'src',
-                                    type: 'src',
-                                },
-                            ],
-                        },
-                    },
-                },
-            },
-            {
                 test: /\.(jpg|png|svg)$/,
                 use: {
                     loader: 'url-loader',

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import categories from '@/config/categories';
+
 import Categories from './Categories';
 import PopularPosts from './PopularPosts';
 import RelatedPosts from './RelatedPosts';
@@ -24,7 +26,7 @@ const MainContentSection = () => {
                 <RightSideBar>
                     <SearchPanel />
                     <PopularPosts />
-                    <Categories />
+                    <Categories content={categories} />
                     <Tags />
                 </RightSideBar>
             </MainContent>

@@ -2,7 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, ReadMoreComponent } from '@/components';
-import { ServiceCardProps } from '@/types/componentsOptions';
+import { useAppDispatch } from '@/hooks/useStore';
+import { setServicePage } from '@/store/slices/serviceSlice';
+import { IService, ServiceCardProps } from '@/types/componentsOptions';
 
 import {
     CardContainer,
@@ -15,6 +17,10 @@ import {
 const ServiceCard = ({ type, content }: ServiceCardProps) => {
     const { image, glassImage, title, description } = content;
     const { t } = useTranslation();
+    const dispatch = useAppDispatch();
+    const onSetService = (service: IService) => () => {
+        dispatch(setServicePage(service));
+    };
     return (
         <CardContainer type={type}>
             <ImageContainer type={type}>
@@ -26,8 +32,8 @@ const ServiceCard = ({ type, content }: ServiceCardProps) => {
             <DescriptionContainer type={type}>
                 {t(description)}
             </DescriptionContainer>
-            <ReadMoreContainer type={type}>
-                <ReadMoreComponent link={title} />
+            <ReadMoreContainer type={type} onClick={onSetService(content)}>
+                <ReadMoreComponent link={`service/${title}`} />
             </ReadMoreContainer>
         </CardContainer>
     );

@@ -35,7 +35,12 @@ const links = [
 export const singlePagesLinks = [
     {
         id: uuidv4(),
-        link: '/:title',
+        link: '/:blog',
+        title: '',
+    },
+    {
+        id: uuidv4(),
+        link: '/service/:title',
         title: '',
     },
 ];

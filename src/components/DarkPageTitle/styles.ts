@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BlogPagePreviewContainer = styled.div`
+export const DarkPagePreviewContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
     height: auto;
@@ -12,7 +12,7 @@ export const BlogPagePreviewContainer = styled.div`
     background: ${({ theme: { colors } }) => colors.secondary};
 `;
 
-export const BlogPagePreviewContent = styled.div`
+export const DarkPagePreviewContent = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x4l}px;
     height: ${({ theme: { height } }) => height.x1l}px;
@@ -26,7 +26,7 @@ export const BreadCrumb = styled.div`
     margin-top: ${({ theme: { margin } }) => margin.l1x}px;
 `;
 
-export const BlogPagePreviewDescription = styled.div`
+export const DarkPagePreviewDescription = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ export const BlogPagePreviewDescription = styled.div`
     margin-bottom: ${({ theme: { margin } }) => margin.m}px;
 `;
 
-export const BlogPagePreviewTitle = styled.div`
+export const DarkPagePreviewTitle = styled.div`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
     font-style: normal;
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxxl};

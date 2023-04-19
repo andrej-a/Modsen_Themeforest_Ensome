@@ -32,8 +32,10 @@ const BreadCrumbs = ({ linkColor, crumbColor }: BreadCrumbsProps) => {
         }
     });
 
-    const result = linksStack.map(({ link, title }, index) => {
-        if (index !== linksStack.length - 1) {
+    const filteredResult = [linksStack.shift()!, linksStack.pop()!];
+
+    const result = filteredResult.map(({ link, title }, index) => {
+        if (index !== filteredResult.length - 1) {
             return index === 0 ? (
                 <BreadCrumbLink linkColor={linkColor}>
                     <Link to={link}>{title} </Link>

@@ -1,5 +1,3 @@
-import localforage from 'localforage';
-
 import {
     FLUSH,
     PAUSE,
@@ -13,6 +11,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import blogSlice from '@/store/slices/blog';
+import serviceSlice from '@/store/slices/serviceSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 const persistConfig = {
@@ -21,6 +20,7 @@ const persistConfig = {
 };
 const rootReducer = combineReducers({
     blogSlice,
+    serviceSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
