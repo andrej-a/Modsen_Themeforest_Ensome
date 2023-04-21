@@ -158,4 +158,5 @@ export const envConstants = {
     SERVICE_ID: process.env.SERVICE_ID,
     TEMPLATE_ID: process.env.TEMPLATE_ID,
     USER_ID: process.env.USER_ID,
+    FULL_FORM_TEMPLATE_ID: process.env.FULL_FORM_TEMPLATE_ID,
 };

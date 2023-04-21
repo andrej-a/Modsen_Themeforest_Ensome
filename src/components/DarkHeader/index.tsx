@@ -67,18 +67,18 @@ const DarkFooter = () => {
                 <ServiceContainer>
                     <Title>{t(SERVICE)}</Title>
                     {services.map(service => {
-                        return <p>{t(service)}</p>;
+                        return <Text>{t(service)}</Text>;
                     })}
                 </ServiceContainer>
                 <ContactInfoContainer>
                     <Title>{t(CONTACT_INFO)}</Title>
                     {Object.values(contactList).map(({ href, contact }) => {
                         return (
-                            <p>
+                            <Text>
                                 <Link href={href} target="_blank">
                                     {contact}
                                 </Link>
-                            </p>
+                            </Text>
                         );
                     })}
                 </ContactInfoContainer>

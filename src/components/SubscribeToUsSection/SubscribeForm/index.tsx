@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useSubscribe from '@/hooks/useSubscribe';
-import { valuesOfTheSettings } from '@/types/constants';
+import { envConstants, valuesOfTheSettings } from '@/types/constants';
 
 import { schema } from './config/schema';
 import {
@@ -13,6 +13,8 @@ import {
 } from './styles';
 
 const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE } = valuesOfTheSettings;
+const { TEMPLATE_ID } = envConstants;
+
 const SubscribeFormComponent = () => {
     const { t } = useTranslation();
     const {
@@ -22,7 +24,7 @@ const SubscribeFormComponent = () => {
         handleSubmit,
         errors,
         handleChange,
-    } = useSubscribe(schema);
+    } = useSubscribe(schema, TEMPLATE_ID);
     return (
         <SubscribeForm ref={formRef} onSubmit={handleSubmit(handleChange)}>
             <SubscribeInput

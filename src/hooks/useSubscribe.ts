@@ -7,7 +7,7 @@ import createNotification from '@/utils/notificationSettings';
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-const { SERVICE_ID, TEMPLATE_ID, USER_ID } = envConstants;
+const { SERVICE_ID, USER_ID, FULL_FORM_TEMPLATE_ID } = envConstants;
 
 type TFormFileds = {
     email: string;
@@ -16,7 +16,7 @@ type TFormFileds = {
     message?: string;
 };
 
-const useSubscribe = (schema: Schema<TFormFileds>) => {
+const useSubscribe = (schema: Schema<TFormFileds>, template?: string) => {
     const [isDisabled, setIsDisabled] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
     const {
@@ -29,10 +29,25 @@ const useSubscribe = (schema: Schema<TFormFileds>) => {
         defaultValues: { email: '', name: '', theme: '', message: '' },
     });
 
-    const handleChange: SubmitHandler<TFormFileds> = () => {
+    const handleChange: SubmitHandler<TFormFileds> = ({
+        email,
+        theme,
+        name,
+        message,
+    }) => {
         setIsDisabled(true);
         emailjs
-            .sendForm(SERVICE_ID!, TEMPLATE_ID!, formRef.current!, USER_ID)
+            .send(
+                SERVICE_ID!,
+                template || FULL_FORM_TEMPLATE_ID!,
+                {
+                    email,
+                    theme,
+                    name,
+                    message,
+                },
+                USER_ID,
+            )
             .then(
                 result => {
                     createNotification('success', result.text);

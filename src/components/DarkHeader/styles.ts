@@ -31,6 +31,22 @@ export const FooterContent = styled.div`
     padding-bottom: ${({ theme: { padding } }) => padding.x6l}px;
     gap: ${({ theme: { gap } }) => gap.x4l}px;
     border-bottom: ${({ theme: { border } }) => border.m};
+
+    a {
+        font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
+        font-style: normal;
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+        color: ${({ theme: { colors } }) => colors.grey};
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: ${({ theme: { colors } }) => colors.beige};
+        }
+    }
 `;
 
 export const ContentDescription = styled.div`
@@ -67,18 +83,6 @@ export const QuickLinkContainer = styled.div`
     align-items: flex-start;
     text-align: left;
     gap: ${({ theme: { gap } }) => gap.sx}px;
-
-    a {
-        font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
-        font-style: normal;
-        font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
-        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-        color: ${({ theme: { colors } }) => colors.grey};
-        text-decoration: none;
-        cursor: pointer;
-    }
 `;
 
 export const ServiceContainer = styled.div`
@@ -95,18 +99,6 @@ export const ContactInfoContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     gap: ${({ theme: { gap } }) => gap.sx}px;
-
-    a {
-        font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
-        font-style: normal;
-        font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
-        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
-        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-        color: ${({ theme: { colors } }) => colors.grey};
-        text-decoration: none;
-        cursor: pointer;
-    }
 `;
 
 export const Title = styled.div`
