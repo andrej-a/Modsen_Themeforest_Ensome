@@ -6,7 +6,7 @@ export const AccordionTrigger = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${({ theme: { padding } }) => padding.lm}px;
+    padding: ${({ theme: { padding } }) => padding.x2s}px;
     border-bottom: ${({ theme: { border } }) => border.xl};
 
     cursor: pointer;

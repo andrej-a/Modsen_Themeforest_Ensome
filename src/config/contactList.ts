@@ -1,4 +1,4 @@
-const contactInfo = {
+const contactList = {
     mail: {
         value: 'Email',
         href: 'mailto:ensome@info.co.us',
@@ -15,4 +15,4 @@ const contactInfo = {
         contact: '1642 Washington Avenue, Jackson, MS, Mississippi, 39201',
     },
 };
-export default contactInfo;
+export default contactList;

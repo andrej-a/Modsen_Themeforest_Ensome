@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { BreadCrumbs, ImageComponent } from '@/components';
+import contactList from '@/config/contactList';
 import { valuesOfTheSettings } from '@/types/constants';
 import { getIcon } from '@/utils/cutString';
 
-import contactInfo from '../DarkHeader/config/contactInfo';
 import ContactsPageForm from './Form';
 import {
     BreadCrumbContainer,
@@ -38,7 +38,7 @@ const ContactsSection = () => {
                     <ContactsPageForm />
                 </FormContainer>
                 <ContactsContainer>
-                    {Object.values(contactInfo).map(
+                    {Object.values(contactList).map(
                         ({ value, href, contact }) => {
                             return (
                                 <ContactItemWrapper>

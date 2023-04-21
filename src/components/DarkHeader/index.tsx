@@ -8,9 +8,8 @@ import { ImageComponent } from '@/components';
 import links from '@/config/links';
 import { UIConstants, valuesOfTheSettings } from '@/types/constants';
 
+import contactList from '../../config/contactList';
 import footerLogoArray from '../../config/logoLinks';
-import contactInfo from './config/contactInfo';
-import quickLinks from './config/quickLinks';
 import services from './config/service';
 import {
     AdditionalInformation,
@@ -73,7 +72,7 @@ const DarkFooter = () => {
                 </ServiceContainer>
                 <ContactInfoContainer>
                     <Title>{t(CONTACT_INFO)}</Title>
-                    {Object.values(contactInfo).map(({ href, contact }) => {
+                    {Object.values(contactList).map(({ href, contact }) => {
                         return (
                             <p>
                                 <Link href={href} target="_blank">

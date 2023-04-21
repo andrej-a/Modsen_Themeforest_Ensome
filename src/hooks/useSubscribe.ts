@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { AnyObject, ObjectSchema, Schema } from 'yup';
+import { Schema } from 'yup';
 
-import { schema } from '@/components/SubscribeToUsSection/SubscribeForm/config/schema';
 import { envConstants } from '@/types/constants';
 import createNotification from '@/utils/notificationSettings';
 import emailjs from '@emailjs/browser';

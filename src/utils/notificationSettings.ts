@@ -8,10 +8,10 @@ const createNotification = (type: 'success' | 'error', message: string) => {
         fadeAnimation: 'fade-out',
         type,
         visibleTime: 5000,
-        title: type === 'success' ? 'Subscribed' : 'Error in subscribed!',
+        title: type === 'success' ? 'Success' : 'Error in process!',
         description: message,
         indent: 'small',
-        color: type === 'success' ? '#0cee53' : '#f30808',
+        color: type === 'success' ? '#185CFF' : '#f30808',
         id: uuidv4(),
         animationDuration: 1000,
     });

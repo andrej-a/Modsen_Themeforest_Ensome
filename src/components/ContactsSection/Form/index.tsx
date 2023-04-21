@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SubscribeToUsSection/SubscribeForm/styles';
+import { schema } from '@/config/fullFormSchema';
 import useSubscribe from '@/hooks/useSubscribe';
 import { numberEnums, valuesOfTheSettings } from '@/types/constants';
 
-import { schema } from './config/schema';
 import {
     CustomerDataContainer,
     CustomerDataInput,

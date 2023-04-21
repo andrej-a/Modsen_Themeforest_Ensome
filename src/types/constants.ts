@@ -122,6 +122,12 @@ export enum valuesOfTheSettings {
     SERVICE_SOLUTIONS_LIST = 'SolutionsList',
     BIG_DATA_TITLE = 'BigDataTitle',
     ARTIFICAL_TITLE = 'ArtificalTitle',
+    CONTACT_INFORMATION = 'ContactInformation',
+    CONTACT_SERVICE_DESCRIPTION = 'CotactServiceDescription',
+    EMAIL_TITLE = 'EmailTitle',
+    NAME_TITLE = 'Name',
+    MESSAGE_TITLE = 'Message',
+    THEME_TITLE = 'Theme',
 }
 
 export enum numberEnums {

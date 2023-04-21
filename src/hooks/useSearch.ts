@@ -7,13 +7,10 @@ import {
     setTagFromSearchInput,
     setTagsOfCurrentBlog,
 } from '@/store/slices/blog';
+import { TSearchField } from '@/types/componentsOptions';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { useAppDispatch, useAppSelector } from './useStore';
-
-type TSearchField = {
-    search: string;
-};
 
 const useSearch = (schema?: Schema<TSearchField>) => {
     const dispatch = useAppDispatch();
@@ -22,9 +19,8 @@ const useSearch = (schema?: Schema<TSearchField>) => {
     const {
         register,
         handleSubmit,
-        formState: { errors, isSubmitSuccessful },
+        formState: { errors },
         setValue,
-        reset,
     } = useForm<TSearchField>({
         resolver: yupResolver(schema),
         defaultValues: { search: tagFromSearchInput },
@@ -39,7 +35,7 @@ const useSearch = (schema?: Schema<TSearchField>) => {
     };
 
     const onHandleSubmit: SubmitHandler<{ search: string }> = ({ search }) => {
-        dispatch(setTagsOfCurrentBlog([tagFromSearchInput]));
+        dispatch(setTagsOfCurrentBlog([search]));
     };
 
     return {

@@ -136,3 +136,12 @@ export interface IDarkPageTitle {
     title: string;
     description: string;
 }
+
+export type TSearchField = {
+    search: string;
+};
+
+export type ElasticItemComponentProps = {
+    matchedServices: string[];
+    onSetIsVisible: (status: boolean) => () => void;
+};

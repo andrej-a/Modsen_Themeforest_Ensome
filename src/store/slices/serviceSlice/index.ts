@@ -9,6 +9,7 @@ export const initialState = {
     services: service,
     currentServicePage: {} as IService,
     searchingValue: '',
+    currentLink: '',
 };
 
 const serviceSlice = createSlice({
@@ -18,9 +19,15 @@ const serviceSlice = createSlice({
         setServicePage: (state, { payload }: TPayload<IService>) => {
             state.currentServicePage = payload;
         },
+        setSearchingValue: (state, { payload }: TPayload<string>) => {
+            state.searchingValue = payload;
+        },
+        setCurrentLink: (state, { payload }: TPayload<string>) => {
+            state.currentLink = payload;
+        },
     },
 });
 
 const { actions, reducer } = serviceSlice;
-export const { setServicePage } = actions;
+export const { setServicePage, setSearchingValue, setCurrentLink } = actions;
 export default reducer;

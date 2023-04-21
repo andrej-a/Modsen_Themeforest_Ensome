@@ -20,6 +20,12 @@ const ElasticContainerItems = memo(
 
         useEffect(() => {
             const result: string[] = [];
+
+            if (!tagFromSearchInput) {
+                setResultOfSearch([]);
+                return;
+            }
+
             tags.forEach(tag => {
                 if (
                     tag.toLowerCase().includes(tagFromSearchInput.toLowerCase())
