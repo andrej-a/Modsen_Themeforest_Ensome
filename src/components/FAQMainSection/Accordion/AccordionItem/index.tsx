@@ -5,11 +5,11 @@ import ClosedAccordion from '@/assets/images/logo/closed_accordion.png';
 import OpenedAccordion from '@/assets/images/logo/opened_accordion.png';
 import { ImageComponent } from '@/components';
 import { IAccordionCard } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { AccodrionItem, Answer, Question, Text } from './styles';
 
-const { BENEFITS_DESCRIPTION } = valuesOfTheSettings;
+const { BENEFITS_DESCRIPTION } = dictionary;
 
 const AccordionCard = ({ content }: IAccordionCard) => {
     const { t } = useTranslation();

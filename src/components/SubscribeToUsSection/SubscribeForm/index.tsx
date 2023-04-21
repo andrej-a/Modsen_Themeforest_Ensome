@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useSubscribe from '@/hooks/useSubscribe';
-import { envConstants, valuesOfTheSettings } from '@/types/constants';
+import { dictionary, envConstants } from '@/types/constants';
 
 import { schema } from './config/schema';
 import {
@@ -12,7 +12,7 @@ import {
     ValidationError,
 } from './styles';
 
-const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE } = valuesOfTheSettings;
+const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE } = dictionary;
 const { TEMPLATE_ID } = envConstants;
 
 const SubscribeFormComponent = () => {

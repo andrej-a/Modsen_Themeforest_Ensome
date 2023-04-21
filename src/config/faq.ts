@@ -1,4 +1,4 @@
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 const {
     DATA_ANALYTICS,
@@ -8,7 +8,7 @@ const {
     CONFIRMATORY_DATA_ANALYSIS,
     PREDICTIVE_ANALYTICS,
     DATA_VISUALIZATION,
-} = valuesOfTheSettings;
+} = dictionary;
 
 const faqData = [
     DATA_ANALYTICS,

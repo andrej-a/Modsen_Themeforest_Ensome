@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { SliderComponent } from '@/components';
 import { BlogCard } from '@/componentsLibrary';
 import blogCardsData from '@/config/blogCardsData';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { OurBlogContainer } from './styles';
 
-const { OUR_BLOG } = valuesOfTheSettings;
+const { OUR_BLOG } = dictionary;
 const OurBlogSection = () => {
     const { t } = useTranslation();
     return (

@@ -85,28 +85,6 @@ export type PageContainerProps = {
     children?: React.ReactNode;
 };
 
-export interface IService {
-    image: string;
-    glassImage: string;
-    title: string;
-    description: string;
-    solutionList: string;
-    content: {
-        customer: string;
-        challenge: string;
-        solution: string;
-        results: string;
-        tech: string;
-    };
-}
-
-export type TService = IService[];
-
-export type ServiceCardProps = {
-    type: 'right text' | 'center text' | 'wide glass icon' | 'small';
-    content: IService;
-};
-
 export type BlogCardProps = {
     settings: {
         type:

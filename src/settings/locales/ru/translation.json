@@ -126,6 +126,8 @@
     "Name": "Имя",
     "EmailTitle": "Email",
     "Theme": "тема",
-    "Message": "Сообщение"
-
+    "Message": "Сообщение",
+    "SolutionsPageTitle": "Решения в области анализа данных",
+    "SolutionsPageDescription": "Готовясь к вашему успеху, мы предоставляем поистине выдающиеся IT-решения.",
+    "AdvantagesTitle": "Почему выбирают нас?"
 }

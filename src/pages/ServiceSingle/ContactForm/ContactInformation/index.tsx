@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { ImageComponent } from '@/components';
 import contactList from '@/config/contactList';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     ComponentContainer,
@@ -14,8 +14,7 @@ import {
     TitleContainer,
 } from './styles';
 
-const { CONTACT_INFORMATION, CONTACT_SERVICE_DESCRIPTION } =
-    valuesOfTheSettings;
+const { CONTACT_INFORMATION, CONTACT_SERVICE_DESCRIPTION } = dictionary;
 const ContactInformation = () => {
     const { t } = useTranslation();
     return (

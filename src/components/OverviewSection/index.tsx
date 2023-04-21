@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, StatisticCard } from '@/components';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import clientsLogos from './settings/clientLogos';
 import projectsInformation from './settings/projectsInformation';
@@ -16,7 +16,7 @@ import {
     OverviewTitleContainer,
 } from './styles';
 
-const { OVERVIEW_TITLE, OVERVIEW_DESCRIPTION } = valuesOfTheSettings;
+const { OVERVIEW_TITLE, OVERVIEW_DESCRIPTION } = dictionary;
 
 const OverviewSection = () => {
     const { t } = useTranslation();

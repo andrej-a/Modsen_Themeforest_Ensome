@@ -11,10 +11,9 @@ import {
     SubscribeSection,
 } from '@/components';
 import { PageTitle } from '@/componentsLibrary';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { SERVICES, SERVICES_PAGE_TITLE, SERVICES_PAGE_DESCRIPTION } =
-    valuesOfTheSettings;
+const { SERVICES, SERVICES_PAGE_TITLE, SERVICES_PAGE_DESCRIPTION } = dictionary;
 
 const Services = () => {
     return (

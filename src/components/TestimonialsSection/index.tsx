@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { ImageComponent, SliderComponent } from '@/components';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import testimonialsData from './config';
 import {
@@ -15,7 +15,7 @@ import {
     TestimonialText,
 } from './style';
 
-const { TESTIMONIALS } = valuesOfTheSettings;
+const { TESTIMONIALS } = dictionary;
 
 const TestimonialsSection = () => {
     const [countCardsOnThePage, setCountCardsOnThePage] = useState(3);

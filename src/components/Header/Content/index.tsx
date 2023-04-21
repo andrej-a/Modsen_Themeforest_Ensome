@@ -5,13 +5,13 @@ import HeaderLogo from '@/assets/images/logo/headerLogo.png';
 import HeaderLogoWhite from '@/assets/images/logo/headerLogoWhite.png';
 import { LogoComponent } from '@/components/';
 import { HeaderContentProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import VideoPlayerHandler from '../VideoPlayerHandler';
 import { ContentContainer, MenuContainer, MenuItem } from './styles';
 
 const { HOME, SOLUTIONS, PAGES, ELEMENTS, BLOG, CONTACT, WATCH_THE_DEMO } =
-    valuesOfTheSettings;
+    dictionary;
 
 const Content = ({ type }: HeaderContentProps) => {
     const { t } = useTranslation();

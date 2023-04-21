@@ -8,11 +8,11 @@ import {
     Header,
     SubscribeSection,
 } from '@/components';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { BlogPageContainer } from './styles';
 
-const { BLOG, BLOG_DESCRIPTION } = valuesOfTheSettings;
+const { BLOG, BLOG_DESCRIPTION } = dictionary;
 
 const Blog = () => {
     return (

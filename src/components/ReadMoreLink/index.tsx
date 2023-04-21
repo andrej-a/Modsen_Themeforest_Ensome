@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import ReadMoreArrow from '@/assets/images/logo/readmore.png';
 import { ImageComponent } from '@/components';
 import { useAppDispatch } from '@/hooks/useStore';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { ReadMoreContainer } from './styles';
 
-const { READ_MORE } = valuesOfTheSettings;
+const { READ_MORE } = dictionary;
 
 type ReadMoreLinkProps = {
     link: string;

@@ -6,7 +6,7 @@ import { ReactSVG } from 'react-svg';
 import FooterLogoWhite from '@/assets/images/logo/footerLogoWhite.png';
 import { ImageComponent } from '@/components';
 import links from '@/config/links';
-import { UIConstants, valuesOfTheSettings } from '@/types/constants';
+import { dictionary, UIConstants } from '@/types/constants';
 
 import contactList from '../../config/contactList';
 import footerLogoArray from '../../config/logoLinks';
@@ -28,8 +28,7 @@ import {
     Title,
 } from './styles';
 
-const { QUICK_LINK, SERVICE, CONTACT_INFO, FOOTER_DESCRIPTION } =
-    valuesOfTheSettings;
+const { QUICK_LINK, SERVICE, CONTACT_INFO, FOOTER_DESCRIPTION } = dictionary;
 const { COMPANY_INFO, POLICY, TERMS } = UIConstants;
 const DarkFooter = () => {
     const { t } = useTranslation();

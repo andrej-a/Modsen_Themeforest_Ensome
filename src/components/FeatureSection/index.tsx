@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import FeatureSectionImage from '@/assets/images/pictures/featuresSection.png';
 import { DefaultButton, ImageComponent } from '@/components';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     FeatureSectionContainer,
@@ -28,7 +28,7 @@ const {
     LEARN_MORE,
     NEW_SOLUTIONS,
     NEW_SOLUTIONS_DESCRIPTION,
-} = valuesOfTheSettings;
+} = dictionary;
 const FeatureSection = () => {
     const { t } = useTranslation();
     return (

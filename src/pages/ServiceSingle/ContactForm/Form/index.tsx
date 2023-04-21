@@ -5,7 +5,7 @@ import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SearchPanel/styles';
 import { schema } from '@/config/fullFormSchema';
 import useSubscribe from '@/hooks/useSubscribe';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     FormComponent,
@@ -26,7 +26,7 @@ const {
     EMAIL_TITLE,
     MESSAGE_TITLE,
     THEME_TITLE,
-} = valuesOfTheSettings;
+} = dictionary;
 
 const Form = () => {
     const { t } = useTranslation();

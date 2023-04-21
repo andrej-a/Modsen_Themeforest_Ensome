@@ -1,8 +1,8 @@
 import * as yup from 'yup';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { INPUT_ERROR } = valuesOfTheSettings;
+const { INPUT_ERROR } = dictionary;
 
 export const schema = yup.object({
     search: yup.string().required(INPUT_ERROR),

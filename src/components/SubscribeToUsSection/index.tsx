@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { SubscribeSectionProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     Description,
@@ -14,7 +14,7 @@ import {
 } from './styles';
 import SubscribeFormComponent from './SubscribeForm';
 
-const { SUBSCRIBE_US, SUBSCRIBE_DESCRIPTION } = valuesOfTheSettings;
+const { SUBSCRIBE_US, SUBSCRIBE_DESCRIPTION } = dictionary;
 
 const SubscribeSection = ({ type }: SubscribeSectionProps) => {
     const { t } = useTranslation();

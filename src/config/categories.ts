@@ -1,4 +1,4 @@
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 const {
     SOFTWARE_DEVELOPMENT,
@@ -6,7 +6,8 @@ const {
     INTERNET_OF_THIGS,
     DIGITAL_TRANSFORMATION,
     HEALTH_CARE_IT,
-} = valuesOfTheSettings;
+} = dictionary;
+
 const categories = [
     {
         title: SOFTWARE_DEVELOPMENT,

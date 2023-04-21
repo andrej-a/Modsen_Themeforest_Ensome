@@ -1,9 +1,8 @@
 import * as yup from 'yup';
 
-import { numberEnums, valuesOfTheSettings } from '@/types/constants';
+import { dictionary, numberEnums } from '@/types/constants';
 
-const { INPUT_ERROR, CORRECT_EMAIL_ERROR, MINIMUM_LETTERS_ERROR } =
-    valuesOfTheSettings;
+const { INPUT_ERROR, CORRECT_EMAIL_ERROR, MINIMUM_LETTERS_ERROR } = dictionary;
 
 const {
     MINIMUM_LETTERS_OF_THEME_INPUT,

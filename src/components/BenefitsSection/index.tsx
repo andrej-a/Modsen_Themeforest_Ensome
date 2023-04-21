@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ImageComponent } from '@/components';
 import { ServiceCard } from '@/componentsLibrary';
 import service from '@/config/services';
-import { valuesOfTheSettings } from '@/types/constants';
+import { setServicePage } from '@/store/slices/serviceSlice';
+import { dictionary } from '@/types/constants';
 
 import {
     BenefitsCards,
@@ -15,7 +15,7 @@ import {
     BenefitsSectionContainer,
 } from './style';
 
-const { BENEFITS_DESCRIPTION, BENEFITS_TITLE } = valuesOfTheSettings;
+const { BENEFITS_DESCRIPTION, BENEFITS_TITLE } = dictionary;
 
 const BenefitsSection = () => {
     const { t } = useTranslation();

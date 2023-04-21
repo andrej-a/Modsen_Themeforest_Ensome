@@ -1,7 +1,7 @@
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 const { HOME, SOLUTIONS, BLOG, CONTACTS, OUR_TEAM, ABOUT_US, SERVICES, FAQ } =
-    valuesOfTheSettings;
+    dictionary;
 
 const quickLinks = [
     HOME,

@@ -4,11 +4,11 @@ import { t } from 'i18next';
 import Categories from '@/components/SingleBlogMainContent/Categories';
 import { useAppSelector } from '@/hooks/useStore';
 import { serviceSelector } from '@/store/selectors/selectors';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { ServiceSlideContainer, ServiceSlideTitle } from './styles';
 
-const { SERVICES } = valuesOfTheSettings;
+const { SERVICES } = dictionary;
 
 const ServiceDescription = () => {
     const { currentServicePage, services } = useAppSelector(serviceSelector);

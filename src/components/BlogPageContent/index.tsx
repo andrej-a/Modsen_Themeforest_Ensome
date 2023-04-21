@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { DefaultButton } from '@/components';
 import { BlogCard } from '@/componentsLibrary';
 import useArticle from '@/hooks/useArticle';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     BlogPageContentContainer,
@@ -13,7 +13,7 @@ import {
     LoadButtonWrapper,
 } from './styles';
 
-const { MORE_ARTICLES } = valuesOfTheSettings;
+const { MORE_ARTICLES } = dictionary;
 
 const BlogPageContent = () => {
     const { onHandleIndex, visibleCards, isButtonVisible } = useArticle();

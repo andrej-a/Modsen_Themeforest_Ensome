@@ -6,7 +6,8 @@ import { Schema } from 'yup';
 
 import { serviceSelector } from '@/store/selectors/selectors';
 import { setSearchingValue, setServicePage } from '@/store/slices/serviceSlice';
-import { TSearchField, TService } from '@/types/componentsOptions';
+import { TSearchField } from '@/types/componentsOptions';
+import { TService } from '@/types/IService';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { useAppDispatch, useAppSelector } from './useStore';

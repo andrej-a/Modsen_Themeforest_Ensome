@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import LeftSideBarContainer from './LeftSideBar';
 import RightSideBarContainer from './RightSideBar';

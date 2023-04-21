@@ -6,11 +6,11 @@ import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { blogSelector } from '@/store/selectors/selectors';
 import { setTagFromSearchInput } from '@/store/slices/blog';
 import { IElasticContainerItems } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { ElasticContainer, ElasticItem } from './styles';
 
-const { NO_DATA } = valuesOfTheSettings;
+const { NO_DATA } = dictionary;
 const ElasticContainerItems = memo(
     ({ isVisible, onSetIsVisible }: IElasticContainerItems) => {
         const { tagFromSearchInput } = useAppSelector(blogSelector);

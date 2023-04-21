@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { BreadCrumbs, ImageComponent } from '@/components';
 import contactList from '@/config/contactList';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 import { getIcon } from '@/utils/cutString';
 
 import ContactsPageForm from './Form';
@@ -20,7 +20,7 @@ import {
     FormContainer,
 } from './styles';
 
-const { CONTACTS_PAGE_TITLE } = valuesOfTheSettings;
+const { CONTACTS_PAGE_TITLE } = dictionary;
 const ContactsSection = () => {
     const { t } = useTranslation();
     return (

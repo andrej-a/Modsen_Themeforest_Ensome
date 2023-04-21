@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { BlogCard } from '@/componentsLibrary';
 import useRelatedPosts from '@/hooks/useRelatedPosts';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { RelatedPostsContainer, RelatedPostsContent } from './styles';
 
-const { NO_POSTS, RELATED_POSTS } = valuesOfTheSettings;
+const { NO_POSTS, RELATED_POSTS } = dictionary;
 
 const RelatedPosts = () => {
     const { relatedPosts } = useRelatedPosts();

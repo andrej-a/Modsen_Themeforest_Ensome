@@ -1,14 +1,19 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { HOME, BLOG, CONTACTS, SERVICES } = valuesOfTheSettings;
+const { HOME, BLOG, CONTACTS, SERVICES, SOLUTIONS } = dictionary;
 
 const links = [
     {
         id: uuidv4(),
         link: '/',
         title: HOME,
+    },
+    {
+        id: uuidv4(),
+        link: '/solutions',
+        title: SOLUTIONS,
     },
     {
         id: uuidv4(),

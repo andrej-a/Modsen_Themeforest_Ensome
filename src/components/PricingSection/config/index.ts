@@ -1,4 +1,4 @@
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 const {
     FREE_TRIAL,
@@ -18,7 +18,7 @@ const {
     DATA_HISTORY,
     AUDIT_LOG,
     ALL_FUNCTIONS,
-} = valuesOfTheSettings;
+} = dictionary;
 
 const dataOfThePrices = [
     {

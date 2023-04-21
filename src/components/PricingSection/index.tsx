@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { ModalWindow } from '@/components';
 import { PricingCardProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import PricingCard from './Card';
 import dataOfThePrices from './config';
@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 export type PaymentCardProps = Pick<PricingCardProps, 'kindOfThePlan' | 'cost'>;
-const { OUR_PRICING } = valuesOfTheSettings;
+const { OUR_PRICING } = dictionary;
 const PricingSection = () => {
     const [choosedPlan, setChoosedPlan] = useState<PaymentCardProps>({
         kindOfThePlan: '',

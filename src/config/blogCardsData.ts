@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 const {
     PUBLISH_DATE,
@@ -11,7 +11,7 @@ const {
     SHARE,
     VIEWS,
     TAGS,
-} = valuesOfTheSettings;
+} = dictionary;
 
 export interface IBlogCard {
     id: string;

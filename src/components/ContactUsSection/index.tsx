@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { DefaultButton } from '@/components';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     ContactUsContainer,
@@ -11,8 +11,7 @@ import {
     ContactUsTitle,
 } from './styles';
 
-const { IS_NEED_HELP, CONTACT_US_DESCRIPTION, CONTACT_US } =
-    valuesOfTheSettings;
+const { IS_NEED_HELP, CONTACT_US_DESCRIPTION, CONTACT_US } = dictionary;
 const ContactUsSection = () => {
     const { t } = useTranslation();
     return (

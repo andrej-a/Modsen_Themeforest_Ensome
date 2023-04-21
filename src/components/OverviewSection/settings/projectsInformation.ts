@@ -1,6 +1,6 @@
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { PROJECT_EXECUTED, S_CUSTOMERS, DATA_MANAGEMENT } = valuesOfTheSettings;
+const { PROJECT_EXECUTED, S_CUSTOMERS, DATA_MANAGEMENT } = dictionary;
 export const projectsInformation = [
     {
         amountOfWorkeDone: '1830+',

@@ -5,7 +5,7 @@ import Vector from '@/assets/images/logo/vector.png';
 import VectorLight from '@/assets/images/logo/vectorLight.png';
 import { DefaultButton, ImageComponent, ModalWindow } from '@/components';
 import { PricingCardProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 import { getSummAroundYear } from '@/utils/getSummAroundYear';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
@@ -21,7 +21,7 @@ import {
     YearToggler,
 } from './styles';
 
-const { CHOOSE_PLAN } = valuesOfTheSettings;
+const { CHOOSE_PLAN } = dictionary;
 const PricingCard = ({
     isPaymentCard,
     kindOfThePlan,

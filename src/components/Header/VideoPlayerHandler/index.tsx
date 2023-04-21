@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import { ModalWindow, VideoPlayerWindow, WatchVideoButton } from '@/components';
 import { HeaderContentProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { WATCH_THE_DEMO } = valuesOfTheSettings;
+const { WATCH_THE_DEMO } = dictionary;
 
 const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);

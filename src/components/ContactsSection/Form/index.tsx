@@ -5,7 +5,7 @@ import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SubscribeToUsSection/SubscribeForm/styles';
 import { schema } from '@/config/fullFormSchema';
 import useSubscribe from '@/hooks/useSubscribe';
-import { numberEnums, valuesOfTheSettings } from '@/types/constants';
+import { dictionary, numberEnums } from '@/types/constants';
 
 import {
     CustomerDataContainer,
@@ -30,7 +30,7 @@ const {
     THEME_INPUT_PLACEHOLDER,
     MESSAGE_INPUT_PLACEHOLDER,
     SUBSCRIBE_BUTTON_VALUE,
-} = valuesOfTheSettings;
+} = dictionary;
 
 const ContactsPageForm = () => {
     const { t } = useTranslation();

@@ -3,12 +3,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import translationEN from './locales/en/translation.json';
 import translationRU from './locales/ru/translation.json';
 
-const { DEFAULT_APP_LANGUAGE } = valuesOfTheSettings;
+const { DEFAULT_APP_LANGUAGE } = dictionary;
 
 const resources = {
     en: {

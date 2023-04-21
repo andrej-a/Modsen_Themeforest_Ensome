@@ -1,4 +1,4 @@
-export enum valuesOfTheSettings {
+export enum dictionary {
     DEFAULT_APP_LANGUAGE = 'en',
     HOME = 'Home',
     SOLUTIONS = 'Solutions',
@@ -128,6 +128,9 @@ export enum valuesOfTheSettings {
     NAME_TITLE = 'Name',
     MESSAGE_TITLE = 'Message',
     THEME_TITLE = 'Theme',
+    SOLUTIONS_PAGE_TITLE = 'SolutionsPageTitle',
+    SOLUTIONS_PAGE_DESCRIPTION = 'SolutionsPageDescription',
+    ADVANTAGES_TITLE = 'AdvantagesTitle',
 }
 
 export enum numberEnums {

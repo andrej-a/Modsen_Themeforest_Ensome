@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import HeroSectionImage from '@/assets/images/pictures/heroSection.png';
 import { ImageComponent, RoundButton } from '@/components';
 import i18n from '@/settings/i18n';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import {
     HeroSectionContainer,
@@ -17,8 +17,7 @@ import {
     LearnMoreButton,
 } from './styles';
 
-const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE } =
-    valuesOfTheSettings;
+const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE } = dictionary;
 const HeroSection = () => {
     const { t } = useTranslation();
     return (

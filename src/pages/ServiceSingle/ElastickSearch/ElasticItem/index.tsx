@@ -4,11 +4,11 @@ import { t } from 'i18next';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentLink, setSearchingValue } from '@/store/slices/serviceSlice';
 import { ElasticItemComponentProps } from '@/types/componentsOptions';
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
 import { ElasticItem } from './styles';
 
-const { NO_DATA } = valuesOfTheSettings;
+const { NO_DATA } = dictionary;
 
 const ElasticItemsComponent = memo(
     ({ matchedServices, onSetIsVisible }: ElasticItemComponentProps) => {

@@ -1,8 +1,8 @@
 import * as yup from 'yup';
 
-import { valuesOfTheSettings } from '@/types/constants';
+import { dictionary } from '@/types/constants';
 
-const { INPUT_ERROR, CORRECT_EMAIL_ERROR } = valuesOfTheSettings;
+const { INPUT_ERROR, CORRECT_EMAIL_ERROR } = dictionary;
 
 export const schema = yup.object({
     email: yup.string().required(INPUT_ERROR).email(CORRECT_EMAIL_ERROR),
