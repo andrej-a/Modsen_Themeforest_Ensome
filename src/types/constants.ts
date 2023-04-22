@@ -154,6 +154,11 @@ export enum dictionary {
     PREACTICES_TEXT = 'PracticesText',
     CONCLUSION_TITLE = 'ConclusionTitle',
     CONCLUSION_TEXT = 'ConclusionText',
+    WHO_WE_ARE = 'WhoWeAre',
+    ABOUT_US_TEXT = 'AboutUsText',
+    OUR_MISSION = 'OurMission',
+    ABOUT_OUR_MISSION = 'AboutOurMission',
+    ENSOME_IN_NUMBERS = 'EnsomeInNumbers',
 }
 
 export enum numberEnums {

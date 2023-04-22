@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, StatisticCard } from '@/components';
+import { NumberComponent } from '@/componentsLibrary';
 import { dictionary } from '@/types/constants';
 
 import clientsLogos from './settings/clientLogos';
@@ -31,10 +32,16 @@ const OverviewSection = () => {
                         {projectsInformation.map(
                             ({ amountOfWorkeDone, descriptionOfWorke }) => {
                                 return (
-                                    <StatisticCard
-                                        key={amountOfWorkeDone}
-                                        number={amountOfWorkeDone}
-                                        description={t(descriptionOfWorke)}
+                                    <NumberComponent
+                                        settings={{
+                                            type: 'variant 4',
+                                            mainColor: 'primary',
+                                            secondColor: 'grey',
+                                        }}
+                                        content={{
+                                            main: amountOfWorkeDone,
+                                            second: descriptionOfWorke,
+                                        }}
                                     />
                                 );
                             },

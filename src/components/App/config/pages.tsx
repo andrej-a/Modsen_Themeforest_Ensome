@@ -9,11 +9,14 @@ const FAQ = lazy(() => import('@/pages/FAQ'));
 const ServiceSingle = lazy(() => import('@/pages/ServiceSingle'));
 const SolutionsPage = lazy(() => import('@/pages/Solutions'));
 const SolutionSinglePage = lazy(() => import('@/pages/SolutionsSingle'));
+export const AboutUs = lazy(() => import('@/pages/AboutUs'));
+
 const pages = [
     <MainPage />,
     <SolutionsPage />,
     <Blog />,
     <ContactsPage />,
+    <AboutUs />,
     <Services />,
     <FAQ />,
     <SinglePage />,

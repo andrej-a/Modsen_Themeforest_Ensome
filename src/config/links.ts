@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { dictionary } from '@/types/constants';
 
-const { HOME, BLOG, CONTACTS, SERVICES, SOLUTIONS } = dictionary;
+const { HOME, BLOG, CONTACTS, SERVICES, SOLUTIONS, ABOUT_US } = dictionary;
 
 const links = [
     {
@@ -24,6 +24,11 @@ const links = [
         id: uuidv4(),
         link: '/contacts',
         title: CONTACTS,
+    },
+    {
+        id: uuidv4(),
+        link: '/about us',
+        title: ABOUT_US,
     },
     {
         id: uuidv4(),

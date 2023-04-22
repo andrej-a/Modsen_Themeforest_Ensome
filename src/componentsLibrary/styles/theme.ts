@@ -67,6 +67,7 @@ const theme = {
         lxxx: 80,
         m: 85,
         ml: 120,
+        mll: 135,
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',
@@ -79,6 +80,7 @@ const theme = {
     },
     padding: {
         none: 0,
+        ss: '0 50px',
         s: '4px 10px',
         sx: '15px 0 15px 25px',
         x: 5,
@@ -182,6 +184,7 @@ const theme = {
         xxll: 38,
         xxxl: 46,
         x3l: 50,
+        xx3l: 56,
         x4l: 57,
         x5l: 80,
     },

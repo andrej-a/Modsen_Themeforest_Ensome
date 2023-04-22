@@ -27,7 +27,7 @@ const navigation = [
             },
             {
                 to: ABOUT_US,
-                link: '/about_us',
+                link: '/about us',
             },
             {
                 to: SERVICES,
@@ -46,7 +46,7 @@ const navigation = [
             },
             {
                 to: OUR_TEAM,
-                link: '/our_team',
+                link: '/our team',
             },
             {
                 to: BLOG,
