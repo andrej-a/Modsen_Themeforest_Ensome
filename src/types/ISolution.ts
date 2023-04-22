@@ -5,4 +5,19 @@ export type TSolution = Pick<
     'image' | 'glassImage' | 'title' | 'description' | 'link'
 >;
 
-export interface ISolution extends TSolution {}
+interface IPage {
+    id: string;
+    title: string;
+    image?: string;
+    text: string;
+    types?: string;
+}
+
+export interface ISolution extends TSolution {
+    page: {
+        definition: IPage;
+        types: IPage;
+        pracices: IPage;
+        conclusion: IPage;
+    };
+}

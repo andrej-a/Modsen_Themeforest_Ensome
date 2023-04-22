@@ -8,7 +8,7 @@ const Services = lazy(() => import('@/pages/ServicesPage'));
 const FAQ = lazy(() => import('@/pages/FAQ'));
 const ServiceSingle = lazy(() => import('@/pages/ServiceSingle'));
 const SolutionsPage = lazy(() => import('@/pages/Solutions'));
-
+const SolutionSinglePage = lazy(() => import('@/pages/SolutionsSingle'));
 const pages = [
     <MainPage />,
     <SolutionsPage />,
@@ -18,5 +18,6 @@ const pages = [
     <FAQ />,
     <SinglePage />,
     <ServiceSingle />,
+    <SolutionSinglePage />,
 ];
 export default pages;

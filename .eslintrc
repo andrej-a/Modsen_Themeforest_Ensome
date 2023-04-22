@@ -76,6 +76,7 @@
         "react/jsx-closing-tag-location": 2,
         "react/jsx-closing-bracket-location": "off",
         "import/prefer-default-export": "off",
+        "react/no-array-index-key": "off",
         "consistent-return": "off",
         "react/jsx-max-props-per-line": "off",
         "prefer-const": [

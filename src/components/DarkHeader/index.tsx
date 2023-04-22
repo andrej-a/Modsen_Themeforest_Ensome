@@ -5,11 +5,11 @@ import { ReactSVG } from 'react-svg';
 
 import FooterLogoWhite from '@/assets/images/logo/footerLogoWhite.png';
 import { ImageComponent } from '@/components';
+import contactList from '@/config/contactList';
 import links from '@/config/links';
+import footerLogoArray from '@/config/logoLinks';
 import { dictionary, UIConstants } from '@/types/constants';
 
-import contactList from '../../config/contactList';
-import footerLogoArray from '../../config/logoLinks';
 import services from './config/service';
 import {
     AdditionalInformation,

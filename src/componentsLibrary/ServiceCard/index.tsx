@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ImageComponent, ReadMoreComponent } from '@/components';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setServicePage } from '@/store/slices/serviceSlice';
+import { setCurrentSolutionPage } from '@/store/slices/solutions';
 import { IService, ServiceCardProps } from '@/types/IService';
 import { ISolution } from '@/types/ISolution';
 
@@ -24,7 +25,7 @@ const ServiceCard = ({ type, content }: ServiceCardProps) => {
         if ((content as IService).content !== undefined) {
             dispatch(setServicePage(content as IService));
         } else {
-            console.log('HERE');
+            dispatch(setCurrentSolutionPage(content as ISolution));
         }
     };
 

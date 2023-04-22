@@ -131,6 +131,29 @@ export enum dictionary {
     SOLUTIONS_PAGE_TITLE = 'SolutionsPageTitle',
     SOLUTIONS_PAGE_DESCRIPTION = 'SolutionsPageDescription',
     ADVANTAGES_TITLE = 'AdvantagesTitle',
+    DATA_INTEGRATION = 'DataIntegration',
+    DATA_INTEGRATION_DESCRIPTION = 'DataIntegrationDescription',
+    DATA_MANAGEMENT_DESCRIPTION = 'DataManagementDescription',
+    BIG_DATA = 'BigData',
+    BIG_DATA_DESCRIPTION = 'BigDataDescription',
+    DATA_WAREHOUSING = 'DataWarehousing',
+    DATA_WAREHOUSING_DESCRIPTION = 'DataWarehousingDescription',
+    SELF_SERVICE_BI = 'SelfService',
+    SELF_SERVICE_DESCRIPTION = 'SelfServiceDescription',
+    DATA_VISUALIZATION_SERVICE = 'DataVisualizationService',
+    DATA_VISUALIZATION_DESCRIPTION = 'DataVisualizationDescription',
+    SOCIAL = 'Social',
+    ABOUT = 'About',
+    INFORMATION = 'Information',
+    DEFINITION_TITLE = 'DefinitionTitle',
+    DEFINITION_CONTENT = 'DefinitionContent',
+    TYPES_TITLE = 'TypesTitle',
+    TYPES_TEXT = 'TypesText',
+    TYPES_LIST = 'TypesList',
+    PRACTICES_TITLE = 'PracticesTitle',
+    PREACTICES_TEXT = 'PracticesText',
+    CONCLUSION_TITLE = 'ConclusionTitle',
+    CONCLUSION_TEXT = 'ConclusionText',
 }
 
 export enum numberEnums {
@@ -147,10 +170,12 @@ export enum numberEnums {
 export enum namesOfTheSlices {
     BLOG_SLICE = 'blogSlice',
     SERVICE_SLICE = 'serviceSlice',
+    SOLUTION_SLICE = 'solutionSlice',
 }
 
 export enum UIConstants {
     COMPANY_INFO = 'Ensome© 2022 All Rights Reserved',
+    COMPANY_INFO_SECONDARY = '© 2022 Ensome. All Rights Reserved.',
     POLICY = 'Privacy policy',
     TERMS = 'Terms of us',
 }
