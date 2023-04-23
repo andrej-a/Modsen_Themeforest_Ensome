@@ -10,12 +10,25 @@ export const ServiceFormContainer = styled.div`
     align-items: flex-start;
 `;
 
-export const FormComponent = styled.form`
+export const FormComponent = styled.form<{ type: string }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: ${({ theme: { gap } }) => gap.sl}px;
+
+    ${({ type }) => {
+        switch (type) {
+            case 'column':
+                return css`
+                    button {
+                        margin-top: ${({ theme: { margin } }) => margin.lxl}px;
+                    }
+                `;
+            default:
+                break;
+        }
+    }}
 `;
 
 export const InputComponent = styled.input<{ error: string | undefined }>`
@@ -32,7 +45,7 @@ export const InputComponent = styled.input<{ error: string | undefined }>`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
-    background: ${({ theme: { colors } }) => colors.background};
+    background: transparent;
 
     &:focus {
         outline: none;
@@ -74,8 +87,19 @@ export const InputContainer = styled.div`
     align-items: flex-start;
 `;
 
-export const InputGroup = styled.div`
+export const InputGroup = styled.div<{ type: string }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     gap: ${({ theme: { gap } }) => gap.sl}px;
+
+    ${({ type }) => {
+        switch (type) {
+            case 'column':
+                return css`
+                    flex-direction: column;
+                `;
+            default:
+                break;
+        }
+    }}
 `;

@@ -161,6 +161,10 @@ export enum dictionary {
     ENSOME_IN_NUMBERS = 'EnsomeInNumbers',
     OUR_CUSTOMERS = 'OurCustomers',
     CUSTOMER_DESCRIPTION = 'CustomersDescription',
+    CONTACT_US_FORM = 'ContactUsForm',
+    CONTACT_US_DESCRIPTION_FORM = 'ContactUsDescriptionForm',
+    EMAIL_ADDRESS = 'EmailAddress',
+    PHONE_NUMBER = 'PhoneNumber',
 }
 
 export enum numberEnums {

@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Form from '@/components/Form';
+
 import ContactInformation from './ContactInformation';
-import Form from './Form';
 import { ComponentContainer, ContentContainer } from './styles';
 
 const ContactFormComponent = () => {
@@ -9,7 +10,7 @@ const ContactFormComponent = () => {
         <ComponentContainer>
             <ContentContainer>
                 <ContactInformation />
-                <Form />
+                <Form type="group" />
             </ContentContainer>
         </ComponentContainer>
     );

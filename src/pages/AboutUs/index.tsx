@@ -2,12 +2,15 @@ import React from 'react';
 
 import {
     Content,
+    DarkFooter,
     Header,
     PageContainer,
     PageTitleWithLightBlueBackground,
+    SubscribeSection,
 } from '@/components';
 import { dictionary } from '@/types/constants';
 
+import ContactUs from './ContactUs';
 import EnsomeInNumbers from './EnsomeInNumbersSection';
 import Overview from './OverviewSection';
 import Testimonials from './Testimonials';
@@ -25,6 +28,10 @@ const AboutUs = () => {
             <EnsomeInNumbers />
             <Overview />
             <Testimonials />
+            <ContactUs />
+            <SubscribeSection type="light" />
+            <SubscribeSection type="primary" />
+            <DarkFooter />
         </PageContainer>
     );
 };

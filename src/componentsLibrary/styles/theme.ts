@@ -104,6 +104,7 @@ const theme = {
         xxl: '48px 23px',
         xxxl: '10px 52px',
         x4l: '30px 25px 25px 30px',
+        x4ll: '50px 50px 60px 50px',
         x5l: 35,
         x5ll: 40,
         x6l: 50,

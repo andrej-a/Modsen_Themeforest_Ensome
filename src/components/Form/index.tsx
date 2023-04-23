@@ -28,7 +28,11 @@ const {
     THEME_TITLE,
 } = dictionary;
 
-const Form = () => {
+interface IFormProps {
+    type: 'column' | 'group';
+}
+
+const Form = ({ type }: IFormProps) => {
     const { t } = useTranslation();
     const {
         formRef,
@@ -41,8 +45,12 @@ const Form = () => {
 
     return (
         <ServiceFormContainer>
-            <FormComponent ref={formRef} onSubmit={handleSubmit(handleChange)}>
-                <InputGroup>
+            <FormComponent
+                type={type}
+                ref={formRef}
+                onSubmit={handleSubmit(handleChange)}
+            >
+                <InputGroup type={type}>
                     <InputContainer>
                         <LabelComponent
                             error={errors.name?.message}
