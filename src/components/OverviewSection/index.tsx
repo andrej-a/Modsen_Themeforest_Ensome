@@ -5,7 +5,7 @@ import { ImageComponent, StatisticCard } from '@/components';
 import { NumberComponent } from '@/componentsLibrary';
 import { dictionary } from '@/types/constants';
 
-import clientsLogos from './settings/clientLogos';
+import clientsLogos from '../../config/clientLogos';
 import projectsInformation from './settings/projectsInformation';
 import {
     Overview,

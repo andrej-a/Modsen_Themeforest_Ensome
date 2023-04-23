@@ -1,54 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { ImageComponent, SliderComponent } from '@/components';
+import { SliderComponent } from '@/components';
+import { ReviewCard } from '@/componentsLibrary';
 import { dictionary } from '@/types/constants';
 
-import testimonialsData from './config';
-import {
-    AuthorAvatar,
-    AuthorInformationContainer,
-    AuthorInformationName,
-    AuthorInformationRole,
-    TestimonialCard,
-    TestimonialCardHeader,
-    TestimonialsSectionContainer,
-    TestimonialText,
-} from './style';
+import testimonialsData from '../../config/testimonials';
+import { TestimonialsSectionContainer } from './style';
 
 const { TESTIMONIALS } = dictionary;
 
 const TestimonialsSection = () => {
-    const [countCardsOnThePage, setCountCardsOnThePage] = useState(3);
-    const [sizeOfTheScreen, setSizeOfTheScreen] = useState(1140);
     return (
         <TestimonialsSectionContainer>
-            <SliderComponent title={TESTIMONIALS}>
-                {testimonialsData.map(
-                    ({ avatar, role, name, testimonial, id }) => {
-                        return (
-                            <TestimonialCard
-                                countCardsOnThePage={countCardsOnThePage}
-                                sizeOfTheScreen={sizeOfTheScreen}
-                                key={id}
-                            >
-                                <TestimonialCardHeader>
-                                    <AuthorAvatar>
-                                        <ImageComponent source={avatar} />
-                                    </AuthorAvatar>
-                                    <AuthorInformationContainer>
-                                        <AuthorInformationName>
-                                            {name}
-                                        </AuthorInformationName>
-                                        <AuthorInformationRole>
-                                            {role}
-                                        </AuthorInformationRole>
-                                    </AuthorInformationContainer>
-                                </TestimonialCardHeader>
-                                <TestimonialText>{testimonial}</TestimonialText>
-                            </TestimonialCard>
-                        );
-                    },
-                )}
+            <SliderComponent countOfTheCards={3} title={TESTIMONIALS}>
+                {testimonialsData.map(data => {
+                    return (
+                        <ReviewCard
+                            type={{ size: 'small', type: 'image inside' }}
+                            content={data}
+                        />
+                    );
+                })}
             </SliderComponent>
         </TestimonialsSectionContainer>
     );

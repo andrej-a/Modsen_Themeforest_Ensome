@@ -25,6 +25,7 @@ const BreadCrumbs = ({ linkColor, crumbColor }: BreadCrumbsProps) => {
                 link: '/',
             });
         } else {
+            console.log(capitalize(crumb));
             linksStack.push({
                 title: t(capitalize(crumb)),
                 link: `${crumb}/`,
@@ -37,11 +38,11 @@ const BreadCrumbs = ({ linkColor, crumbColor }: BreadCrumbsProps) => {
     const result = filteredResult.map(({ link, title }, index) => {
         if (index !== filteredResult.length - 1) {
             return index === 0 ? (
-                <BreadCrumbLink linkColor={linkColor}>
+                <BreadCrumbLink key={link} linkColor={linkColor}>
                     <Link to={link}>{title} </Link>
                 </BreadCrumbLink>
             ) : (
-                <BreadCrumbLink linkColor={linkColor}>
+                <BreadCrumbLink key={link} linkColor={linkColor}>
                     | <Link to={link}>{title}</Link>
                 </BreadCrumbLink>
             );

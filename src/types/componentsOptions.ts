@@ -33,6 +33,8 @@ export type ModalWindowProps = {
 
 export type SliderProps = {
     title: string;
+    countOfTheCards: number;
+    size?: 'small' | 'medium';
     children: React.ReactNode;
 };
 

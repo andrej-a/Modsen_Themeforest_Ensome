@@ -1,13 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import avatarOne from '@/assets/images/pictures/avatar1.png';
-import avatarTwo from '@/assets/images/pictures/avatar2.png';
-import avatarThree from '@/assets/images/pictures/avatar3.png';
-
 const testimonialsData = [
     {
         id: uuidv4(),
-        avatar: avatarOne,
+        avatar: './images/avatar1.png',
         name: 'Alex Bern',
         role: 'CEO by PixelPerfect',
         testimonial:
@@ -15,7 +11,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarTwo,
+        avatar: './images/avatar2.png',
         name: 'Ruben Chifundo',
         role: 'CEO by NOX',
         testimonial:
@@ -23,7 +19,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarThree,
+        avatar: './images/avatar3.png',
         name: 'Tigran Nazaret',
         role: 'Data analyst',
         testimonial:
@@ -31,7 +27,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarOne,
+        avatar: './images/avatar1.png',
         name: 'Alex Bern',
         role: 'CEO by PixelPerfect',
         testimonial:
@@ -39,7 +35,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarTwo,
+        avatar: './images/avatar2.png',
         name: 'Ruben Chifundo',
         role: 'CEO by NOX',
         testimonial:
@@ -47,7 +43,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarThree,
+        avatar: './images/avatar3.png',
         name: 'Tigran Nazaret',
         role: 'Data analyst',
         testimonial:
@@ -55,7 +51,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarOne,
+        avatar: './images/avatar1.png',
         name: 'Alex Bern',
         role: 'CEO by PixelPerfect',
         testimonial:
@@ -63,7 +59,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarTwo,
+        avatar: './images/avatar2.png',
         name: 'Ruben Chifundo',
         role: 'CEO by NOX',
         testimonial:
@@ -71,7 +67,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarThree,
+        avatar: './images/avatar3.png',
         name: 'Tigran Nazaret',
         role: 'Data analyst',
         testimonial:
@@ -79,7 +75,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarOne,
+        avatar: './images/avatar1.png',
         name: 'Alex Bern',
         role: 'CEO by PixelPerfect',
         testimonial:
@@ -87,7 +83,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarTwo,
+        avatar: './images/avatar2.png',
         name: 'Ruben Chifundo',
         role: 'CEO by NOX',
         testimonial:
@@ -95,7 +91,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarThree,
+        avatar: './images/avatar3.png',
         name: 'Tigran Nazaret',
         role: 'Data analyst',
         testimonial:
@@ -103,7 +99,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarOne,
+        avatar: './images/avatar1.png',
         name: 'Alex Bern',
         role: 'CEO by PixelPerfect',
         testimonial:
@@ -111,7 +107,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarTwo,
+        avatar: './images/avatar2.png',
         name: 'Ruben Chifundo',
         role: 'CEO by NOX',
         testimonial:
@@ -119,7 +115,7 @@ const testimonialsData = [
     },
     {
         id: uuidv4(),
-        avatar: avatarThree,
+        avatar: './images/avatar3.png',
         name: 'Tigran Nazaret',
         role: 'Data analyst',
         testimonial:

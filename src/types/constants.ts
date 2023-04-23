@@ -75,7 +75,7 @@ export enum dictionary {
     QUICK_LINK = 'QuickLink',
     CONTACTS = 'Contacts',
     OUR_TEAM = 'OurTeam',
-    ABOUT_US = 'AboutUs',
+    ABOUT_US = 'About us',
     SERVICES = 'Services',
     FAQ = 'FAQ',
     PRICING = 'Pricing',
@@ -159,6 +159,8 @@ export enum dictionary {
     OUR_MISSION = 'OurMission',
     ABOUT_OUR_MISSION = 'AboutOurMission',
     ENSOME_IN_NUMBERS = 'EnsomeInNumbers',
+    OUR_CUSTOMERS = 'OurCustomers',
+    CUSTOMER_DESCRIPTION = 'CustomersDescription',
 }
 
 export enum numberEnums {

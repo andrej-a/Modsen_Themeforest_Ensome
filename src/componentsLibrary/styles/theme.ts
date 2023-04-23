@@ -55,6 +55,7 @@ const theme = {
         xxxl: 525,
     },
     margin: {
+        none: 0,
         xs: 15,
         x: 20,
         s: 25,

@@ -13,7 +13,7 @@ const OurBlogSection = () => {
     const { t } = useTranslation();
     return (
         <OurBlogContainer>
-            <SliderComponent title={t(OUR_BLOG)}>
+            <SliderComponent countOfTheCards={3} title={t(OUR_BLOG)}>
                 {blogCardsData.map(
                     ({
                         id,

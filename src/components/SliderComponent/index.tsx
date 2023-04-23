@@ -16,12 +16,22 @@ import {
     SliderSectionContent,
 } from './styles';
 
-const SliderComponent = ({ title, children }: SliderProps) => {
+const SliderComponent = ({
+    title,
+    size = 'small',
+    countOfTheCards,
+    children,
+}: SliderProps) => {
     const [currentCardsIndex, setCurrentCardsIndex] = useState(0);
     const childrensLength = React.Children.count(children);
 
     const moveLeft = () => {
-        if (!(Math.abs(currentCardsIndex - 1) === childrensLength / 3)) {
+        if (
+            !(
+                Math.abs(currentCardsIndex - 1) ===
+                childrensLength / countOfTheCards
+            )
+        ) {
             setCurrentCardsIndex(prevIndex => prevIndex - 1);
         }
     };
@@ -35,7 +45,7 @@ const SliderComponent = ({ title, children }: SliderProps) => {
 
     return (
         <>
-            <SliderSectionContent>
+            <SliderSectionContent size={size}>
                 <SliderContentHeader>
                     <SliderContentTitle>{t(title)}</SliderContentTitle>
                     <SliderControls>
@@ -48,12 +58,12 @@ const SliderComponent = ({ title, children }: SliderProps) => {
                         </SliderButton>
                         <SliderButton
                             disabled={
-                                Math.abs(currentCardsIndex - 1) ===
-                                childrensLength / 3
+                                Math.abs(currentCardsIndex - 1) >=
+                                childrensLength / countOfTheCards
                             }
                             isDisabled={
-                                Math.abs(currentCardsIndex - 1) ===
-                                childrensLength / 3
+                                Math.abs(currentCardsIndex - 1) >=
+                                childrensLength / countOfTheCards
                             }
                             onClick={moveLeft}
                         >
