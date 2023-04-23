@@ -1,5 +1,6 @@
 const theme = {
     top: {
+        xss: -120,
         xs: 0,
         s: 30,
         l: 50,
@@ -11,6 +12,7 @@ const theme = {
         l: 18,
     },
     bottom: {
+        none: 0,
         s: 30,
     },
     left: {
@@ -69,6 +71,7 @@ const theme = {
         m: 85,
         ml: 120,
         mll: 135,
+        m2l: 240,
         l: '40px 0',
         xl: '70px 0 90px 0',
         xxl: '120px 0',

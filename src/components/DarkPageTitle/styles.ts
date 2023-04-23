@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const DarkPagePreviewContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
@@ -15,10 +15,11 @@ export const DarkPagePreviewContainer = styled.div`
 export const DarkPagePreviewContent = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x4l}px;
-    height: ${({ theme: { height } }) => height.x1l}px;
+    min-height: ${({ theme: { height } }) => height.x1l}px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: ${({ theme: { gap } }) => gap.x2l}px;
 `;
 
 export const BreadCrumb = styled.div`
@@ -30,7 +31,7 @@ export const DarkPagePreviewDescription = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: ${({ theme: { margin } }) => margin.m}px;
 `;
 
@@ -44,7 +45,7 @@ export const DarkPagePreviewTitle = styled.div`
     color: ${({ theme: { colors } }) => colors.white};
 `;
 
-export const Description = styled.div`
+export const Description = styled.div<{ descriptionSize: string }>`
     max-width: ${({ theme: { width } }) => width.x1l}px;
     display: flex;
     align-items: center;
@@ -56,4 +57,15 @@ export const Description = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.background};
+
+    ${({ descriptionSize }) => {
+        switch (descriptionSize) {
+            case 'medium':
+                return css`
+                    max-width: ${({ theme: { width } }) => width.xxxl}px;
+                `;
+            default:
+                break;
+        }
+    }}
 `;

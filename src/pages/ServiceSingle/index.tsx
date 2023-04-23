@@ -24,7 +24,14 @@ const ServiceSingle = () => {
             <Header background="secondary">
                 <Content type="secondary" />
             </Header>
-            <DarkPageTitle title={title} description={description} />
+            <DarkPageTitle
+                settings={{
+                    size: 'small',
+                    descriptionSize: 'small',
+                }}
+                title={title}
+                description={description}
+            />
             <ServiceSingleContent />
             <ContactFormComponent />
             <SubscribeSection type="primary" />

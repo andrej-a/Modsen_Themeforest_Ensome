@@ -13,7 +13,8 @@ import {
     Description,
 } from './styles';
 
-const DarkPageTitle = ({ title, description }: IDarkPageTitle) => {
+const DarkPageTitle = ({ title, description, settings }: IDarkPageTitle) => {
+    const { descriptionSize, size } = settings;
     const { t } = useTranslation();
     return (
         <DarkPagePreviewContainer>
@@ -23,7 +24,12 @@ const DarkPageTitle = ({ title, description }: IDarkPageTitle) => {
                 </BreadCrumb>
                 <DarkPagePreviewDescription>
                     <DarkPagePreviewTitle>{t(title)}</DarkPagePreviewTitle>
-                    <Description>{t(description)}</Description>
+                    <Description
+                        descriptionSize={descriptionSize}
+                        dangerouslySetInnerHTML={{
+                            __html: t(description),
+                        }}
+                    />
                 </DarkPagePreviewDescription>
             </DarkPagePreviewContent>
         </DarkPagePreviewContainer>

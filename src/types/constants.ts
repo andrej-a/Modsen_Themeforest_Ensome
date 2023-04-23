@@ -165,6 +165,16 @@ export enum dictionary {
     CONTACT_US_DESCRIPTION_FORM = 'ContactUsDescriptionForm',
     EMAIL_ADDRESS = 'EmailAddress',
     PHONE_NUMBER = 'PhoneNumber',
+    OUR_TEAM_DESCRIPTION = 'OurTeamDescription',
+    SARIS_BIO = 'SagrisBio',
+    BAGRAT_BIO = 'BagratBio',
+    GOR_BIO = 'GorBio',
+    MARI_BIO = 'MariBio',
+    HAKOB_BIO = 'HakovBio',
+    EVA_BIO = 'EvaBio',
+    KOHAR_BIO = 'KoharBio',
+    ARARAT_BIO = 'AraratBio',
+    EDUARD_BIO = 'EduardBio',
 }
 
 export enum numberEnums {
@@ -176,6 +186,8 @@ export enum numberEnums {
     DEFAULT_ZOOM_OF_THE_MAP = 10,
     COUNT_OF_THE_POPULAR_POSTS = 4,
     COUNT_OF_THE_RELATED_POSTS = 3,
+    SHOWING_DELAY_MS = 500,
+    OFFSET_PX = 500,
 }
 
 export enum namesOfTheSlices {

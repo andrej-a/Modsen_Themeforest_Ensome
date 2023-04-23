@@ -112,9 +112,16 @@ export type BlogCardProps = {
         tagsArray: string[];
     };
 };
+
+interface IDarkPageTitleSettings {
+    descriptionSize: 'small' | 'medium';
+    size: 'small' | 'medium';
+}
+
 export interface IDarkPageTitle {
     title: string;
     description: string;
+    settings: IDarkPageTitleSettings;
 }
 
 export type TSearchField = {
@@ -125,3 +132,10 @@ export type ElasticItemComponentProps = {
     matchedServices: string[];
     onSetIsVisible: (status: boolean) => () => void;
 };
+
+export interface PersonComponentProps {
+    name: string;
+    photo: string;
+    position: string;
+    index: number;
+}

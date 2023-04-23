@@ -20,7 +20,14 @@ const Blog = () => {
             <Header background="secondary">
                 <Content type="secondary" />
             </Header>
-            <DarkPageTitle title={BLOG} description={BLOG_DESCRIPTION} />
+            <DarkPageTitle
+                settings={{
+                    size: 'small',
+                    descriptionSize: 'small',
+                }}
+                title={BLOG}
+                description={BLOG_DESCRIPTION}
+            />
             <BlogPageContent />
             <SubscribeSection type="dark" />
             <DarkFooter />
