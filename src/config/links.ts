@@ -1,49 +1,59 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { dictionary } from '@/types/constants';
+import { dictionary, linksConstants } from '@/types/constants';
 
 const { HOME, BLOG, CONTACTS, SERVICES, SOLUTIONS, ABOUT_US, OUR_TEAM } =
     dictionary;
+const {
+    HOME_PAGE,
+    BLOG_PAGE,
+    SOLUTION_PAGE,
+    CONTACTS_PAGE,
+    OUR_TEAM_PAGE,
+    ABOUT_US_PAGE,
+    SERVICES_PAGE,
+    FAQ_PAGE,
+} = linksConstants;
 
 const links = [
     {
         id: uuidv4(),
-        link: '/',
+        link: HOME_PAGE,
         title: HOME,
     },
     {
         id: uuidv4(),
-        link: '/solutions',
+        link: SOLUTION_PAGE,
         title: SOLUTIONS,
     },
     {
         id: uuidv4(),
-        link: '/blog',
+        link: BLOG_PAGE,
         title: BLOG,
     },
     {
         id: uuidv4(),
-        link: '/contacts',
+        link: CONTACTS_PAGE,
         title: CONTACTS,
     },
     {
         id: uuidv4(),
-        link: '/our team',
+        link: OUR_TEAM_PAGE,
         title: OUR_TEAM,
     },
     {
         id: uuidv4(),
-        link: '/about us',
+        link: ABOUT_US_PAGE,
         title: ABOUT_US,
     },
     {
         id: uuidv4(),
-        link: '/services',
+        link: SERVICES_PAGE,
         title: SERVICES,
     },
     {
         id: uuidv4(),
-        link: '/FAQs',
+        link: FAQ_PAGE,
         title: 'FAQ',
     },
 ];

@@ -21,11 +21,10 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     box-sizing: border-box;
 
     transition: all .3s ease;
+    scroll-behavior: smooth;
+
   }
   #root {
-    overflow: auto;
-
-    scrollbar-gutter: stable;
     display: flex;
     flex-direction: column;
     justify-content: center;

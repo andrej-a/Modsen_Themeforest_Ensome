@@ -9,6 +9,7 @@ const theme = {
         xl: 111,
     },
     right: {
+        s: -15,
         xs: 0,
         l: 18,
     },
@@ -17,10 +18,16 @@ const theme = {
         s: 30,
     },
     left: {
+        x: -2,
         xs: 0,
     },
     zIndex: {
+        s: 3,
         l: 5,
+    },
+    translate: {
+        none: 0,
+        l: 102,
     },
     width: {
         sx: 15,
@@ -89,11 +96,13 @@ const theme = {
         none: 0,
         ss: '0 50px',
         s: '4px 10px',
+        sxx: '10px 0',
         sx: '15px 0 15px 25px',
         x: 5,
         xs: '15px 20px',
         xss: '15px 25px',
         x2s: '20px 20px 20px 0',
+        x3s: '20px 50px 20px 30px',
         l: 8,
         lmm: 15,
         lm: 20,
@@ -172,6 +181,8 @@ const theme = {
         m: '1px solid #607d94',
         ml: '1px solid #fff',
         xxl: '4px solid #185cff',
+        x3l: '5px solid #c9dcec',
+        x4l: '5px solid #185cff',
     },
     borderRadius: {
         l: 6,

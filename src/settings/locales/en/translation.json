@@ -85,7 +85,7 @@
     "BlogDescription": "Sed ut perspiciatis unde omnis iste natus error volupta accusantium doloremque laudantium, totam remiga aperiam, eaque ipsa.",
     "MoreArticles": "More articles",
     "ContactsPageTitle": "How can we <span>help you?<span>",
-    "MinimumLettersError": "Minimum letters of input is: ",
+    "MinimumLettersError": "Not enough characters",
     "NameInputPlaceholder": "Your name",
     "ThemeInputPlaceholder": "Theme",
     "MessageInputPlaceholder": "Your message",
@@ -178,5 +178,7 @@
     "SocialNetworks": "Social Networks",
     "Want": "Want",
     "Suggestion": "to share his expertise with you?",
-    "WomenSuggestion": "to share her expertise with you?"
+    "WomenSuggestion": "to share her expertise with you?",
+    "Russian": "Russian",
+    "English": "English"
 }

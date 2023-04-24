@@ -25,3 +25,10 @@ export const ApplicationNavigation = styled.div`
     padding: ${({ theme: { padding } }) => padding.mxx};
     border-bottom: ${({ theme: { border } }) => border.xs};
 `;
+
+export const SwitcherContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    gap: ${({ theme: { gap } }) => gap.sl}px;
+`;

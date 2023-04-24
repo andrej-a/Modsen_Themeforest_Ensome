@@ -68,6 +68,6 @@ export const MenuItem = styled.h6<{ type?: string; isActive: boolean }>`
 
 export const ShowPagesContainer = styled.div`
     position: absolute;
-    top: 0;
-    left: 45px;
+    top: ${({ theme: { top } }) => top.xs};
+    right: ${({ theme: { right } }) => right.s}px;
 `;

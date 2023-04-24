@@ -1,4 +1,4 @@
-import { dictionary } from '@/types/constants';
+import { dictionary, linksConstants } from '@/types/constants';
 
 const {
     HOME,
@@ -16,6 +16,16 @@ const {
     ABOUT,
     INFORMATION,
 } = dictionary;
+const {
+    HOME_PAGE,
+    BLOG_PAGE,
+    SOLUTION_PAGE,
+    CONTACTS_PAGE,
+    OUR_TEAM_PAGE,
+    ABOUT_US_PAGE,
+    SERVICES_PAGE,
+    FAQ_PAGE,
+} = linksConstants;
 
 const navigation = [
     {
@@ -23,17 +33,17 @@ const navigation = [
         links: [
             {
                 to: HOME,
-                link: '/',
+                link: HOME_PAGE,
             },
             {
                 to: ABOUT_US,
-                link: '/about us',
+                link: ABOUT_US_PAGE,
             },
             {
                 to: SERVICES,
-                link: '/services',
+                link: SERVICES_PAGE,
             },
-            { to: SOLUTIONS, link: '/solutions' },
+            { to: SOLUTIONS, link: SOLUTION_PAGE },
         ],
     },
 
@@ -42,19 +52,19 @@ const navigation = [
         links: [
             {
                 to: CONTACTS,
-                link: '/contacts',
+                link: CONTACTS_PAGE,
             },
             {
                 to: OUR_TEAM,
-                link: '/our team',
+                link: OUR_TEAM_PAGE,
             },
             {
                 to: BLOG,
-                link: '/blog',
+                link: BLOG_PAGE,
             },
             {
                 to: 'FAQ',
-                link: '/FAQs',
+                link: FAQ_PAGE,
             },
         ],
     },
@@ -64,20 +74,20 @@ const navigation = [
         links: [
             {
                 to: PAGES,
-                link: '/',
+                link: HOME_PAGE,
             },
             {
                 to: ELEMENTS,
-                link: '/',
+                link: HOME_PAGE,
             },
-            { to: SITE_MAP, link: '/' },
+            { to: SITE_MAP, link: HOME_PAGE },
             {
                 to: PRICING,
-                link: '/',
+                link: HOME_PAGE,
             },
             {
                 to: 'FAQ',
-                link: '/FAQs',
+                link: FAQ_PAGE,
             },
         ],
     },

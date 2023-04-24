@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import i18n from '@/settings/i18n';
+import { dictionary } from '@/types/constants';
+
+import { Position, SwitchElement, SwitcherContainer, Text } from './styles';
+
+type Props = {};
+
+const { RUSSIAN, ENGLISH } = dictionary;
+
+const Switcher = (props: Props) => {
+    const [lang, setLang] = useState(i18n.language);
+    const { t } = useTranslation();
+    const onHandleLang = () => {
+        i18n.language === 'ru'
+            ? i18n.changeLanguage('en')
+            : i18n.changeLanguage('ru');
+        setLang(i18n.language);
+    };
+    return (
+        <SwitcherContainer onClick={onHandleLang}>
+            <Position>
+                <Text>{t(ENGLISH)}</Text>
+            </Position>
+            <Position>
+                <Text>{t(RUSSIAN)}</Text>
+            </Position>
+            <SwitchElement currentLang={lang} />
+        </SwitcherContainer>
+    );
+};
+
+export default Switcher;

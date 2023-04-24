@@ -43,7 +43,7 @@ const Content = ({ type }: HeaderContentProps) => {
                     return (
                         <NavLink key={title} to={link}>
                             {({ isActive }) => {
-                                if (title === PAGES) {
+                                if (t(title) === t(PAGES)) {
                                     return (
                                         <MenuItem
                                             onMouseEnter={onHandleShowAdditionalPages(

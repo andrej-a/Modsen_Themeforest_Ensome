@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import FeatureSectionImage from '@/assets/images/pictures/featuresSection.png';
 import { DefaultButton, ImageComponent } from '@/components';
-import { dictionary } from '@/types/constants';
+import { dictionary, linksConstants } from '@/types/constants';
 
 import {
     FeatureSectionContainer,
@@ -29,6 +30,7 @@ const {
     NEW_SOLUTIONS,
     NEW_SOLUTIONS_DESCRIPTION,
 } = dictionary;
+const { SOLUTION_PAGE } = linksConstants;
 const FeatureSection = () => {
     const { t } = useTranslation();
     return (
@@ -44,7 +46,9 @@ const FeatureSection = () => {
                         <PlatformDescriptionText>
                             {t(NEWEST_PLATFORM_DESCRIPTION)}
                         </PlatformDescriptionText>
-                        <DefaultButton>{t(DISCOVER_MORE)}</DefaultButton>
+                        <Link to={SOLUTION_PAGE}>
+                            <DefaultButton>{t(DISCOVER_MORE)}</DefaultButton>
+                        </Link>
                     </TextContainer>
                 </PlatformDescription>
             </PlatformDescriptionContainer>
@@ -59,7 +63,9 @@ const FeatureSection = () => {
                     <PlatformInformationTextDescription>
                         {t(NEW_SOLUTIONS_DESCRIPTION)}
                     </PlatformInformationTextDescription>
-                    <DefaultButton>{t(LEARN_MORE)}</DefaultButton>
+                    <Link to={SOLUTION_PAGE}>
+                        <DefaultButton>{t(LEARN_MORE)}</DefaultButton>
+                    </Link>
                 </PlatformInformationText>
             </PlatformInformationContainer>
         </FeatureSectionContainer>

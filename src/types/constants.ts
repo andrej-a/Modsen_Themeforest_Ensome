@@ -179,6 +179,8 @@ export enum dictionary {
     WANT = 'Want',
     SUGGESTION = 'Suggestion',
     WOMEN_SUGGESTION = 'WomenSuggestion',
+    RUSSIAN = 'Russian',
+    ENGLISH = 'English',
 }
 
 export enum numberEnums {
@@ -192,6 +194,8 @@ export enum numberEnums {
     COUNT_OF_THE_RELATED_POSTS = 3,
     SHOWING_DELAY_MS = 500,
     OFFSET_PX = 500,
+    START_SCROLL_POSITION = 400,
+    ARCHOR_OFFSET_TOP = 100,
 }
 
 export enum namesOfTheSlices {
@@ -206,6 +210,17 @@ export enum UIConstants {
     COMPANY_INFO_SECONDARY = '© 2022 Ensome. All Rights Reserved.',
     POLICY = 'Privacy policy',
     TERMS = 'Terms of us',
+}
+
+export enum linksConstants {
+    HOME_PAGE = '/',
+    SOLUTION_PAGE = '/solutions',
+    BLOG_PAGE = '/blog',
+    CONTACTS_PAGE = '/contacts',
+    OUR_TEAM_PAGE = '/our team',
+    ABOUT_US_PAGE = '/about us',
+    SERVICES_PAGE = '/services',
+    FAQ_PAGE = '/FAQs',
 }
 
 export const envConstants = {

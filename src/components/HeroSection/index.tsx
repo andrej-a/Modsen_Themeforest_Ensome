@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import HeroSectionImage from '@/assets/images/pictures/heroSection.png';
 import { ImageComponent, RoundButton } from '@/components';
-import i18n from '@/settings/i18n';
-import { dictionary } from '@/types/constants';
+import { dictionary, linksConstants } from '@/types/constants';
 
 import {
     HeroSectionContainer,
@@ -17,7 +17,9 @@ import {
     LearnMoreButton,
 } from './styles';
 
-const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE } = dictionary;
+const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE, ENSOME } =
+    dictionary;
+const { SERVICES_PAGE } = linksConstants;
 const HeroSection = () => {
     const { t } = useTranslation();
     return (
@@ -25,16 +27,7 @@ const HeroSection = () => {
             <HeroSectionContentContainer>
                 <HeroSectionTitleContainer>
                     <HeroSectionTitle>
-                        {t(FIND_POWER)}{' '}
-                        <span
-                            onClick={() =>
-                                i18n.language === 'ru'
-                                    ? i18n.changeLanguage('en')
-                                    : i18n.changeLanguage('ru')
-                            }
-                        >
-                            Ensome
-                        </span>
+                        {t(FIND_POWER)} <span>{ENSOME}</span>
                     </HeroSectionTitle>
                 </HeroSectionTitleContainer>
                 <HeroSectionDescriptionContainer>
@@ -42,9 +35,11 @@ const HeroSection = () => {
                         {t(HEROES_SECTION_DESCRIPTION)}
                     </HeroSectionDescription>
                 </HeroSectionDescriptionContainer>
-                <LearnMoreButton>
-                    <RoundButton>{t(LEARN_MORE)}</RoundButton>
-                </LearnMoreButton>
+                <Link to={SERVICES_PAGE}>
+                    <LearnMoreButton>
+                        <RoundButton>{t(LEARN_MORE)}</RoundButton>
+                    </LearnMoreButton>
+                </Link>
             </HeroSectionContentContainer>
             <HeroSectionImageContainer>
                 <ImageComponent source={HeroSectionImage} />

@@ -1,12 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { InView } from 'react-intersection-observer';
 
 import { ImageComponent } from '@/components';
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { solutionSelector } from '@/store/selectors/selectors';
 import { setCurrentVisibleElement } from '@/store/slices/solutions';
+import { numberEnums } from '@/types/constants';
 
+import ArchorLinks from './ArchorLinks';
 import {
     Content,
     ContentContainer,
@@ -16,7 +17,7 @@ import {
     TypesContainer,
 } from './styles';
 
-type TObserver = (inView: boolean, entry: IntersectionObserverEntry) => void;
+const { START_SCROLL_POSITION, ARCHOR_OFFSET_TOP } = numberEnums;
 const SolutionContent = () => {
     const dispatch = useAppDispatch();
     const myRef = useRef<HTMLDivElement>(null);
@@ -24,25 +25,40 @@ const SolutionContent = () => {
         currentSolutionPage: { page },
     } = useAppSelector(solutionSelector);
     const { t } = useTranslation();
-    const observer: TObserver = (inView, entry) => {
-        console.log('Inview:', entry.target);
-        // dispatch(setCurrentVisibleElement(entry.target));
-    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.pageYOffset;
+            if (scrollPos < START_SCROLL_POSITION) {
+                dispatch(setCurrentVisibleElement(sections[0].id));
+            }
+
+            sections.forEach(section => {
+                const top = section.offsetTop - ARCHOR_OFFSET_TOP;
+                const bottom = top + section.offsetHeight;
+                if (scrollPos >= top && scrollPos < bottom) {
+                    dispatch(setCurrentVisibleElement(section.id));
+                }
+            });
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <ContentContainer>
             <Content>
+                <ArchorLinks />
                 <TextContainer ref={myRef}>
                     {Object.values(page).map(
                         ({ id, title, text, image, types }) => {
                             return (
-                                <InView
-                                    id={id}
-                                    root={myRef.current}
-                                    threshold={0.5}
-                                    onChange={observer}
-                                >
-                                    <Title id={id}>{t(title)}</Title>
+                                <section id={id}>
+                                    <Title>{t(title)}</Title>
 
                                     {image ? (
                                         <ImageComponent source={image} />
@@ -59,7 +75,7 @@ const SolutionContent = () => {
                                             }}
                                         />
                                     ) : null}
-                                </InView>
+                                </section>
                             );
                         },
                     )}

@@ -44,4 +44,8 @@ export const LinkToPage = styled.div<{ isActive: boolean }>`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.white};
+
+    &:hover {
+        border-bottom: ${({ theme: { border } }) => border.ml};
+    }
 `;

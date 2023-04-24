@@ -5,6 +5,7 @@ import { ReactSVG } from 'react-svg';
 
 import FooterLogoWhite from '@/assets/images/logo/footerLogoWhite.png';
 import { ImageComponent } from '@/components';
+import { Switcher } from '@/componentsLibrary';
 import contactList from '@/config/contactList';
 import links from '@/config/links';
 import footerLogoArray from '@/config/logoLinks';
@@ -52,6 +53,7 @@ const DarkFooter = () => {
                             );
                         })}
                     </ContentLinks>
+                    <Switcher />
                 </ContentDescription>
                 <QuickLinkContainer>
                     <Title>{t(QUICK_LINK)}</Title>
