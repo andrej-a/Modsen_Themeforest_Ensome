@@ -9,6 +9,7 @@ module.exports = {
     },
     transform: {
         '^.+\\.{ts|tsx}?$': 'ts-jest',
+        '^.+\\.(jpg|jpeg|png|gif|svg)$': 'jest-transform-stub',
     },
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };

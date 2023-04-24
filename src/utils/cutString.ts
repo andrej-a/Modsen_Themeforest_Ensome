@@ -10,7 +10,7 @@ export const cutString = (str: string): string => {
     return stringWithoutTags;
 };
 
-export const capitalize = (str: string): string => {
+export const decodeString = (str: string): string => {
     let correctLink = str.replace(/%20/gi, ' ');
     correctLink = decodeURIComponent(str);
     return correctLink.charAt(0).toUpperCase() + correctLink.slice(1);

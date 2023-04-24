@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 import { TLinksStack } from '@/types/componentsOptions';
-import { capitalize } from '@/utils/cutString';
+import { decodeString } from '@/utils/cutString';
 
 import { BreadCrumbLink, BreadCrumbsWrapper, FinalyBreadCrumb } from './styles';
 
@@ -32,7 +32,7 @@ const BreadCrumbs = ({
             });
         } else {
             linksStack.push({
-                title: t(capitalize(crumb)),
+                title: t(decodeString(crumb)),
                 link: `/${crumb}`,
             });
         }

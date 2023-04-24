@@ -113,7 +113,7 @@ const blogCardsData: TBlogCards = [
         countOfTheViews: `503 ${VIEWS}`,
         share: SHARE,
         tagsTitle: TAGS,
-        tagsArray: ['Proxy', 'Data'],
+        tagsArray: ['Proxy', 'Data', 'Big data'],
     },
     {
         id: uuidv4(),
