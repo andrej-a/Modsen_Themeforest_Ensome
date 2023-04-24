@@ -1,5 +1,6 @@
 const theme = {
     top: {
+        x2s: -900,
         xss: -120,
         xs: 0,
         s: 30,
@@ -50,6 +51,7 @@ const theme = {
         x: 0,
         ssx: 15,
         xxl: 100,
+        x2ll: 125,
         x3l: 170,
         xl: 330,
         x1l: 360,
@@ -168,6 +170,7 @@ const theme = {
         xl: '1px solid #9497A1',
         xll: '1px solid #C14040',
         m: '1px solid #607d94',
+        ml: '1px solid #fff',
         xxl: '4px solid #185cff',
     },
     borderRadius: {

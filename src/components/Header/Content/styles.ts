@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ContentContainer = styled.div`
     width: auto;
@@ -17,9 +17,13 @@ export const MenuContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: ${({ theme: { gap } }) => gap.l}px;
+
+    a {
+        text-decoration: none;
+    }
 `;
 
-export const MenuItem = styled.h6<{ type?: string }>`
+export const MenuItem = styled.h6<{ type?: string; isActive: boolean }>`
     position: relative;
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
     font-style: normal;
@@ -31,8 +35,39 @@ export const MenuItem = styled.h6<{ type?: string }>`
         type === 'secondary' ? colors.white : colors.grey};
     cursor: pointer;
 
+    ${({ isActive, type }) => {
+        if (isActive) {
+            switch (type) {
+                case 'secondary':
+                    return css`
+                        border-bottom: ${({ theme: { border } }) => border.ml};
+                    `;
+                default:
+                    break;
+            }
+        }
+        if (isActive && type !== 'secondary') {
+            return css`
+                color: ${({ theme: { colors } }) => colors.black};
+                font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
+            `;
+        }
+    }}
+
+    path {
+        cursor: pointer;
+        fill: ${({ type, theme: { colors } }) =>
+            type === 'secondary' ? colors.white : colors.grey};
+    }
+
     &:hover {
         color: ${({ type, theme: { colors } }) =>
             type === 'secondary' ? colors.lightGrey : colors.black};
     }
+`;
+
+export const ShowPagesContainer = styled.div`
+    position: absolute;
+    top: 0;
+    left: 45px;
 `;
