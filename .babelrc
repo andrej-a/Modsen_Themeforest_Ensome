@@ -7,10 +7,13 @@
         }], "@babel/preset-react", "@babel/preset-typescript"
     ],
     "plugins": [
-        "@babel/plugin-proposal-class-properties",
-        "babel-plugin-styled-components",
-        "@babel/plugin-transform-runtime",
-        "@babel/plugin-proposal-optional-chaining"
+        [
+            "styled-components",
+            {
+                "displayName": true,
+                "fileName": false
+            }
+        ],
     ],
     "env": {
         "test": {

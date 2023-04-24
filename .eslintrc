@@ -31,7 +31,11 @@
         "no-plusplus": 0,
         "no-continue": 0,
         "no-unused-expressions": 0,
+        "react/jsx-curly-newline": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
         "simple-import-sort/exports": "error",
+        "no-unused-vars": "off",
         "import/first": "error",
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
@@ -67,20 +71,14 @@
                 "ignorePattern": "import"
             }
         ],
-        "no-unused-vars": "warn",
         "operator-linebreak": "off",
         "react-hooks/rules-of-hooks": "error",
         "react/jsx-closing-tag-location": 2,
         "react/jsx-closing-bracket-location": "off",
         "import/prefer-default-export": "off",
+        "react/no-array-index-key": "off",
         "consistent-return": "off",
-        "react/jsx-max-props-per-line": [
-            2,
-            {
-                "maximum": 2,
-                "when": "always"
-            }
-        ],
+        "react/jsx-max-props-per-line": "off",
         "prefer-const": [
             "error",
             {
