@@ -170,11 +170,15 @@ export enum dictionary {
     BAGRAT_BIO = 'BagratBio',
     GOR_BIO = 'GorBio',
     MARI_BIO = 'MariBio',
-    HAKOB_BIO = 'HakovBio',
+    HAKOB_BIO = 'HakobBio',
     EVA_BIO = 'EvaBio',
     KOHAR_BIO = 'KoharBio',
     ARARAT_BIO = 'AraratBio',
     EDUARD_BIO = 'EduardBio',
+    SOCIAL_NETWORKS = 'SocialNetworks',
+    WANT = 'Want',
+    SUGGESTION = 'Suggestion',
+    WOMEN_SUGGESTION = 'WomenSuggestion',
 }
 
 export enum numberEnums {
@@ -194,6 +198,7 @@ export enum namesOfTheSlices {
     BLOG_SLICE = 'blogSlice',
     SERVICE_SLICE = 'serviceSlice',
     SOLUTION_SLICE = 'solutionSlice',
+    OUR_TEAM_SLICE = 'ourTeam',
 }
 
 export enum UIConstants {

@@ -11,6 +11,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import blogSlice from '@/store/slices/blog';
+import ourTeamSlice from '@/store/slices/ourTeam';
 import serviceSlice from '@/store/slices/serviceSlice';
 import solutionSlice from '@/store/slices/solutions';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
     blogSlice,
     serviceSlice,
     solutionSlice,
+    ourTeamSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

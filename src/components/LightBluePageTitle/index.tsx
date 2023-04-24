@@ -7,15 +7,23 @@ import { Title, TitleContainer, TitleContent } from './styles';
 
 interface ISingleBlogTitle {
     title: string;
+    isBreadCrumbsShort?: boolean;
 }
 
-const PageTitleWithLightBlueBackground = ({ title }: ISingleBlogTitle) => {
+const PageTitleWithLightBlueBackground = ({
+    title,
+    isBreadCrumbsShort,
+}: ISingleBlogTitle) => {
     const { t } = useTranslation();
     return (
         <TitleContainer>
             <TitleContent>
                 <Title>{t(title)}</Title>
-                <BreadCrumbs linkColor="grey" crumbColor="black" />
+                <BreadCrumbs
+                    isShortland={isBreadCrumbsShort}
+                    linkColor="grey"
+                    crumbColor="black"
+                />
             </TitleContent>
         </TitleContainer>
     );

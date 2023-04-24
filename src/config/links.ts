@@ -64,6 +64,11 @@ export const singlePagesLinks = [
         link: '/solutions/:title',
         title: '',
     },
+    {
+        id: uuidv4(),
+        link: '/our team/:name',
+        title: '',
+    },
 ];
 
 export default links;

@@ -58,6 +58,7 @@ const theme = {
     },
     margin: {
         none: 0,
+        xss: 5,
         xs: 15,
         x: 20,
         s: 25,
