@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
   }
   #root {
+    overflow: clip;
     display: flex;
     flex-direction: column;
     justify-content: center;
