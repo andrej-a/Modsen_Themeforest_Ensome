@@ -33,7 +33,7 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
         dispatch(setTagsOfCurrentBlog(tagsArray));
     };
     return (
-        <BlogCardContainer>
+        <BlogCardContainer data-test="blogCard">
             <BlogCardContent type={type}>
                 <ImageContainer type={type}>
                     <ImageComponent source={image} />

@@ -14,10 +14,12 @@ const ArchorLinks = () => {
     const { t } = useTranslation();
 
     return (
-        <ArchorLinksContainer>
+        <ArchorLinksContainer data-test="archorLinks">
             {Object.values(page).map(({ id, title }) => {
                 return (
                     <ArchorLink
+                        data-test="archorLink"
+                        key={id}
                         isActive={id === currentVisibleElement}
                         href={`#${id}`}
                     >

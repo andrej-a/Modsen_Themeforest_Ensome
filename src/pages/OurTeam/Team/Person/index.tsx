@@ -17,7 +17,12 @@ const PersonComponent = memo(
         }, []);
 
         return (
-            <Person isShow={isShow} pos={index % 3 === 1} key={name}>
+            <Person
+                data-test="personCard"
+                isShow={isShow}
+                pos={index % 3 === 1}
+                key={name}
+            >
                 <ImageComponent source={photo} />
                 <PersonInformation>
                     <Name>{name}</Name>

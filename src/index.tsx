@@ -45,3 +45,7 @@ const Root = () => {
 };
 
 ReactDOM.render(<Root />, document.getElementById('root'));
+
+if (window.Cypress) {
+    window.store = store;
+}

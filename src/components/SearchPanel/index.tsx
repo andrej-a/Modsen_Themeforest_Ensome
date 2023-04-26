@@ -44,6 +44,7 @@ const SearchPanel = ({
     return (
         <SearchForm onSubmit={handleSubmit(onHandleSubmit)}>
             <SearchInput
+                data-test="searchBloByTag"
                 {...register('search', {
                     onChange: handleSubmit(handleChange),
                 })}
@@ -56,8 +57,11 @@ const SearchPanel = ({
                 placeholder="Search"
                 autoComplete="off"
             />
-            <ValidationError>{t(errors.search?.message!)}</ValidationError>
+            <ValidationError data-test="tagValidationError">
+                {t(errors.search?.message!)}
+            </ValidationError>
             <SubmitButton
+                data-test="submitBlogSearching"
                 disabled={!!Object.keys(errors).length}
                 type="submit"
                 value="Search"

@@ -26,11 +26,15 @@ const CategoryItem = memo(({ theme, description }: CategoryItemProps) => {
 
     return (
         <>
-            <AccordionTrigger onClick={toggleAccordion}>
+            <AccordionTrigger
+                data-test="categoryTrigger"
+                onClick={toggleAccordion}
+            >
                 {t(theme)}
                 <ImageComponent source={AccordionArrow} />
             </AccordionTrigger>
             <AccordeonDescription
+                data-test="categoryDescription"
                 ref={ref}
                 currentHeight={height}
                 isExpanded={isExpanded}

@@ -18,7 +18,7 @@ const PageTitleWithLightBlueBackground = ({
     return (
         <TitleContainer>
             <TitleContent>
-                <Title>{t(title)}</Title>
+                <Title data-test="lightBluePageTitle">{t(title)}</Title>
                 <BreadCrumbs
                     isShortland={isBreadCrumbsShort}
                     linkColor="grey"

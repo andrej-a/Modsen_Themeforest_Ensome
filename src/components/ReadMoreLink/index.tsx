@@ -19,7 +19,7 @@ const ReadMoreComponent = ({ link }: ReadMoreLinkProps) => {
     const { t } = useTranslation();
 
     return (
-        <ReadMoreContainer>
+        <ReadMoreContainer data-test="readMore">
             <Link to={`/${t(link)}`}>{t(READ_MORE)}</Link>
             <ImageComponent source={ReadMoreArrow} />
         </ReadMoreContainer>

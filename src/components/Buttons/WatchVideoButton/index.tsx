@@ -10,7 +10,7 @@ import { VideoButton, VideoButtonContainer } from './styles';
 const WatchVideoButton = memo(
     ({ type, onClick, children }: WatchVideoButtonProps) => {
         return (
-            <VideoButtonContainer onClick={onClick}>
+            <VideoButtonContainer data-test="watchVideo" onClick={onClick}>
                 <VideoButton btnType={type}>
                     <LogoComponent
                         source={

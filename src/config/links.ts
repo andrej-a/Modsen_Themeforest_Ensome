@@ -66,7 +66,7 @@ export const singlePagesLinks = [
     },
     {
         id: uuidv4(),
-        link: '/service/:title',
+        link: '/services/:title',
         title: '',
     },
     {
