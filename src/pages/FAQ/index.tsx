@@ -14,9 +14,9 @@ import { Container } from './styles';
 const FAQ = () => {
     return (
         <Container>
-            {/*             <Header background="primary">
+            <Header background="primary">
                 <Content type="primary" />
-    </Header> */}
+            </Header>
             <FAQMainSection />
 
             <ContactUsSection />

@@ -16,9 +16,10 @@ interface DropDownMenuListProps {
 const DropDownMenuList = ({ settings }: DropDownMenuListProps) => {
     return (
         <DropDownMenuListWrapper>
-            {settings.map(({ linksTitles, linksPaths }) => {
+            {settings.map(({ linksTitles, linksPaths }, index) => {
                 return (
                     <DropDownMenuItem
+                        key={index}
                         category={linksTitles}
                         links={linksPaths}
                     />

@@ -131,6 +131,7 @@ export enum dictionary {
     THEME_TITLE = 'Theme',
     SOLUTIONS_PAGE_TITLE = 'SolutionsPageTitle',
     SOLUTIONS_PAGE_DESCRIPTION = 'SolutionsPageDescription',
+    SOLUTION_PAGE_DESCRIPTION_MOBILE = 'SolutionsPageDescriptionMobile',
     ADVANTAGES_TITLE = 'AdvantagesTitle',
     DATA_INTEGRATION = 'DataIntegration',
     DATA_INTEGRATION_DESCRIPTION = 'DataIntegrationDescription',
@@ -241,6 +242,7 @@ export enum size {
     mobileL = 426,
     tablet = 768,
     laptop = 1024,
+    laptopM = 1100,
     laptopL = 1440,
     desktop = 1920,
 }

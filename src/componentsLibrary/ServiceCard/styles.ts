@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { mobileL } = size;
 export const CardContainer = styled.div<{ type: string }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x1l}px;
@@ -11,6 +14,7 @@ export const CardContainer = styled.div<{ type: string }>`
     padding: ${({ theme: { padding } }) => padding.ms};
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;
     box-shadow: ${({ theme: { shadows } }) => shadows.shadowCard3};
+
     ${({ type }) => {
         switch (type) {
             case 'center text':
@@ -22,6 +26,12 @@ export const CardContainer = styled.div<{ type: string }>`
                     max-width: ${({ theme: { width } }) => width.xxxl}px;
                     padding: ${({ theme: { padding } }) => padding.mx};
                     gap: ${({ theme: { gap } }) => gap.sxx}px;
+
+                    @media (max-width: ${mobileL}px) {
+                        padding: ${({ theme: { padding } }) => padding.mm};
+                        gap: ${({ theme: { gap } }) => gap.none}px;
+                        margin: ${({ theme: { margin } }) => margin.m3l};
+                    }
                 `;
             case 'small':
                 return css`
@@ -46,6 +56,12 @@ export const ImageContainer = styled.div<{ type: string }>`
             case 'center text':
                 return css`
                     justify-content: center;
+                `;
+            case 'wide glass icon':
+                return css`
+                    @media (max-width: ${mobileL}px) {
+                        margin-bottom: ${({ theme: { margin } }) => margin.x}px;
+                    }
                 `;
             default:
                 break;
@@ -79,6 +95,17 @@ export const TitleContainer = styled.div<{ type: string }>`
                 return css`
                     font-size: ${({ theme: { fontSize } }) => fontSize.xxl}px;
                 `;
+            case 'wide glass icon':
+                return css`
+                    @media (max-width: ${mobileL}px) {
+                        font-size: ${({ theme: { fontSize } }) =>
+                            fontSize.xxl}px;
+                        line-height: ${({ theme: { lineHeight } }) =>
+                            lineHeight.xll}px;
+                        margin-bottom: ${({ theme: { margin } }) =>
+                            margin.x2s}px;
+                    }
+                `;
             default:
                 break;
         }
@@ -106,6 +133,16 @@ export const DescriptionContainer = styled.div<{ type: string }>`
                     font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
                     line-height: ${({ theme: { lineHeight } }) =>
                         lineHeight.l}px;
+                `;
+            case 'wide glass icon':
+                return css`
+                    @media (max-width: ${mobileL}px) {
+                        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+                        line-height: ${({ theme: { lineHeight } }) =>
+                            lineHeight.l}px;
+                        margin-bottom: ${({ theme: { margin } }) =>
+                            margin.xs}px;
+                    }
                 `;
             default:
                 break;
