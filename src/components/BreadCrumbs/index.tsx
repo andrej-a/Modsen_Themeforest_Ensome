@@ -55,7 +55,7 @@ const BreadCrumbs = ({
             );
         }
         return (
-            <FinalyBreadCrumb crumbColor={crumbColor}>
+            <FinalyBreadCrumb key={link} crumbColor={crumbColor}>
                 <FinalyBreadCrumb crumbColor={crumbColor}>|</FinalyBreadCrumb>
                 {title}
             </FinalyBreadCrumb>

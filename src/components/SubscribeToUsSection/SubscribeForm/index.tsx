@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import useMobile from '@/hooks/useMobile';
 import useSubscribe from '@/hooks/useSubscribe';
-import { dictionary, envConstants } from '@/types/constants';
+import { dictionary, envConstants, size } from '@/types/constants';
 
 import { schema } from './config/schema';
 import {
@@ -12,10 +13,12 @@ import {
     ValidationError,
 } from './styles';
 
-const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE } = dictionary;
+const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE, SUBSCRIBE } = dictionary;
 const { TEMPLATE_ID } = envConstants;
 
+const { tablet } = size;
 const SubscribeFormComponent = () => {
+    const { isMobile } = useMobile(tablet);
     const { t } = useTranslation();
     const {
         formRef,
@@ -40,7 +43,9 @@ const SubscribeFormComponent = () => {
             <SubmitButton
                 disabled={!!Object.keys(errors).length || isDisabled}
                 type="submit"
-                value={t(SUBSCRIBE_BUTTON_VALUE) as string}
+                value={
+                    t(isMobile ? SUBSCRIBE : SUBSCRIBE_BUTTON_VALUE) as string
+                }
             />
         </SubscribeForm>
     );

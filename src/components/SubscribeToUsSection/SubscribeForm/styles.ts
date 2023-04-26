@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet, mobileS } = size;
+
 export const SubscribeForm = styled.form`
     position: relative;
     display: flex;
@@ -33,6 +37,19 @@ export const SubscribeInput = styled.input<{ isError: boolean }>`
     &:disabled {
         background: ${({ theme: { colors } }) => colors.beige};
     }
+
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.x1ll}px;
+        background: transparent;
+        border: ${({ theme: { border } }) => border.m};
+        ::placeholder {
+            color: ${({ theme: { colors } }) => colors.helperBlue2};
+        }
+    }
+
+    @media (max-width: ${mobileS}px) {
+        width: ${({ theme: { width } }) => width.x}px;
+    }
 `;
 
 export const SubmitButton = styled.input`
@@ -57,6 +74,10 @@ export const SubmitButton = styled.input`
     &:disabled {
         color: ${({ theme: { colors } }) => colors.lightGrey};
         cursor: not-allowed;
+    }
+
+    @media (max-width: ${tablet}px) {
+        position: relative;
     }
 `;
 

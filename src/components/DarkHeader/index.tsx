@@ -1,38 +1,36 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
-import { ReactSVG } from 'react-svg';
 
 import FooterLogoWhite from '@/assets/images/logo/footerLogoWhite.png';
 import { ImageComponent } from '@/components';
 import { Switcher } from '@/componentsLibrary';
-import contactList from '@/config/contactList';
-import links from '@/config/links';
-import footerLogoArray from '@/config/logoLinks';
-import { dictionary, UIConstants } from '@/types/constants';
+import useMobile from '@/hooks/useMobile';
+import { dictionary, size, UIConstants } from '@/types/constants';
 
-import services from './config/service';
+import DropDownMenuList, { ISettings } from '../DropDownMenuList';
+import allLinksTogether from './config/allLinksTohether';
+import FollowUs from './FollowUs';
+import LinksToPages from './LinksToPages';
+import SocialLinks from './SocialLinks';
 import {
     AdditionalInformation,
-    ContactInfoContainer,
+    CompanyInforWrapper,
     ContentDescription,
     ContentDescriptionText,
-    ContentLinks,
     FooterContainer,
     FooterContent,
-    Link,
-    PageLink,
     Policy,
-    QuickLinkContainer,
-    ServiceContainer,
     Text,
-    Title,
 } from './styles';
 
-const { QUICK_LINK, SERVICE, CONTACT_INFO, FOOTER_DESCRIPTION } = dictionary;
+const { FOOTER_DESCRIPTION } = dictionary;
 const { COMPANY_INFO, POLICY, TERMS } = UIConstants;
+
+const { laptop } = size;
 const DarkFooter = () => {
     const { t } = useTranslation();
+    const { isMobile } = useMobile(laptop);
+
     return (
         <FooterContainer>
             <FooterContent>
@@ -41,54 +39,23 @@ const DarkFooter = () => {
                     <ContentDescriptionText>
                         {t(FOOTER_DESCRIPTION)}
                     </ContentDescriptionText>
-                    <ContentLinks>
-                        {footerLogoArray.map(logo => {
-                            return (
-                                <Link
-                                    href="https://www.google.com/"
-                                    target="_blank"
-                                >
-                                    <ReactSVG src={logo} />
-                                </Link>
-                            );
-                        })}
-                    </ContentLinks>
+                    {isMobile ? null : <SocialLinks />}
                     <Switcher />
                 </ContentDescription>
-                <QuickLinkContainer>
-                    <Title>{t(QUICK_LINK)}</Title>
-                    {links.map(({ id, link, title }) => {
-                        return (
-                            <NavLink key={id} to={link}>
-                                <PageLink>{t(title)}</PageLink>
-                            </NavLink>
-                        );
-                    })}
-                </QuickLinkContainer>
-                <ServiceContainer>
-                    <Title>{t(SERVICE)}</Title>
-                    {services.map(service => {
-                        return <Text>{t(service)}</Text>;
-                    })}
-                </ServiceContainer>
-                <ContactInfoContainer>
-                    <Title>{t(CONTACT_INFO)}</Title>
-                    {Object.values(contactList).map(({ href, contact }) => {
-                        return (
-                            <Text>
-                                <Link href={href} target="_blank">
-                                    {contact}
-                                </Link>
-                            </Text>
-                        );
-                    })}
-                </ContactInfoContainer>
+                {isMobile ? null : <LinksToPages />}
+                {isMobile ? (
+                    <DropDownMenuList settings={allLinksTogether} />
+                ) : null}
             </FooterContent>
+            {isMobile && <FollowUs />}
             <AdditionalInformation>
-                {COMPANY_INFO}
+                {!isMobile && <>{COMPANY_INFO}</>}
                 <Policy>
                     <Text>{POLICY}</Text> <Text>{TERMS}</Text>
                 </Policy>
+                {isMobile && (
+                    <CompanyInforWrapper>{COMPANY_INFO}</CompanyInforWrapper>
+                )}
             </AdditionalInformation>
         </FooterContainer>
     );

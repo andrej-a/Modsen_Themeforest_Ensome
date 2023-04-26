@@ -105,6 +105,7 @@ export enum dictionary {
     FAQS_SUBTITLE = 'FAQs',
     FAQ_TITLE = 'FrequentlyQuestions',
     FAQ_DESCRIPTION = 'FrequentlyQuestionsDescription',
+    FAQ_DESCRIPTION_MOBILE = 'FAQDescriptionMobile',
     DATA_ANALYTICS = 'DataAnalytics',
     DATA_MINING = 'DataMining',
     BUSINESS_INTELLIGENCE = 'BusinessIntelligence',
@@ -181,6 +182,8 @@ export enum dictionary {
     WOMEN_SUGGESTION = 'WomenSuggestion',
     RUSSIAN = 'Russian',
     ENGLISH = 'English',
+    SUBSCRIBE = 'Subscribe',
+    FOLLOW_US = 'FollowUs',
 }
 
 export enum numberEnums {
@@ -231,3 +234,13 @@ export const envConstants = {
     USER_ID: process.env.USER_ID,
     FULL_FORM_TEMPLATE_ID: process.env.FULL_FORM_TEMPLATE_ID,
 };
+
+export enum size {
+    mobileS = 320,
+    mobileM = 375,
+    mobileL = 426,
+    tablet = 768,
+    laptop = 1024,
+    laptopL = 1440,
+    desktop = 1920,
+}

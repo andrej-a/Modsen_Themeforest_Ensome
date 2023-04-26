@@ -103,6 +103,7 @@
     "HealthcareIt": "Healthcare it",
     "FrequentlyQuestions": "Frequently asked questions",
     "FrequentlyQuestionsDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.",
+    "FAQDescriptionMobile": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     "DataAnalytics": "What are data analytics?",
     "DataMining": "What is data mining?",
     "BusinessIntelligence": "What is business intelligence?",
@@ -180,5 +181,7 @@
     "Suggestion": "to share his expertise with you?",
     "WomenSuggestion": "to share her expertise with you?",
     "Russian": "Russian",
-    "English": "English"
+    "English": "English",
+    "Subscribe": "Subscribe",
+    "FollowUs": "Follow us"
 }

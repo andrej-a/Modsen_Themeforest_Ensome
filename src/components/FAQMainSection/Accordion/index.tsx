@@ -8,8 +8,8 @@ import { AccordionContainer } from './styles';
 const Accordion = () => {
     return (
         <AccordionContainer>
-            {faqData.map(question => {
-                return <AccordionCard content={question} />;
+            {faqData.map((question, index) => {
+                return <AccordionCard key={index} content={question} />;
             })}
         </AccordionContainer>
     );

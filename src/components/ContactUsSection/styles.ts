@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { mobileL, mobileS } = size;
 export const ContactUsContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -21,6 +24,23 @@ export const ContactUsContent = styled.div`
     align-items: center;
     gap: ${({ theme: { gap } }) => gap.sl}px;
     margin: ${({ theme: { margin } }) => margin.x2l};
+
+    @media (max-width: ${mobileL}px) {
+        padding: ${({ theme: { padding } }) => padding.s3s};
+        gap: ${({ theme: { gap } }) => gap.sxx}px;
+        margin: ${({ theme: { margin } }) => margin.ll};
+
+        button {
+            width: ${({ theme: { width } }) => width.x1ll}px;
+            padding: ${({ theme: { padding } }) => padding.x2ss};
+        }
+    }
+
+    @media (max-width: ${mobileS}px) {
+        button {
+            width: ${({ theme: { width } }) => width.x}px;
+        }
+    }
 `;
 
 export const ContactUsTitle = styled.div`
@@ -36,6 +56,11 @@ export const ContactUsTitle = styled.div`
     text-align: center;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${mobileL}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
+    }
 `;
 
 export const ContactUsDescription = styled.div`
@@ -49,4 +74,10 @@ export const ContactUsDescription = styled.div`
     text-align: center;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${mobileL}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        margin-bottom: ${({ theme: { margin } }) => margin.x2s}px;
+    }
 `;

@@ -103,6 +103,7 @@
     "DigitalTransformation": "Цифровая трансформация",
     "HealthcareIt": "Здравоохранение и информационные технологии",
     "FrequentlyQuestions": "Часто задаваемые вопросы",
+    "FAQDescriptionMobile": "Часто задаваемые вопросы",
     "FrequentlyQuestionsDescription": "Часто задаваемые вопросы и ответы на них от наших специалистов",
     "DataAnalytics": "Что такое аналитика данных?",
     "DataMining": "Что такое добыча данных?",
@@ -181,7 +182,7 @@
     "Suggestion": "поделился с Вами опытом?",
     "WomenSuggestion": "поделилась с Вами опытом?",
     "Russian": "Русский",
-    "English": "Английский"
-
-
+    "English": "Английский",
+    "Subscribe": "Подписаться",
+    "FollowUs": "Читайте нас"
 }

@@ -23,7 +23,7 @@ const AdditionalContent = ({
             <Content>
                 {additionalLinks.map(({ link, title }) => {
                     return (
-                        <NavLink to={link}>
+                        <NavLink key={title} to={link}>
                             {({ isActive }) => (
                                 <LinkToPage isActive={isActive}>
                                     {t(title)}
