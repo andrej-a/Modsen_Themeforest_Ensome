@@ -46,7 +46,7 @@ const useService = (schema?: Schema<TSearchField>) => {
 
     const onHandleSubmit: SubmitHandler<{ search: string }> = ({ search }) => {
         findPageAndSetToStore();
-        history(`/service/${currentLink}`);
+        history(`/services/${currentLink}`);
     };
 
     return {

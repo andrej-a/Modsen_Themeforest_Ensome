@@ -27,7 +27,7 @@ const service: TService = [
         title: MACHINE_LEARNING_TITLE,
         description: MACHINE_LEARNING_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${MACHINE_LEARNING_TITLE}`,
+        link: `services/${MACHINE_LEARNING_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,
@@ -42,7 +42,7 @@ const service: TService = [
         title: EMBED_ANALYTICS_TITLE,
         description: EMBED_ANALYTICS_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${EMBED_ANALYTICS_TITLE}`,
+        link: `services/${EMBED_ANALYTICS_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,
@@ -57,7 +57,7 @@ const service: TService = [
         title: ACCESS_CONTROL_TITLE,
         description: ACCESS_CONTROL_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${ACCESS_CONTROL_TITLE}`,
+        link: `services/${ACCESS_CONTROL_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,
@@ -72,7 +72,7 @@ const service: TService = [
         title: DATA_ANALYTICS_TITLE,
         description: DATA_ANALYTICS_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${DATA_ANALYTICS_TITLE}`,
+        link: `services/${DATA_ANALYTICS_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,
@@ -87,7 +87,7 @@ const service: TService = [
         title: BIG_DATA_TITLE,
         description: DATA_ANALYTICS_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${BIG_DATA_TITLE}`,
+        link: `services/${BIG_DATA_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,
@@ -102,7 +102,7 @@ const service: TService = [
         title: ARTIFICAL_TITLE,
         description: DATA_ANALYTICS_DESCRIPTION,
         solutionList: SERVICE_SOLUTIONS_LIST,
-        link: `service/${ARTIFICAL_TITLE}`,
+        link: `services/${ARTIFICAL_TITLE}`,
         content: {
             customer: SERVICE_CUSTOMER,
             challenge: SERVICE_CHALLENGE,

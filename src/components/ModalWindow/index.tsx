@@ -9,7 +9,7 @@ import { CloseModalWindowButton, ModalWindowOverlay } from './styles';
 
 const ModalWindow = memo(({ onClick, children }: ModalWindowProps) => {
     return createPortal(
-        <ModalWindowOverlay onClick={onClick}>
+        <ModalWindowOverlay data-test="modal" onClick={onClick}>
             {children}
             <CloseModalWindowButton onClick={onClick}>
                 <LogoComponent source={CloseButton} />

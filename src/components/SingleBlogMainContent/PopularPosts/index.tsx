@@ -10,6 +10,7 @@ import { PopularPostsContainer, PopularPostsContent } from './styles';
 const { POPULAR_POSTS, NO_POSTS } = dictionary;
 const PopularPosts = () => {
     const { filteredByTagAndSortedByPopularArray } = usePopularPosts();
+    console.log(filteredByTagAndSortedByPopularArray);
     const { t } = useTranslation();
     return (
         <PopularPostsContainer>

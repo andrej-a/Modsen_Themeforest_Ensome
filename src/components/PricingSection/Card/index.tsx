@@ -95,7 +95,9 @@ const PricingCard = ({
                         }}
                     />
                 ) : (
-                    <DefaultButton>{t(CHOOSE_PLAN)}</DefaultButton>
+                    <DefaultButton data-test="paypal button">
+                        {t(CHOOSE_PLAN)}
+                    </DefaultButton>
                 )}
             </ChoosePlanButtonContainer>
             {listOfServices.map(service => {

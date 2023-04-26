@@ -21,10 +21,10 @@ const Switcher = (props: Props) => {
     };
     return (
         <SwitcherContainer onClick={onHandleLang}>
-            <Position>
+            <Position data-test="SwitchToEnglish">
                 <Text>{t(ENGLISH)}</Text>
             </Position>
-            <Position>
+            <Position data-test="SwitchToRussian">
                 <Text>{t(RUSSIAN)}</Text>
             </Position>
             <SwitchElement currentLang={lang} />

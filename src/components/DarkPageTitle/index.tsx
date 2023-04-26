@@ -23,7 +23,9 @@ const DarkPageTitle = ({ title, description, settings }: IDarkPageTitle) => {
                     <BreadCrumbs linkColor="grey" crumbColor="white" />
                 </BreadCrumb>
                 <DarkPagePreviewDescription>
-                    <DarkPagePreviewTitle>{t(title)}</DarkPagePreviewTitle>
+                    <DarkPagePreviewTitle data-test="darkPageTitle">
+                        {t(title)}
+                    </DarkPagePreviewTitle>
                     <Description
                         descriptionSize={descriptionSize}
                         dangerouslySetInnerHTML={{

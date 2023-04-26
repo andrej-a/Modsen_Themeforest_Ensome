@@ -57,6 +57,7 @@ const SliderComponent = ({
                             <ImageComponent source={leftArrow} />
                         </SliderButton>
                         <SliderButton
+                            data-test="moveLeftButton"
                             disabled={
                                 Math.abs(currentCardsIndex - 1) >=
                                 childrensLength / countOfTheCards

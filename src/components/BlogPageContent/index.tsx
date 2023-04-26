@@ -33,7 +33,10 @@ const BlogPageContent = () => {
                     })}
                 </Content>
                 <LoadButtonWrapper isButtonVisible={isButtonVisible}>
-                    <DefaultButton onClick={onHandleIndex}>
+                    <DefaultButton
+                        data-test="loadMoreArticles"
+                        onClick={onHandleIndex}
+                    >
                         {t(MORE_ARTICLES)}
                     </DefaultButton>
                 </LoadButtonWrapper>

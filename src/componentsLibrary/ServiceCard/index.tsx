@@ -30,7 +30,7 @@ const ServiceCard = ({ type, content }: ServiceCardProps) => {
     };
 
     return (
-        <CardContainer type={type}>
+        <CardContainer data-test="serviceCard" type={type}>
             <ImageContainer type={type}>
                 <ImageComponent
                     source={type === 'wide glass icon' ? glassImage : image}
