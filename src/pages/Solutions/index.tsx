@@ -27,10 +27,10 @@ const SolutionsPage = () => {
     const { isMobile } = useMobile(tablet);
     return (
         <PageContainer>
-            {/*             <Header background="white">
+            <Header background="white">
                 <Content type="primary" />
             </Header>
- */}{' '}
+
             <PageTitle
                 size="low"
                 subTitle={SOLUTIONS}

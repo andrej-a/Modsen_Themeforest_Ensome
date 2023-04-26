@@ -238,6 +238,7 @@ export const envConstants = {
 
 export enum size {
     mobileS = 320,
+    mobileX = 360,
     mobileM = 375,
     mobileL = 426,
     tablet = 768,
