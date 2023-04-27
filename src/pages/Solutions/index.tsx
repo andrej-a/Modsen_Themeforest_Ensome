@@ -45,7 +45,7 @@ const SolutionsPage = () => {
             <Advantages />
             <TestimonialsSection />
             <ContactUsSection />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </PageContainer>
     );

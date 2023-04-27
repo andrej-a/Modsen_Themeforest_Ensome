@@ -73,7 +73,7 @@
     "SubscribeButtonValue": "Send",
     "QuickLink": "Quick Link",
     "Contacts": "Contacts",
-    "OurTeam": "Our Team",
+    "Our team": "Our Team",
     "About us": "About Us",
     "Services": "Services",
     "FAQ": "FAQ",
@@ -184,5 +184,8 @@
     "English": "English",
     "Subscribe": "Subscribe",
     "FollowUs": "Follow us",
-    "SolutionsPageDescriptionMobile": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    "SolutionsPageDescriptionMobile": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "GetToKnowUs": "Get to know us closer",
+    "AboutUsMobileDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "AboutUsMobileLongDescription": "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. Fusce id commodo libero. <br><br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Nulla rhoncus consectetur eros non iaculis. "
 }

@@ -30,7 +30,7 @@ const Services = () => {
             <ServiceContent />
             <OverviewSection />
             <ContactUsSection />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </PageContainer>
     );

@@ -34,7 +34,7 @@ const ServiceSingle = () => {
             />
             <ServiceSingleContent />
             <ContactFormComponent />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </PageContainer>
     );

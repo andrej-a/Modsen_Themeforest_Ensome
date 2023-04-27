@@ -2,6 +2,8 @@ import { ButtonHTMLAttributes } from 'react';
 
 import { PaymentCardProps } from '@/components/PricingSection';
 
+import { SocialLinks } from './IPerson';
+
 export type HeaderProps = {
     background?: string;
     children?: React.ReactNode;
@@ -51,7 +53,7 @@ export type PaymentModalWindowProps = {
 };
 
 export type SubscribeSectionProps = {
-    type: string;
+    type: 'light' | 'dark';
 };
 
 export type TPayload<T> = {
@@ -138,4 +140,5 @@ export interface PersonComponentProps {
     photo: string;
     position: string;
     index: number;
+    social: SocialLinks;
 }

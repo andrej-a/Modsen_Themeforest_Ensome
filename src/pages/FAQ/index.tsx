@@ -20,7 +20,7 @@ const FAQ = () => {
             <FAQMainSection />
 
             <ContactUsSection />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </Container>
     );

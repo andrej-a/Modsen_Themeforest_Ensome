@@ -11,7 +11,10 @@ export const SubscribeForm = styled.form`
     gap: ${({ theme: { gap } }) => gap.s}px;
 `;
 
-export const SubscribeInput = styled.input<{ isError: boolean }>`
+export const SubscribeInput = styled.input<{
+    isError: boolean;
+    componentType: string;
+}>`
     width: ${({ theme: { width } }) => width.l1x}px;
     padding: ${({ theme: { padding } }) => padding.sx};
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;
@@ -41,9 +44,14 @@ export const SubscribeInput = styled.input<{ isError: boolean }>`
     @media (max-width: ${tablet}px) {
         width: ${({ theme: { width } }) => width.x1ll}px;
         background: transparent;
-        border: ${({ theme: { border } }) => border.m};
+        border: ${({ componentType, theme: { border } }) =>
+            componentType === 'dark' ? border.m : border.xs};
+
         ::placeholder {
-            color: ${({ theme: { colors } }) => colors.helperBlue2};
+            color: ${({ componentType, theme: { colors } }) =>
+                componentType === 'dark'
+                    ? colors.helperBlue2
+                    : colors.helperBlue3};
         }
     }
 

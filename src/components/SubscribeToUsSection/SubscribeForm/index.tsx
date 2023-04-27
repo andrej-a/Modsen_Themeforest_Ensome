@@ -17,7 +17,10 @@ const { SUBSCRIBE_PLACEHOLDER, SUBSCRIBE_BUTTON_VALUE, SUBSCRIBE } = dictionary;
 const { TEMPLATE_ID } = envConstants;
 
 const { tablet } = size;
-const SubscribeFormComponent = () => {
+export interface ISubscribeFormComponent {
+    componentType: 'light' | 'dark';
+}
+const SubscribeFormComponent = ({ componentType }: ISubscribeFormComponent) => {
     const { isMobile } = useMobile(tablet);
     const { t } = useTranslation();
     const {
@@ -31,6 +34,7 @@ const SubscribeFormComponent = () => {
     return (
         <SubscribeForm ref={formRef} onSubmit={handleSubmit(handleChange)}>
             <SubscribeInput
+                componentType={componentType}
                 isError={Object.keys(errors).length > 0}
                 type="text"
                 {...register('email')}

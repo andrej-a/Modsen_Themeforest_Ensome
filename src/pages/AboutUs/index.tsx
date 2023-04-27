@@ -30,7 +30,7 @@ const AboutUs = () => {
             <Testimonials />
             <ContactUs />
             <SubscribeSection type="light" />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </PageContainer>
     );

@@ -74,7 +74,7 @@ export enum dictionary {
     SUBSCRIBE_BUTTON_VALUE = 'SubscribeButtonValue',
     QUICK_LINK = 'QuickLink',
     CONTACTS = 'Contacts',
-    OUR_TEAM = 'OurTeam',
+    OUR_TEAM = 'Our team',
     ABOUT_US = 'About us',
     SERVICES = 'Services',
     FAQ = 'FAQ',
@@ -185,6 +185,9 @@ export enum dictionary {
     ENGLISH = 'English',
     SUBSCRIBE = 'Subscribe',
     FOLLOW_US = 'FollowUs',
+    GET_TO_KNOW_US = 'GetToKnowUs',
+    ABOUT_US_MOBILE_DESCRIPTION = 'AboutUsMobileDescription',
+    ABOUT_US_LONG_DESCRIBE = 'AboutUsMobileLongDescription',
 }
 
 export enum numberEnums {
