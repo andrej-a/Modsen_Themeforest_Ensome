@@ -188,6 +188,7 @@ export enum dictionary {
     GET_TO_KNOW_US = 'GetToKnowUs',
     ABOUT_US_MOBILE_DESCRIPTION = 'AboutUsMobileDescription',
     ABOUT_US_LONG_DESCRIBE = 'AboutUsMobileLongDescription',
+    SEND_MESSAGE = 'SendMessage',
 }
 
 export enum numberEnums {
