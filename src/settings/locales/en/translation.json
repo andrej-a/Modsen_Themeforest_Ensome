@@ -188,5 +188,8 @@
     "GetToKnowUs": "Get to know us closer",
     "AboutUsMobileDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     "AboutUsMobileLongDescription": "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. Fusce id commodo libero. <br><br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Nulla rhoncus consectetur eros non iaculis. ",
-    "SendMessage": "Send message"
+    "SendMessage": "Send message",
+    "BlogMobileTitle": "Discover new things with Ensome blog",
+    "BlogMobileDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+    "SeeMore": "See more"
 }

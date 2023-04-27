@@ -59,7 +59,7 @@ export const Title = styled.div`
     color: ${({ theme: { colors } }) => colors.black};
 
     @media (max-width: ${tablet}px) {
-        padding: ${({ theme: { padding } }) => padding.s2s};
+        padding: ${({ theme: { padding } }) => padding.s3s};
         font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
         line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
     }

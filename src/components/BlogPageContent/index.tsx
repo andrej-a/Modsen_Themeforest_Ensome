@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { DefaultButton } from '@/components';
 import { BlogCard } from '@/componentsLibrary';
 import useArticle from '@/hooks/useArticle';
-import { dictionary } from '@/types/constants';
+import useMobile from '@/hooks/useMobile';
+import { dictionary, size } from '@/types/constants';
 
 import {
     BlogPageContentContainer,
@@ -13,21 +14,32 @@ import {
     LoadButtonWrapper,
 } from './styles';
 
-const { MORE_ARTICLES } = dictionary;
+const { MORE_ARTICLES, SEE_MORE } = dictionary;
+const { mobileL } = size;
 
 const BlogPageContent = () => {
     const { onHandleIndex, visibleCards, isButtonVisible } = useArticle();
     const { t } = useTranslation();
+    const { isMobile } = useMobile(mobileL);
     return (
         <BlogPageContentContainer>
             <ContentContainer>
                 <Content>
                     {visibleCards.map(card => {
+                        const { blogTitle, publishDate, id, firstContentPart } =
+                            card;
                         return (
                             <BlogCard
-                                key={card.id}
-                                settings={{ type: 'small' }}
-                                content={card}
+                                key={id}
+                                settings={{
+                                    type: isMobile ? 'medium' : 'small',
+                                }}
+                                content={{
+                                    ...card,
+                                    blogTitle: t(blogTitle),
+                                    publishDate: t(publishDate),
+                                    firstContentPart: t(firstContentPart),
+                                }}
                             />
                         );
                     })}
@@ -37,7 +49,7 @@ const BlogPageContent = () => {
                         data-test="loadMoreArticles"
                         onClick={onHandleIndex}
                     >
-                        {t(MORE_ARTICLES)}
+                        {isMobile ? t(SEE_MORE) : t(MORE_ARTICLES)}
                     </DefaultButton>
                 </LoadButtonWrapper>
             </ContentContainer>

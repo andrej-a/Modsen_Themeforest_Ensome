@@ -18,7 +18,6 @@ const FAQ = () => {
                 <Content type="primary" />
             </Header>
             <FAQMainSection />
-
             <ContactUsSection />
             <SubscribeSection type="dark" />
             <DarkFooter />

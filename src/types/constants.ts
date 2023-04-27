@@ -189,6 +189,9 @@ export enum dictionary {
     ABOUT_US_MOBILE_DESCRIPTION = 'AboutUsMobileDescription',
     ABOUT_US_LONG_DESCRIBE = 'AboutUsMobileLongDescription',
     SEND_MESSAGE = 'SendMessage',
+    BLOG_MOBILE_TITLE = 'BlogMobileTitle',
+    BLOG_MOBILE_DESCRIPTION = 'BlogMobileDescription',
+    SEE_MORE = 'SeeMore',
 }
 
 export enum numberEnums {
