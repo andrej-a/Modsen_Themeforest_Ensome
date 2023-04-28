@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { ISliderControls } from '@/types/componentsOptions';
 import { size } from '@/types/constants';
 
 const { laptopM, tablet, mobileX } = size;
@@ -29,9 +30,29 @@ export const SliderContentHeader = styled.div<{ contentPosition: string }>`
     justify-content: space-between;
     align-items: center;
     gap: ${({ theme: { gap } }) => gap.xxl}px;
+
     @media (max-width: ${tablet}px) {
         gap: ${({ theme: { gap } }) => gap.sxx}px;
     }
+
+    ${({ contentPosition }) => {
+        switch (contentPosition) {
+            case 'center':
+                return css`
+                    text-align: center;
+                `;
+            case 'left':
+                return css`
+                    text-align: left;
+                `;
+            case 'space-between':
+                return css`
+                    justify-content: space-between;
+                `;
+            default:
+                break;
+        }
+    }}
 `;
 
 export const SliderContentTitle = styled.div`
@@ -52,24 +73,38 @@ export const SliderContentTitle = styled.div`
     }
 
     @media (max-width: ${mobileX}px) {
-        font-size: ${({ theme: { fontSize } }) => fontSize.x2l}px;
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
     }
 `;
 
 export const SliderDescription = styled.div<{ contentPosition: string }>`
-    padding: 0 15px;
+    padding: ${({ theme: { padding } }) => padding.s3s};
     font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* or 171% */
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
+    font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+    line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+    color: ${({ theme: { colors } }) => colors.grey};
 
-    letter-spacing: -0.015em;
-
-    /* Grey */
-
-    color: #9497a1;
+    ${({ contentPosition }) => {
+        switch (contentPosition) {
+            case 'center':
+                return css`
+                    text-align: center;
+                `;
+            case 'left':
+                return css`
+                    text-align: left;
+                `;
+            case 'space-between':
+                return css`
+                    justify-content: space-between;
+                `;
+            default:
+                break;
+        }
+    }}
 `;
 
 export const SliderControls = styled.div`
@@ -130,7 +165,12 @@ export const Slider = styled.div`
 `;
 
 export const SliderCarousel = styled.div<{
-    params: { index: number; childrensLength: number };
+    params: {
+        index: number;
+        childrensLength: number;
+        isButtonsControls: boolean;
+    };
+    innerControls: ISliderControls;
 }>`
     width: ${({ params: { childrensLength } }) =>
         css`calc(1125px / 3 * ${childrensLength})`};
@@ -153,5 +193,25 @@ export const SliderCarousel = styled.div<{
             css`calc(375px / 1 * ${childrensLength})`};
         transform: ${({ params: { index }, theme: { width } }) =>
             css`translateX(${index * width.x1xx}px)`};
+
+        ${({
+            params: { childrensLength, index },
+            innerControls: {
+                isInclude,
+                cardsSize,
+                innerPadding,
+                innerGap,
+                innerTransform,
+            },
+        }) => {
+            if (isInclude) {
+                return css`
+                    width: calc(${cardsSize}px / 1 * ${childrensLength});
+                    padding-left: ${innerPadding}px;
+                    gap: ${innerGap}px;
+                    transform: translateX(${index * innerTransform}px);
+                `;
+            }
+        }}
     }
 `;

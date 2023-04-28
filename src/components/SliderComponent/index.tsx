@@ -24,6 +24,7 @@ const SliderComponent = ({
     size = 'small',
     countOfTheCards,
     settings,
+    innerControls,
     children,
 }: SliderProps) => {
     const [currentCardsIndex, setCurrentCardsIndex] = useState(0);
@@ -93,7 +94,9 @@ const SliderComponent = ({
                         params={{
                             index: currentCardsIndex,
                             childrensLength,
+                            isButtonsControls,
                         }}
+                        innerControls={innerControls!}
                     >
                         {children}
                     </SliderCarousel>

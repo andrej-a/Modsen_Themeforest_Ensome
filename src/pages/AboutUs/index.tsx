@@ -16,6 +16,7 @@ import { PageTitle } from '@/componentsLibrary';
 import useMobile from '@/hooks/useMobile';
 import { dictionary, size } from '@/types/constants';
 
+import BenefitsSliderMobile from './BenefitsSlider';
 import ContactUs from './ContactUs';
 import EnsomeInNumbers from './EnsomeInNumbersSection';
 import Overview from './OverviewSection';
@@ -30,10 +31,9 @@ const AboutUs = () => {
     const { isMobile } = useMobile(mobileL);
     return (
         <PageContainer>
-            {/*             <Header background="background">
+            <Header background="background">
                 <Content />
             </Header>
- */}{' '}
             {!isMobile && <PageTitleWithLightBlueBackground title={ABOUT_US} />}
             {isMobile && (
                 <PageTitle
@@ -55,6 +55,7 @@ const AboutUs = () => {
                 />
             )}
             {!isMobile && <Overview />}
+            <BenefitsSliderMobile />
             <Testimonials />
             {!isMobile && <ContactUs />}
             {!isMobile && <SubscribeSection type="light" />}

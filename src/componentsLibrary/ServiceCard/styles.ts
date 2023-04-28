@@ -20,6 +20,13 @@ export const CardContainer = styled.div<{ type: string }>`
             case 'center text':
                 return css`
                     padding: ${({ theme: { padding } }) => padding.x5l}px;
+
+                    @media (max-width: ${mobileL}px) {
+                        gap: ${({ theme: { gap } }) => gap.none};
+                        padding: ${({ theme: { padding } }) => padding.mll};
+                        min-width: ${({ theme: { width } }) => width.xx2l}px;
+                        max-width: ${({ theme: { width } }) => width.xx2l}px;
+                    }
                 `;
             case 'wide glass icon':
                 return css`
@@ -56,6 +63,9 @@ export const ImageContainer = styled.div<{ type: string }>`
             case 'center text':
                 return css`
                     justify-content: center;
+                    @media (max-width: ${mobileL}px) {
+                        margin-bottom: ${({ theme: { margin } }) => margin.x}px;
+                    }
                 `;
             case 'wide glass icon':
                 return css`
@@ -90,6 +100,10 @@ export const TitleContainer = styled.div<{ type: string }>`
                 return css`
                     justify-content: center;
                     text-align: center;
+                    @media (max-width: ${mobileL}px) {
+                        margin-bottom: ${({ theme: { margin } }) =>
+                            margin.xs}px;
+                    }
                 `;
             case 'small':
                 return css`
@@ -165,6 +179,10 @@ export const ReadMoreContainer = styled.div<{ type: string }>`
             case 'center text':
                 return css`
                     justify-content: center;
+
+                    @media (max-width: ${mobileL}px) {
+                        display: none;
+                    }
                 `;
             case 'small':
                 return css`

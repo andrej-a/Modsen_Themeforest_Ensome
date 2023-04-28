@@ -11,7 +11,7 @@ import { TestimonialsSectionContainer } from './style';
 const { TESTIMONIALS } = dictionary;
 
 const TestimonialsSection = () => {
-    const { sliderCards } = useSliderCards(3);
+    const { sliderCards } = useSliderCards();
     return (
         <TestimonialsSectionContainer>
             <SliderComponent
@@ -20,8 +20,15 @@ const TestimonialsSection = () => {
                     isDescription: false,
                     contentPosition: 'space-between',
                 }}
+                innerControls={{
+                    isInclude: false,
+                    cardsSize: 275,
+                    innerGap: 28,
+                    innerPadding: 44,
+                    innerTransform: 300,
+                }}
                 description=""
-                countOfTheCards={sliderCards}
+                countOfTheCards={sliderCards!}
                 title={TESTIMONIALS}
             >
                 {testimonialsData.map((data, index) => {

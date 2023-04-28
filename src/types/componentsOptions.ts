@@ -39,12 +39,21 @@ interface ISliderSettings {
     contentPosition: 'left' | 'center' | 'space-between';
 }
 
+export interface ISliderControls {
+    isInclude: boolean;
+    cardsSize: number;
+    innerGap: number;
+    innerPadding: number;
+    innerTransform: number;
+}
+
 export type SliderProps = {
     title: string;
     description: string;
     countOfTheCards: number;
     size?: 'small' | 'medium';
     settings: ISliderSettings;
+    innerControls: ISliderControls;
     children: React.ReactNode;
 };
 

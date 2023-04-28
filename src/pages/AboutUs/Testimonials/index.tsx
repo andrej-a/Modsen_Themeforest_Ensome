@@ -14,7 +14,7 @@ const Testimonials = () => {
     const { sliderCards } = useSliderCards(2);
     return (
         <SliderComponent
-            countOfTheCards={sliderCards}
+            countOfTheCards={sliderCards!}
             title={isMobile ? 'Testimonials' : 'What our customers say'}
             description={
                 isMobile
@@ -25,6 +25,13 @@ const Testimonials = () => {
                 isButtonsControls: true,
                 isDescription: true,
                 contentPosition: 'space-between',
+            }}
+            innerControls={{
+                isInclude: false,
+                cardsSize: 0,
+                innerGap: 0,
+                innerPadding: 0,
+                innerTransform: 0,
             }}
             size={isMobile ? 'small' : 'medium'}
         >
