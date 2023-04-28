@@ -33,10 +33,18 @@ export type ModalWindowProps = {
     children?: React.ReactNode;
 };
 
+interface ISliderSettings {
+    isButtonsControls: boolean;
+    isDescription: boolean;
+    contentPosition: 'left' | 'center' | 'space-between';
+}
+
 export type SliderProps = {
     title: string;
+    description: string;
     countOfTheCards: number;
     size?: 'small' | 'medium';
+    settings: ISliderSettings;
     children: React.ReactNode;
 };
 

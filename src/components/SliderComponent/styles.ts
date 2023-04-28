@@ -23,7 +23,7 @@ export const SliderSectionContent = styled.div<{ size: string }>`
     }
 `;
 
-export const SliderContentHeader = styled.div`
+export const SliderContentHeader = styled.div<{ contentPosition: string }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     justify-content: space-between;
@@ -54,6 +54,22 @@ export const SliderContentTitle = styled.div`
     @media (max-width: ${mobileX}px) {
         font-size: ${({ theme: { fontSize } }) => fontSize.x2l}px;
     }
+`;
+
+export const SliderDescription = styled.div<{ contentPosition: string }>`
+    padding: 0 15px;
+    font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+
+    letter-spacing: -0.015em;
+
+    /* Grey */
+
+    color: #9497a1;
 `;
 
 export const SliderControls = styled.div`

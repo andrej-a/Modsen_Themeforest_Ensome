@@ -15,8 +15,18 @@ const Testimonials = () => {
     return (
         <SliderComponent
             countOfTheCards={sliderCards}
-            title="What our customers say"
-            size="medium"
+            title={isMobile ? 'Testimonials' : 'What our customers say'}
+            description={
+                isMobile
+                    ? 'Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+                    : ''
+            }
+            settings={{
+                isButtonsControls: true,
+                isDescription: true,
+                contentPosition: 'space-between',
+            }}
+            size={isMobile ? 'small' : 'medium'}
         >
             {testimonialsData.map((data, index) => {
                 return (
@@ -24,7 +34,7 @@ const Testimonials = () => {
                         key={index}
                         type={{
                             size: isMobile ? 'small' : 'medium',
-                            type: 'image outside',
+                            type: isMobile ? 'image inside' : 'image outside',
                         }}
                         content={data}
                     />

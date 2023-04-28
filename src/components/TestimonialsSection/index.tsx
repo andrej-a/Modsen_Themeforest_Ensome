@@ -14,7 +14,16 @@ const TestimonialsSection = () => {
     const { sliderCards } = useSliderCards(3);
     return (
         <TestimonialsSectionContainer>
-            <SliderComponent countOfTheCards={sliderCards} title={TESTIMONIALS}>
+            <SliderComponent
+                settings={{
+                    isButtonsControls: true,
+                    isDescription: false,
+                    contentPosition: 'space-between',
+                }}
+                description=""
+                countOfTheCards={sliderCards}
+                title={TESTIMONIALS}
+            >
                 {testimonialsData.map((data, index) => {
                     return (
                         <ReviewCard

@@ -11,7 +11,6 @@ import {
     PageContainer,
     PageTitleWithLightBlueBackground,
     SubscribeSection,
-    TestimonialsSection,
 } from '@/components';
 import { PageTitle } from '@/componentsLibrary';
 import useMobile from '@/hooks/useMobile';
@@ -56,8 +55,7 @@ const AboutUs = () => {
                 />
             )}
             {!isMobile && <Overview />}
-            {!isMobile && <Testimonials />}
-            {isMobile && <TestimonialsSection />}
+            <Testimonials />
             {!isMobile && <ContactUs />}
             {!isMobile && <SubscribeSection type="light" />}
             {isMobile && <ContactUsSection />}
