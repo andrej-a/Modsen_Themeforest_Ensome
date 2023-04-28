@@ -11,13 +11,14 @@ import { TestimonialsSectionContainer } from './style';
 const { TESTIMONIALS } = dictionary;
 
 const TestimonialsSection = () => {
-    const { sliderCards } = useSliderCards();
+    const { sliderCards } = useSliderCards(3);
     return (
         <TestimonialsSectionContainer>
             <SliderComponent countOfTheCards={sliderCards} title={TESTIMONIALS}>
-                {testimonialsData.map(data => {
+                {testimonialsData.map((data, index) => {
                     return (
                         <ReviewCard
+                            key={index}
                             type={{ size: 'small', type: 'image inside' }}
                             content={data}
                         />

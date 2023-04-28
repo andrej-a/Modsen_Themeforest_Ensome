@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { CardContainer, Description, Title } from './styles';
 
@@ -22,14 +21,13 @@ const NumberComponent = ({
     content,
 }: INumberComponent) => {
     const { main, second } = content;
-    const { t } = useTranslation();
     return (
         <CardContainer type={type}>
             <Title type={type} color={mainColor}>
-                {t(main)}
+                {main}
             </Title>
             <Description type={type} color={secondColor}>
-                {t(second)}
+                {second}
             </Description>
         </CardContainer>
     );

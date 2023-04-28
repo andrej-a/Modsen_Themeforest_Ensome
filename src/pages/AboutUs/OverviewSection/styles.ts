@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM } = size;
+
 export const ContentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x5l}px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: ${({ theme: { padding } }) => padding.s3s};
 `;
 
 export const Content = styled.div`
@@ -15,6 +20,10 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${({ theme: { gap } }) => gap.sl}px;
+
+    @media (max-width: ${laptopM}px) {
+        margin-top: ${({ theme: { margin } }) => margin.l3x}px;
+    }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -26,6 +35,10 @@ export const DescriptionContainer = styled.div`
 
     font-style: normal;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+
+    @media (max-width: ${laptopM}px) {
+        align-items: center;
+    }
 `;
 
 export const Title = styled.div`
@@ -49,4 +62,11 @@ export const Description = styled.div`
 export const CustomersContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
+
+    @media (max-width: ${laptopM}px) {
+        justify-content: center;
+        img {
+            width: ${({ theme: { width } }) => width.xxl}px;
+        }
+    }
 `;

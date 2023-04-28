@@ -192,6 +192,8 @@ export enum dictionary {
     BLOG_MOBILE_TITLE = 'BlogMobileTitle',
     BLOG_MOBILE_DESCRIPTION = 'BlogMobileDescription',
     SEE_MORE = 'SeeMore',
+    ABOUT_US_MOBILE_TITLE = 'AboutUsMobileTitle',
+    ABOUT_US_PAGE_MOBILE_DESCRIPTION = 'AboutUsPageMobileDescription',
 }
 
 export enum numberEnums {

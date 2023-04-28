@@ -176,6 +176,7 @@ const theme = {
         xxl: 50,
         xxxl: 60,
         x3l: 80,
+        x4ll: 90,
         xll: 95,
         x2l: 125,
         x4l: 145,

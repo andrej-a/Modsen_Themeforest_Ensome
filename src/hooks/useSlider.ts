@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-function useSliderCards() {
-    const [sliderCards, setSliderCards] = useState(3);
+function useSliderCards(defaultCards: number) {
+    const [sliderCards, setSliderCards] = useState(defaultCards);
 
     useEffect(() => {
         const handleResize = () => {
@@ -14,7 +14,6 @@ function useSliderCards() {
                 setSliderCards(1);
             }
         };
-        handleResize();
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);

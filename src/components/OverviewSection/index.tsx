@@ -19,10 +19,18 @@ import {
 
 const { OVERVIEW_TITLE, OVERVIEW_DESCRIPTION } = dictionary;
 
-const OverviewSection = () => {
+interface IOverviewSection {
+    background: string;
+    isClientsLogoShow: boolean;
+}
+
+const OverviewSection = ({
+    background,
+    isClientsLogoShow,
+}: IOverviewSection) => {
     const { t } = useTranslation();
     return (
-        <OverviewSectionContainer>
+        <OverviewSectionContainer background={background}>
             <Overview>
                 <OverviewTitleContainer>
                     {t(OVERVIEW_TITLE)}
@@ -30,32 +38,38 @@ const OverviewSection = () => {
                 <OverviewContentContainer>
                     <OverviewProjects>
                         {projectsInformation.map(
-                            ({ amountOfWorkeDone, descriptionOfWorke }) => {
+                            (
+                                { amountOfWorkeDone, descriptionOfWorke },
+                                index,
+                            ) => {
                                 return (
                                     <NumberComponent
+                                        key={index}
                                         settings={{
                                             type: 'variant 4',
                                             mainColor: 'primary',
                                             secondColor: 'grey',
                                         }}
                                         content={{
-                                            main: amountOfWorkeDone,
-                                            second: descriptionOfWorke,
+                                            main: t(amountOfWorkeDone),
+                                            second: t(descriptionOfWorke),
                                         }}
                                     />
                                 );
                             },
                         )}
                     </OverviewProjects>
-                    <OverviewDescription>
+                    <OverviewDescription isClientsLogoShow={isClientsLogoShow}>
                         {t(OVERVIEW_DESCRIPTION)}
                     </OverviewDescription>
                 </OverviewContentContainer>
-                <OverviewClientsLogos>
-                    {clientsLogos.map(logo => {
-                        return <ImageComponent source={logo} />;
-                    })}
-                </OverviewClientsLogos>
+                {isClientsLogoShow && (
+                    <OverviewClientsLogos>
+                        {clientsLogos.map((logo, index) => {
+                            return <ImageComponent key={index} source={logo} />;
+                        })}
+                    </OverviewClientsLogos>
+                )}
             </Overview>
         </OverviewSectionContainer>
     );

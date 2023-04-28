@@ -28,7 +28,7 @@ const Services = () => {
                 description={SERVICES_PAGE_DESCRIPTION}
             />
             <ServiceContent />
-            <OverviewSection />
+            <OverviewSection background="white" isClientsLogoShow />
             <ContactUsSection />
             <SubscribeSection type="dark" />
             <DarkFooter />

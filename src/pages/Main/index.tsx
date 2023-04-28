@@ -25,7 +25,7 @@ const MainPage = () => {
             </Header>
             <HeroSection />
             <FeatureSection />
-            <OverviewSection />
+            <OverviewSection background="white" isClientsLogoShow />
             <BenefitsSection />
             <TestimonialsSection />
             <PricingSection />
