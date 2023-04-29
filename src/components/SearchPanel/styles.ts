@@ -1,10 +1,21 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet, mobileM } = size;
+
 export const SearchForm = styled.form`
     position: relative;
     display: flex;
     flex-direction: column;
     gap: ${({ theme: { gap } }) => gap.s}px;
+
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.xll}%;
+    }
+    @media (max-width: ${mobileM}px) {
+        width: ${({ theme: { width } }) => width.x}px;
+    }
 `;
 
 export const SearchInput = styled.input<{ isError: boolean }>`
@@ -33,6 +44,10 @@ export const SearchInput = styled.input<{ isError: boolean }>`
     &:disabled {
         background: ${({ theme: { colors } }) => colors.beige};
     }
+
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+    }
 `;
 
 export const SubmitButton = styled.input`
@@ -58,6 +73,10 @@ export const SubmitButton = styled.input`
         background: ${({ theme: { colors } }) => colors.lightGrey};
         color: ${({ theme: { colors } }) => colors.beige};
         cursor: not-allowed;
+    }
+
+    @media (max-width: ${tablet}px) {
+        position: relative;
     }
 `;
 

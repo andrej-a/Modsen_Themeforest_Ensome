@@ -2,29 +2,48 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { BlogCard } from '@/componentsLibrary';
+import useMobile from '@/hooks/useMobile';
 import usePopularPosts from '@/hooks/usePopularPosts';
-import { dictionary } from '@/types/constants';
+import { dictionary, size } from '@/types/constants';
 
 import { PopularPostsContainer, PopularPostsContent } from './styles';
 
 const { POPULAR_POSTS, NO_POSTS } = dictionary;
+const { tablet } = size;
 const PopularPosts = () => {
     const { filteredByTagAndSortedByPopularArray } = usePopularPosts();
-    console.log(filteredByTagAndSortedByPopularArray);
     const { t } = useTranslation();
+    const { isMobile } = useMobile(tablet);
     return (
         <PopularPostsContainer>
             {t(POPULAR_POSTS)}
             <PopularPostsContent>
                 {filteredByTagAndSortedByPopularArray.length > 0
-                    ? filteredByTagAndSortedByPopularArray.map(card => {
-                          return (
-                              <BlogCard
-                                  settings={{ type: 'without description' }}
-                                  content={card}
-                              />
-                          );
-                      })
+                    ? filteredByTagAndSortedByPopularArray.map(
+                          (card, index) => {
+                              const {
+                                  publishDate,
+                                  blogTitle,
+                                  firstContentPart,
+                              } = card;
+                              return (
+                                  <BlogCard
+                                      key={index}
+                                      settings={{
+                                          type: isMobile
+                                              ? 'small'
+                                              : 'without description',
+                                      }}
+                                      content={{
+                                          ...card,
+                                          publishDate: t(publishDate),
+                                          blogTitle: t(blogTitle),
+                                          firstContentPart: t(firstContentPart),
+                                      }}
+                                  />
+                              );
+                          },
+                      )
                     : t(NO_POSTS)}
             </PopularPostsContent>
         </PopularPostsContainer>

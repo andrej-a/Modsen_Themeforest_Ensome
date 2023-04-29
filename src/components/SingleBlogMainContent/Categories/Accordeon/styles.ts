@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { mobileL } = size;
+
 export const AccordionTrigger = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     height: auto;
@@ -22,6 +26,12 @@ export const AccordionTrigger = styled.div`
         img {
             transform: rotateZ(90deg);
         }
+    }
+
+    @media (max-width: ${mobileL}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        padding: ${({ theme: { padding } }) => padding.sx};
     }
 `;
 
