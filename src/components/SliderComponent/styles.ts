@@ -18,9 +18,12 @@ export const SliderSectionContent = styled.div<{ size: string }>`
         align-items: center;
     }
     @media (max-width: ${tablet}px) {
+        position: relative;
+        top: ${({ theme: { top } }) => top.sx}px;
+
         margin: ${({ theme: { margin } }) => margin.l1l};
         gap: ${({ size, theme: { gap } }) =>
-            size === 'small' ? gap.sl : gap.x2l}px;
+            size === 'small' ? gap.sxx : gap.x2l}px;
     }
 `;
 
@@ -172,7 +175,7 @@ export const SliderCarousel = styled.div<{
     };
     innerControls: ISliderControls;
 }>`
-    width: ${({ params: { childrensLength } }) =>
+    width: ${({ params: { childrensLength, index } }) =>
         css`calc(1125px / 3 * ${childrensLength})`};
     display: flex;
     justify-content: flex-start;
@@ -210,6 +213,10 @@ export const SliderCarousel = styled.div<{
                     padding-left: ${innerPadding}px;
                     gap: ${innerGap}px;
                     transform: translateX(${index * innerTransform}px);
+
+                    & > :nth-child(${Math.abs(index) + 2}) {
+                        opacity: ${({ theme: { opacity } }) => opacity.sx};
+                    }
                 `;
             }
         }}

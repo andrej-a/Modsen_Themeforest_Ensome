@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptop, tablet } = size;
+
 export const HeroSectionContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -19,7 +23,18 @@ export const HeroSectionContentContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: ${({ theme: { margin } }) => margin.xl}%;
+    margin: ${({ theme: { margin } }) => margin.xl}px;
+    padding: ${({ theme: { padding } }) => padding.s3s};
+
+    @media (max-width: ${laptop}px) {
+        flex-direction: column;
+        gap: ${({ theme: { gap } }) => gap.sxx}px;
+    }
+
+    @media (max-width: ${tablet}px) {
+        margin-top: ${({ theme: { margin } }) => margin.x}px;
+        margin-bottom: ${({ theme: { margin } }) => margin.l1x}px;
+    }
 `;
 
 export const HeroSectionTitleContainer = styled.div`
@@ -28,6 +43,11 @@ export const HeroSectionTitleContainer = styled.div`
     height: auto;
     display: flex;
     align-items: center;
+
+    @media (max-width: ${laptop}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+        max-width: none;
+    }
 `;
 
 export const HeroSectionTitle = styled.h1`
@@ -42,6 +62,15 @@ export const HeroSectionTitle = styled.h1`
     span {
         color: ${({ theme: { colors } }) => colors.primary};
     }
+
+    @media (max-width: ${laptop}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+    }
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xxlll}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
+    }
 `;
 
 export const LearnMoreButton = styled.div`
@@ -55,12 +84,21 @@ export const LearnMoreButton = styled.div`
 
     background: ${({ theme: { colors } }) => colors.white};
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.full}%;
+
+    @media (max-width: ${tablet}px) {
+        top: ${({ theme: { top } }) => top.lm}%;
+        right: ${({ theme: { right } }) => right.sx}%;
+    }
 `;
 
 export const HeroSectionDescriptionContainer = styled(
     HeroSectionTitleContainer,
 )`
     width: ${({ theme: { width } }) => width.l}%;
+
+    @media (max-width: ${laptop}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+    }
 `;
 
 export const HeroSectionDescription = styled.p`
@@ -71,11 +109,20 @@ export const HeroSectionDescription = styled.p`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.lx}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+    }
 `;
 
 export const HeroSectionImageContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     img {
         max-width: ${({ theme: { width } }) => width.xxl}%;
+
+        @media (max-width: ${tablet}px) {
+            height: ${({ theme: { width } }) => width.x7l}px;
+        }
     }
 `;

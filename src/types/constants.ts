@@ -194,6 +194,7 @@ export enum dictionary {
     SEE_MORE = 'SeeMore',
     ABOUT_US_MOBILE_TITLE = 'AboutUsMobileTitle',
     ABOUT_US_PAGE_MOBILE_DESCRIPTION = 'AboutUsPageMobileDescription',
+    HEROES_SECTION_DESCRIPTION_MOBILE = 'HeroesDescriptionMobile',
 }
 
 export enum numberEnums {

@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { mobileL } = size;
 export const CardContainer = styled.div<{ isCardHover: boolean }>`
     width: auto;
     min-width: ${({ theme: { width } }) => width.x2l}px;
@@ -18,6 +21,11 @@ export const CardContainer = styled.div<{ isCardHover: boolean }>`
             border-color: ${({ theme: { colors }, isCardHover }) =>
                 isCardHover ? colors.white : colors.primary};
         }
+    }
+
+    @media (max-width: ${mobileL}px) {
+        max-width: ${({ theme: { width } }) => width.xx2l}px;
+        min-width: ${({ theme: { width } }) => width.xx2l}px;
     }
 `;
 
@@ -50,6 +58,12 @@ export const CostAndTogglerContainer = styled.div<{ isCardHover: boolean }>`
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors }, isCardHover }) =>
         isCardHover ? colors.white : colors.black};
+
+    @media (max-width: ${mobileL}px) {
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxxl};
+        font-size: ${({ theme: { fontSize } }) => fontSize.x1l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
+    }
 `;
 
 export const TogglersContainer = styled.div`
@@ -122,6 +136,12 @@ export const ChoosePlanButtonContainer = styled.div<{ isCardHover: boolean }>`
                 isCardHover ? colors.lightGrey : colors.primary};
             color: ${({ theme: { colors }, isCardHover }) =>
                 isCardHover ? colors.primary : colors.white};
+        }
+
+        @media (max-width: ${mobileL}px) {
+            font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
+            font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+            line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
         }
     }
 `;

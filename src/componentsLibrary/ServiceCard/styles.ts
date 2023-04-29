@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { size } from '@/types/constants';
 
 const { mobileL } = size;
+
 export const CardContainer = styled.div<{ type: string }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x1l}px;
@@ -45,6 +46,11 @@ export const CardContainer = styled.div<{ type: string }>`
                     max-width: ${({ theme: { width } }) => width.x2l}px;
                     padding: ${({ theme: { padding } }) => padding.lmx}px;
                     gap: ${({ theme: { gap } }) => gap.sx}px;
+
+                    @media (max-width: ${mobileL}px) {
+                        min-width: ${({ theme: { width } }) => width.lx2}px;
+                        max-width: ${({ theme: { width } }) => width.lx2}px;
+                    }
                 `;
 
             default:

@@ -2,9 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import HeroSectionImageMobile from '@/assets/images/pictures/hero_section_mobile.png';
 import HeroSectionImage from '@/assets/images/pictures/heroSection.png';
 import { ImageComponent, RoundButton } from '@/components';
-import { dictionary, linksConstants } from '@/types/constants';
+import useMobile from '@/hooks/useMobile';
+import { dictionary, linksConstants, size } from '@/types/constants';
 
 import {
     HeroSectionContainer,
@@ -17,11 +19,18 @@ import {
     LearnMoreButton,
 } from './styles';
 
-const { FIND_POWER, HEROES_SECTION_DESCRIPTION, LEARN_MORE, ENSOME } =
-    dictionary;
+const {
+    FIND_POWER,
+    HEROES_SECTION_DESCRIPTION,
+    HEROES_SECTION_DESCRIPTION_MOBILE,
+    LEARN_MORE,
+    ENSOME,
+} = dictionary;
 const { SERVICES_PAGE } = linksConstants;
+const { tablet } = size;
 const HeroSection = () => {
     const { t } = useTranslation();
+    const { isMobile } = useMobile(tablet);
     return (
         <HeroSectionContainer>
             <HeroSectionContentContainer>
@@ -32,7 +41,9 @@ const HeroSection = () => {
                 </HeroSectionTitleContainer>
                 <HeroSectionDescriptionContainer>
                     <HeroSectionDescription>
-                        {t(HEROES_SECTION_DESCRIPTION)}
+                        {isMobile
+                            ? t(HEROES_SECTION_DESCRIPTION_MOBILE)
+                            : t(HEROES_SECTION_DESCRIPTION)}
                     </HeroSectionDescription>
                 </HeroSectionDescriptionContainer>
                 <Link to={SERVICES_PAGE}>
@@ -42,7 +53,11 @@ const HeroSection = () => {
                 </Link>
             </HeroSectionContentContainer>
             <HeroSectionImageContainer>
-                <ImageComponent source={HeroSectionImage} />
+                <ImageComponent
+                    source={
+                        isMobile ? HeroSectionImageMobile : HeroSectionImage
+                    }
+                />
             </HeroSectionImageContainer>
         </HeroSectionContainer>
     );
