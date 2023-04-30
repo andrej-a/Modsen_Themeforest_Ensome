@@ -7,13 +7,13 @@ export const DropDownContainer = styled.div`
     border-bottom: ${({ theme: { border } }) => border.xl};
 `;
 
-export const MenuTrigger = styled.div<{ isExpanded: boolean }>`
+export const MenuTrigger = styled.div<{ type: string; isExpanded: boolean }>`
     width: ${({ theme: { width } }) => width.xxl}%;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: ${({ theme: { padding } }) => padding.lmm}px;
+    /* padding-bottom: ${({ theme: { padding } }) => padding.lmm}px; */
 
     cursor: pointer;
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
@@ -22,7 +22,8 @@ export const MenuTrigger = styled.div<{ isExpanded: boolean }>`
     font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.white};
+    color: ${({ type, theme: { colors } }) =>
+        type === 'dark' ? colors.black : colors.white};
 
     ${({ isExpanded }) => {
         if (isExpanded) {
@@ -55,7 +56,7 @@ export const MenuContent = styled.div<{
     text-align: left;
 `;
 
-export const LinkToPage = styled.div`
+export const LinkToPage = styled.div<{ type: string }>`
     display: flex;
     gap: ${({ theme: { gap } }) => gap.s}px;
     padding-left: ${({ theme: { padding } }) => padding.lmm}px;
@@ -67,6 +68,7 @@ export const LinkToPage = styled.div`
         font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
         line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
         letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
-        color: ${({ theme: { colors } }) => colors.tertiary};
+        color: ${({ type, theme: { colors } }) =>
+            type === 'dark' ? colors.black : colors.tertiary};
     }
 `;

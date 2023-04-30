@@ -11,17 +11,25 @@ export interface ISettings {
 }
 interface DropDownMenuListProps {
     settings: ISettings[];
+    type: 'light' | 'dark';
+    onHandleMenu?: (status: boolean) => () => void;
 }
 
-const DropDownMenuList = ({ settings }: DropDownMenuListProps) => {
+const DropDownMenuList = ({
+    settings,
+    type,
+    onHandleMenu,
+}: DropDownMenuListProps) => {
     return (
         <DropDownMenuListWrapper>
             {settings.map(({ linksTitles, linksPaths }, index) => {
                 return (
                     <DropDownMenuItem
+                        onHandleMenu={onHandleMenu}
                         key={index}
                         category={linksTitles}
                         links={linksPaths}
+                        type={type}
                     />
                 );
             })}

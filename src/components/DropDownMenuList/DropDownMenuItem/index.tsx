@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import MenuArrowRightDark from '@/assets/images/logo/contacts_arrow.png';
 import MenuArrowRight from '@/assets/images/logo/drop_down_arrow_right.png';
+import DropDownDarkArrow from '@/assets/images/logo/drop_down_dark_arrow.png';
 import DropDownArrow from '@/assets/images/logo/dropdown_arrow.png';
 import { ImageComponent } from '@/components';
 import { ILink } from '@/config/links';
@@ -17,9 +19,16 @@ import {
 type DropDownMenuItemProps = {
     category: string;
     links: ILink[];
+    type: string;
+    onHandleMenu?: (status: boolean) => () => void;
 };
 
-const DropDownMenuItem = ({ category, links }: DropDownMenuItemProps) => {
+const DropDownMenuItem = ({
+    category,
+    links,
+    type,
+    onHandleMenu,
+}: DropDownMenuItemProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [height, setHeight] = useState('0');
     const { t } = useTranslation();
@@ -34,9 +43,15 @@ const DropDownMenuItem = ({ category, links }: DropDownMenuItemProps) => {
 
     return (
         <DropDownContainer>
-            <MenuTrigger isExpanded={isExpanded} onClick={toggleAccordion}>
+            <MenuTrigger
+                type={type}
+                isExpanded={isExpanded}
+                onClick={toggleAccordion}
+            >
                 {t(category)}
-                <ImageComponent source={DropDownArrow} />
+                <ImageComponent
+                    source={type === 'dark' ? DropDownDarkArrow : DropDownArrow}
+                />
             </MenuTrigger>
             <MenuContent
                 ref={ref}
@@ -45,9 +60,21 @@ const DropDownMenuItem = ({ category, links }: DropDownMenuItemProps) => {
             >
                 {links.map(({ id, link, title }) => {
                     return (
-                        <LinkToPage key={id}>
+                        <LinkToPage
+                            onClick={
+                                onHandleMenu ? onHandleMenu(false) : () => {}
+                            }
+                            type={type}
+                            key={id}
+                        >
                             <Link to={link}>{t(title)}</Link>
-                            <ImageComponent source={MenuArrowRight} />
+                            <ImageComponent
+                                source={
+                                    type === 'dark'
+                                        ? MenuArrowRightDark
+                                        : MenuArrowRight
+                                }
+                            />
                         </LinkToPage>
                     );
                 })}

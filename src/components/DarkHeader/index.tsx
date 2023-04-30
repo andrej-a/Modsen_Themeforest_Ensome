@@ -7,9 +7,9 @@ import { Switcher } from '@/componentsLibrary';
 import useMobile from '@/hooks/useMobile';
 import { dictionary, size, UIConstants } from '@/types/constants';
 
-import DropDownMenuList, { ISettings } from '../DropDownMenuList';
+import DropDownMenuList from '../DropDownMenuList';
+import FollowUs from '../FollowUs';
 import allLinksTogether from './config/allLinksTohether';
-import FollowUs from './FollowUs';
 import LinksToPages from './LinksToPages';
 import SocialLinks from './SocialLinks';
 import {
@@ -44,10 +44,13 @@ const DarkFooter = () => {
                 </ContentDescription>
                 {isMobile ? null : <LinksToPages />}
                 {isMobile ? (
-                    <DropDownMenuList settings={allLinksTogether} />
+                    <DropDownMenuList
+                        type="light"
+                        settings={allLinksTogether}
+                    />
                 ) : null}
             </FooterContent>
-            {isMobile && <FollowUs />}
+            {isMobile && <FollowUs type="light" />}
             <AdditionalInformation>
                 {!isMobile && <>{COMPANY_INFO}</>}
                 <Policy>

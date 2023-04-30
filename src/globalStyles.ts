@@ -31,5 +31,9 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     justify-content: center;
     align-items: center;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 export default GlobalStyle;

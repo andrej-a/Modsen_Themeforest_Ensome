@@ -3,15 +3,18 @@ import { useTranslation } from 'react-i18next';
 
 import { dictionary } from '@/types/constants';
 
-import SocialLinks from '../SocialLinks';
+import SocialLinks from '../DarkHeader/SocialLinks';
 import { FollowUsContainer, Title } from './styles';
 
 const { FOLLOW_US } = dictionary;
-const FollowUs = () => {
+interface IFollowUs {
+    type: 'light' | 'dark';
+}
+const FollowUs = ({ type }: IFollowUs) => {
     const { t } = useTranslation();
     return (
         <FollowUsContainer>
-            <Title>{t(FOLLOW_US)}</Title>
+            <Title type={type}>{t(FOLLOW_US)}</Title>
             <SocialLinks />
         </FollowUsContainer>
     );

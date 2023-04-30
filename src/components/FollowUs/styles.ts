@@ -8,12 +8,13 @@ export const FollowUsContainer = styled.div`
     padding: ${({ theme: { padding } }) => padding.s3s};
 `;
 
-export const Title = styled.div`
+export const Title = styled.div<{ type: string }>`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
     font-style: normal;
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxl};
     font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.white};
+    color: ${({ type, theme: { colors } }) =>
+        type === 'dark' ? colors.black : colors.white};
 `;

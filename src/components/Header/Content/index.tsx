@@ -12,6 +12,7 @@ import { dictionary } from '@/types/constants';
 
 import AdditionalContent from '../AdditionalPages';
 import VideoPlayerHandler from '../VideoPlayerHandler';
+import BurgerMenu from './BurgerMenu';
 import headerLinks from './config/headerLinks';
 import {
     ContentContainer,
@@ -69,6 +70,7 @@ const Content = ({ type }: HeaderContentProps) => {
                     );
                 })}
             </MenuContainer>
+            <BurgerMenu />
             <VideoPlayerHandler type={type} />
         </ContentContainer>
     );

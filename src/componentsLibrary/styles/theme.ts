@@ -27,6 +27,7 @@ const theme = {
         x: -2,
         xs: 0,
         s: 25,
+        l: -900,
     },
     zIndex: {
         s: 3,
