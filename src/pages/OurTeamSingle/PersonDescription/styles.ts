@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet } = size;
 export const ContentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x5l}px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: ${({ theme: { padding } }) => padding.s3s};
 `;
 
 export const Content = styled.div`
@@ -17,12 +21,25 @@ export const Content = styled.div`
 
     gap: ${({ theme: { gap } }) => gap.sl}px;
     margin-top: ${({ theme: { margin } }) => margin.ml}px;
+
+    @media (max-width: ${tablet}px) {
+        flex-direction: column;
+        align-items: center;
+        margin: ${({ theme: { margin } }) => margin.none};
+        gap: ${({ theme: { gap } }) => gap.s}px;
+    }
 `;
 
 export const Photo = styled.div`
     width: ${({ theme: { width } }) => width.xxxl}px;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -59,6 +76,11 @@ export const Text = styled.div`
     font-size: ${({ theme: { fontSize } }) => fontSize.xxl}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+    }
 `;
 
 export const SocialLinks = styled.div`
