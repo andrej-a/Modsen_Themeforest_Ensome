@@ -25,7 +25,9 @@ const Privacy = () => {
                     {t(TERMS)} <ImageComponent source={Icon} />
                 </CompanyDescription>
             </CompanyDescriptionContainer>
-            <CompanyInfo>{t(COMPANY_INFO_SECONDARY)}</CompanyInfo>
+            <CompanyInfo color="helperBlue3">
+                {t(COMPANY_INFO_SECONDARY)}
+            </CompanyInfo>
         </PrivacyContainer>
     );
 };
