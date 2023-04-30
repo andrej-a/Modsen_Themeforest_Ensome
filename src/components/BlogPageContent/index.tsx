@@ -26,20 +26,14 @@ const BlogPageContent = () => {
             <ContentContainer>
                 <Content>
                     {visibleCards.map(card => {
-                        const { blogTitle, publishDate, id, firstContentPart } =
-                            card;
+                        const { id } = card;
                         return (
                             <BlogCard
                                 key={id}
                                 settings={{
                                     type: isMobile ? 'medium' : 'small',
                                 }}
-                                content={{
-                                    ...card,
-                                    blogTitle: t(blogTitle),
-                                    publishDate: t(publishDate),
-                                    firstContentPart: t(firstContentPart),
-                                }}
+                                content={card}
                             />
                         );
                     })}

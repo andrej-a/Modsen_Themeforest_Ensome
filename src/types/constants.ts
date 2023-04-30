@@ -195,6 +195,10 @@ export enum dictionary {
     ABOUT_US_MOBILE_TITLE = 'AboutUsMobileTitle',
     ABOUT_US_PAGE_MOBILE_DESCRIPTION = 'AboutUsPageMobileDescription',
     HEROES_SECTION_DESCRIPTION_MOBILE = 'HeroesDescriptionMobile',
+    BENEFITS_SLIDER_TITLE = 'BenefitsSliderTitle',
+    BENEFITS_SLIDER_DESCRIPTION = 'BenefitsSliderDescription',
+    CLIENTS_TESTIMONIALS = 'ClientsTestimonials',
+    ABOUT_OUR_CLIENTS = 'OurClients',
 }
 
 export enum numberEnums {
@@ -207,7 +211,7 @@ export enum numberEnums {
     COUNT_OF_THE_POPULAR_POSTS = 4,
     COUNT_OF_THE_RELATED_POSTS = 3,
     SHOWING_DELAY_MS = 500,
-    OFFSET_PX = 500,
+    OFFSET_PX = 1100,
     START_SCROLL_POSITION = 400,
     ARCHOR_OFFSET_TOP = 100,
 }

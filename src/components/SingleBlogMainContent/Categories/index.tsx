@@ -15,8 +15,14 @@ export interface ICategories {
 const Categories = ({ content }: ICategories) => {
     return (
         <CategoriesWrapper>
-            {content.map(({ title, description }) => {
-                return <CategoryItem theme={title} description={description} />;
+            {content.map(({ title, description }, index) => {
+                return (
+                    <CategoryItem
+                        key={index}
+                        theme={title}
+                        description={description}
+                    />
+                );
             })}
         </CategoriesWrapper>
     );

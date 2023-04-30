@@ -41,6 +41,7 @@ const Text = () => {
         },
     } = useAppSelector(blogSelector);
     const { t } = useTranslation();
+
     return (
         <TextWrapper>
             <ImageWrapper>
@@ -73,20 +74,20 @@ const Text = () => {
             <MetaDataContainer>
                 <MetaDataItem>
                     <ImageComponent source={Views} />
-                    {t(countOfTheViews)}
+                    {countOfTheViews}
                 </MetaDataItem>
                 <MetaDataItem>
                     <ImageComponent source={Sharing} />
                     {t(share)}
-                    {blogLogoArray.map(logo => {
-                        return <ReactSVG src={logo} />;
+                    {blogLogoArray.map((logo, index) => {
+                        return <ReactSVG key={index} src={logo} />;
                     })}
                 </MetaDataItem>
                 <MetaDataItem>
                     <ImageComponent source={Tags} />
                     {t(tagsTitle)}
-                    {tagsArray.map(tag => {
-                        return <Tag>{tag}</Tag>;
+                    {tagsArray.map((tag, index) => {
+                        return <Tag key={index}>{tag}</Tag>;
                     })}
                 </MetaDataItem>
             </MetaDataContainer>

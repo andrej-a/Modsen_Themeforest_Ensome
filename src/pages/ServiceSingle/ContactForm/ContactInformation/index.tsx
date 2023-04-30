@@ -24,16 +24,20 @@ const ContactInformation = () => {
                 {t(CONTACT_SERVICE_DESCRIPTION)}
             </DescriptionContainer>
             <ContactsListContainer>
-                {Object.values(contactList).map(({ value, href, contact }) => {
-                    return (
-                        <ContactItem>
-                            <ImageComponent
-                                source={`../logo/${value.toLowerCase()}_services_icon.png`}
-                            />
-                            <ContactLink href={href}>{t(contact)}</ContactLink>
-                        </ContactItem>
-                    );
-                })}
+                {Object.values(contactList).map(
+                    ({ value, href, contact }, index) => {
+                        return (
+                            <ContactItem key={index}>
+                                <ImageComponent
+                                    source={`../logo/${value.toLowerCase()}_services_icon.png`}
+                                />
+                                <ContactLink href={href}>
+                                    {t(contact)}
+                                </ContactLink>
+                            </ContactItem>
+                        );
+                    },
+                )}
             </ContactsListContainer>
         </ComponentContainer>
     );

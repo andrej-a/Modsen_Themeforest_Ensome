@@ -85,7 +85,7 @@ const SliderComponent = ({
                 </SliderContentHeader>
                 {isDescription && (
                     <SliderDescription contentPosition={contentPosition}>
-                        {t(description)}
+                        {description ? t(description) : ''}
                     </SliderDescription>
                 )}
                 <Slider>

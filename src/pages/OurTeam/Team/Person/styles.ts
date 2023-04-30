@@ -27,6 +27,6 @@ export const Person = styled.div<{ pos: boolean; isShow: boolean }>`
     &:hover {
         z-index: ${({ theme: { zIndex } }) => zIndex.l};
         box-shadow: ${({ theme: { shadows } }) => shadows.shadowDropDown};
-        transform: rotateZ(30deg);
+        transform: rotateZ(5deg);
     }
 `;

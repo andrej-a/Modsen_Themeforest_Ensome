@@ -51,6 +51,7 @@ export const PersonCardImage = styled.div<{ type: string }>`
             case 'horizontal':
                 return css`
                     img {
+                        object-fit: cover;
                         width: ${({ theme: { width } }) => width.xxxl}px;
                         height: ${({ theme: { height } }) => height.xx1l}px;
                     }

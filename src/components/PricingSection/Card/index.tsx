@@ -99,9 +99,9 @@ const PricingCard = ({
                     </DefaultButton>
                 )}
             </ChoosePlanButtonContainer>
-            {listOfServices.map(service => {
+            {listOfServices.map((service, index) => {
                 return (
-                    <ServiceItem isCardHover={isCardHover} key={cost}>
+                    <ServiceItem isCardHover={isCardHover} key={index}>
                         <ImageComponent
                             source={isCardHover ? VectorLight : Vector}
                         />

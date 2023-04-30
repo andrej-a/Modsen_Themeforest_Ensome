@@ -26,7 +26,7 @@ const LeftSideBarContainer = () => {
             {Object.values(content).map((key, index) => {
                 if (index === 0) {
                     return (
-                        <TextWithImage>
+                        <TextWithImage key={index}>
                             {' '}
                             <ContentText
                                 dangerouslySetInnerHTML={{
@@ -43,7 +43,7 @@ const LeftSideBarContainer = () => {
                 }
                 if (index === 2) {
                     return (
-                        <TextWithImage>
+                        <TextWithImage key={index}>
                             <ContentText
                                 dangerouslySetInnerHTML={{
                                     __html: t(key),
@@ -62,6 +62,7 @@ const LeftSideBarContainer = () => {
                 }
                 return (
                     <ContentText
+                        key={index}
                         dangerouslySetInnerHTML={{
                             __html: t(key),
                         }}

@@ -21,11 +21,6 @@ const PopularPosts = () => {
                 {filteredByTagAndSortedByPopularArray.length > 0
                     ? filteredByTagAndSortedByPopularArray.map(
                           (card, index) => {
-                              const {
-                                  publishDate,
-                                  blogTitle,
-                                  firstContentPart,
-                              } = card;
                               return (
                                   <BlogCard
                                       key={index}
@@ -34,12 +29,7 @@ const PopularPosts = () => {
                                               ? 'small'
                                               : 'without description',
                                       }}
-                                      content={{
-                                          ...card,
-                                          publishDate: t(publishDate),
-                                          blogTitle: t(blogTitle),
-                                          firstContentPart: t(firstContentPart),
-                                      }}
+                                      content={card}
                                   />
                               );
                           },

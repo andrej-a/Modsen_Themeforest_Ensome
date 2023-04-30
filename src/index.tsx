@@ -3,6 +3,7 @@ import { AlertContainer } from 'alertor-library';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import MoonLoader from 'react-spinners/MoonLoader';
 import { ThemeProvider } from 'styled-components';
 
 import { PersistGate } from 'redux-persist/es/integration/react';
@@ -21,7 +22,7 @@ const { PAYPAL_ID } = envConstants;
 const Root = () => {
     return (
         <>
-            <Suspense>
+            <Suspense fallback={<MoonLoader color="#185CFF" />}>
                 <PersistGate loading={null} persistor={persistor}>
                     <Router>
                         <Provider store={store}>

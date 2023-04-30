@@ -19,20 +19,14 @@ const RelatedPosts = () => {
             {t(RELATED_POSTS)}
             <RelatedPostsContent>
                 {relatedPosts.length > 0
-                    ? relatedPosts.map(post => {
-                          const { publishDate, blogTitle, firstContentPart } =
-                              post;
+                    ? relatedPosts.map((post, index) => {
                           return (
                               <BlogCard
+                                  key={index}
                                   settings={{
                                       type: isMobile ? 'small' : 'right text',
                                   }}
-                                  content={{
-                                      ...post,
-                                      publishDate: t(publishDate),
-                                      blogTitle: t(blogTitle),
-                                      firstContentPart: t(firstContentPart),
-                                  }}
+                                  content={post}
                               />
                           );
                       })

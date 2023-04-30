@@ -45,13 +45,15 @@ const PersonInformation = () => {
                     <DescriptionData>
                         <Title>{t(SOCIAL_NETWORKS)}</Title>
                         <SocialLinks>
-                            {Object.values(social).map(({ link, logo }) => {
-                                return (
-                                    <SocialLink href={link}>
-                                        <ReactSVG src={logo} />
-                                    </SocialLink>
-                                );
-                            })}
+                            {Object.values(social).map(
+                                ({ link, logo }, index) => {
+                                    return (
+                                        <SocialLink key={index} href={link}>
+                                            <ReactSVG src={logo} />
+                                        </SocialLink>
+                                    );
+                                },
+                            )}
                         </SocialLinks>
                     </DescriptionData>
                 </DescriptionContainer>

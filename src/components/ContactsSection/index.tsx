@@ -39,9 +39,9 @@ const ContactsSection = () => {
                 </FormContainer>
                 <ContactsContainer>
                     {Object.values(contactList).map(
-                        ({ value, href, contact }) => {
+                        ({ value, href, contact }, index) => {
                             return (
-                                <ContactItemWrapper>
+                                <ContactItemWrapper key={index}>
                                     <ContactItem>
                                         <ImageComponent
                                             source={getIcon(value)}

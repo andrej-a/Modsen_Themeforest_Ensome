@@ -7,7 +7,6 @@ import {
     PaymentModalWindowButtons,
     PaymentModalWindowContainer,
     PaymentModalWindowContent,
-    PaymentModalWindowHeader,
 } from './styles';
 
 const PaymentModalWindow = ({ cost }: PaymentModalWindowProps) => {

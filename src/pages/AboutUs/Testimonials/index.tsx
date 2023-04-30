@@ -5,9 +5,10 @@ import { ReviewCard } from '@/componentsLibrary';
 import testimonialsData from '@/config/testimonials';
 import useMobile from '@/hooks/useMobile';
 import useSliderCards from '@/hooks/useSlider';
-import { size } from '@/types/constants';
+import { dictionary, size } from '@/types/constants';
 
 const { laptopM } = size;
+const { TESTIMONIALS, CLIENTS_TESTIMONIALS, ABOUT_OUR_CLIENTS } = dictionary;
 
 const Testimonials = () => {
     const { isMobile } = useMobile(laptopM);
@@ -15,12 +16,8 @@ const Testimonials = () => {
     return (
         <SliderComponent
             countOfTheCards={sliderCards!}
-            title={isMobile ? 'Testimonials' : 'What our customers say'}
-            description={
-                isMobile
-                    ? 'Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
-                    : ''
-            }
+            title={isMobile ? TESTIMONIALS : CLIENTS_TESTIMONIALS}
+            description={isMobile ? ABOUT_OUR_CLIENTS : ''}
             settings={{
                 isButtonsControls: true,
                 isDescription: true,

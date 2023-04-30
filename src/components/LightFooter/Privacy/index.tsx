@@ -19,14 +19,14 @@ const Privacy = () => {
         <PrivacyContainer>
             <CompanyDescriptionContainer>
                 <CompanyDescription>
-                    {t(POLICY)} <ImageComponent source={Icon} />
+                    {POLICY} <ImageComponent source={Icon} />
                 </CompanyDescription>
                 <CompanyDescription>
-                    {t(TERMS)} <ImageComponent source={Icon} />
+                    {TERMS} <ImageComponent source={Icon} />
                 </CompanyDescription>
             </CompanyDescriptionContainer>
             <CompanyInfo color="helperBlue3">
-                {t(COMPANY_INFO_SECONDARY)}
+                {COMPANY_INFO_SECONDARY}
             </CompanyInfo>
         </PrivacyContainer>
     );

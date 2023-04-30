@@ -34,18 +34,12 @@ const OurBlogSection = () => {
                     countOfTheCards={sliderCards!}
                     title={t(OUR_BLOG)}
                 >
-                    {blogCardsData.map(data => {
-                        const { publishDate, blogTitle, firstContentPart } =
-                            data;
+                    {blogCardsData.map((data, index) => {
                         return (
                             <BlogCard
+                                key={index}
                                 settings={{ type: 'small' }}
-                                content={{
-                                    ...data,
-                                    publishDate: t(publishDate),
-                                    blogTitle: t(blogTitle),
-                                    firstContentPart: t(firstContentPart),
-                                }}
+                                content={data}
                             />
                         );
                     })}

@@ -55,9 +55,9 @@ const SolutionContent = () => {
                 <ArchorLinks />
                 <TextContainer ref={myRef}>
                     {Object.values(page).map(
-                        ({ id, title, text, image, types }) => {
+                        ({ id, title, text, image, types }, index) => {
                             return (
-                                <section id={id}>
+                                <section key={index} id={id}>
                                     <Title>{t(title)}</Title>
 
                                     {image ? (

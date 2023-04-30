@@ -3,17 +3,18 @@ import React from 'react';
 import { SliderComponent } from '@/components';
 import { ServiceCard } from '@/componentsLibrary';
 import service from '@/config/services';
+import { dictionary } from '@/types/constants';
 
 import { ComponentContainer } from './styles';
 
+const { BENEFITS_SLIDER_TITLE, BENEFITS_SLIDER_DESCRIPTION } = dictionary;
 const BenefitsSliderMobile = () => {
     return (
         <ComponentContainer>
             <SliderComponent
                 countOfTheCards={1}
-                title="Why our clients
-chosse Ensome?"
-                description="Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+                title={BENEFITS_SLIDER_TITLE}
+                description={BENEFITS_SLIDER_DESCRIPTION}
                 settings={{
                     isButtonsControls: false,
                     isDescription: true,
@@ -27,8 +28,14 @@ chosse Ensome?"
                     innerTransform: 305,
                 }}
             >
-                {service.map(serv => {
-                    return <ServiceCard type="center text" content={serv} />;
+                {service.map((serv, index) => {
+                    return (
+                        <ServiceCard
+                            key={index}
+                            type="center text"
+                            content={serv}
+                        />
+                    );
                 })}
             </SliderComponent>
         </ComponentContainer>

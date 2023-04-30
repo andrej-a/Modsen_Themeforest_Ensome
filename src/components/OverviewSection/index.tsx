@@ -51,7 +51,7 @@ const OverviewSection = ({
                                             secondColor: 'grey',
                                         }}
                                         content={{
-                                            main: t(amountOfWorkeDone),
+                                            main: amountOfWorkeDone,
                                             second: t(descriptionOfWorke),
                                         }}
                                     />

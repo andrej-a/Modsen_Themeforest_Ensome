@@ -25,18 +25,11 @@ const OurBlogMobile = () => {
                 <Title>{t(OUR_BLOG)}</Title>
                 <BlogCardsContainer>
                     {blogCardsData.slice(0, 3).map((data, index) => {
-                        const { publishDate, blogTitle, firstContentPart } =
-                            data;
                         return (
                             <BlogCard
                                 key={index}
                                 settings={{ type: 'without description' }}
-                                content={{
-                                    ...data,
-                                    publishDate: t(publishDate),
-                                    blogTitle: t(blogTitle),
-                                    firstContentPart: t(firstContentPart),
-                                }}
+                                content={data}
                             />
                         );
                     })}

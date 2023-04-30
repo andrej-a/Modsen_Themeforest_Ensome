@@ -34,6 +34,7 @@ const theme = {
     zIndex: {
         s: 3,
         l: 5,
+        m: 7,
     },
     translate: {
         s: -20,

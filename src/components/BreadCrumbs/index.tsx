@@ -32,7 +32,7 @@ const BreadCrumbs = ({
             });
         } else {
             linksStack.push({
-                title: t(decodeString(crumb)),
+                title: decodeString(crumb),
                 link: `/${crumb}`,
             });
         }
@@ -46,18 +46,18 @@ const BreadCrumbs = ({
         if (index !== dataToMap.length - 1) {
             return index === 0 ? (
                 <BreadCrumbLink key={link} linkColor={linkColor}>
-                    <Link to={link}>{title} </Link>
+                    <Link to={link}>{t(title)} </Link>
                 </BreadCrumbLink>
             ) : (
                 <BreadCrumbLink key={link} linkColor={linkColor}>
-                    | <Link to={link}>{title}</Link>
+                    | <Link to={link}>{t(title)}</Link>
                 </BreadCrumbLink>
             );
         }
         return (
             <FinalyBreadCrumb key={link} crumbColor={crumbColor}>
                 <FinalyBreadCrumb crumbColor={crumbColor}>|</FinalyBreadCrumb>
-                {title}
+                {t(title)}
             </FinalyBreadCrumb>
         );
     });

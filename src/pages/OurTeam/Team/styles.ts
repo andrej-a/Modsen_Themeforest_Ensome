@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { size } from '@/types/constants';
 
-const { tablet, mobileM } = size;
+const { mobileM, laptop } = size;
 
 export const ContentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
@@ -24,7 +24,7 @@ export const Content = styled.div`
     margin-bottom: ${({ theme: { margin } }) => margin.ml}px;
     gap: ${({ theme: { gap } }) => gap.sl}px;
 
-    @media (max-width: ${tablet}px) {
+    @media (max-width: ${laptop}px) {
         margin-top: ${({ theme: { margin } }) => margin.l3x}px;
         margin-bottom: ${({ theme: { margin } }) => margin.llxx}px;
     }

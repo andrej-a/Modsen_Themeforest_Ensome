@@ -15,6 +15,7 @@ const PageTitleWithLightBlueBackground = ({
     isBreadCrumbsShort,
 }: ISingleBlogTitle) => {
     const { t } = useTranslation();
+
     return (
         <TitleContainer>
             <TitleContent>

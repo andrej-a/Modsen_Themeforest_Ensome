@@ -20,7 +20,7 @@ const ReadMoreComponent = ({ link }: ReadMoreLinkProps) => {
 
     return (
         <ReadMoreContainer data-test="readMore">
-            <Link to={`/${t(link)}`}>{t(READ_MORE)}</Link>
+            <Link to={`/${link}`}>{t(READ_MORE)}</Link>
             <ImageComponent source={ReadMoreArrow} />
         </ReadMoreContainer>
     );

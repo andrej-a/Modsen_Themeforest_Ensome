@@ -30,9 +30,9 @@ const PersonCard = memo(({ settings: { type, content } }: PersonCardProps) => {
                         <PersonPosition type={type}>{position}</PersonPosition>
                     </PersonInformation>
                     <SocialContainer type={type}>
-                        {Object.values(social).map(({ link, logo }) => {
+                        {Object.values(social).map(({ link, logo }, index) => {
                             return (
-                                <SocialLink href={link}>
+                                <SocialLink key={index} href={link}>
                                     <ReactSVG src={logo} />
                                 </SocialLink>
                             );

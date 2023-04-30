@@ -9,9 +9,13 @@ const ServiceContent = () => {
     return (
         <ContentWrapper>
             <Content>
-                {service.map(serv => {
+                {service.map((serv, index) => {
                     return (
-                        <ServiceCard type="wide glass icon" content={serv} />
+                        <ServiceCard
+                            key={index}
+                            type="wide glass icon"
+                            content={serv}
+                        />
                     );
                 })}
             </Content>

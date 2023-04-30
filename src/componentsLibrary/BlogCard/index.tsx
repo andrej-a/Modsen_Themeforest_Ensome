@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, ReadMoreComponent } from '@/components';
 import { Tag } from '@/componentsLibrary';
-import { IBlogCard } from '@/config/blogCardsData';
+import blogCardsData, { IBlogCard } from '@/config/blogCardsData';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentBlog, setTagsOfCurrentBlog } from '@/store/slices/blog';
 import { BlogCardProps } from '@/types/componentsOptions';
@@ -24,6 +25,8 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
     const { type } = settings;
     const { image, publishDate, blogTitle, firstContentPart, tagsArray } =
         content;
+    const { t } = useTranslation();
+
     const dispatch = useAppDispatch();
 
     const onSetSingleBlog = (content: IBlogCard) => () => {
@@ -37,13 +40,13 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
                     <ImageComponent source={image} />
                 </ImageContainer>
                 <DescriptionContainer type={type}>
-                    <PublishDate type={type}>{publishDate}</PublishDate>
-                    <CardTitle type={type}>{blogTitle}</CardTitle>
+                    <PublishDate type={type}>{t(publishDate)}</PublishDate>
+                    <CardTitle type={type}>{t(blogTitle)}</CardTitle>
                     <MainTextSection type={type}>
-                        {cutString(firstContentPart)}
+                        {cutString(t(firstContentPart))}
                     </MainTextSection>
                     <ReadMore type={type} onClick={onSetSingleBlog(content)}>
-                        <ReadMoreComponent link={blogTitle} />
+                        <ReadMoreComponent link={t(blogTitle)} />
                     </ReadMore>
                     <TagsContainer type={type}>
                         {tagsArray.map(tag => {

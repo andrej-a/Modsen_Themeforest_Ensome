@@ -9,6 +9,7 @@ export interface DefaultTheme {
     };
     colors: {
         secondary: string;
+        primary: string;
     };
 }
 
@@ -25,6 +26,8 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
   }
   #root {
+    width: 100vw;
+    min-height: 100vh;
     overflow: clip;
     display: flex;
     flex-direction: column;

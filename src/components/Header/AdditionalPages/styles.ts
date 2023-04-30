@@ -4,7 +4,7 @@ export const ContentContainer = styled.div<{ isShow: boolean }>`
     position: absolute;
     top: ${({ theme: { top } }) => top.x2s}px;
     left: ${({ theme: { left } }) => left.xs};
-    z-index: ${({ theme: { zIndex } }) => zIndex.l};
+    z-index: ${({ theme: { zIndex } }) => zIndex.m};
 
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x5l}px;

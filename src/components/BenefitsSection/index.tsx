@@ -31,8 +31,14 @@ const BenefitsSection = () => {
                     </BenefitsDescriptionText>
                 </BenefitsDescription>
                 <BenefitsCards>
-                    {service.slice(0, 4).map(serv => {
-                        return <ServiceCard type="small" content={serv} />;
+                    {service.slice(0, 4).map((serv, index) => {
+                        return (
+                            <ServiceCard
+                                key={index}
+                                type="small"
+                                content={serv}
+                            />
+                        );
                     })}
                 </BenefitsCards>
             </BenefitsContentContainer>
