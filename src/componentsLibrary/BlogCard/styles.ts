@@ -34,7 +34,7 @@ export const BlogCardContent = styled.div<{ type: string }>`
                         shadows.shadowCard3};
 
                     @media (max-width: ${tablet}px) {
-                        width: width: ${({ theme: { width } }) => width.x1ll}px;
+                        width: ${({ theme: { width } }) => width.x1ll}px;
                         gap: ${({ theme: { gap } }) => gap.sxx}px;
                     }
                 `;

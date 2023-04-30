@@ -19,46 +19,51 @@ export const HandlerContainer = styled.div`
 
 export const MenuHandler = styled.div`
     position: relative;
-    z-index: 5;
-    width: 20px;
-    height: 2px;
+    z-index: ${({ theme: { zIndex } }) => zIndex.l};
+    width: ${({ theme: { width } }) => width.sxx}px;
+    height: ${({ theme: { height } }) => height.xxs}px;
     background: ${({ theme: { colors } }) => colors.primary};
 
     ::before,
     ::after {
         content: '';
         position: relative;
+        top: ${({ theme: { top } }) => top.xxs}px;
+
         display: block;
-        width: 20px;
-        height: 2px;
+        width: ${({ theme: { width } }) => width.sxx}px;
+        height: ${({ theme: { height } }) => height.xxs}px;
+
         background: ${({ theme: { colors } }) => colors.primary};
-        top: 5px;
     }
 
     ::after {
-        top: 8px;
+        top: ${({ theme: { top } }) => top.x3s}px;
     }
 `;
 
 export const DropDownContainer = styled.div`
-    width: 100%;
-    padding: 0 15px;
+    width: ${({ theme: { width } }) => width.xxl}%;
+    max-height: ${({ theme: { height } }) => height.x2s}vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: ${({ theme: { padding } }) => padding.s3s};
 `;
 
 export const Menu = styled.div<{ isMenuActive: boolean }>`
     position: absolute;
-    top: 0;
+    top: ${({ theme: { top } }) => top.xs};
     left: ${({ isMenuActive, theme: { left } }) =>
         isMenuActive ? left.xs : left.l}px;
-    z-index: 3;
+    z-index: ${({ theme: { zIndex } }) => zIndex.s};
 
     width: ${({ theme: { width } }) => width.xxl}vw;
     height: ${({ theme: { height } }) => height.xxl}vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: ${({ theme: { gap } }) => gap.sl}px;
 
     background: ${({ theme: { colors } }) => colors.white};
     path {
