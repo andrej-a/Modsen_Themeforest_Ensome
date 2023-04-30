@@ -12,6 +12,7 @@ import PersonComponent from './Person';
 import { Content, ContentContainer } from './styles';
 
 const { OFFSET_PX } = numberEnums;
+
 const Team = () => {
     const [cardsToRender, setCardsToRender] = useState<ITeamMember[]>(team);
     const [index, setIndex] = useState(0);
@@ -48,9 +49,10 @@ const Team = () => {
         <ContentContainer>
             <Content>
                 {cardsToRender.map((data, index) => {
-                    const { name, photo, position } = data;
+                    const { name, photo, position, social } = data;
                     return (
                         <Link
+                            key={index}
                             onClick={handlePerson(data)}
                             to={`/our team/${name}`}
                         >
@@ -59,6 +61,7 @@ const Team = () => {
                                 name={name}
                                 photo={photo}
                                 position={position}
+                                social={social}
                                 index={index}
                             />
                         </Link>

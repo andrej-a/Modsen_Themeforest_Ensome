@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ModalWindow } from '@/components';
+import PricingMobileSlider from '@/pages/Main/PricingMobileSlider';
 import { PricingCardProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
@@ -26,47 +27,59 @@ const PricingSection = () => {
     };
     const { t } = useTranslation();
     return (
-        <PricingSectionContainer>
-            <PricingSectionContent>
-                <PricingSectionHeader>{t(OUR_PRICING)}</PricingSectionHeader>
-                <PricingSectionCards>
-                    {dataOfThePrices.map(
-                        ({ kindOfThePlan, cost, listOfServices }) => {
-                            return (
-                                <PricingCard
-                                    isPaymentCard={false}
-                                    onHandlePlan={onHandlePlan}
-                                    kindOfThePlan={kindOfThePlan}
-                                    cost={cost}
-                                    listOfServices={listOfServices}
-                                />
-                            );
-                        },
-                    )}
-                </PricingSectionCards>
-            </PricingSectionContent>
-            {choosedPlan.kindOfThePlan && (
-                <ModalWindow
-                    onClick={onHandlePlan({ kindOfThePlan: '', cost: '' })}
-                >
-                    {dataOfThePrices.map(
-                        ({ kindOfThePlan, listOfServices }) => {
-                            if (kindOfThePlan === choosedPlan.kindOfThePlan) {
+        <>
+            <PricingSectionContainer>
+                <PricingSectionContent>
+                    <PricingSectionHeader>
+                        {t(OUR_PRICING)}
+                    </PricingSectionHeader>
+                    <PricingSectionCards>
+                        {dataOfThePrices.map(
+                            (
+                                { kindOfThePlan, cost, listOfServices },
+                                index,
+                            ) => {
                                 return (
                                     <PricingCard
-                                        isPaymentCard
+                                        key={index}
+                                        isPaymentCard={false}
                                         onHandlePlan={onHandlePlan}
                                         kindOfThePlan={kindOfThePlan}
-                                        cost={choosedPlan.cost}
+                                        cost={cost}
                                         listOfServices={listOfServices}
                                     />
                                 );
-                            }
-                        },
-                    )}
-                </ModalWindow>
-            )}
-        </PricingSectionContainer>
+                            },
+                        )}
+                    </PricingSectionCards>
+                </PricingSectionContent>
+                {choosedPlan.kindOfThePlan && (
+                    <ModalWindow
+                        onClick={onHandlePlan({ kindOfThePlan: '', cost: '' })}
+                    >
+                        {dataOfThePrices.map(
+                            ({ kindOfThePlan, listOfServices }, index) => {
+                                if (
+                                    kindOfThePlan === choosedPlan.kindOfThePlan
+                                ) {
+                                    return (
+                                        <PricingCard
+                                            key={index}
+                                            isPaymentCard
+                                            onHandlePlan={onHandlePlan}
+                                            kindOfThePlan={kindOfThePlan}
+                                            cost={choosedPlan.cost}
+                                            listOfServices={listOfServices}
+                                        />
+                                    );
+                                }
+                            },
+                        )}
+                    </ModalWindow>
+                )}
+            </PricingSectionContainer>
+            <PricingMobileSlider onHandlePlan={onHandlePlan} />
+        </>
     );
 };
 

@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM, tablet } = size;
+
 export const ContentContainer = styled.div`
     width: auto;
     height: auto;
@@ -8,6 +12,19 @@ export const ContentContainer = styled.div`
     align-items: center;
     margin: ${({ theme: { margin } }) => margin.l};
     gap: ${({ theme: { gap } }) => gap.x4l}px;
+    padding: ${({ theme: { padding } }) => padding.s3s};
+
+    @media (max-width: ${laptopM}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+        justify-content: center;
+        gap: ${({ theme: { gap } }) => gap.sl}px;
+    }
+
+    @media (max-width: ${tablet}px) {
+        justify-content: space-between;
+        margin-top: ${({ theme: { margin } }) => margin.x}px;
+        margin-bottom: ${({ theme: { margin } }) => margin.x}px;
+    }
 `;
 
 export const MenuContainer = styled.div`
@@ -20,6 +37,10 @@ export const MenuContainer = styled.div`
 
     a {
         text-decoration: none;
+    }
+
+    @media (max-width: ${tablet}px) {
+        display: none;
     }
 `;
 

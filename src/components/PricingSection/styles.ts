@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM, tablet, mobileL } = size;
 export const PricingSectionContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -7,6 +10,10 @@ export const PricingSectionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${mobileL}px) {
+        display: none;
+    }
 `;
 
 export const PricingSectionContent = styled.div`
@@ -18,6 +25,7 @@ export const PricingSectionContent = styled.div`
     justify-content: center;
     align-items: center;
     gap: ${({ theme: { gap } }) => gap.xxl}px;
+    padding: ${({ theme: { padding } }) => padding.s3s};
 `;
 
 export const PricingSectionHeader = styled.div`
@@ -33,10 +41,20 @@ export const PricingSectionHeader = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxll}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
+    }
 `;
 
 export const PricingSectionCards = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     display: flex;
     gap: ${({ theme: { gap } }) => gap.sl}px;
+
+    @media (max-width: ${laptopM}px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `;

@@ -2,6 +2,8 @@ import { ButtonHTMLAttributes } from 'react';
 
 import { PaymentCardProps } from '@/components/PricingSection';
 
+import { SocialLinks } from './IPerson';
+
 export type HeaderProps = {
     background?: string;
     children?: React.ReactNode;
@@ -31,10 +33,27 @@ export type ModalWindowProps = {
     children?: React.ReactNode;
 };
 
+interface ISliderSettings {
+    isButtonsControls: boolean;
+    isDescription: boolean;
+    contentPosition: 'left' | 'center' | 'space-between';
+}
+
+export interface ISliderControls {
+    isInclude: boolean;
+    cardsSize: number;
+    innerGap: number;
+    innerPadding: number;
+    innerTransform: number;
+}
+
 export type SliderProps = {
     title: string;
+    description: string;
     countOfTheCards: number;
     size?: 'small' | 'medium';
+    settings: ISliderSettings;
+    innerControls: ISliderControls;
     children: React.ReactNode;
 };
 
@@ -51,7 +70,7 @@ export type PaymentModalWindowProps = {
 };
 
 export type SubscribeSectionProps = {
-    type: string;
+    type: 'light' | 'dark';
 };
 
 export type TPayload<T> = {
@@ -138,4 +157,5 @@ export interface PersonComponentProps {
     photo: string;
     position: string;
     index: number;
+    social: SocialLinks;
 }

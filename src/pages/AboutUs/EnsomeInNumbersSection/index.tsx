@@ -32,8 +32,8 @@ const EnsomeInNumbers = () => {
                                         secondColor: 'grey',
                                     }}
                                     content={{
-                                        main: amountOfWorkeDone,
-                                        second: descriptionOfWorke,
+                                        main: t(amountOfWorkeDone),
+                                        second: t(descriptionOfWorke),
                                     }}
                                 />
                             );

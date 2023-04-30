@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM, tablet } = size;
 export const ContentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -15,6 +18,12 @@ export const Content = styled.div`
     margin-top: ${({ theme: { margin } }) => margin.mll}px;
     margin-bottom: ${({ theme: { margin } }) => margin.ml}px;
     gap: ${({ theme: { gap } }) => gap.x2l}px;
+    padding: ${({ theme: { padding } }) => padding.s3s};
+
+    @media (max-width: ${laptopM}px) {
+        gap: ${({ theme: { gap } }) => gap.xxl}px;
+        margin: ${({ theme: { margin } }) => margin.l1l};
+    }
 `;
 
 export const DescriptionContainer = styled.div<{ isReflect?: boolean }>`
@@ -22,6 +31,15 @@ export const DescriptionContainer = styled.div<{ isReflect?: boolean }>`
     display: flex;
     flex-direction: ${({ isReflect }) => (isReflect ? 'row-reverse' : 'row')};
     gap: ${({ theme: { gap } }) => gap.sl}px;
+
+    @media (max-width: ${laptopM}px) {
+        flex-direction: column;
+    }
+    @media (max-width: ${tablet}px) {
+        img {
+            width: ${({ theme: { width } }) => width.xxl}%;
+        }
+    }
 `;
 
 export const DescriptionContent = styled.div`
@@ -51,4 +69,11 @@ export const Description = styled.div`
     font-size: ${({ theme: { fontSize } }) => fontSize.xxl}px;
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${laptopM}px) {
+        width: ${({ theme: { width } }) => width.x3ll}px;
+    }
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+    }
 `;

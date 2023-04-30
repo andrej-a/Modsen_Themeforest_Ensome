@@ -3,11 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import FeatureSectionImage from '@/assets/images/pictures/featuresSection.png';
+import SolutionsSectionImageMobile from '@/assets/images/pictures/main_page_mobile.png';
 import { DefaultButton, ImageComponent } from '@/components';
-import { dictionary, linksConstants } from '@/types/constants';
+import useMobile from '@/hooks/useMobile';
+import { dictionary, linksConstants, size } from '@/types/constants';
 
 import {
     FeatureSectionContainer,
+    MobileImageContainer,
     PlatformDescription,
     PlatformDescriptionContainer,
     PlatformDescriptionText,
@@ -31,8 +34,10 @@ const {
     NEW_SOLUTIONS_DESCRIPTION,
 } = dictionary;
 const { SOLUTION_PAGE } = linksConstants;
+const { mobileL } = size;
 const FeatureSection = () => {
     const { t } = useTranslation();
+    const { isMobile } = useMobile(mobileL);
     return (
         <FeatureSectionContainer>
             <PlatformDescriptionContainer>
@@ -60,11 +65,16 @@ const FeatureSection = () => {
                     <PlatformInformationTextTitle>
                         {t(NEW_SOLUTIONS)}
                     </PlatformInformationTextTitle>
+                    <MobileImageContainer>
+                        <ImageComponent source={SolutionsSectionImageMobile} />
+                    </MobileImageContainer>
                     <PlatformInformationTextDescription>
                         {t(NEW_SOLUTIONS_DESCRIPTION)}
                     </PlatformInformationTextDescription>
                     <Link to={SOLUTION_PAGE}>
-                        <DefaultButton>{t(LEARN_MORE)}</DefaultButton>
+                        <DefaultButton>
+                            {isMobile ? t(DISCOVER_MORE) : t(LEARN_MORE)}
+                        </DefaultButton>
                     </Link>
                 </PlatformInformationText>
             </PlatformInformationContainer>

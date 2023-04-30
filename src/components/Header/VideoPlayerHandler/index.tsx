@@ -5,6 +5,8 @@ import { ModalWindow, VideoPlayerWindow, WatchVideoButton } from '@/components';
 import { HeaderContentProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
+import { Container } from './styles';
+
 const { WATCH_THE_DEMO } = dictionary;
 
 const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
@@ -24,7 +26,7 @@ const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
     const { t } = useTranslation();
 
     return (
-        <>
+        <Container>
             <WatchVideoButton
                 onClick={event => onSetIsVideoOpen(event, true)}
                 type={type}
@@ -42,7 +44,7 @@ const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
                     <VideoPlayerWindow />
                 </ModalWindow>
             )}
-        </>
+        </Container>
     );
 };
 

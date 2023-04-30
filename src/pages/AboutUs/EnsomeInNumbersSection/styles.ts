@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM, tablet } = size;
+
 export const ContentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -13,11 +17,17 @@ export const ContentContainer = styled.div`
 export const Container = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     margin: ${({ theme: { margin } }) => margin.x2l};
-    gap: 90px;
+    gap: ${({ theme: { gap } }) => gap.x4ll}px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${laptopM}px) {
+        margin: ${({ theme: { margin } }) => margin.l1l};
+        padding: ${({ theme: { padding } }) => padding.s3s};
+        gap: ${({ theme: { gap } }) => gap.sl}px;
+    }
 `;
 
 export const Title = styled.div`
@@ -28,6 +38,10 @@ export const Title = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
+    }
 `;
 
 export const StatisticContainer = styled.div`
@@ -36,4 +50,8 @@ export const StatisticContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: ${({ theme: { gap } }) => gap.xxxl}px;
+
+    @media (max-width: ${laptopM}px) {
+        flex-wrap: wrap;
+    }
 `;

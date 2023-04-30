@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SubscribeToUsSection/SubscribeForm/styles';
 import { schema } from '@/config/fullFormSchema';
+import useMobile from '@/hooks/useMobile';
 import useSubscribe from '@/hooks/useSubscribe';
-import { dictionary, numberEnums } from '@/types/constants';
+import { dictionary, numberEnums, size } from '@/types/constants';
 
 import {
     CustomerDataContainer,
@@ -19,21 +20,18 @@ import {
 } from './styles';
 
 const {
-    MINIMUM_LETTERS_OF_THEME_INPUT,
-    MINIMUM_LETTERS_OF_NAME_INPUT,
-    MINIMUM_LETTERS_OF_MESSAGE_INPUT,
-} = numberEnums;
-
-const {
     SUBSCRIBE_PLACEHOLDER,
     NAME_INPUT_PLACEHOLDER,
     THEME_INPUT_PLACEHOLDER,
     MESSAGE_INPUT_PLACEHOLDER,
     SUBSCRIBE_BUTTON_VALUE,
+    SEND_MESSAGE,
 } = dictionary;
 
+const { mobileL } = size;
 const ContactsPageForm = () => {
     const { t } = useTranslation();
+    const { isMobile } = useMobile(mobileL);
     const {
         formRef,
         isDisabled,
@@ -92,7 +90,7 @@ const ContactsPageForm = () => {
                         type="submit"
                         disabled={!!Object.keys(errors).length || isDisabled}
                     >
-                        {t(SUBSCRIBE_BUTTON_VALUE)}{' '}
+                        {t(isMobile ? SEND_MESSAGE : SUBSCRIBE_BUTTON_VALUE)}{' '}
                     </DefaultButton>
                 </SubmitButtonContainer>
             </MessageForm>

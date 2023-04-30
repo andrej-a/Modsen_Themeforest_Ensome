@@ -15,7 +15,9 @@ export const PrivacyContainer = styled.div`
     color: ${({ theme: { colors } }) => colors.grey};
 `;
 
-export const CompanyInfo = styled.div``;
+export const CompanyInfo = styled.div<{ color: string }>`
+    color: ${({ color, theme: { colors } }) => colors[color]};
+`;
 
 export const CompanyDescriptionContainer = styled.div`
     display: flex;

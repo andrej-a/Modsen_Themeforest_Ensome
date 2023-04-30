@@ -26,7 +26,7 @@ const SubscribeSection = ({ type }: SubscribeSectionProps) => {
                     <Description>{t(SUBSCRIBE_DESCRIPTION)}</Description>
                 </SubscribeDescription>
                 <FormContainer>
-                    <SubscribeFormComponent />
+                    <SubscribeFormComponent componentType={type} />
                 </FormContainer>
             </SubscribeContent>
         </SubscribeContainer>

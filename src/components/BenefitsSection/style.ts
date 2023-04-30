@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopL, tablet } = size;
 export const BenefitsSectionContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -18,6 +21,12 @@ export const BenefitsContentContainer = styled.div`
     align-items: center;
     gap: ${({ theme: { gap } }) => gap.sl}px;
     margin: ${({ theme: { margin } }) => margin.xxl};
+    padding: ${({ theme: { padding } }) => padding.s3s};
+
+    @media (max-width: ${laptopL}px) {
+        flex-direction: column;
+        margin: ${({ theme: { margin } }) => margin.ll};
+    }
 `;
 
 export const BenefitsDescription = styled.div`
@@ -30,6 +39,10 @@ export const BenefitsDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${tablet}px) {
+        gap: ${({ theme: { gap } }) => gap.sxx}px;
+    }
 `;
 
 export const BenefitsDescriptionTitle = styled.p`
@@ -43,6 +56,11 @@ export const BenefitsDescriptionTitle = styled.p`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxll}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.x2l}px;
+    }
 `;
 
 export const BenefitsDescriptionText = styled.p`
@@ -53,6 +71,11 @@ export const BenefitsDescriptionText = styled.p`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+    }
 `;
 
 export const BenefitsCards = styled.div`
@@ -78,5 +101,25 @@ export const BenefitsCards = styled.div`
     & > :nth-child(4) {
         position: relative;
         top: ${({ theme: { top } }) => top.s}px;
+    }
+
+    @media (max-width: ${laptopL}px) {
+        & > :nth-child(1) {
+            bottom: 0;
+        }
+        & > :nth-child(3) {
+            bottom: 0;
+        }
+
+        & > :nth-child(2) {
+            top: 0;
+        }
+        & > :nth-child(4) {
+            top: 0;
+        }
+    }
+
+    @media (max-width: ${tablet}px) {
+        justify-content: center;
     }
 `;

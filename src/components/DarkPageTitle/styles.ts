@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptopM, laptop } = size;
 export const DarkPagePreviewContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -10,6 +13,10 @@ export const DarkPagePreviewContainer = styled.div`
 
     border-top: ${({ theme: { border } }) => border.m};
     background: ${({ theme: { colors } }) => colors.secondary};
+
+    @media (max-width: ${laptopM}px) {
+        padding: 0 15px;
+    }
 `;
 
 export const DarkPagePreviewContent = styled.div`
@@ -20,6 +27,10 @@ export const DarkPagePreviewContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${({ theme: { gap } }) => gap.x2l}px;
+
+    @media (max-width: ${laptop}px) {
+        gap: ${({ theme: { gap } }) => gap.l}px;
+    }
 `;
 
 export const BreadCrumb = styled.div`
@@ -33,6 +44,12 @@ export const DarkPagePreviewDescription = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: ${({ theme: { margin } }) => margin.m}px;
+
+    @media (max-width: ${laptop}px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 `;
 
 export const DarkPagePreviewTitle = styled.div`

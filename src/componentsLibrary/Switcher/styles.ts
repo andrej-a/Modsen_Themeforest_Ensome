@@ -4,6 +4,7 @@ export const SwitcherContainer = styled.div`
     position: relative;
     width: ${({ theme: { width } }) => width.xxl}%;
     min-width: ${({ theme: { width } }) => width.x2l}px;
+    max-width: ${({ theme: { width } }) => width.x2l}px;
     display: flex;
 
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;

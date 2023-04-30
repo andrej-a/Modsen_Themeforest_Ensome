@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, ReadMoreComponent } from '@/components';
 import { Tag } from '@/componentsLibrary';
@@ -25,7 +24,6 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
     const { type } = settings;
     const { image, publishDate, blogTitle, firstContentPart, tagsArray } =
         content;
-    const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
     const onSetSingleBlog = (content: IBlogCard) => () => {
@@ -39,10 +37,10 @@ const BlogCard = memo(({ settings, content }: BlogCardProps) => {
                     <ImageComponent source={image} />
                 </ImageContainer>
                 <DescriptionContainer type={type}>
-                    <PublishDate>{t(publishDate)}</PublishDate>
-                    <CardTitle type={type}>{t(blogTitle)}</CardTitle>
+                    <PublishDate type={type}>{publishDate}</PublishDate>
+                    <CardTitle type={type}>{blogTitle}</CardTitle>
                     <MainTextSection type={type}>
-                        {cutString(t(firstContentPart))}
+                        {cutString(firstContentPart)}
                     </MainTextSection>
                     <ReadMore type={type} onClick={onSetSingleBlog(content)}>
                         <ReadMoreComponent link={blogTitle} />

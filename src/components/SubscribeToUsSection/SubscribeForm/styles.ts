@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet, mobileS } = size;
+
 export const SubscribeForm = styled.form`
     position: relative;
     display: flex;
@@ -7,7 +11,10 @@ export const SubscribeForm = styled.form`
     gap: ${({ theme: { gap } }) => gap.s}px;
 `;
 
-export const SubscribeInput = styled.input<{ isError: boolean }>`
+export const SubscribeInput = styled.input<{
+    isError: boolean;
+    componentType: string;
+}>`
     width: ${({ theme: { width } }) => width.l1x}px;
     padding: ${({ theme: { padding } }) => padding.sx};
     border-radius: ${({ theme: { borderRadius } }) => borderRadius.l}px;
@@ -33,6 +40,24 @@ export const SubscribeInput = styled.input<{ isError: boolean }>`
     &:disabled {
         background: ${({ theme: { colors } }) => colors.beige};
     }
+
+    @media (max-width: ${tablet}px) {
+        width: ${({ theme: { width } }) => width.x1ll}px;
+        background: transparent;
+        border: ${({ componentType, theme: { border } }) =>
+            componentType === 'dark' ? border.m : border.xs};
+
+        ::placeholder {
+            color: ${({ componentType, theme: { colors } }) =>
+                componentType === 'dark'
+                    ? colors.helperBlue2
+                    : colors.helperBlue3};
+        }
+    }
+
+    @media (max-width: ${mobileS}px) {
+        width: ${({ theme: { width } }) => width.x}px;
+    }
 `;
 
 export const SubmitButton = styled.input`
@@ -57,6 +82,10 @@ export const SubmitButton = styled.input`
     &:disabled {
         color: ${({ theme: { colors } }) => colors.lightGrey};
         cursor: not-allowed;
+    }
+
+    @media (max-width: ${tablet}px) {
+        position: relative;
     }
 `;
 

@@ -1,17 +1,18 @@
 import React, { memo, useEffect, useState } from 'react';
 
-import { ImageComponent } from '@/components';
+import { PersonCard } from '@/componentsLibrary';
+import useMobile from '@/hooks/useMobile';
 import { PersonComponentProps } from '@/types/componentsOptions';
-import { numberEnums } from '@/types/constants';
+import { size } from '@/types/constants';
 
-import { Name, Person, PersonInformation, Position } from './styles';
+import { Person } from './styles';
 
-const { SHOWING_DELAY_MS } = numberEnums;
+const { laptopM } = size;
 
 const PersonComponent = memo(
-    ({ name, photo, position, index }: PersonComponentProps) => {
+    ({ name, photo, position, index, social }: PersonComponentProps) => {
         const [isShow, setIsShow] = useState(false);
-
+        const { isMobile } = useMobile(laptopM);
         useEffect(() => {
             setIsShow(true);
         }, []);
@@ -20,14 +21,20 @@ const PersonComponent = memo(
             <Person
                 data-test="personCard"
                 isShow={isShow}
-                pos={index % 3 === 1}
+                pos={isMobile ? false : index % 3 === 1}
                 key={name}
             >
-                <ImageComponent source={photo} />
-                <PersonInformation>
-                    <Name>{name}</Name>
-                    <Position>{position}</Position>
-                </PersonInformation>
+                <PersonCard
+                    settings={{
+                        type: isMobile ? 'horizontal' : 'vertical',
+                        content: {
+                            name,
+                            position,
+                            photo,
+                            social,
+                        },
+                    }}
+                />
             </Person>
         );
     },

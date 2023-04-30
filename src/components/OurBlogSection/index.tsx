@@ -4,54 +4,55 @@ import { useTranslation } from 'react-i18next';
 import { SliderComponent } from '@/components';
 import { BlogCard } from '@/componentsLibrary';
 import blogCardsData from '@/config/blogCardsData';
+import useSliderCards from '@/hooks/useSlider';
 import { dictionary } from '@/types/constants';
 
+import OurBlogMobile from './OurBlogMobile';
 import { OurBlogContainer } from './styles';
 
 const { OUR_BLOG } = dictionary;
 const OurBlogSection = () => {
     const { t } = useTranslation();
+    const { sliderCards } = useSliderCards();
     return (
-        <OurBlogContainer>
-            <SliderComponent countOfTheCards={3} title={t(OUR_BLOG)}>
-                {blogCardsData.map(
-                    ({
-                        id,
-                        author,
-                        image,
-                        countOfTheViews,
-                        publishDate,
-                        blogTitle,
-                        firstContentPart,
-                        separateParagraph,
-                        secondContentPart,
-                        share,
-                        tagsTitle,
-                        tagsArray,
-                    }) => {
+        <>
+            <OurBlogContainer>
+                <SliderComponent
+                    description=""
+                    settings={{
+                        isButtonsControls: true,
+                        isDescription: false,
+                        contentPosition: 'space-between',
+                    }}
+                    innerControls={{
+                        isInclude: false,
+                        cardsSize: 275,
+                        innerGap: 28,
+                        innerPadding: 44,
+                        innerTransform: 300,
+                    }}
+                    countOfTheCards={sliderCards!}
+                    title={t(OUR_BLOG)}
+                >
+                    {blogCardsData.map(data => {
+                        const { publishDate, blogTitle, firstContentPart } =
+                            data;
                         return (
                             <BlogCard
                                 settings={{ type: 'small' }}
                                 content={{
-                                    id,
-                                    author,
-                                    image,
-                                    countOfTheViews,
-                                    publishDate,
-                                    blogTitle,
-                                    firstContentPart,
-                                    separateParagraph,
-                                    secondContentPart,
-                                    share,
-                                    tagsTitle,
-                                    tagsArray,
+                                    ...data,
+                                    publishDate: t(publishDate),
+                                    blogTitle: t(blogTitle),
+                                    firstContentPart: t(firstContentPart),
                                 }}
                             />
                         );
-                    },
-                )}
-            </SliderComponent>
-        </OurBlogContainer>
+                    })}
+                </SliderComponent>
+            </OurBlogContainer>
+            <OurBlogMobile />
+        </>
     );
 };
 

@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet } = size;
 export const RoundButtonContainer = styled.div`
     width: auto;
     height: auto;
@@ -41,5 +44,10 @@ export const RoundButtonElement = styled.button`
     &:disabled {
         background: ${({ theme: { colors } }) => colors.grey};
         cursor: not-allowed;
+    }
+
+    @media (max-width: ${tablet}px) {
+        padding: ${({ theme: { padding } }) => padding.mml};
+        font-size: ${({ theme: { fontSize } }) => fontSize.x}px;
     }
 `;

@@ -3,13 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 import Vector from '@/assets/images/logo/vector.png';
 import VectorLight from '@/assets/images/logo/vectorLight.png';
-import { DefaultButton, ImageComponent, ModalWindow } from '@/components';
+import { DefaultButton, ImageComponent } from '@/components';
 import { PricingCardProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 import { getSummAroundYear } from '@/utils/getSummAroundYear';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
-import PaymentModalWindow from '../PaymentModalWindow';
 import {
     CardContainer,
     ChoosePlanButtonContainer,

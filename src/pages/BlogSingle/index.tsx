@@ -8,22 +8,36 @@ import {
     PageTitleWithLightBlueBackground,
     SubscribeSection,
 } from '@/components';
+import { PageTitle } from '@/componentsLibrary';
+import useMobile from '@/hooks/useMobile';
 import { useAppSelector } from '@/hooks/useStore';
 import { blogSelector } from '@/store/selectors/selectors';
+import { size } from '@/types/constants';
 
 import { SinglePageContainer } from './styles';
 
+const { tablet } = size;
 const BlogSingle = () => {
     const {
         currentBlog: { blogTitle },
     } = useAppSelector(blogSelector);
-
+    const { isMobile } = useMobile(tablet);
     return (
         <SinglePageContainer>
             <Header background="primary">
                 <Content type="primary" />
             </Header>
-            <PageTitleWithLightBlueBackground title={blogTitle} />
+            {!isMobile && (
+                <PageTitleWithLightBlueBackground title={blogTitle} />
+            )}
+            {isMobile && (
+                <PageTitle
+                    size="low"
+                    subTitle=""
+                    title={blogTitle}
+                    description=""
+                />
+            )}
             <MainContentSection />
             <SubscribeSection type="dark" />
             <DarkFooter />

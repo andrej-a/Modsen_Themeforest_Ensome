@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptop } = size;
+
 export const ArchorLinksContainer = styled.div`
     position: sticky;
     top: ${({ theme: { top } }) => top.l}px;
@@ -7,6 +11,10 @@ export const ArchorLinksContainer = styled.div`
     min-width: ${({ theme: { width } }) => width.x2l}px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: ${laptop}px) {
+        display: none;
+    }
 `;
 
 export const ArchorLink = styled.a<{ isActive: boolean }>`

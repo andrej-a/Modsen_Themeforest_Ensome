@@ -14,10 +14,16 @@ import {
     SubscribeSection,
     TestimonialsSection,
 } from '@/components';
+import useMobile from '@/hooks/useMobile';
+import { size } from '@/types/constants';
 
+import BenefitsMobileSlider from './BenefitsMobileSlider';
+import PricingMobileSlider from './PricingMobileSlider';
 import { MainPageContainer } from './styles';
 
+const { mobileL } = size;
 const MainPage = () => {
+    const { isMobile } = useMobile(mobileL);
     return (
         <MainPageContainer>
             <Header background="primary">
@@ -25,8 +31,9 @@ const MainPage = () => {
             </Header>
             <HeroSection />
             <FeatureSection />
-            <OverviewSection />
-            <BenefitsSection />
+            <OverviewSection background="white" isClientsLogoShow />
+            {!isMobile && <BenefitsSection />}
+            {isMobile && <BenefitsMobileSlider />}
             <TestimonialsSection />
             <PricingSection />
             <OurBlogSection />

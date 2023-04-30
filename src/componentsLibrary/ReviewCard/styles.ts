@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { mobileM } = size;
+
 export const TestimonialCard = styled.div<{ type: string; size: string }>`
     position: relative;
     min-width: ${({ theme: { width } }) => width.x1l}px;
@@ -13,7 +17,7 @@ export const TestimonialCard = styled.div<{ type: string; size: string }>`
     align-items: center;
     padding: ${({ theme: { padding } }) => padding.x5l}px;
     box-shadow: ${({ theme: { shadows } }) => shadows.shadowCard3};
-    gap: 25px;
+    gap: ${({ theme: { gap } }) => gap.ssl}px;
 
     ${({ size }) => {
         switch (size) {
@@ -41,7 +45,7 @@ export const AuthorAvatar = styled.div<{ type: string }>`
             case 'image outside':
                 return css`
                     position: absolute;
-                    top: -30px;
+                    top: ${({ theme: { top } }) => top.x}px;
                 `;
             default:
                 break;
@@ -64,6 +68,13 @@ export const AuthorInformationName = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.black};
+
+    @media (max-width: ${mobileM}px) {
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.xl};
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.s}em;
+    }
 `;
 
 export const AuthorInformationRole = styled.div`
@@ -86,4 +97,9 @@ export const TestimonialText = styled.div<{ type: string }>`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${mobileM}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.l}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
+    }
 `;

@@ -11,26 +11,28 @@ import {
     SubscribeSection,
 } from '@/components';
 import { PageTitle } from '@/componentsLibrary';
-import { dictionary } from '@/types/constants';
+import useMobile from '@/hooks/useMobile';
+import { dictionary, size } from '@/types/constants';
 
 const { SERVICES, SERVICES_PAGE_TITLE, SERVICES_PAGE_DESCRIPTION } = dictionary;
-
+const { mobileL } = size;
 const Services = () => {
+    const { isMobile } = useMobile(mobileL);
     return (
         <PageContainer>
             <Header background="primary">
                 <Content />
             </Header>
             <PageTitle
-                size="medium"
+                size={isMobile ? 'low' : 'medium'}
                 subTitle={SERVICES}
                 title={SERVICES_PAGE_TITLE}
                 description={SERVICES_PAGE_DESCRIPTION}
             />
             <ServiceContent />
-            <OverviewSection />
+            <OverviewSection background="white" isClientsLogoShow />
             <ContactUsSection />
-            <SubscribeSection type="primary" />
+            <SubscribeSection type="dark" />
             <DarkFooter />
         </PageContainer>
     );

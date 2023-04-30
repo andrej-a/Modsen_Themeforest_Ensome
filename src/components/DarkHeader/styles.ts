@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { laptop, tablet } = size;
+
 export const FooterContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
@@ -11,7 +15,6 @@ export const FooterContainer = styled.div`
     align-items: center;
 
     background: ${({ theme: { colors } }) => colors.secondary};
-    border-top: ${({ theme: { border } }) => border.m};
 
     font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
     font-style: normal;
@@ -47,6 +50,13 @@ export const FooterContent = styled.div`
             color: ${({ theme: { colors } }) => colors.beige};
         }
     }
+
+    @media (max-width: ${laptop}px) {
+        flex-direction: column;
+        padding: ${({ theme: { padding } }) => padding.s3s};
+        gap: ${({ theme: { gap } }) => gap.sl}px;
+        border-bottom: ${({ theme: { border } }) => border.none};
+    }
 `;
 
 export const ContentDescription = styled.div`
@@ -56,60 +66,24 @@ export const ContentDescription = styled.div`
     align-items: flex-start;
     gap: ${({ theme: { gap } }) => gap.sxx}px;
     margin-right: ${({ theme: { margin } }) => margin.m}px;
+
+    @media (max-width: ${laptop}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media (max-width: ${tablet}px) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: ${({ theme: { gap } }) => gap.xxl}px;
+    }
 `;
 
 export const ContentDescriptionText = styled.div`
     max-width: ${({ theme: { width } }) => width.x}px;
-`;
-
-export const ContentLinks = styled.div`
-    display: flex;
-    gap: ${({ theme: { gap } }) => gap.sx}px;
-    path {
-        cursor: pointer;
-        &:hover {
-            fill: ${({ theme: { colors } }) => colors.primary};
-        }
+    @media (max-width: ${laptop}px) {
+        display: none;
     }
-`;
-
-export const Link = styled.a``;
-
-export const QuickLinkContainer = styled.div`
-    min-width: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    gap: ${({ theme: { gap } }) => gap.sx}px;
-`;
-
-export const ServiceContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: ${({ theme: { gap } }) => gap.sx}px;
-`;
-
-export const ContactInfoContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: ${({ theme: { gap } }) => gap.sx}px;
-`;
-
-export const Title = styled.div`
-    margin-bottom: ${({ theme: { margin } }) => margin.xs}px;
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.manrope};
-    font-style: normal;
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.xxl};
-    font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
-    line-height: ${({ theme: { lineHeight } }) => lineHeight.l}px;
-    letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
-    color: ${({ theme: { colors } }) => colors.white};
 `;
 
 export const AdditionalInformation = styled.div`
@@ -119,6 +93,14 @@ export const AdditionalInformation = styled.div`
     display: flex;
     justify-content: space-between;
     padding: ${({ theme: { padding } }) => padding.m};
+
+    @media (max-width: ${laptop}px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: ${({ theme: { padding } }) => padding.none};
+        padding-right: ${({ theme: { padding } }) => padding.lmm}px;
+        padding-left: ${({ theme: { padding } }) => padding.lmm}px;
+    }
 `;
 
 export const Policy = styled.div`
@@ -126,8 +108,26 @@ export const Policy = styled.div`
     height: auto;
     display: flex;
     gap: ${({ theme: { gap } }) => gap.xll}px;
+
+    @media (max-width: ${laptop}px) {
+        width: ${({ theme: { width } }) => width.xxl}%;
+        gap: ${({ theme: { gap } }) => gap.sx}px;
+        padding-bottom: ${({ theme: { padding } }) => padding.ll}px;
+        border-bottom: ${({ theme: { border } }) => border.m};
+    }
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+    @media (max-width: ${laptop}px) {
+        font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
+        font-style: normal;
+        font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
+        font-size: ${({ theme: { fontSize } }) => fontSize.x}px;
+        letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
+        color: ${({ theme: { colors } }) => colors.tertiary};
+    }
+`;
 
-export const PageLink = styled.p``;
+export const CompanyInforWrapper = styled.div`
+    padding-top: ${({ theme: { padding } }) => padding.ll}px;
+`;

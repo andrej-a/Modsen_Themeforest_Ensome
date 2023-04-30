@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { size } from '@/types/constants';
+
+const { tablet, mobileM } = size;
 export const ComponentContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}%;
     max-width: ${({ theme: { width } }) => width.l1x}px;
@@ -30,6 +33,15 @@ export const TitleContainer = styled.div`
         border: ${({ theme: { border } }) => border.xxl};
         margin-top: ${({ theme: { margin } }) => margin.xs}px;
     }
+
+    @media (max-width: ${tablet}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xll}px;
+        line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
+    }
+
+    @media (max-width: ${mobileM}px) {
+        font-size: ${({ theme: { fontSize } }) => fontSize.xxlll}px;
+    }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -44,6 +56,11 @@ export const DescriptionContainer = styled.div`
     line-height: ${({ theme: { lineHeight } }) => lineHeight.xxl}px;
     letter-spacing: ${({ theme: { letterSpacing } }) => letterSpacing.x}em;
     color: ${({ theme: { colors } }) => colors.grey};
+
+    @media (max-width: ${tablet}px) {
+        margin-top: ${({ theme: { margin } }) => margin.s}px;
+        font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
+    }
 `;
 
 export const ContactsListContainer = styled.div`
@@ -53,6 +70,11 @@ export const ContactsListContainer = styled.div`
     align-items: flex-start;
     gap: ${({ theme: { gap } }) => gap.sx}px;
     margin-top: ${({ theme: { margin } }) => margin.l2x}px;
+
+    @media (max-width: ${tablet}px) {
+        margin-top: ${({ theme: { margin } }) => margin.s}px;
+        font-size: ${({ theme: { fontSize } }) => fontSize.xl}px;
+    }
 `;
 
 export const ContactItem = styled.div`

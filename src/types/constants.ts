@@ -74,7 +74,7 @@ export enum dictionary {
     SUBSCRIBE_BUTTON_VALUE = 'SubscribeButtonValue',
     QUICK_LINK = 'QuickLink',
     CONTACTS = 'Contacts',
-    OUR_TEAM = 'OurTeam',
+    OUR_TEAM = 'Our team',
     ABOUT_US = 'About us',
     SERVICES = 'Services',
     FAQ = 'FAQ',
@@ -105,6 +105,7 @@ export enum dictionary {
     FAQS_SUBTITLE = 'FAQs',
     FAQ_TITLE = 'FrequentlyQuestions',
     FAQ_DESCRIPTION = 'FrequentlyQuestionsDescription',
+    FAQ_DESCRIPTION_MOBILE = 'FAQDescriptionMobile',
     DATA_ANALYTICS = 'DataAnalytics',
     DATA_MINING = 'DataMining',
     BUSINESS_INTELLIGENCE = 'BusinessIntelligence',
@@ -130,6 +131,7 @@ export enum dictionary {
     THEME_TITLE = 'Theme',
     SOLUTIONS_PAGE_TITLE = 'SolutionsPageTitle',
     SOLUTIONS_PAGE_DESCRIPTION = 'SolutionsPageDescription',
+    SOLUTION_PAGE_DESCRIPTION_MOBILE = 'SolutionsPageDescriptionMobile',
     ADVANTAGES_TITLE = 'AdvantagesTitle',
     DATA_INTEGRATION = 'DataIntegration',
     DATA_INTEGRATION_DESCRIPTION = 'DataIntegrationDescription',
@@ -181,6 +183,18 @@ export enum dictionary {
     WOMEN_SUGGESTION = 'WomenSuggestion',
     RUSSIAN = 'Russian',
     ENGLISH = 'English',
+    SUBSCRIBE = 'Subscribe',
+    FOLLOW_US = 'FollowUs',
+    GET_TO_KNOW_US = 'GetToKnowUs',
+    ABOUT_US_MOBILE_DESCRIPTION = 'AboutUsMobileDescription',
+    ABOUT_US_LONG_DESCRIBE = 'AboutUsMobileLongDescription',
+    SEND_MESSAGE = 'SendMessage',
+    BLOG_MOBILE_TITLE = 'BlogMobileTitle',
+    BLOG_MOBILE_DESCRIPTION = 'BlogMobileDescription',
+    SEE_MORE = 'SeeMore',
+    ABOUT_US_MOBILE_TITLE = 'AboutUsMobileTitle',
+    ABOUT_US_PAGE_MOBILE_DESCRIPTION = 'AboutUsPageMobileDescription',
+    HEROES_SECTION_DESCRIPTION_MOBILE = 'HeroesDescriptionMobile',
 }
 
 export enum numberEnums {
@@ -231,3 +245,15 @@ export const envConstants = {
     USER_ID: process.env.USER_ID,
     FULL_FORM_TEMPLATE_ID: process.env.FULL_FORM_TEMPLATE_ID,
 };
+
+export enum size {
+    mobileS = 320,
+    mobileX = 360,
+    mobileM = 375,
+    mobileL = 426,
+    tablet = 768,
+    laptop = 1024,
+    laptopM = 1100,
+    laptopL = 1440,
+    desktop = 1920,
+}

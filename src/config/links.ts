@@ -15,7 +15,13 @@ const {
     FAQ_PAGE,
 } = linksConstants;
 
-const links = [
+export interface ILink {
+    id: string;
+    link: string;
+    title: string;
+}
+
+const links: ILink[] = [
     {
         id: uuidv4(),
         link: HOME_PAGE,

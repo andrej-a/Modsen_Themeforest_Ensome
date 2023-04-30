@@ -7,11 +7,13 @@ import HeaderLogo from '@/assets/images/logo/headerLogo.png';
 import HeaderLogoWhite from '@/assets/images/logo/headerLogoWhite.png';
 import ShowPages from '@/assets/images/logo/showList.svg';
 import { LogoComponent } from '@/components/';
+import useMobile from '@/hooks/useMobile';
 import { HeaderContentProps } from '@/types/componentsOptions';
-import { dictionary } from '@/types/constants';
+import { dictionary, size } from '@/types/constants';
 
 import AdditionalContent from '../AdditionalPages';
 import VideoPlayerHandler from '../VideoPlayerHandler';
+import BurgerMenu from './BurgerMenu';
 import headerLinks from './config/headerLinks';
 import {
     ContentContainer,
@@ -21,11 +23,11 @@ import {
 } from './styles';
 
 const { PAGES } = dictionary;
-
+const { tablet } = size;
 const Content = ({ type }: HeaderContentProps) => {
     const { t } = useTranslation();
     const [isShowAdditionalPages, setIsShowAdditionalPages] = useState(false);
-
+    const { isMobile } = useMobile(tablet);
     const onHandleShowAdditionalPages = (status: boolean) => () => {
         setIsShowAdditionalPages(status);
     };
@@ -36,7 +38,11 @@ const Content = ({ type }: HeaderContentProps) => {
                 isShow={isShowAdditionalPages}
             />
             <LogoComponent
-                source={type === 'secondary' ? HeaderLogoWhite : HeaderLogo}
+                source={
+                    type === 'secondary' && !isMobile
+                        ? HeaderLogoWhite
+                        : HeaderLogo
+                }
             />
             <MenuContainer>
                 {headerLinks.map(({ link, title }) => {
@@ -69,6 +75,7 @@ const Content = ({ type }: HeaderContentProps) => {
                     );
                 })}
             </MenuContainer>
+            <BurgerMenu />
             <VideoPlayerHandler type={type} />
         </ContentContainer>
     );
