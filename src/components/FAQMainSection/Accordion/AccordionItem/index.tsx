@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ClosedAccordion from '@/assets/images/logo/closed_accordion.png';
 import OpenedAccordion from '@/assets/images/logo/opened_accordion.png';
 import { ImageComponent } from '@/components';
-import { IAccordionCard } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
+import IAccordionCard from '../types';
 import { AccodrionItem, Answer, Question, Text } from './styles';
 
 const { BENEFITS_DESCRIPTION } = dictionary;
 
-const AccordionCard = ({ content }: IAccordionCard) => {
+const AccordionCard = memo(({ content }: IAccordionCard) => {
     const { t } = useTranslation();
     const [isExpanded, setIsExpanded] = useState(false);
     const [height, setHeight] = useState('0');
@@ -41,6 +41,6 @@ const AccordionCard = ({ content }: IAccordionCard) => {
             </Answer>
         </AccodrionItem>
     );
-};
+});
 
 export default AccordionCard;

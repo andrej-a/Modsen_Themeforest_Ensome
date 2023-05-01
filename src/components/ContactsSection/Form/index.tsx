@@ -1,9 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import MoonLoader from 'react-spinners/MoonLoader';
+import { useTheme } from 'styled-components';
 
 import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SubscribeToUsSection/SubscribeForm/styles';
 import { schema } from '@/config/fullFormSchema';
+import { DefaultTheme } from '@/globalStyles';
 import useMobile from '@/hooks/useMobile';
 import useSubscribe from '@/hooks/useSubscribe';
 import { dictionary, numberEnums, size } from '@/types/constants';
@@ -32,6 +35,7 @@ const { mobileL } = size;
 const ContactsPageForm = () => {
     const { t } = useTranslation();
     const { isMobile } = useMobile(mobileL);
+    const theme = useTheme() as DefaultTheme;
     const {
         formRef,
         isDisabled,
@@ -39,6 +43,7 @@ const ContactsPageForm = () => {
         handleSubmit,
         errors,
         handleChange,
+        isLoading,
     } = useSubscribe(schema);
     return (
         <MessageFormContainer>
@@ -90,7 +95,14 @@ const ContactsPageForm = () => {
                         type="submit"
                         disabled={!!Object.keys(errors).length || isDisabled}
                     >
-                        {t(isMobile ? SEND_MESSAGE : SUBSCRIBE_BUTTON_VALUE)}{' '}
+                        {isLoading ? (
+                            <MoonLoader
+                                color={theme.colors.white}
+                                size={theme.width.sx}
+                            />
+                        ) : (
+                            t(isMobile ? SEND_MESSAGE : SUBSCRIBE_BUTTON_VALUE)
+                        )}
                     </DefaultButton>
                 </SubmitButtonContainer>
             </MessageForm>

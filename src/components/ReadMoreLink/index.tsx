@@ -1,21 +1,17 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import ReadMoreArrow from '@/assets/images/logo/readmore.png';
 import { ImageComponent } from '@/components';
-import { useAppDispatch } from '@/hooks/useStore';
 import { dictionary } from '@/types/constants';
 
 import { ReadMoreContainer } from './styles';
+import IReadMoreLinkProps from './types';
 
 const { READ_MORE } = dictionary;
 
-type ReadMoreLinkProps = {
-    link: string;
-};
-
-const ReadMoreComponent = ({ link }: ReadMoreLinkProps) => {
+const ReadMoreComponent = memo(({ link }: IReadMoreLinkProps) => {
     const { t } = useTranslation();
 
     return (
@@ -24,6 +20,6 @@ const ReadMoreComponent = ({ link }: ReadMoreLinkProps) => {
             <ImageComponent source={ReadMoreArrow} />
         </ReadMoreContainer>
     );
-};
+});
 
 export default ReadMoreComponent;

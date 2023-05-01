@@ -1,5 +1,5 @@
+import { TService } from '@/componentsLibrary/ServiceCard/types/IService';
 import { dictionary } from '@/types/constants';
-import { TService } from '@/types/IService';
 
 const {
     MACHINE_LEARNING_TITLE,

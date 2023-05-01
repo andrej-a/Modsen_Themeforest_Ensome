@@ -1,10 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { ISettings } from '@/components/DropDownMenuList';
+import { ISettings } from '@/components/DropDownMenuList/types';
+import additionalLinks from '@/components/Header/AdditionalPages/config/additionalLinks';
 import links, { ILink } from '@/config/links';
 import { dictionary, linksConstants } from '@/types/constants';
-
-import additionalLinks from '../../AdditionalPages/config/additionalLinks';
 
 const { HOME, SOLUTIONS, PAGES, ELEMENTS, BLOG, CONTACT, ABOUT_US, CONTACTS } =
     dictionary;

@@ -3,9 +3,9 @@ import React, { memo } from 'react';
 import PlayVideo from '@/assets/images/logo/playVideo.png';
 import PlayVideoDark from '@/assets/images/logo/playVideoDark.png';
 import { LogoComponent } from '@/components';
-import { WatchVideoButtonProps } from '@/types/componentsOptions';
 
 import { VideoButton, VideoButtonContainer } from './styles';
+import WatchVideoButtonProps from './types';
 
 const WatchVideoButton = memo(
     ({ type, onClick, children }: WatchVideoButtonProps) => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
@@ -8,10 +8,10 @@ import HeaderLogoWhite from '@/assets/images/logo/headerLogoWhite.png';
 import ShowPages from '@/assets/images/logo/showList.svg';
 import { LogoComponent } from '@/components/';
 import useMobile from '@/hooks/useMobile';
-import { HeaderContentProps } from '@/types/componentsOptions';
 import { dictionary, size } from '@/types/constants';
 
 import AdditionalContent from '../AdditionalPages';
+import { HeaderContentProps } from '../types';
 import VideoPlayerHandler from '../VideoPlayerHandler';
 import BurgerMenu from './BurgerMenu';
 import headerLinks from './config/headerLinks';
@@ -24,7 +24,8 @@ import {
 
 const { PAGES } = dictionary;
 const { tablet } = size;
-const Content = ({ type }: HeaderContentProps) => {
+
+const Content = memo(({ type }: HeaderContentProps) => {
     const { t } = useTranslation();
     const [isShowAdditionalPages, setIsShowAdditionalPages] = useState(false);
     const { isMobile } = useMobile(tablet);
@@ -79,6 +80,6 @@ const Content = ({ type }: HeaderContentProps) => {
             <VideoPlayerHandler type={type} />
         </ContentContainer>
     );
-};
+});
 
 export default Content;

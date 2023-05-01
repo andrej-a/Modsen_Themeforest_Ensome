@@ -3,16 +3,15 @@ import { useTranslation } from 'react-i18next';
 
 import { ServiceCard } from '@/componentsLibrary';
 import service from '@/config/services';
-import { setServicePage } from '@/store/slices/serviceSlice';
 import { dictionary } from '@/types/constants';
 
 import {
-    BenefitsCards,
-    BenefitsContentContainer,
-    BenefitsDescription,
-    BenefitsDescriptionText,
-    BenefitsDescriptionTitle,
-    BenefitsSectionContainer,
+    Cards,
+    ContentContainer,
+    Description,
+    DescriptionText,
+    DescriptionTitle,
+    SectionContainer,
 } from './style';
 
 const { BENEFITS_DESCRIPTION, BENEFITS_TITLE } = dictionary;
@@ -20,17 +19,13 @@ const { BENEFITS_DESCRIPTION, BENEFITS_TITLE } = dictionary;
 const BenefitsSection = () => {
     const { t } = useTranslation();
     return (
-        <BenefitsSectionContainer>
-            <BenefitsContentContainer>
-                <BenefitsDescription>
-                    <BenefitsDescriptionTitle>
-                        {t(BENEFITS_TITLE)}
-                    </BenefitsDescriptionTitle>
-                    <BenefitsDescriptionText>
-                        {t(BENEFITS_DESCRIPTION)}
-                    </BenefitsDescriptionText>
-                </BenefitsDescription>
-                <BenefitsCards>
+        <SectionContainer>
+            <ContentContainer>
+                <Description>
+                    <DescriptionTitle>{t(BENEFITS_TITLE)}</DescriptionTitle>
+                    <DescriptionText>{t(BENEFITS_DESCRIPTION)}</DescriptionText>
+                </Description>
+                <Cards>
                     {service.slice(0, 4).map((serv, index) => {
                         return (
                             <ServiceCard
@@ -40,9 +35,9 @@ const BenefitsSection = () => {
                             />
                         );
                     })}
-                </BenefitsCards>
-            </BenefitsContentContainer>
-        </BenefitsSectionContainer>
+                </Cards>
+            </ContentContainer>
+        </SectionContainer>
     );
 };
 

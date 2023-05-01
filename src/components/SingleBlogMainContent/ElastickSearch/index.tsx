@@ -5,9 +5,9 @@ import tags from '@/config/tags';
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { blogSelector } from '@/store/selectors/selectors';
 import { setTagFromSearchInput } from '@/store/slices/blog';
-import { IElasticContainerItems } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
+import { IElasticContainerItems } from '../types';
 import { ElasticContainer, ElasticItem } from './styles';
 
 const { NO_DATA } = dictionary;

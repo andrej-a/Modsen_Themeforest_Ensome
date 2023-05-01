@@ -1,7 +1,6 @@
+import ITeamMember from '@/componentsLibrary/PersonCard/types/IPerson';
 import { TPayload } from '@/types/componentsOptions';
 import { namesOfTheSlices } from '@/types/constants';
-import ITeamMember from '@/types/IPerson';
-import { ISolution } from '@/types/ISolution';
 import { createSlice } from '@reduxjs/toolkit';
 
 const { OUR_TEAM_SLICE } = namesOfTheSlices;

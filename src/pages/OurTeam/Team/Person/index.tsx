@@ -2,9 +2,9 @@ import React, { forwardRef, memo, useEffect, useState } from 'react';
 
 import { PersonCard } from '@/componentsLibrary';
 import useMobile from '@/hooks/useMobile';
-import { PersonComponentProps } from '@/types/componentsOptions';
 import { size } from '@/types/constants';
 
+import IPersonComponentProps from '../../types';
 import { Person } from './styles';
 
 const { laptopM } = size;
@@ -12,7 +12,7 @@ const { laptopM } = size;
 const PersonComponent = memo(
     forwardRef(
         (
-            { name, photo, position, index, social }: PersonComponentProps,
+            { name, photo, position, index, social }: IPersonComponentProps,
             ref: React.ForwardedRef<HTMLDivElement>,
         ) => {
             const [isShow, setIsShow] = useState(false);

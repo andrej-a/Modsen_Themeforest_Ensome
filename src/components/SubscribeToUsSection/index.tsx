@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { SubscribeSectionProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
 import {
@@ -13,10 +12,11 @@ import {
     Title,
 } from './styles';
 import SubscribeFormComponent from './SubscribeForm';
+import { SubscribeSectionProps } from './types';
 
 const { SUBSCRIBE_US, SUBSCRIBE_DESCRIPTION } = dictionary;
 
-const SubscribeSection = ({ type }: SubscribeSectionProps) => {
+const SubscribeSection = memo(({ type }: SubscribeSectionProps) => {
     const { t } = useTranslation();
     return (
         <SubscribeContainer type={type}>
@@ -31,6 +31,6 @@ const SubscribeSection = ({ type }: SubscribeSectionProps) => {
             </SubscribeContent>
         </SubscribeContainer>
     );
-};
+});
 
 export default SubscribeSection;

@@ -1,15 +1,14 @@
-import React from 'react';
-
-import { TagProps } from '@/types/componentsOptions';
+import React, { memo } from 'react';
 
 import { TagComponent } from './styles';
+import ITagProps from './types';
 
-const Tag = ({ isActive, children, ...rest }: TagProps) => {
+const Tag = memo(({ isActive, children, ...rest }: ITagProps) => {
     return (
         <TagComponent isActive={isActive} {...rest}>
             {children}
         </TagComponent>
     );
-};
+});
 
 export default Tag;

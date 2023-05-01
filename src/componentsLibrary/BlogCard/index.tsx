@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, ReadMoreComponent } from '@/components';
 import { Tag } from '@/componentsLibrary';
-import blogCardsData, { IBlogCard } from '@/config/blogCardsData';
+import { IBlogCard } from '@/config/blogCardsData';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentBlog, setTagsOfCurrentBlog } from '@/store/slices/blog';
-import { BlogCardProps } from '@/types/componentsOptions';
 import { cutString } from '@/utils/cutString';
 
 import {
@@ -20,8 +19,9 @@ import {
     ReadMore,
     TagsContainer,
 } from './styles';
+import IBlogCardProps from './types';
 
-const BlogCard = memo(({ settings, content }: BlogCardProps) => {
+const BlogCard = memo(({ settings, content }: IBlogCardProps) => {
     const { type } = settings;
     const { image, publishDate, blogTitle, firstContentPart, tagsArray } =
         content;

@@ -1,18 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 
+import { ICategories } from '../types';
 import CategoryItem from './Accordeon';
 import { CategoriesWrapper } from './styles';
 
-export interface IListItem {
-    title: string;
-    description: string;
-}
-
-export interface ICategories {
-    content: IListItem[];
-}
-
-const Categories = ({ content }: ICategories) => {
+const Categories = memo(({ content }: ICategories) => {
     return (
         <CategoriesWrapper>
             {content.map(({ title, description }, index) => {
@@ -26,6 +18,6 @@ const Categories = ({ content }: ICategories) => {
             })}
         </CategoriesWrapper>
     );
-};
+});
 
 export default Categories;

@@ -1,4 +1,4 @@
-import { ISolution } from './ISolution';
+import { ISolution } from '../../../types/ISolution';
 
 interface IServiceSinglePageContent {
     customer: string;

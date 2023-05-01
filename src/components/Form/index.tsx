@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import MoonLoader from 'react-spinners/MoonLoader';
+import { useTheme } from 'styled-components';
 
 import { DefaultButton } from '@/components';
 import { ValidationError } from '@/components/SearchPanel/styles';
 import { schema } from '@/config/fullFormSchema';
+import { DefaultTheme } from '@/globalStyles';
 import useSubscribe from '@/hooks/useSubscribe';
 import { dictionary } from '@/types/constants';
 
@@ -15,6 +18,7 @@ import {
     LabelComponent,
     ServiceFormContainer,
 } from './styles';
+import IFormProps from './types';
 
 const {
     SUBSCRIBE_PLACEHOLDER,
@@ -28,12 +32,9 @@ const {
     THEME_TITLE,
 } = dictionary;
 
-interface IFormProps {
-    type: 'column' | 'group';
-}
-
-const Form = ({ type }: IFormProps) => {
+const Form = memo(({ type }: IFormProps) => {
     const { t } = useTranslation();
+    const theme = useTheme() as DefaultTheme;
     const {
         formRef,
         isDisabled,
@@ -41,6 +42,7 @@ const Form = ({ type }: IFormProps) => {
         handleSubmit,
         errors,
         handleChange,
+        isLoading,
     } = useSubscribe(schema);
 
     return (
@@ -132,11 +134,18 @@ const Form = ({ type }: IFormProps) => {
                     disabled={!!Object.keys(errors).length || isDisabled}
                     type="submit"
                 >
-                    {t(SUBSCRIBE_BUTTON_VALUE)}
+                    {isLoading ? (
+                        <MoonLoader
+                            color={theme.colors.white}
+                            size={theme.width.sx}
+                        />
+                    ) : (
+                        t(SUBSCRIBE_BUTTON_VALUE)
+                    )}
                 </DefaultButton>
             </FormComponent>
         </ServiceFormContainer>
     );
-};
+});
 
 export default Form;

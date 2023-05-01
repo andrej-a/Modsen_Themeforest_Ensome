@@ -1,4 +1,4 @@
-import { ISettings } from '@/components/DropDownMenuList';
+import { ISettings } from '@/components/DropDownMenuList/types';
 import contactList from '@/config/contactList';
 import links from '@/config/links';
 import { dictionary } from '@/types/constants';

@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Schema } from 'yup';
 
+import { TService } from '@/componentsLibrary/ServiceCard/types/IService';
 import { serviceSelector } from '@/store/selectors/selectors';
 import { setSearchingValue, setServicePage } from '@/store/slices/serviceSlice';
 import { TSearchField } from '@/types/componentsOptions';
-import { TService } from '@/types/IService';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { useAppDispatch, useAppSelector } from './useStore';

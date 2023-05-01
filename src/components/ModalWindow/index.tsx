@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 
 import CloseButton from '@/assets/images/logo/closeButton.png';
 import { LogoComponent } from '@/components';
-import { ModalWindowProps } from '@/types/componentsOptions';
 
 import { CloseModalWindowButton, ModalWindowOverlay } from './styles';
+import IModalWindowProps from './types';
 
-const ModalWindow = memo(({ onClick, children }: ModalWindowProps) => {
+const ModalWindow = memo(({ onClick, children }: IModalWindowProps) => {
     return createPortal(
         <ModalWindowOverlay data-test="modal" onClick={onClick}>
             {children}

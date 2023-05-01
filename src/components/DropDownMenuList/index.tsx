@@ -1,40 +1,27 @@
-import React from 'react';
-
-import { ILink } from '@/config/links';
+import React, { memo } from 'react';
 
 import DropDownMenuItem from './DropDownMenuItem';
 import { DropDownMenuListWrapper } from './styles';
+import { DropDownMenuListProps } from './types';
 
-export interface ISettings {
-    linksTitles: string;
-    linksPaths: ILink[];
-}
-interface DropDownMenuListProps {
-    settings: ISettings[];
-    type: 'light' | 'dark';
-    onHandleMenu?: (status: boolean) => () => void;
-}
-
-const DropDownMenuList = ({
-    settings,
-    type,
-    onHandleMenu,
-}: DropDownMenuListProps) => {
-    return (
-        <DropDownMenuListWrapper>
-            {settings.map(({ linksTitles, linksPaths }, index) => {
-                return (
-                    <DropDownMenuItem
-                        onHandleMenu={onHandleMenu}
-                        key={index}
-                        category={linksTitles}
-                        links={linksPaths}
-                        type={type}
-                    />
-                );
-            })}
-        </DropDownMenuListWrapper>
-    );
-};
+const DropDownMenuList = memo(
+    ({ settings, type, onHandleMenu }: DropDownMenuListProps) => {
+        return (
+            <DropDownMenuListWrapper>
+                {settings.map(({ linksTitles, linksPaths }, index) => {
+                    return (
+                        <DropDownMenuItem
+                            onHandleMenu={onHandleMenu}
+                            key={index}
+                            category={linksTitles}
+                            links={linksPaths}
+                            type={type}
+                        />
+                    );
+                })}
+            </DropDownMenuListWrapper>
+        );
+    },
+);
 
 export default DropDownMenuList;

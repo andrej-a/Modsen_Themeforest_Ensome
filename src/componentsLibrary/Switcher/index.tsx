@@ -6,11 +6,9 @@ import { dictionary } from '@/types/constants';
 
 import { Position, SwitchElement, SwitcherContainer, Text } from './styles';
 
-type Props = {};
-
 const { RUSSIAN, ENGLISH } = dictionary;
 
-const Switcher = (props: Props) => {
+const Switcher = () => {
     const [lang, setLang] = useState(i18n.language);
     const { t } = useTranslation();
     const onHandleLang = () => {

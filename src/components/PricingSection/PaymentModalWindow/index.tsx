@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-import { PaymentModalWindowProps } from '@/types/componentsOptions';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
+import { IPaymentModalWindowProps } from '../types';
 import {
     PaymentModalWindowButtons,
     PaymentModalWindowContainer,
     PaymentModalWindowContent,
 } from './styles';
 
-const PaymentModalWindow = ({ cost }: PaymentModalWindowProps) => {
+const PaymentModalWindow = memo(({ cost }: IPaymentModalWindowProps) => {
     return (
         <PaymentModalWindowContainer>
             <PaymentModalWindowContent>
@@ -31,6 +31,6 @@ const PaymentModalWindow = ({ cost }: PaymentModalWindowProps) => {
             </PaymentModalWindowContent>
         </PaymentModalWindowContainer>
     );
-};
+});
 
 export default PaymentModalWindow;

@@ -3,13 +3,17 @@ import { createGlobalStyle } from 'styled-components';
 export interface DefaultTheme {
     width: {
         xxl: number;
+        sl: number;
+        sx: number;
     };
     height: {
         xxl: number;
+        xs: number;
     };
     colors: {
         secondary: string;
         primary: string;
+        white: string;
     };
 }
 
@@ -26,7 +30,6 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
   }
   #root {
-    width: 100vw;
     min-height: 100vh;
     overflow: clip;
     display: flex;

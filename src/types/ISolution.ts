@@ -1,4 +1,4 @@
-import { IService } from './IService';
+import { IService } from '../componentsLibrary/ServiceCard/types/IService';
 
 export type TSolution = Pick<
     IService,

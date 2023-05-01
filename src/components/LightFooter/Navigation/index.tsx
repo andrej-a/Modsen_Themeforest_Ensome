@@ -2,12 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import { dictionary } from '@/types/constants';
-
 import navigation from './config';
 import { NavigationContainer, NavigationItem, Title } from './styles';
-
-const { SERVICE } = dictionary;
 
 const Navigation = () => {
     const { t } = useTranslation();

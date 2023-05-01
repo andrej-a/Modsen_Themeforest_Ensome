@@ -3,15 +3,15 @@ import { t } from 'i18next';
 
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentLink, setSearchingValue } from '@/store/slices/serviceSlice';
-import { ElasticItemComponentProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
+import IElasticItemComponentProps from '../../types';
 import { ElasticItem } from './styles';
 
 const { NO_DATA } = dictionary;
 
 const ElasticItemsComponent = memo(
-    ({ matchedServices, onSetIsVisible }: ElasticItemComponentProps) => {
+    ({ matchedServices, onSetIsVisible }: IElasticItemComponentProps) => {
         const dispatch = useAppDispatch();
 
         const elasticSearchManager = (title: string) => () => {

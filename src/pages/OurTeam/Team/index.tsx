@@ -2,11 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
+import ITeamMember from '@/componentsLibrary/PersonCard/types/IPerson';
 import team from '@/config/team';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setCurrentPerson } from '@/store/slices/ourTeam';
 import { numberEnums } from '@/types/constants';
-import ITeamMember from '@/types/IPerson';
 
 import PersonComponent from './Person';
 import { Content, ContentContainer } from './styles';

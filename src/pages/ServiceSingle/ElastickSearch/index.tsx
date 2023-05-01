@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
+import { IElasticContainerItems } from '@/components/SingleBlogMainContent/types';
+import { useAppSelector } from '@/hooks/useStore';
 import { serviceSelector } from '@/store/selectors/selectors';
-import { IElasticContainerItems } from '@/types/componentsOptions';
 
 import ElasticItemsComponent from './ElasticItem';
 import { ElasticContainer } from './styles';

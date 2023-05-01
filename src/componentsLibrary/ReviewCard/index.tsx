@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import ImageComponent from '@/components/ImageComponent';
 
@@ -11,42 +11,27 @@ import {
     TestimonialCardHeader,
     TestimonialText,
 } from './styles';
+import IReviewCardProps from './types';
 
-interface ISettings {
-    type: 'image inside' | 'image outside';
-    size: 'small' | 'medium';
-}
-
-interface IContent {
-    id: string;
-    avatar: string;
-    name: string;
-    role: string;
-    testimonial: string;
-}
-
-interface ReviewCardProps {
-    type: ISettings;
-    content: IContent;
-}
-
-const ReviewCard = ({
-    type: { type, size },
-    content: { avatar, name, role, testimonial },
-}: ReviewCardProps) => {
-    return (
-        <TestimonialCard type={type} size={size}>
-            <TestimonialCardHeader>
-                <AuthorAvatar type={type}>
-                    <ImageComponent source={avatar} />
-                </AuthorAvatar>
-                <AuthorInformationContainer>
-                    <AuthorInformationName>{name}</AuthorInformationName>
-                    <AuthorInformationRole>{role}</AuthorInformationRole>
-                </AuthorInformationContainer>
-            </TestimonialCardHeader>
-            <TestimonialText type={type}>{testimonial}</TestimonialText>
-        </TestimonialCard>
-    );
-};
+const ReviewCard = memo(
+    ({
+        type: { type, size },
+        content: { avatar, name, role, testimonial },
+    }: IReviewCardProps) => {
+        return (
+            <TestimonialCard type={type} size={size}>
+                <TestimonialCardHeader>
+                    <AuthorAvatar type={type}>
+                        <ImageComponent source={avatar} />
+                    </AuthorAvatar>
+                    <AuthorInformationContainer>
+                        <AuthorInformationName>{name}</AuthorInformationName>
+                        <AuthorInformationRole>{role}</AuthorInformationRole>
+                    </AuthorInformationContainer>
+                </TestimonialCardHeader>
+                <TestimonialText type={type}>{testimonial}</TestimonialText>
+            </TestimonialCard>
+        );
+    },
+);
 export default ReviewCard;

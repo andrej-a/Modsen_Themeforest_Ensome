@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { size } from '@/types/constants';
 
 const { laptopL, tablet } = size;
-export const BenefitsSectionContainer = styled.div`
+export const SectionContainer = styled.div`
     width: ${({ theme: { width } }) => width.xxl}vw;
     max-width: ${({ theme: { width } }) => width.x5l}px;
     height: auto;
@@ -13,7 +13,7 @@ export const BenefitsSectionContainer = styled.div`
     background: ${({ theme: { colors } }) => colors.background};
 `;
 
-export const BenefitsContentContainer = styled.div`
+export const ContentContainer = styled.div`
     width: auto;
     height: auto;
     display: flex;
@@ -29,7 +29,7 @@ export const BenefitsContentContainer = styled.div`
     }
 `;
 
-export const BenefitsDescription = styled.div`
+export const Description = styled.div`
     width: auto;
     max-width: ${({ theme: { width } }) => width.xxxl}px;
     height: auto;
@@ -45,7 +45,7 @@ export const BenefitsDescription = styled.div`
     }
 `;
 
-export const BenefitsDescriptionTitle = styled.p`
+export const DescriptionTitle = styled.p`
     width: ${({ theme: { width } }) => width.xxl}%;
 
     text-align: left;
@@ -63,7 +63,7 @@ export const BenefitsDescriptionTitle = styled.p`
     }
 `;
 
-export const BenefitsDescriptionText = styled.p`
+export const DescriptionText = styled.p`
     font-family: ${({ theme: { fontFamily } }) => fontFamily.openSans};
     font-style: normal;
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.s};
@@ -78,7 +78,7 @@ export const BenefitsDescriptionText = styled.p`
     }
 `;
 
-export const BenefitsCards = styled.div`
+export const Cards = styled.div`
     max-width: ${({ theme: { width } }) => width.xxxl}px;
     display: flex;
     justify-content: space-between;

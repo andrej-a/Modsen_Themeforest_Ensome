@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { ReactSVG } from 'react-svg';
 
 import { ImageComponent } from '@/components';
-import { PersonCardProps } from '@/types/IPerson';
+import { PersonCardProps } from '@/componentsLibrary/PersonCard/types/IPerson';
 
 import {
     MainInfoContainer,

@@ -4,14 +4,10 @@ import { useTranslation } from 'react-i18next';
 import AccordionArrow from '@/assets/images/logo/accordion_arrow.png';
 import { ImageComponent } from '@/components';
 
+import { ICategoryItemProps } from '../../types';
 import { AccordeonDescription, AccordionTrigger } from './styles';
 
-type CategoryItemProps = {
-    theme: string;
-    description: string;
-};
-
-const CategoryItem = memo(({ theme, description }: CategoryItemProps) => {
+const CategoryItem = memo(({ theme, description }: ICategoryItemProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [height, setHeight] = useState('0');
     const { t } = useTranslation();

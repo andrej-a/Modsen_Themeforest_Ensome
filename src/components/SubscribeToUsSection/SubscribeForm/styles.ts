@@ -9,6 +9,7 @@ export const SubscribeForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: ${({ theme: { gap } }) => gap.s}px;
+    align-items: center;
 `;
 
 export const SubscribeInput = styled.input<{

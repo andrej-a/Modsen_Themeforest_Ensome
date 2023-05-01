@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ModalWindow } from '@/components';
 import PricingMobileSlider from '@/pages/Main/PricingMobileSlider';
-import { PricingCardProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
 import PricingCard from './Card';
@@ -14,10 +13,14 @@ import {
     PricingSectionContent,
     PricingSectionHeader,
 } from './styles';
+import IPricingCardProps from './types';
 
-export type PaymentCardProps = Pick<PricingCardProps, 'kindOfThePlan' | 'cost'>;
+export type PaymentCardProps = Pick<
+    IPricingCardProps,
+    'kindOfThePlan' | 'cost'
+>;
 const { OUR_PRICING } = dictionary;
-const PricingSection = () => {
+const PricingSection = memo(() => {
     const [choosedPlan, setChoosedPlan] = useState<PaymentCardProps>({
         kindOfThePlan: '',
         cost: '',
@@ -81,6 +84,6 @@ const PricingSection = () => {
             <PricingMobileSlider onHandlePlan={onHandlePlan} />
         </>
     );
-};
+});
 
 export default PricingSection;

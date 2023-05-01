@@ -1,68 +1,62 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
-import { TLinksStack } from '@/types/componentsOptions';
 import { decodeString } from '@/utils/cutString';
 
 import { BreadCrumbLink, BreadCrumbsWrapper, FinalyBreadCrumb } from './styles';
+import BreadCrumbsProps, { ILinksStack } from './types';
 
-type BreadCrumbsProps = {
-    linkColor: string;
-    crumbColor: string;
-    isShortland?: boolean;
-};
+const BreadCrumbs = memo(
+    ({ linkColor, crumbColor, isShortland }: BreadCrumbsProps) => {
+        const location = useLocation();
+        const linksStack: ILinksStack[] = [];
+        const crumbs = location.pathname.split('/');
+        let dataToMap: ILinksStack[] = [];
+        const { t } = useTranslation();
 
-const BreadCrumbs = ({
-    linkColor,
-    crumbColor,
-    isShortland,
-}: BreadCrumbsProps) => {
-    const location = useLocation();
-    const linksStack: TLinksStack[] = [];
-    const crumbs = location.pathname.split('/');
-    let dataToMap: TLinksStack[] = [];
-    const { t } = useTranslation();
+        crumbs.map((crumb, index) => {
+            if (index === 0 && crumb === '') {
+                linksStack.push({
+                    title: t('Home'),
+                    link: '/',
+                });
+            } else {
+                linksStack.push({
+                    title: decodeString(crumb),
+                    link: `/${crumb}`,
+                });
+            }
+        });
 
-    crumbs.map((crumb, index) => {
-        if (index === 0 && crumb === '') {
-            linksStack.push({
-                title: t('Home'),
-                link: '/',
-            });
-        } else {
-            linksStack.push({
-                title: decodeString(crumb),
-                link: `/${crumb}`,
-            });
-        }
-    });
+        dataToMap = isShortland
+            ? linksStack
+            : [linksStack.shift()!, linksStack.pop()!];
 
-    dataToMap = isShortland
-        ? linksStack
-        : [linksStack.shift()!, linksStack.pop()!];
-
-    const result = dataToMap.map(({ link, title }, index) => {
-        if (index !== dataToMap.length - 1) {
-            return index === 0 ? (
-                <BreadCrumbLink key={link} linkColor={linkColor}>
-                    <Link to={link}>{t(title)} </Link>
-                </BreadCrumbLink>
-            ) : (
-                <BreadCrumbLink key={link} linkColor={linkColor}>
-                    | <Link to={link}>{t(title)}</Link>
-                </BreadCrumbLink>
+        const result = dataToMap.map(({ link, title }, index) => {
+            if (index !== dataToMap.length - 1) {
+                return index === 0 ? (
+                    <BreadCrumbLink key={link} linkColor={linkColor}>
+                        <Link to={link}>{t(title)} </Link>
+                    </BreadCrumbLink>
+                ) : (
+                    <BreadCrumbLink key={link} linkColor={linkColor}>
+                        | <Link to={link}>{t(title)}</Link>
+                    </BreadCrumbLink>
+                );
+            }
+            return (
+                <FinalyBreadCrumb key={link} crumbColor={crumbColor}>
+                    <FinalyBreadCrumb crumbColor={crumbColor}>
+                        |
+                    </FinalyBreadCrumb>
+                    {t(title)}
+                </FinalyBreadCrumb>
             );
-        }
-        return (
-            <FinalyBreadCrumb key={link} crumbColor={crumbColor}>
-                <FinalyBreadCrumb crumbColor={crumbColor}>|</FinalyBreadCrumb>
-                {t(title)}
-            </FinalyBreadCrumb>
-        );
-    });
+        });
 
-    return <BreadCrumbsWrapper>{result}</BreadCrumbsWrapper>;
-};
+        return <BreadCrumbsWrapper>{result}</BreadCrumbsWrapper>;
+    },
+);
 
 export default BreadCrumbs;

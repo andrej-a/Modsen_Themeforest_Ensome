@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { BreadCrumbs } from '@/components';
-import { PageTitleProps } from '@/types/componentsOptions';
 
 import {
     BreadCrumbsWrapper,
@@ -12,9 +11,10 @@ import {
     SubTitle,
     Title,
 } from './styles';
+import IPageTitleProps from './types';
 
 const PageTitle = memo(
-    ({ size, title, subTitle, description }: PageTitleProps) => {
+    ({ size, title, subTitle, description }: IPageTitleProps) => {
         const { t } = useTranslation();
 
         return (

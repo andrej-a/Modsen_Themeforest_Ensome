@@ -18,6 +18,7 @@ type TFormFileds = {
 
 const useSubscribe = (schema: Schema<TFormFileds>, template?: string) => {
     const [isDisabled, setIsDisabled] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
     const {
         register,
@@ -36,6 +37,7 @@ const useSubscribe = (schema: Schema<TFormFileds>, template?: string) => {
         message,
     }) => {
         setIsDisabled(true);
+        setIsLoading(true);
         emailjs
             .send(
                 SERVICE_ID!,
@@ -52,10 +54,12 @@ const useSubscribe = (schema: Schema<TFormFileds>, template?: string) => {
                 result => {
                     createNotification('success', result.text);
                     setIsDisabled(false);
+                    setIsLoading(false);
                 },
                 error => {
                     createNotification('error', error.text);
                     setIsDisabled(false);
+                    setIsLoading(false);
                 },
             );
     };
@@ -72,6 +76,7 @@ const useSubscribe = (schema: Schema<TFormFileds>, template?: string) => {
         handleSubmit,
         errors,
         handleChange,
+        isLoading,
     };
 };
 

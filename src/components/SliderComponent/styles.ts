@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { ISliderControls } from '@/types/componentsOptions';
 import { size } from '@/types/constants';
+
+import { ISliderControls } from './types';
 
 const { laptopM, tablet, mobileX } = size;
 

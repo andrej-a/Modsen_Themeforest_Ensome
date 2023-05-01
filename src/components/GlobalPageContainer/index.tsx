@@ -1,11 +1,10 @@
-import React from 'react';
-
-import { PageContainerProps } from '@/types/componentsOptions';
+import React, { memo } from 'react';
 
 import { Container } from './styles';
+import IPageContainerProps from './types';
 
-const PageContainer = ({ children }: PageContainerProps) => {
+const PageContainer = memo(({ children }: IPageContainerProps) => {
     return <Container>{children}</Container>;
-};
+});
 
 export default PageContainer;

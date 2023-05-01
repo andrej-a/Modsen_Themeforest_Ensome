@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-import { ButtonProps } from '@/types/componentsOptions';
-
+import { ButtonProps } from '../DefaultButton/types';
 import { RoundButtonContainer, RoundButtonElement } from './style';
 
-const RoundButton: React.FC<ButtonProps> = ({ children, ...rest }) => {
+const RoundButton: React.FC<ButtonProps> = memo(({ children, ...rest }) => {
     return (
         <RoundButtonContainer>
             <RoundButtonElement {...rest}>
@@ -12,6 +11,6 @@ const RoundButton: React.FC<ButtonProps> = ({ children, ...rest }) => {
             </RoundButtonElement>
         </RoundButtonContainer>
     );
-};
+});
 
 export default RoundButton;

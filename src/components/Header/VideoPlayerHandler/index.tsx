@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ModalWindow, VideoPlayerWindow, WatchVideoButton } from '@/components';
-import { HeaderContentProps } from '@/types/componentsOptions';
 import { dictionary } from '@/types/constants';
 
+import { HeaderContentProps } from '../types';
 import { Container } from './styles';
 
 const { WATCH_THE_DEMO } = dictionary;
 
-const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
+const VideoPlayerHandler = memo(({ type }: HeaderContentProps) => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     const onSetIsVideoOpen = (
@@ -21,6 +21,10 @@ const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
     };
     useEffect(() => {
         document.documentElement.style.overflow = isVideoOpen ? 'hidden' : '';
+
+        return () => {
+            document.documentElement.style.overflow = '';
+        };
     }, [isVideoOpen]);
 
     const { t } = useTranslation();
@@ -46,6 +50,6 @@ const VideoPlayerHandler = ({ type }: HeaderContentProps) => {
             )}
         </Container>
     );
-};
+});
 
 export default VideoPlayerHandler;

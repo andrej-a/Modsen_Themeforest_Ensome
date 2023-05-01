@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-import { LogoComponentProps } from '@/types/componentsOptions';
-
+import { ILogoComponentProps } from '../ImageComponent/types';
 import { Logo, LogoContainer } from './style';
 
-const LogoComponent = ({ source }: LogoComponentProps) => {
+const LogoComponent = memo(({ source }: ILogoComponentProps) => {
     return (
         <LogoContainer>
             <Logo src={source} alt="company_logo" />
         </LogoContainer>
     );
-};
+});
 
 export default LogoComponent;

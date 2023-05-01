@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ImageComponent, ReadMoreComponent } from '@/components';
+import {
+    IService,
+    ServiceCardProps,
+} from '@/componentsLibrary/ServiceCard/types/IService';
 import { useAppDispatch } from '@/hooks/useStore';
 import { setServicePage } from '@/store/slices/serviceSlice';
 import { setCurrentSolutionPage } from '@/store/slices/solutions';
-import { IService, ServiceCardProps } from '@/types/IService';
 import { ISolution } from '@/types/ISolution';
 
 import {
@@ -16,7 +19,7 @@ import {
     TitleContainer,
 } from './styles';
 
-const ServiceCard = ({ type, content }: ServiceCardProps) => {
+const ServiceCard = memo(({ type, content }: ServiceCardProps) => {
     const { image, glassImage, title, description, link } = content;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
@@ -45,6 +48,6 @@ const ServiceCard = ({ type, content }: ServiceCardProps) => {
             </ReadMoreContainer>
         </CardContainer>
     );
-};
+});
 
 export default ServiceCard;
